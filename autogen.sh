@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) 2013-2019 The Fujicoin Core developers
+# Copyright (c) 2021-2021 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
