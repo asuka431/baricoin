@@ -75,18 +75,18 @@ before_build:
 - ps:  Start-Process clcache-server
 - ps:  fsutil behavior set disablelastaccess 0 # Enable Access time feature on Windows (for clcache)
 build_script:
-- cmd: msbuild /p:TrackFileAccess=false /p:CLToolExe=clcache.exe build_msvc\fujicoin.sln /m /v:q /nologo
+- cmd: msbuild /p:TrackFileAccess=false /p:CLToolExe=clcache.exe build_msvc\baricoin.sln /m /v:q /nologo
 after_build:
 - ps:  fsutil behavior set disablelastaccess 1 # Disable Access time feature on Windows (better performance)
 - ps:  clcache -z
-#- 7z a fujicoin-%APPVEYOR_BUILD_VERSION%.zip %APPVEYOR_BUILD_FOLDER%\build_msvc\%platform%\%configuration%\*.exe
+#- 7z a baricoin-%APPVEYOR_BUILD_VERSION%.zip %APPVEYOR_BUILD_FOLDER%\build_msvc\%platform%\%configuration%\*.exe
 test_script:
-- cmd: src\test_fujicoin.exe -l test_suite
-- cmd: src\bench_fujicoin.exe -evals=1 -scaling=0 > NUL
-- ps:  python test\util\fujicoin-util-test.py
+- cmd: src\test_baricoin.exe -l test_suite
+- cmd: src\bench_baricoin.exe -evals=1 -scaling=0 > NUL
+- ps:  python test\util\baricoin-util-test.py
 - cmd: python test\util\rpcauth-test.py
 # Fee estimation test failing on appveyor with: WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted.
 - cmd: python test\functional\test_runner.py --ci --quiet --combinedlogslen=4000 --failfast --exclude feature_fee_estimation
 artifacts:
-#- path: fujicoin-%APPVEYOR_BUILD_VERSION%.zip
+#- path: baricoin-%APPVEYOR_BUILD_VERSION%.zip
 deploy: off

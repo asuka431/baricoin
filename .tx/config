@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[fujicoin.qt-translation-020x]
-file_filter = src/qt/locale/fujicoin_<lang>.ts
-source_file = src/qt/locale/fujicoin_en.ts
+[baricoin.qt-translation-020x]
+file_filter = src/qt/locale/baricoin_<lang>.ts
+source_file = src/qt/locale/baricoin_en.ts
 source_lang = en
