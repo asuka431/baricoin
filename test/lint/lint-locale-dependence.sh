@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C
 KNOWN_VIOLATIONS=(
-    "src/fujicoin-tx.cpp.*stoul"
-    "src/fujicoin-tx.cpp.*trim_right"
+    "src/baricoin-tx.cpp.*stoul"
+    "src/baricoin-tx.cpp.*trim_right"
     "src/dbwrapper.cpp.*stoul"
     "src/dbwrapper.cpp:.*vsnprintf"
     "src/httprpc.cpp.*trim"

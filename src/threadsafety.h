@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_THREADSAFETY_H
-#define FUJICOIN_THREADSAFETY_H
+#ifndef BARICOIN_THREADSAFETY_H
+#define BARICOIN_THREADSAFETY_H
 
 #ifdef __clang__
 // TL;DR Add GUARDED_BY(mutex) to member variables. The others are
@@ -54,4 +54,4 @@
 #define ASSERT_EXCLUSIVE_LOCK(...)
 #endif // __GNUC__
 
-#endif // FUJICOIN_THREADSAFETY_H
+#endif // BARICOIN_THREADSAFETY_H

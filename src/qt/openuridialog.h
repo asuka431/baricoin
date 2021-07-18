@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_OPENURIDIALOG_H
-#define FUJICOIN_QT_OPENURIDIALOG_H
+#ifndef BARICOIN_QT_OPENURIDIALOG_H
+#define BARICOIN_QT_OPENURIDIALOG_H
 
 #include <QDialog>
 
@@ -28,4 +28,4 @@ private:
     Ui::OpenURIDialog *ui;
 };
 
-#endif // FUJICOIN_QT_OPENURIDIALOG_H
+#endif // BARICOIN_QT_OPENURIDIALOG_H

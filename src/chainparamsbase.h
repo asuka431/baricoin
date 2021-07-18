@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CHAINPARAMSBASE_H
-#define FUJICOIN_CHAINPARAMSBASE_H
+#ifndef BARICOIN_CHAINPARAMSBASE_H
+#define BARICOIN_CHAINPARAMSBASE_H
 
 #include <memory>
 #include <string>
 
 /**
- * CBaseChainParams defines the base parameters (shared between fujicoin-cli and fujicoind)
- * of a given instance of the Fujicoin system.
+ * CBaseChainParams defines the base parameters (shared between baricoin-cli and baricoind)
+ * of a given instance of the Baricoin system.
  */
 class CBaseChainParams
 {
@@ -54,4 +54,4 @@ const CBaseChainParams& BaseParams();
 /** Sets the params returned by Params() to those for the given network. */
 void SelectBaseParams(const std::string& chain);
 
-#endif // FUJICOIN_CHAINPARAMSBASE_H
+#endif // BARICOIN_CHAINPARAMSBASE_H

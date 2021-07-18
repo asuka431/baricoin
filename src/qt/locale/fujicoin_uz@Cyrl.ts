@@ -66,8 +66,8 @@
         <translation>Қабул қилинадиган манзиллар</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Улар тўловларни жўнатиш учун сизнинг Fujicoin манзилларингиз. Доимо тангаларни жўнатишдан олдин сумма ва қабул қилувчи манзилни текшириб кўринг. </translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Улар тўловларни жўнатиш учун сизнинг Baricoin манзилларингиз. Доимо тангаларни жўнатишдан олдин сумма ва қабул қилувчи манзилни текшириб кўринг. </translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Ҳамённи кодлашни тасдиқлаш</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Диққат: Агар сиз ҳамёнингизни кодласангиз ва махфий сўзингизни унутсангиз, сиз &lt;b&gt;БАРЧА FUJICOIN ПУЛЛАРИНГИЗНИ ЙЎҚОТАСИЗ&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Диққат: Агар сиз ҳамёнингизни кодласангиз ва махфий сўзингизни унутсангиз, сиз &lt;b&gt;БАРЧА BARICOIN ПУЛЛАРИНГИЗНИ ЙЎҚОТАСИЗ&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -212,7 +212,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Хабар ёзиш...</translation>
@@ -278,8 +278,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Тангаларни Fujicoin манзилига жўнатиш</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Тангаларни Baricoin манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,12 +314,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Fujicoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Baricoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Хабарларни махсус Fujicoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Хабарларни махсус Baricoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -338,8 +338,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва fujicoin ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва baricoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -354,8 +354,8 @@
         <translation>&amp;Буйруқлар сатри мосламалари</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Fujicoin network</source>
-        <translation><numerusform>%n та Fujicoin тармоғига фаол уланиш мавжуд</numerusform></translation>
+        <source>%n active connection(s) to Baricoin network</source>
+        <translation><numerusform>%n та Baricoin тармоғига фаол уланиш мавжуд</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -414,8 +414,8 @@
         <translation>Ҳамён &lt;b&gt;кодланган&lt;/b&gt; ва вақтинча &lt;b&gt;қулфланган&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>Жиддий хато юз берди. Fujicoin хавфсиз ишлай олмайди, шунинг учун чиқиб кетилади.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>Жиддий хато юз берди. Baricoin хавфсиз ишлай олмайди, шунинг учун чиқиб кетилади.</translation>
     </message>
 </context>
 <context>
@@ -594,8 +594,8 @@
         <translation>Жунатилувчи манзилни тахрирлаш</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>Киритилган "%1" манзили тўғри Fujicoin манзили эмас.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>Киритилган "%1" манзили тўғри Baricoin манзили эмас.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -655,8 +655,8 @@
         <translation>Бошқа маълумотлар директориясида фойдаланинг:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -802,8 +802,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Fujicoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Baricoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -895,8 +895,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
-        <translation>Fujicoin манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a Baricoin address (e.g. %1)</source>
+        <translation>Baricoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -1389,8 +1389,8 @@
         <translation>Тўлов миқдори 0. дан катта бўлиши керак. </translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Диққат: Нотўғр Fujicoin манзили</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Диққат: Нотўғр Baricoin манзили</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1817,7 +1817,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Кам миқдор</translation>

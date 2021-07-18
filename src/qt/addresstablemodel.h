@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_ADDRESSTABLEMODEL_H
-#define FUJICOIN_QT_ADDRESSTABLEMODEL_H
+#ifndef BARICOIN_QT_ADDRESSTABLEMODEL_H
+#define BARICOIN_QT_ADDRESSTABLEMODEL_H
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -30,7 +30,7 @@ public:
 
     enum ColumnIndex {
         Label = 0,   /**< User specified label */
-        Address = 1  /**< Fujicoin address */
+        Address = 1  /**< Baricoin address */
     };
 
     enum RoleIndex {
@@ -102,4 +102,4 @@ public Q_SLOTS:
     friend class AddressTablePriv;
 };
 
-#endif // FUJICOIN_QT_ADDRESSTABLEMODEL_H
+#endif // BARICOIN_QT_ADDRESSTABLEMODEL_H

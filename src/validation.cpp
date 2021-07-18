@@ -52,7 +52,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "Fujicoin cannot be compiled without assertions."
+# error "Baricoin cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001

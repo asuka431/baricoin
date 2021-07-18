@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020 The Fujicoin Core developers
+# Copyright (c) 2020 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test asmap config argument for ASN-based IP bucketing.
 
-Verify node behaviour and debug log when launching fujicoind in these cases:
+Verify node behaviour and debug log when launching baricoind in these cases:
 
-1. `fujicoind` with no -asmap arg, using /16 prefix for IP bucketing
+1. `baricoind` with no -asmap arg, using /16 prefix for IP bucketing
 
-2. `fujicoind -asmap=<absolute path>`, using the unit test skeleton asmap
+2. `baricoind -asmap=<absolute path>`, using the unit test skeleton asmap
 
-3. `fujicoind -asmap=<relative path>`, using the unit test skeleton asmap
+3. `baricoind -asmap=<relative path>`, using the unit test skeleton asmap
 
-4. `fujicoind -asmap/-asmap=` with no file specified, using the default asmap
+4. `baricoind -asmap/-asmap=` with no file specified, using the default asmap
 
-5. `fujicoind -asmap` with no file specified and a missing default asmap file
+5. `baricoind -asmap` with no file specified and a missing default asmap file
 
-6. `fujicoind -asmap` with an empty (unparsable) default asmap file
+6. `baricoind -asmap` with an empty (unparsable) default asmap file
 
 The tests are order-independent.
 
@@ -24,7 +24,7 @@ The tests are order-independent.
 import os
 import shutil
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 
 DEFAULT_ASMAP_FILENAME = 'ip_asn.map' # defined in src/init.cpp
 ASMAP = '../../src/test/data/asmap.raw' # path to unit test skeleton asmap
@@ -34,19 +34,19 @@ def expected_messages(filename):
     return ['Opened asmap file "{}" (59 bytes) from disk'.format(filename),
             'Using asmap version {} for IP bucketing'.format(VERSION)]
 
-class AsmapTest(FujicoinTestFramework):
+class AsmapTest(BaricoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = False
         self.num_nodes = 1
 
     def test_without_asmap_arg(self):
-        self.log.info('Test fujicoind with no -asmap arg passed')
+        self.log.info('Test baricoind with no -asmap arg passed')
         self.stop_node(0)
         with self.node.assert_debug_log(['Using /16 prefix for IP bucketing']):
             self.start_node(0)
 
     def test_asmap_with_absolute_path(self):
-        self.log.info('Test fujicoind -asmap=<absolute path>')
+        self.log.info('Test baricoind -asmap=<absolute path>')
         self.stop_node(0)
         filename = os.path.join(self.datadir, 'my-map-file.map')
         shutil.copyfile(self.asmap_raw, filename)
@@ -55,7 +55,7 @@ class AsmapTest(FujicoinTestFramework):
         os.remove(filename)
 
     def test_asmap_with_relative_path(self):
-        self.log.info('Test fujicoind -asmap=<relative path>')
+        self.log.info('Test baricoind -asmap=<relative path>')
         self.stop_node(0)
         name = 'ASN_map'
         filename = os.path.join(self.datadir, name)
@@ -67,20 +67,20 @@ class AsmapTest(FujicoinTestFramework):
     def test_default_asmap(self):
         shutil.copyfile(self.asmap_raw, self.default_asmap)
         for arg in ['-asmap', '-asmap=']:
-            self.log.info('Test fujicoind {} (using default map file)'.format(arg))
+            self.log.info('Test baricoind {} (using default map file)'.format(arg))
             self.stop_node(0)
             with self.node.assert_debug_log(expected_messages(self.default_asmap)):
                 self.start_node(0, [arg])
         os.remove(self.default_asmap)
 
     def test_default_asmap_with_missing_file(self):
-        self.log.info('Test fujicoind -asmap with missing default map file')
+        self.log.info('Test baricoind -asmap with missing default map file')
         self.stop_node(0)
         msg = "Error: Could not find asmap file \"{}\"".format(self.default_asmap)
         self.node.assert_start_raises_init_error(extra_args=['-asmap'], expected_msg=msg)
 
     def test_empty_asmap(self):
-        self.log.info('Test fujicoind -asmap with empty map file')
+        self.log.info('Test baricoind -asmap with empty map file')
         self.stop_node(0)
         with open(self.default_asmap, "w", encoding="utf-8") as f:
             f.write("")

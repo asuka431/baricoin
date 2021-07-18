@@ -4,8 +4,8 @@
 
 #include <qt/guiutil.h>
 
-#include <qt/fujicoinaddressvalidator.h>
-#include <qt/fujicoinunits.h>
+#include <qt/baricoinaddressvalidator.h>
+#include <qt/baricoinunits.h>
 #include <qt/qvalidatedlineedit.h>
 #include <qt/sendcoinsrecipient.h>
 
@@ -108,16 +108,16 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Fujicoin address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Baricoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
-    widget->setValidator(new FujicoinAddressEntryValidator(parent));
-    widget->setCheckValidator(new FujicoinAddressCheckValidator(parent));
+    widget->setValidator(new BaricoinAddressEntryValidator(parent));
+    widget->setCheckValidator(new BaricoinAddressCheckValidator(parent));
 }
 
-bool parseFujicoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseBaricoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no fujicoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("fujicoin"))
+    // return if URI is not valid or is no baricoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("baricoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -153,7 +153,7 @@ bool parseFujicoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!FujicoinUnits::parse(FujicoinUnits::FJC, i->second, &rv.amount))
+                if(!BaricoinUnits::parse(BaricoinUnits::BARI, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -171,22 +171,22 @@ bool parseFujicoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseFujicoinURI(QString uri, SendCoinsRecipient *out)
+bool parseBaricoinURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
-    return parseFujicoinURI(uriInstance, out);
+    return parseBaricoinURI(uriInstance, out);
 }
 
-QString formatFujicoinURI(const SendCoinsRecipient &info)
+QString formatBaricoinURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
-    QString ret = QString("fujicoin:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("baricoin:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(FujicoinUnits::format(FujicoinUnits::FJC, info.amount, false, FujicoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(BaricoinUnits::format(BaricoinUnits::BARI, info.amount, false, BaricoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -387,9 +387,9 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathDebug)));
 }
 
-bool openFujicoinConf()
+bool openBaricoinConf()
 {
-    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", FUJICOIN_CONF_FILENAME));
+    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BARICOIN_CONF_FILENAME));
 
     /* Create the file */
     fsbridge::ofstream configFile(pathConfig, std::ios_base::app);
@@ -399,7 +399,7 @@ bool openFujicoinConf()
 
     configFile.close();
 
-    /* Open fujicoin.conf with the associated application */
+    /* Open baricoin.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 #ifdef Q_OS_MAC
     // Workaround for macOS-specific behavior; see #15409.
@@ -555,15 +555,15 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Fujicoin.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Baricoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Fujicoin (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Fujicoin (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Baricoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Baricoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Fujicoin*.lnk
+    // check for Baricoin*.lnk
     return fs::exists(StartupShortcutPath());
 }
 
@@ -638,8 +638,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "fujicoin.desktop";
-    return GetAutostartDir() / strprintf("fujicoin-%s.desktop", chain);
+        return GetAutostartDir() / "baricoin.desktop";
+    return GetAutostartDir() / strprintf("baricoin-%s.desktop", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -679,13 +679,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = gArgs.GetChainName();
-        // Write a fujicoin.desktop file to the autostart directory:
+        // Write a baricoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Fujicoin\n";
+            optionFile << "Name=Baricoin\n";
         else
-            optionFile << strprintf("Name=Fujicoin (%s)\n", chain);
+            optionFile << strprintf("Name=Baricoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -chain=%s\n", chain);
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

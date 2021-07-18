@@ -47,11 +47,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Vælg adresse at sende fujicoins til</translation>
+        <translation>Vælg adresse at sende baricoins til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Vælg adresse at modtage fujicoins med</translation>
+        <translation>Vælg adresse at modtage baricoins med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -66,12 +66,12 @@
         <translation>Modtagelsesadresser</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Fujicoin-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender fujicoins.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine Baricoin-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender baricoins.</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
-        <translation>Disse er dine Fujicoin adresser til at modtage betalinger. Benyt 'Opret ny modtager adresse' knappen i modtag fanen for at oprette nye adresser.</translation>
+        <source>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>Disse er dine Baricoin adresser til at modtage betalinger. Benyt 'Opret ny modtager adresse' knappen i modtag fanen for at oprette nye adresser.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Bekræft tegnebogskryptering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE FUJICOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE BARICOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Indtast den gamle adgangskode og en ny adgangskode til tegnebogen.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your fujicoins from being stolen by malware infecting your computer.</source>
-        <translation>Husk, at kryptere din tegnebog vil ikke fuldt ud beskytte dine fujicoins mod at blive stjålet af malware på din computer.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your baricoins from being stolen by malware infecting your computer.</source>
+        <translation>Husk, at kryptere din tegnebog vil ikke fuldt ud beskytte dine baricoins mod at blive stjålet af malware på din computer.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -252,7 +252,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signér &amp;besked…</translation>
@@ -362,8 +362,8 @@
         <translation>Proxy er &lt;b&gt;aktiveret&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Send fujicoins til en Fujicoin-adresse</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Send baricoins til en Baricoin-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -398,12 +398,12 @@
         <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Signér beskeder med dine Fujicoin-adresser for at bevise, at de tilhører dig</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Signér beskeder med dine Baricoin-adresser for at bevise, at de tilhører dig</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Fujicoin-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Baricoin-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -422,8 +422,8 @@
         <translation>Faneværktøjslinje</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Anmod om betalinger (genererer QR-koder og “fujicoin:”-URI'er)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Anmod om betalinger (genererer QR-koder og “baricoin:”-URI'er)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -438,8 +438,8 @@
         <translation>Tilvalg for &amp;kommandolinje</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Fujicoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til Fujicoin-netværket</numerusform><numerusform>%n aktive forbindelser til Fujicoin-netværket</numerusform></translation>
+        <source>%n active connection(s) to Baricoin network</source>
+        <translation><numerusform>%n aktiv forbindelse til Baricoin-netværket</numerusform><numerusform>%n aktive forbindelser til Baricoin-netværket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>&amp;Modtageradresser</translation>
     </message>
     <message>
-        <source>Open a fujicoin: URI</source>
-        <translation>Åbn en fujicoin:-URI</translation>
+        <source>Open a baricoin: URI</source>
+        <translation>Åbn en baricoin:-URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -518,8 +518,8 @@
         <translation>Luk tegnebog</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Fujicoin command-line options</source>
-        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Fujicoin kommandolinje</translation>
+        <source>Show the %1 help message to get a list with possible Baricoin command-line options</source>
+        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Baricoin kommandolinje</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -630,8 +630,8 @@
         <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>Der opstod en fatal fejl. Fujicoin kan ikke længere fortsætte sikkert og vil afslutte.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>Der opstod en fatal fejl. Baricoin kan ikke længere fortsætte sikkert og vil afslutte.</translation>
     </message>
 </context>
 <context>
@@ -874,8 +874,8 @@
         <translation>Redigér afsendelsesadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>Den indtastede adresse “%1” er ikke en gyldig Fujicoin-adresse.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>Den indtastede adresse “%1” er ikke en gyldig Baricoin-adresse.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -971,8 +971,8 @@
         <translation>Brug tilpasset mappe for data:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Discard blocks after verification, except most recent %1 GB (prune)</source>
@@ -987,8 +987,8 @@
         <translation>Omtrent %1 GB data vil blive gemt i denne mappe.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Fujicoin block chain.</source>
-        <translation>%1 vil downloade og gemme en kopi af Fujicoin-blokkæden.</translation>
+        <source>%1 will download and store a copy of the Baricoin block chain.</source>
+        <translation>%1 vil downloade og gemme en kopi af Baricoin-blokkæden.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1022,12 +1022,12 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fujicoin network, as detailed below.</source>
-        <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med fujicoin-netværket, som detaljerne herunder viser.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the baricoin network, as detailed below.</source>
+        <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med baricoin-netværket, som detaljerne herunder viser.</translation>
     </message>
     <message>
-        <source>Attempting to spend fujicoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Forsøg på at bruge fujicoin, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
+        <source>Attempting to spend baricoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Forsøg på at bruge baricoin, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1077,8 +1077,8 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open fujicoin URI</source>
-        <translation>Åbn fujicoin-URI</translation>
+        <source>Open baricoin URI</source>
+        <translation>Åbn baricoin-URI</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1223,8 +1223,8 @@
         <translation>&amp;Brug ubekræftede byttepenge</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åbn automatisk Fujicoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åbn automatisk Baricoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1239,8 +1239,8 @@
         <translation>Tillad &amp;indkommende forbindelser</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a SOCKS5 proxy.</source>
-        <translation>Forbind til Fujicoin-netværket gennem en SOCKS5-proxy.</translation>
+        <source>Connect to the Baricoin network through a SOCKS5 proxy.</source>
+        <translation>Forbind til Baricoin-netværket gennem en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1275,8 +1275,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Forbind til Fujicoin-netværket gennem en separat SOCKS5-proxy for Tors skjulte tjenester.</translation>
+        <source>Connect to the Baricoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Forbind til Baricoin-netværket gennem en separat SOCKS5-proxy for Tors skjulte tjenester.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1312,7 +1312,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af fujicoins.</translation>
+        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af baricoins.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1386,8 +1386,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Fujicoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Baricoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1461,16 +1461,16 @@
         <translation>Fejl i betalingsanmodning</translation>
     </message>
     <message>
-        <source>Cannot start fujicoin: click-to-pay handler</source>
-        <translation>Kan ikke starte fujicoin: click-to-pay-håndtering</translation>
+        <source>Cannot start baricoin: click-to-pay handler</source>
+        <translation>Kan ikke starte baricoin: click-to-pay-håndtering</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI-håndtering</translation>
     </message>
     <message>
-        <source>'fujicoin://' is not a valid URI. Use 'fujicoin:' instead.</source>
-        <translation>'fujicoin://' er ikke et gyldigt URI. Brug 'fujicoin:' istedet.</translation>
+        <source>'baricoin://' is not a valid URI. Use 'baricoin:' instead.</source>
+        <translation>'baricoin://' er ikke et gyldigt URI. Brug 'baricoin:' istedet.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1489,8 +1489,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Fujicoin address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Fujicoin-adresse eller forkert udformede URL-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Baricoin address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Baricoin-adresse eller forkert udformede URL-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1531,8 +1531,8 @@
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
-        <translation>Indtast en Fujicoin-adresse (fx %1)</translation>
+        <source>Enter a Baricoin address (e.g. %1)</source>
+        <translation>Indtast en Baricoin-adresse (fx %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2000,8 +2000,8 @@
         <translation>&amp;Besked:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fujicoin network.</source>
-        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Fujicoin-netværket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Baricoin network.</source>
+        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Baricoin-netværket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2166,7 +2166,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send fujicoins</translation>
+        <translation>Send baricoins</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2281,8 +2281,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Skjul indstillinger for transaktionsgebyr</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fujicoin transactions than the network can process.</source>
-        <translation>På tidspunkter, hvor der er færre transaktioner, end der er plads til i nye blokke, kan minere og videresendende knuder gennemtvinge et minimumsgebyr. Du kan vælge kun at betale dette minimumsgebyr, men vær opmærksom på, at det kan resultere i en transaktion, der aldrig bliver bekræftet, hvis mængden af nye fujicoin-transaktioner stiger til mere, end hvad netværket kan behandle ad gangen.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</source>
+        <translation>På tidspunkter, hvor der er færre transaktioner, end der er plads til i nye blokke, kan minere og videresendende knuder gennemtvinge et minimumsgebyr. Du kan vælge kun at betale dette minimumsgebyr, men vær opmærksom på, at det kan resultere i en transaktion, der aldrig bliver bekræftet, hvis mængden af nye baricoin-transaktioner stiger til mere, end hvad netværket kan behandle ad gangen.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2402,7 +2402,7 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af fujicoins</translation>
+        <translation>Bekræft afsendelse af baricoins</translation>
     </message>
     <message>
         <source>Confirm transaction proposal</source>
@@ -2461,8 +2461,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation><numerusform>Bekræftelse estimeret til at begynde om %n blok.</numerusform><numerusform>Bekræftelse estimeret til at begynde om %n blokke.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Advarsel: Ugyldig Fujicoin-adresse</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Advarsel: Ugyldig Baricoin-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2500,8 +2500,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Vælg tidligere brugt adresse</translation>
     </message>
     <message>
-        <source>The Fujicoin address to send the payment to</source>
-        <translation>Fujicoin-adresse, som betalingen skal sendes til</translation>
+        <source>The Baricoin address to send the payment to</source>
+        <translation>Baricoin-adresse, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2524,8 +2524,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Beløbet der skal afsendes i den valgte enhed</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre fujicoin, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre baricoin, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2552,8 +2552,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the fujicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fujicoin network.</source>
-        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Fujicoin-netværket.</translation>
+        <source>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</source>
+        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Baricoin-netværket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2586,12 +2586,12 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>&amp;Singér besked</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fujicoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage fujicoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive baricoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage baricoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
     </message>
     <message>
-        <source>The Fujicoin address to sign the message with</source>
-        <translation>Fujicoin-adresse, som beskeden skal signeres med</translation>
+        <source>The Baricoin address to sign the message with</source>
+        <translation>Baricoin-adresse, som beskeden skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2622,8 +2622,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Kopiér den nuværende signatur til systemets udklipsholder</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Signér denne besked for at bevise, at Fujicoin-adressen tilhører dig</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Signér denne besked for at bevise, at Baricoin-adressen tilhører dig</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2646,8 +2646,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Indtast modtagerens adresse, besked (vær sikker på at kopiere linjeskift, mellemrum, tabuleringer, etc. præcist) og signatur herunder for at verificere beskeden. Vær forsigtig med ikke at læse noget ud fra signaturen, som ikke står i selve beskeden, for at undgå at blive snydt af et eventuelt man-in-the-middle-angreb. Bemærk, at dette kun beviser, at den signerende person kan modtage med adressen; det kan ikke bevise hvem der har sendt en given transaktion!</translation>
     </message>
     <message>
-        <source>The Fujicoin address the message was signed with</source>
-        <translation>Fujicoin-adressen, som beskeden blev signeret med</translation>
+        <source>The Baricoin address the message was signed with</source>
+        <translation>Baricoin-adressen, som beskeden blev signeret med</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2658,8 +2658,8 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
         <translation>Signaturen som blev givet da meddelelsen blev signeret</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
-        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Fujicoin-adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
+        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Baricoin-adresse</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2877,7 +2877,7 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Minede fujicoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
+        <translation>Minede baricoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3214,7 +3214,7 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send fujicoins</translation>
+        <translation>Send baricoins</translation>
     </message>
     <message>
         <source>Fee bump error</source>
@@ -3309,7 +3309,7 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
     </message>
 </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distribueret under MIT-softwarelicensen; se den vedlagte fil %s eller %s</translation>

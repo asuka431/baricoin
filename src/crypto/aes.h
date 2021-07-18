@@ -4,8 +4,8 @@
 //
 // C++ wrapper around ctaes, a constant-time AES implementation
 
-#ifndef FUJICOIN_CRYPTO_AES_H
-#define FUJICOIN_CRYPTO_AES_H
+#ifndef BARICOIN_CRYPTO_AES_H
+#define BARICOIN_CRYPTO_AES_H
 
 extern "C" {
 #include <crypto/ctaes/ctaes.h>
@@ -64,4 +64,4 @@ private:
     unsigned char iv[AES_BLOCKSIZE];
 };
 
-#endif // FUJICOIN_CRYPTO_AES_H
+#endif // BARICOIN_CRYPTO_AES_H

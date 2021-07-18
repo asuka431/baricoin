@@ -1,12 +1,12 @@
 WINDOWS BUILD NOTES
 ====================
 
-Below are some notes on how to build Fujicoin Core for Windows.
+Below are some notes on how to build Baricoin Core for Windows.
 
-The options known to work for building Fujicoin Core on Windows are:
+The options known to work for building Baricoin Core on Windows are:
 
 * On Linux, using the [Mingw-w64](https://mingw-w64.org/doku.php) cross compiler tool chain. Ubuntu Bionic 18.04 is required
-and is the platform used to build the Fujicoin Core Windows release binaries.
+and is the platform used to build the Baricoin Core Windows release binaries.
 * On Windows, using [Windows
 Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) and the Mingw-w64 cross compiler tool chain.
 * On Windows, using a native compiler tool chain such as [Visual Studio](https://www.visualstudio.com).
@@ -72,8 +72,8 @@ If you want to build the windows installer with `make deploy` you need [NSIS](ht
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/fujicoin/fujicoin.git
-    cd fujicoin
+    git clone https://github.com/baricoin/baricoin.git
+    cd baricoin
 
 ## Building for 64-bit Windows
 
@@ -87,13 +87,13 @@ Ubuntu Bionic 18.04 <sup>[1](#footnote1)</sup>:
 
 Once the toolchain is installed the build steps are common:
 
-Note that for WSL the Fujicoin Core source path MUST be somewhere in the default mount file system, for
-example /usr/src/fujicoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
+Note that for WSL the Baricoin Core source path MUST be somewhere in the default mount file system, for
+example /usr/src/baricoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
 This means you cannot use a directory that is located directly on the host Windows file system to perform the build.
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/fujicoin/fujicoin.git
+    git clone https://github.com/baricoin/baricoin.git
 
 Once the source code is ready the build steps are below:
 
@@ -108,7 +108,7 @@ Do not compile tests and bench.
     CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=$PWD/dist --disable-tests --disable-bench --disable-dependency-tracking
     make install
     cd dist/bin
-    strip fujicoin-cli.exe fujicoind.exe fujicoin-qt.exe fujicoin-tx.exe
+    strip baricoin-cli.exe baricoind.exe baricoin-qt.exe baricoin-tx.exe
 
 
 ## Building for 32-bit Windows
@@ -121,13 +121,13 @@ For Ubuntu Bionic 18.04 and Windows Subsystem for Linux <sup>[1](#footnote1)</su
 
     sudo update-alternatives --config i686-w64-mingw32-g++  # Set the default mingw32 g++ compiler option to posix.
 
-Note that for WSL the Fujicoin Core source path MUST be somewhere in the default mount file system, for
-example /usr/src/fujicoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
+Note that for WSL the Baricoin Core source path MUST be somewhere in the default mount file system, for
+example /usr/src/baricoin, AND not under /mnt/d/. If this is not the case the dependency autoconf scripts will fail.
 This means you cannot use a directory that located directly on the host Windows file system to perform the build.
 
 Acquire the source in the usual way:
 
-    git clone https://github.com/fujicoin/fujicoin.git
+    git clone https://github.com/baricoin/baricoin.git
 
 Then build using:
 
@@ -140,10 +140,10 @@ Do not compile tests and bench.
     mkdir dist
     ./autogen.sh
     CONFIG_SITE=$PWD/depends/i686-w64-mingw32/share/config.site ./configure --prefix=$PWD/dist --disable-tests --disable-bench --disable-dependency-tracking
-    strip src/fujicoin-cli.exe src/fujicoin-tx.exe src/fujicoind.exe src/qt/fujicoin-qt.exe
+    strip src/baricoin-cli.exe src/baricoin-tx.exe src/baricoind.exe src/qt/baricoin-qt.exe
     make install
     cd dist/bin
-    strip fujicoin-cli.exe fujicoind.exe fujicoin-qt.exe fujicoin-tx.exe
+    strip baricoin-cli.exe baricoind.exe baricoin-qt.exe baricoin-tx.exe
 
 
 ## Depends system
@@ -156,9 +156,9 @@ Installation
 After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the Windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
-way. This will install to `c:\workspace\fujicoin`, for example:
+way. This will install to `c:\workspace\baricoin`, for example:
 
-    make install DESTDIR=/mnt/c/workspace/fujicoin
+    make install DESTDIR=/mnt/c/workspace/baricoin
 
 You can also create an installer using:
 
@@ -171,5 +171,5 @@ Footnotes
 compiler options to allow a choice between either posix or win32 threads. The default option is win32 threads which is the more
 efficient since it will result in binary code that links directly with the Windows kernel32.lib. Unfortunately, the headers
 required to support win32 threads conflict with some of the classes in the C++11 standard library, in particular std::mutex.
-It's not possible to build the Fujicoin Core code using the win32 version of the Mingw-w64 cross compilers (at least not without
-modifying headers in the Fujicoin Core source code).
+It's not possible to build the Baricoin Core code using the win32 version of the Mingw-w64 cross compilers (at least not without
+modifying headers in the Baricoin Core source code).

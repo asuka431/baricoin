@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_FUJICOINGUI_H
-#define FUJICOIN_QT_FUJICOINGUI_H
+#ifndef BARICOIN_QT_BARICOINGUI_H
+#define BARICOIN_QT_BARICOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <qt/optionsdialog.h>
@@ -58,18 +58,18 @@ class ClickableProgressBar;
 }
 
 /**
-  Fujicoin GUI main class. This class represents the main window of the Fujicoin UI. It communicates with both the client and
+  Baricoin GUI main class. This class represents the main window of the Baricoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class FujicoinGUI : public QMainWindow
+class BaricoinGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const std::string DEFAULT_UIPLATFORM;
 
-    explicit FujicoinGUI(interfaces::Node& node, const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = nullptr);
-    ~FujicoinGUI();
+    explicit BaricoinGUI(interfaces::Node& node, const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = nullptr);
+    ~BaricoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -81,7 +81,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a fujicoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a baricoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void addWallet(WalletModel* walletModel);
@@ -339,4 +339,4 @@ private Q_SLOTS:
     void onMenuSelection(QAction* action);
 };
 
-#endif // FUJICOIN_QT_FUJICOINGUI_H
+#endif // BARICOIN_QT_BARICOINGUI_H

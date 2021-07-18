@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_TRANSLATION_H
-#define FUJICOIN_UTIL_TRANSLATION_H
+#ifndef BARICOIN_UTIL_TRANSLATION_H
+#define BARICOIN_UTIL_TRANSLATION_H
 
 #include <tinyformat.h>
 #include <functional>
@@ -38,4 +38,4 @@ inline bilingual_str _(const char* psz)
     return bilingual_str{psz, G_TRANSLATION_FUN ? (G_TRANSLATION_FUN)(psz) : psz};
 }
 
-#endif // FUJICOIN_UTIL_TRANSLATION_H
+#endif // BARICOIN_UTIL_TRANSLATION_H

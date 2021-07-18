@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_INTERFACES_NODE_H
-#define FUJICOIN_INTERFACES_NODE_H
+#ifndef BARICOIN_INTERFACES_NODE_H
+#define BARICOIN_INTERFACES_NODE_H
 
 #include <amount.h>     // For CAmount
 #include <net.h>        // For CConnman::NumConnections
@@ -35,7 +35,7 @@ namespace interfaces {
 class Handler;
 class Wallet;
 
-//! Top-level interface for a fujicoin node (fujicoind process).
+//! Top-level interface for a baricoin node (baricoind process).
 class Node
 {
 public:
@@ -265,4 +265,4 @@ std::unique_ptr<Node> MakeNode();
 
 } // namespace interfaces
 
-#endif // FUJICOIN_INTERFACES_NODE_H
+#endif // BARICOIN_INTERFACES_NODE_H

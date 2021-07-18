@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_RPC_CLIENT_H
-#define FUJICOIN_RPC_CLIENT_H
+#ifndef BARICOIN_RPC_CLIENT_H
+#define BARICOIN_RPC_CLIENT_H
 
 #include <univalue.h>
 
@@ -19,4 +19,4 @@ UniValue RPCConvertNamedValues(const std::string& strMethod, const std::vector<s
  */
 UniValue ParseNonRFCJSONValue(const std::string& strVal);
 
-#endif // FUJICOIN_RPC_CLIENT_H
+#endif // BARICOIN_RPC_CLIENT_H

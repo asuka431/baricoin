@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_PREVECTOR_H
-#define FUJICOIN_PREVECTOR_H
+#ifndef BARICOIN_PREVECTOR_H
+#define BARICOIN_PREVECTOR_H
 
 #include <assert.h>
 #include <stdlib.h>
@@ -534,4 +534,4 @@ public:
     }
 };
 
-#endif // FUJICOIN_PREVECTOR_H
+#endif // BARICOIN_PREVECTOR_H

@@ -2,9 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/fujicoinamountfield.h>
+#include <qt/baricoinamountfield.h>
 
-#include <qt/fujicoinunits.h>
+#include <qt/baricoinunits.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
 #include <qt/qvaluecombobox.h>
@@ -56,7 +56,7 @@ public:
 
         if (valid) {
             val = qBound(m_min_amount, val, m_max_amount);
-            input = FujicoinUnits::format(currentUnit, val, false, FujicoinUnits::separatorAlways);
+            input = BaricoinUnits::format(currentUnit, val, false, BaricoinUnits::separatorAlways);
             lineEdit()->setText(input);
         }
     }
@@ -68,7 +68,7 @@ public:
 
     void setValue(const CAmount& value)
     {
-        lineEdit()->setText(FujicoinUnits::format(currentUnit, value, false, FujicoinUnits::separatorAlways));
+        lineEdit()->setText(BaricoinUnits::format(currentUnit, value, false, BaricoinUnits::separatorAlways));
         Q_EMIT valueChanged();
     }
 
@@ -102,7 +102,7 @@ public:
         CAmount val = value(&valid);
 
         currentUnit = unit;
-        lineEdit()->setPlaceholderText(FujicoinUnits::format(currentUnit, m_min_amount, false, FujicoinUnits::separatorAlways));
+        lineEdit()->setPlaceholderText(BaricoinUnits::format(currentUnit, m_min_amount, false, BaricoinUnits::separatorAlways));
         if(valid)
             setValue(val);
         else
@@ -122,7 +122,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = GUIUtil::TextWidth(fm, FujicoinUnits::format(FujicoinUnits::FJC, FujicoinUnits::maxMoney(), false, FujicoinUnits::separatorAlways));
+            int w = GUIUtil::TextWidth(fm, BaricoinUnits::format(BaricoinUnits::BARI, BaricoinUnits::maxMoney(), false, BaricoinUnits::separatorAlways));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -148,12 +148,12 @@ public:
     }
 
 private:
-    int currentUnit{FujicoinUnits::FJC};
+    int currentUnit{BaricoinUnits::BARI};
     CAmount singleStep{CAmount(100000)}; // satoshis
     mutable QSize cachedMinimumSizeHint;
     bool m_allow_empty{true};
     CAmount m_min_amount{CAmount(0)};
-    CAmount m_max_amount{FujicoinUnits::maxMoney()};
+    CAmount m_max_amount{BaricoinUnits::maxMoney()};
 
     /**
      * Parse a string into a number of base monetary units and
@@ -163,10 +163,10 @@ private:
     CAmount parse(const QString &text, bool *valid_out=nullptr) const
     {
         CAmount val = 0;
-        bool valid = FujicoinUnits::parse(currentUnit, text, &val);
+        bool valid = BaricoinUnits::parse(currentUnit, text, &val);
         if(valid)
         {
-            if(val < 0 || val > FujicoinUnits::maxMoney())
+            if(val < 0 || val > BaricoinUnits::maxMoney())
                 valid = false;
         }
         if(valid_out)
@@ -213,9 +213,9 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include <qt/fujicoinamountfield.moc>
+#include <qt/baricoinamountfield.moc>
 
-FujicoinAmountField::FujicoinAmountField(QWidget *parent) :
+BaricoinAmountField::BaricoinAmountField(QWidget *parent) :
     QWidget(parent),
     amount(nullptr)
 {
@@ -227,7 +227,7 @@ FujicoinAmountField::FujicoinAmountField(QWidget *parent) :
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
-    unit->setModel(new FujicoinUnits(this));
+    unit->setModel(new BaricoinUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
     layout->setContentsMargins(0,0,0,0);
@@ -238,26 +238,26 @@ FujicoinAmountField::FujicoinAmountField(QWidget *parent) :
     setFocusProxy(amount);
 
     // If one if the widgets changes, the combined content changes as well
-    connect(amount, &AmountSpinBox::valueChanged, this, &FujicoinAmountField::valueChanged);
-    connect(unit, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &FujicoinAmountField::unitChanged);
+    connect(amount, &AmountSpinBox::valueChanged, this, &BaricoinAmountField::valueChanged);
+    connect(unit, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &BaricoinAmountField::unitChanged);
 
     // Set default based on configuration
     unitChanged(unit->currentIndex());
 }
 
-void FujicoinAmountField::clear()
+void BaricoinAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-void FujicoinAmountField::setEnabled(bool fEnabled)
+void BaricoinAmountField::setEnabled(bool fEnabled)
 {
     amount->setEnabled(fEnabled);
     unit->setEnabled(fEnabled);
 }
 
-bool FujicoinAmountField::validate()
+bool BaricoinAmountField::validate()
 {
     bool valid = false;
     value(&valid);
@@ -265,7 +265,7 @@ bool FujicoinAmountField::validate()
     return valid;
 }
 
-void FujicoinAmountField::setValid(bool valid)
+void BaricoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -273,7 +273,7 @@ void FujicoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-bool FujicoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool BaricoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -283,60 +283,60 @@ bool FujicoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *FujicoinAmountField::setupTabChain(QWidget *prev)
+QWidget *BaricoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     QWidget::setTabOrder(amount, unit);
     return unit;
 }
 
-CAmount FujicoinAmountField::value(bool *valid_out) const
+CAmount BaricoinAmountField::value(bool *valid_out) const
 {
     return amount->value(valid_out);
 }
 
-void FujicoinAmountField::setValue(const CAmount& value)
+void BaricoinAmountField::setValue(const CAmount& value)
 {
     amount->setValue(value);
 }
 
-void FujicoinAmountField::SetAllowEmpty(bool allow)
+void BaricoinAmountField::SetAllowEmpty(bool allow)
 {
     amount->SetAllowEmpty(allow);
 }
 
-void FujicoinAmountField::SetMinValue(const CAmount& value)
+void BaricoinAmountField::SetMinValue(const CAmount& value)
 {
     amount->SetMinValue(value);
 }
 
-void FujicoinAmountField::SetMaxValue(const CAmount& value)
+void BaricoinAmountField::SetMaxValue(const CAmount& value)
 {
     amount->SetMaxValue(value);
 }
 
-void FujicoinAmountField::setReadOnly(bool fReadOnly)
+void BaricoinAmountField::setReadOnly(bool fReadOnly)
 {
     amount->setReadOnly(fReadOnly);
 }
 
-void FujicoinAmountField::unitChanged(int idx)
+void BaricoinAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
 
     // Determine new unit ID
-    int newUnit = unit->itemData(idx, FujicoinUnits::UnitRole).toInt();
+    int newUnit = unit->itemData(idx, BaricoinUnits::UnitRole).toInt();
 
     amount->setDisplayUnit(newUnit);
 }
 
-void FujicoinAmountField::setDisplayUnit(int newUnit)
+void BaricoinAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }
 
-void FujicoinAmountField::setSingleStep(const CAmount& step)
+void BaricoinAmountField::setSingleStep(const CAmount& step)
 {
     amount->setSingleStep(step);
 }

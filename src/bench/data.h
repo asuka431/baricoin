@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_BENCH_DATA_H
-#define FUJICOIN_BENCH_DATA_H
+#ifndef BARICOIN_BENCH_DATA_H
+#define BARICOIN_BENCH_DATA_H
 
 #include <cstdint>
 #include <vector>
@@ -16,4 +16,4 @@ extern const std::vector<uint8_t> block413567;
 } // namespace data
 } // namespace benchmark
 
-#endif // FUJICOIN_BENCH_DATA_H
+#endif // BARICOIN_BENCH_DATA_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_TEST_UTIL_STR_H
-#define FUJICOIN_TEST_UTIL_STR_H
+#ifndef BARICOIN_TEST_UTIL_STR_H
+#define BARICOIN_TEST_UTIL_STR_H
 
 #include <string>
 
@@ -42,4 +42,4 @@ void ForEachNoDup(CharType (&string)[StringLength], CharType min_char, CharType 
     }
 }
 
-#endif // FUJICOIN_TEST_UTIL_STR_H
+#endif // BARICOIN_TEST_UTIL_STR_H

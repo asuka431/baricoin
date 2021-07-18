@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_INDIRECTMAP_H
-#define FUJICOIN_INDIRECTMAP_H
+#ifndef BARICOIN_INDIRECTMAP_H
+#define BARICOIN_INDIRECTMAP_H
 
 #include <map>
 
@@ -55,4 +55,4 @@ public:
     const_iterator cend() const     { return m.cend(); }
 };
 
-#endif // FUJICOIN_INDIRECTMAP_H
+#endif // BARICOIN_INDIRECTMAP_H

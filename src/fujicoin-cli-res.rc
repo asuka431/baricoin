@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Fujicoin"
-            VALUE "FileDescription",    "fujicoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
+            VALUE "CompanyName",        "Baricoin"
+            VALUE "FileDescription",    "baricoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "fujicoin-cli"
+            VALUE "InternalName",       "baricoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "fujicoin-cli.exe"
-            VALUE "ProductName",        "fujicoin-cli"
+            VALUE "OriginalFilename",   "baricoin-cli.exe"
+            VALUE "ProductName",        "baricoin-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

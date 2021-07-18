@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_SPANPARSING_H
-#define FUJICOIN_UTIL_SPANPARSING_H
+#ifndef BARICOIN_UTIL_SPANPARSING_H
+#define BARICOIN_UTIL_SPANPARSING_H
 
 #include <span.h>
 
@@ -47,4 +47,4 @@ std::vector<Span<const char>> Split(const Span<const char>& sp, char sep);
 
 } // namespace spanparsing
 
-#endif // FUJICOIN_UTIL_SPANPARSING_H
+#endif // BARICOIN_UTIL_SPANPARSING_H

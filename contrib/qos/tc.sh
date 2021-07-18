@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@ export LC_ALL=C
 IF="eth0"
 #limit of the network interface in question
 LINKCEIL="1gbit"
-#limit outbound Fujicoin protocol traffic to this rate
+#limit outbound Baricoin protocol traffic to this rate
 LIMIT="160kbit"
 #defines the IPv4 address space for which you wish to disable rate limiting
 LOCALNET_V4="192.168.0.0/16"

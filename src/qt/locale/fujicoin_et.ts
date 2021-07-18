@@ -66,8 +66,8 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Fujicoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Baricoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA FUJICOINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA BARICOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -216,7 +216,7 @@
     </message>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
@@ -286,8 +286,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Saada münte Fujicoini aadressile</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Saada münte Baricoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -322,12 +322,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Fujicoini aadressiga</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Baricoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Fujicoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Baricoini aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -346,16 +346,16 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja fujicoini: URId)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja baricoini: URId)</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Fujicoin network</source>
-        <translation><numerusform>%n aktiivne ühendus Fujicoini võrku</numerusform><numerusform>%n aktiivset ühendust Fujicoini võrku</numerusform></translation>
+        <source>%n active connection(s) to Baricoin network</source>
+        <translation><numerusform>%n aktiivne ühendus Baricoini võrku</numerusform><numerusform>%n aktiivset ühendust Baricoini võrku</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -456,8 +456,8 @@
         <translation>Rahakott on &lt;b&gt;krüpteeritud&lt;/b&gt; ning hetkel &lt;b&gt;suletud&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>Ilmnes kriitiline tõrge. Fujicoin suletakse turvakaalutluste tõttu.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>Ilmnes kriitiline tõrge. Baricoin suletakse turvakaalutluste tõttu.</translation>
     </message>
 </context>
 <context>
@@ -612,8 +612,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne Fujicoin aadress.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne Baricoin aadress.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -649,8 +649,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -713,8 +713,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Fujicoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Baricoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -812,7 +812,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -843,8 +843,8 @@
         <translation>Maksepäringu tõrge</translation>
     </message>
     <message>
-        <source>Cannot start fujicoin: click-to-pay handler</source>
-        <translation>Fujicoin ei käivitu: vajuta-maksa toiming</translation>
+        <source>Cannot start baricoin: click-to-pay handler</source>
+        <translation>Baricoin ei käivitu: vajuta-maksa toiming</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1331,8 +1331,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Hoiatus: Ebakorrektne Fujicoin aadress</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Hoiatus: Ebakorrektne Baricoin aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1404,8 +1404,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Fujicoin address to sign the message with</source>
-        <translation>Fujicoin aadress millega sõnum allkirjastada</translation>
+        <source>The Baricoin address to sign the message with</source>
+        <translation>Baricoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1436,8 +1436,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Allkirjasta sõnum Fujicoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Allkirjasta sõnum Baricoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1456,12 +1456,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Fujicoin address the message was signed with</source>
-        <translation>Fujicoin aadress millega sõnum on allkirjastatud</translation>
+        <source>The Baricoin address the message was signed with</source>
+        <translation>Baricoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Fujicoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Baricoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1887,7 +1887,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>See on test-versioon - kasutamine omal riisikol - ära kasuta mining'uks ega kaupmeeste programmides</translation>

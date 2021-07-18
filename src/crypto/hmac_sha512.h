@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CRYPTO_HMAC_SHA512_H
-#define FUJICOIN_CRYPTO_HMAC_SHA512_H
+#ifndef BARICOIN_CRYPTO_HMAC_SHA512_H
+#define BARICOIN_CRYPTO_HMAC_SHA512_H
 
 #include <crypto/sha512.h>
 
@@ -29,4 +29,4 @@ public:
     void Finalize(unsigned char hash[OUTPUT_SIZE]);
 };
 
-#endif // FUJICOIN_CRYPTO_HMAC_SHA512_H
+#endif // BARICOIN_CRYPTO_HMAC_SHA512_H

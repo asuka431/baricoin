@@ -2,10 +2,10 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/fujicoin-qt
-EXTRA_LIBRARIES += qt/libfujicoinqt.a
+bin_PROGRAMS += qt/baricoin-qt
+EXTRA_LIBRARIES += qt/libbaricoinqt.a
 
-# fujicoin qt core #
+# baricoin qt core #
 include Makefile.qt_locale.include
 
 QT_FORMS_UI = \
@@ -34,11 +34,11 @@ QT_MOC_CPP = \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_createwalletdialog.cpp \
   qt/moc_bantablemodel.cpp \
-  qt/moc_fujicoinaddressvalidator.cpp \
-  qt/moc_fujicoinamountfield.cpp \
-  qt/moc_fujicoin.cpp \
-  qt/moc_fujicoingui.cpp \
-  qt/moc_fujicoinunits.cpp \
+  qt/moc_baricoinaddressvalidator.cpp \
+  qt/moc_baricoinamountfield.cpp \
+  qt/moc_baricoin.cpp \
+  qt/moc_baricoingui.cpp \
+  qt/moc_baricoinunits.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
   qt/moc_coincontroltreewidget.cpp \
@@ -79,32 +79,32 @@ QT_MOC_CPP = \
   qt/moc_walletmodel.cpp \
   qt/moc_walletview.cpp
 
-FUJICOIN_MM = \
+BARICOIN_MM = \
   qt/macdockiconhandler.mm \
   qt/macnotificationhandler.mm \
   qt/macos_appnap.mm
 
 QT_MOC = \
-  qt/fujicoinamountfield.moc \
+  qt/baricoinamountfield.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_fujicoin.cpp
-QT_QRC = qt/fujicoin.qrc
-QT_QRC_LOCALE_CPP = qt/qrc_fujicoin_locale.cpp
-QT_QRC_LOCALE = qt/fujicoin_locale.qrc
+QT_QRC_CPP = qt/qrc_baricoin.cpp
+QT_QRC = qt/baricoin.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_baricoin_locale.cpp
+QT_QRC_LOCALE = qt/baricoin_locale.qrc
 
-FUJICOIN_QT_H = \
+BARICOIN_QT_H = \
   qt/addressbookpage.h \
   qt/addresstablemodel.h \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
-  qt/fujicoinaddressvalidator.h \
-  qt/fujicoinamountfield.h \
-  qt/fujicoin.h \
-  qt/fujicoingui.h \
-  qt/fujicoinunits.h \
+  qt/baricoinaddressvalidator.h \
+  qt/baricoinamountfield.h \
+  qt/baricoin.h \
+  qt/baricoingui.h \
+  qt/baricoinunits.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
   qt/coincontroltreewidget.h \
@@ -157,9 +157,9 @@ FUJICOIN_QT_H = \
 RES_ICONS = \
   qt/res/icons/add.png \
   qt/res/icons/address-book.png \
-  qt/res/icons/fujicoin.ico \
-  qt/res/icons/fujicoin_testnet.ico \
-  qt/res/icons/fujicoin.png \
+  qt/res/icons/baricoin.ico \
+  qt/res/icons/baricoin_testnet.ico \
+  qt/res/icons/baricoin.png \
   qt/res/icons/chevron.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
@@ -202,13 +202,13 @@ RES_ICONS = \
   qt/res/icons/tx_mined.png \
   qt/res/icons/warning.png
 
-FUJICOIN_QT_BASE_CPP = \
+BARICOIN_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
-  qt/fujicoin.cpp \
-  qt/fujicoinaddressvalidator.cpp \
-  qt/fujicoinamountfield.cpp \
-  qt/fujicoingui.cpp \
-  qt/fujicoinunits.cpp \
+  qt/baricoin.cpp \
+  qt/baricoinaddressvalidator.cpp \
+  qt/baricoinamountfield.cpp \
+  qt/baricoingui.cpp \
+  qt/baricoinunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
   qt/guiutil.cpp \
@@ -227,9 +227,9 @@ FUJICOIN_QT_BASE_CPP = \
   qt/trafficgraphwidget.cpp \
   qt/utilitydialog.cpp
 
-FUJICOIN_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
+BARICOIN_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
 
-FUJICOIN_QT_WALLET_CPP = \
+BARICOIN_QT_WALLET_CPP = \
   qt/addressbookpage.cpp \
   qt/addresstablemodel.cpp \
   qt/askpassphrasedialog.cpp \
@@ -259,34 +259,34 @@ FUJICOIN_QT_WALLET_CPP = \
   qt/walletmodeltransaction.cpp \
   qt/walletview.cpp
 
-FUJICOIN_QT_CPP = $(FUJICOIN_QT_BASE_CPP)
+BARICOIN_QT_CPP = $(BARICOIN_QT_BASE_CPP)
 if TARGET_WINDOWS
-FUJICOIN_QT_CPP += $(FUJICOIN_QT_WINDOWS_CPP)
+BARICOIN_QT_CPP += $(BARICOIN_QT_WINDOWS_CPP)
 endif
 if ENABLE_WALLET
-FUJICOIN_QT_CPP += $(FUJICOIN_QT_WALLET_CPP)
+BARICOIN_QT_CPP += $(BARICOIN_QT_WALLET_CPP)
 endif # ENABLE_WALLET
 
 RES_IMAGES =
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
-FUJICOIN_RC = qt/res/fujicoin-qt-res.rc
+BARICOIN_RC = qt/res/baricoin-qt-res.rc
 
-FUJICOIN_QT_INCLUDES = -DQT_NO_KEYWORDS
+BARICOIN_QT_INCLUDES = -DQT_NO_KEYWORDS
 
-qt_libfujicoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(FUJICOIN_INCLUDES) $(FUJICOIN_QT_INCLUDES) \
+qt_libbaricoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BARICOIN_INCLUDES) $(BARICOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(QR_CFLAGS)
-qt_libfujicoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-qt_libfujicoinqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+qt_libbaricoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libbaricoinqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_libfujicoinqt_a_SOURCES = $(FUJICOIN_QT_CPP) $(FUJICOIN_QT_H) $(QT_FORMS_UI) \
+qt_libbaricoinqt_a_SOURCES = $(BARICOIN_QT_CPP) $(BARICOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 if TARGET_DARWIN
-  qt_libfujicoinqt_a_SOURCES += $(FUJICOIN_MM)
+  qt_libbaricoinqt_a_SOURCES += $(BARICOIN_MM)
 endif
 
-nodist_qt_libfujicoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
+nodist_qt_libbaricoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -294,63 +294,63 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libfujicoinqt_a_OBJECTS) $(qt_fujicoin_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbaricoinqt_a_OBJECTS) $(qt_baricoin_qt_OBJECTS) : | $(QT_MOC)
 
-# fujicoin-qt binary #
-qt_fujicoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(FUJICOIN_INCLUDES) $(FUJICOIN_QT_INCLUDES) \
+# baricoin-qt binary #
+qt_baricoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BARICOIN_INCLUDES) $(BARICOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QR_CFLAGS)
-qt_fujicoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_baricoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_fujicoin_qt_SOURCES = qt/main.cpp
+qt_baricoin_qt_SOURCES = qt/main.cpp
 if TARGET_WINDOWS
-  qt_fujicoin_qt_SOURCES += $(FUJICOIN_RC)
+  qt_baricoin_qt_SOURCES += $(BARICOIN_RC)
 endif
-qt_fujicoin_qt_LDADD = qt/libfujicoinqt.a $(LIBFUJICOIN_SERVER)
+qt_baricoin_qt_LDADD = qt/libbaricoinqt.a $(LIBBARICOIN_SERVER)
 if ENABLE_WALLET
-qt_fujicoin_qt_LDADD += $(LIBFUJICOIN_UTIL) $(LIBFUJICOIN_WALLET)
+qt_baricoin_qt_LDADD += $(LIBBARICOIN_UTIL) $(LIBBARICOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_fujicoin_qt_LDADD += $(LIBFUJICOIN_ZMQ) $(ZMQ_LIBS)
+qt_baricoin_qt_LDADD += $(LIBBARICOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_fujicoin_qt_LDADD += $(LIBFUJICOIN_CLI) $(LIBFUJICOIN_COMMON) $(LIBFUJICOIN_UTIL) $(LIBFUJICOIN_CONSENSUS) $(LIBFUJICOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+qt_baricoin_qt_LDADD += $(LIBBARICOIN_CLI) $(LIBBARICOIN_COMMON) $(LIBBARICOIN_UTIL) $(LIBBARICOIN_CONSENSUS) $(LIBBARICOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(BDB_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_fujicoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_fujicoin_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+qt_baricoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_baricoin_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/fujicoinstrings.cpp: FORCE
+$(srcdir)/qt/baricoinstrings.cpp: FORCE
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
-	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" $(PYTHON) ../share/qt/extract_strings_qt.py $(libfujicoin_server_a_SOURCES) $(libfujicoin_wallet_a_SOURCES) $(libfujicoin_common_a_SOURCES) $(libfujicoin_zmq_a_SOURCES) $(libfujicoin_consensus_a_SOURCES) $(libfujicoin_util_a_SOURCES)
+	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" $(PYTHON) ../share/qt/extract_strings_qt.py $(libbaricoin_server_a_SOURCES) $(libbaricoin_wallet_a_SOURCES) $(libbaricoin_common_a_SOURCES) $(libbaricoin_zmq_a_SOURCES) $(libbaricoin_consensus_a_SOURCES) $(libbaricoin_util_a_SOURCES)
 
-translate: $(srcdir)/qt/fujicoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(FUJICOIN_QT_BASE_CPP) qt/fujicoin.cpp $(FUJICOIN_QT_WINDOWS_CPP) $(FUJICOIN_QT_WALLET_CPP) $(FUJICOIN_QT_H) $(FUJICOIN_MM)
+translate: $(srcdir)/qt/baricoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BARICOIN_QT_BASE_CPP) qt/baricoin.cpp $(BARICOIN_QT_WINDOWS_CPP) $(BARICOIN_QT_WALLET_CPP) $(BARICOIN_QT_H) $(BARICOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/fujicoin_en.ts
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/baricoin_en.ts
 
 $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	@test -f $(RCC)
 	@cp -f $< $(@D)/temp_$(<F)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name fujicoin_locale $(@D)/temp_$(<F) | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name baricoin_locale $(@D)/temp_$(<F) | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 	@rm $(@D)/temp_$(<F)
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
 	@test -f $(RCC)
-	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name fujicoin $< | \
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name baricoin $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libfujicoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_fujicoin_locale.qrc
+CLEAN_QT = $(nodist_qt_libbaricoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_baricoin_locale.qrc
 
 CLEANFILES += $(CLEAN_QT)
 
-fujicoin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libfujicoinqt_a_OBJECTS) $(qt_fujicoin_qt_OBJECTS) qt/fujicoin-qt$(EXEEXT) $(LIBFUJICOINQT)
+baricoin_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbaricoinqt_a_OBJECTS) $(qt_baricoin_qt_OBJECTS) qt/baricoin-qt$(EXEEXT) $(LIBBARICOINQT)
 
-fujicoin_qt : qt/fujicoin-qt$(EXEEXT)
+baricoin_qt : qt/baricoin-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

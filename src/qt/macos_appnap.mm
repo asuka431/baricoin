@@ -30,7 +30,7 @@ public:
                 id processInfo = [NSProcessInfo processInfo];
                 if ([processInfo respondsToSelector:@selector(beginActivityWithOptions:reason:)])
                 {
-                    activityId = [processInfo beginActivityWithOptions: activityOptions reason:@"Temporarily disable App Nap for fujicoin-qt."];
+                    activityId = [processInfo beginActivityWithOptions: activityOptions reason:@"Temporarily disable App Nap for baricoin-qt."];
                     [activityId retain];
                 }
             }

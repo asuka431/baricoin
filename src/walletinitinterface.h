@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLETINITINTERFACE_H
-#define FUJICOIN_WALLETINITINTERFACE_H
+#ifndef BARICOIN_WALLETINITINTERFACE_H
+#define BARICOIN_WALLETINITINTERFACE_H
 
 struct NodeContext;
 
@@ -23,4 +23,4 @@ public:
 
 extern const WalletInitInterface& g_wallet_init_interface;
 
-#endif // FUJICOIN_WALLETINITINTERFACE_H
+#endif // BARICOIN_WALLETINITINTERFACE_H

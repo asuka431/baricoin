@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -98,7 +98,7 @@ pushd "$TARGET" || exit 1
           exit 1
         fi
 
-        git clone https://github.com/fujicoin/fujicoin "$tag"
+        git clone https://github.com/baricoin/baricoin "$tag"
         pushd "$tag" || exit 1
         {
           git checkout "$tag"
@@ -120,9 +120,9 @@ pushd "$TARGET" || exit 1
           make
           # Move binaries, so they're in the same place as in the release download:
           mkdir bin
-          mv src/fujicoind src/fujicoin-cli src/fujicoin-tx bin
+          mv src/baricoind src/baricoin-cli src/baricoin-tx bin
           if [ "$FUNCTIONAL_TESTS" -eq "0" ]; then
-            mv src/qt/fujicoin-qt bin
+            mv src/qt/baricoin-qt bin
           fi
         }
         popd || exit 1
@@ -133,9 +133,9 @@ pushd "$TARGET" || exit 1
       else
         mkdir "$tag"
         if [[ "$tag" =~ v(.*)(rc[0-9]+)$ ]]; then
-            BIN_PATH="bin/fujicoin-core-${BASH_REMATCH[1]}/test.${BASH_REMATCH[2]}"
+            BIN_PATH="bin/baricoin-core-${BASH_REMATCH[1]}/test.${BASH_REMATCH[2]}"
         else
-            BIN_PATH="bin/fujicoin-core-${tag:1}"
+            BIN_PATH="bin/baricoin-core-${tag:1}"
         fi
         URL="https://bitcoin.org/$BIN_PATH/bitcoin-${tag:1}-$PLATFORM.tar.gz"
         echo "Fetching: $URL"
@@ -143,8 +143,8 @@ pushd "$TARGET" || exit 1
             echo "Download failed."
             exit 1
         fi
-        tar -zxf "fujicoin-${tag:1}-$PLATFORM.tar.gz" -C "$tag" --strip-components=1 "fujicoin-${tag:1}"
-        rm "fujicoin-${tag:1}-$PLATFORM.tar.gz"
+        tar -zxf "baricoin-${tag:1}-$PLATFORM.tar.gz" -C "$tag" --strip-components=1 "baricoin-${tag:1}"
+        rm "baricoin-${tag:1}-$PLATFORM.tar.gz"
       fi
     fi
   done

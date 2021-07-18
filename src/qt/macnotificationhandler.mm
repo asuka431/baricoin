@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.fujicoinfoundation.Fujicoin-Qt";
+        return @"org.baricoinfoundation.Baricoin-Qt";
     } else {
         return [self __bundleIdentifier];
     }

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_COINS_H
-#define FUJICOIN_COINS_H
+#ifndef BARICOIN_COINS_H
+#define BARICOIN_COINS_H
 
 #include <primitives/transaction.h>
 #include <compressor.h>
@@ -290,7 +290,7 @@ public:
     size_t DynamicMemoryUsage() const;
 
     /**
-     * Amount of fujicoins coming in to a transaction
+     * Amount of baricoins coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
@@ -327,7 +327,7 @@ const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from the
  * chainstate, while keeping user interface out of the common library, which is shared
- * between fujicoind, and fujicoin-qt and non-server tools.
+ * between baricoind, and baricoin-qt and non-server tools.
  *
  * Writes do not need similar protection, as failure to write is handled by the caller.
 */
@@ -348,4 +348,4 @@ private:
 
 };
 
-#endif // FUJICOIN_COINS_H
+#endif // BARICOIN_COINS_H

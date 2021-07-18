@@ -48,7 +48,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>&amp;Send</source>
         <translation>&amp;ناردن</translation>
@@ -449,6 +449,6 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

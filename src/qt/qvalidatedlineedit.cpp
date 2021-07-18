@@ -4,7 +4,7 @@
 
 #include <qt/qvalidatedlineedit.h>
 
-#include <qt/fujicoinaddressvalidator.h>
+#include <qt/baricoinaddressvalidator.h>
 #include <qt/guiconstants.h>
 
 QValidatedLineEdit::QValidatedLineEdit(QWidget *parent) :

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_LOGGING_H
-#define FUJICOIN_LOGGING_H
+#ifndef BARICOIN_LOGGING_H
+#define BARICOIN_LOGGING_H
 
 #include <fs.h>
 #include <tinyformat.h>
@@ -183,4 +183,4 @@ static inline void LogPrintf(const char* fmt, const Args&... args)
         }                                    \
     } while (0)
 
-#endif // FUJICOIN_LOGGING_H
+#endif // BARICOIN_LOGGING_H

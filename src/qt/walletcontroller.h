@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_WALLETCONTROLLER_H
-#define FUJICOIN_QT_WALLETCONTROLLER_H
+#ifndef BARICOIN_QT_WALLETCONTROLLER_H
+#define BARICOIN_QT_WALLETCONTROLLER_H
 
 #include <qt/sendcoinsrecipient.h>
 #include <support/allocators/secure.h>
@@ -146,4 +146,4 @@ private:
     void finish();
 };
 
-#endif // FUJICOIN_QT_WALLETCONTROLLER_H
+#endif // BARICOIN_QT_WALLETCONTROLLER_H

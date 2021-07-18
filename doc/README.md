@@ -1,41 +1,41 @@
-Fujicoin Core
+Baricoin Core
 =============
 
 Setup
 ---------------------
-Fujicoin Core is the original Fujicoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Fujicoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Baricoin Core is the original Baricoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Baricoin transactions, which requires a few hundred gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Fujicoin Core, visit [fujicoincore.org](https://bitcoincore.org/en/download/).
+To download Baricoin Core, visit [baricoincore.org](https://bitcoincore.org/en/download/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Fujicoin Core on your native platform.
+The following are some helpful notes on how to run Baricoin Core on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/fujicoin-qt` (GUI) or
-- `bin/fujicoind` (headless)
+- `bin/baricoin-qt` (GUI) or
+- `bin/baricoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run fujicoin-qt.exe.
+Unpack the files into a directory, and then run baricoin-qt.exe.
 
 ### macOS
 
-Drag Fujicoin Core to your applications folder, and then run Fujicoin Core.
+Drag Baricoin Core to your applications folder, and then run Baricoin Core.
 
 ### Need Help?
 
-* See the documentation at the [Fujicoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
+* See the documentation at the [Baricoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
 for help and more information.
-* Ask for help on [#fujicoin](https://webchat.freenode.net/#bitcoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#bitcoin).
-* Ask for help on the [FujicoinTalk](https://bitcointalk.org/) forums, in the [Technical Support board](https://bitcointalk.org/index.php?board=4.0).
+* Ask for help on [#baricoin](https://webchat.freenode.net/#bitcoin) on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#bitcoin).
+* Ask for help on the [BaricoinTalk](https://bitcointalk.org/) forums, in the [Technical Support board](https://bitcointalk.org/index.php?board=4.0).
 
 Building
 ---------------------
-The following are developer notes on how to build Fujicoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Baricoin Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -48,7 +48,7 @@ The following are developer notes on how to build Fujicoin Core on your native p
 
 Development
 ---------------------
-The Fujicoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Baricoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
@@ -65,13 +65,13 @@ The Fujicoin repo's [root README](/README.md) contains relevant information on t
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [FujicoinTalk](https://bitcointalk.org/) forums, in the [Development & Technical Discussion board](https://bitcointalk.org/index.php?board=6.0).
-* Discuss project-specific development on #fujicoin-core-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#bitcoin-core-dev).
-* Discuss general Fujicoin development on #fujicoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#bitcoin-dev).
+* Discuss on the [BaricoinTalk](https://bitcointalk.org/) forums, in the [Development & Technical Discussion board](https://bitcointalk.org/index.php?board=6.0).
+* Discuss project-specific development on #baricoin-core-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#bitcoin-core-dev).
+* Discuss general Baricoin development on #baricoin-dev on Freenode. If you don't have an IRC client, use [webchat here](https://webchat.freenode.net/#bitcoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [fujicoin.conf Configuration File](fujicoin-conf.md)
+- [baricoin.conf Configuration File](baricoin-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [Reduce Memory](reduce-memory.md)

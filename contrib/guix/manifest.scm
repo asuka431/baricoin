@@ -88,14 +88,14 @@ chain for " target " development."))
       (home-page (package-home-page xgcc))
       (license (package-license xgcc)))))
 
-(define* (make-fujicoin-cross-toolchain target
+(define* (make-baricoin-cross-toolchain target
                                   #:key
                                   (base-gcc-for-libc gcc-5)
                                   (base-kernel-headers linux-libre-headers-4.19)
                                   (base-libc glibc-2.27)
                                   (base-gcc (make-gcc-rpath-link gcc-9)))
   "Convenience wrapper around MAKE-CROSS-TOOLCHAIN with default values
-desirable for building Fujicoin Core release binaries."
+desirable for building Baricoin Core release binaries."
   (make-cross-toolchain target
                    base-gcc-for-libc
                    base-kernel-headers
@@ -135,12 +135,12 @@ desirable for building Fujicoin Core release binaries."
        ;; Native gcc 9 toolchain targeting glibc 2.27
        (make-gcc-toolchain gcc-9 glibc-2.27)
        ;; Cross gcc 9 toolchains targeting glibc 2.27
-       (make-fujicoin-cross-toolchain "i686-linux-gnu")
-       (make-fujicoin-cross-toolchain "x86_64-linux-gnu")
-       (make-fujicoin-cross-toolchain "aarch64-linux-gnu")
-       (make-fujicoin-cross-toolchain "arm-linux-gnueabihf")
+       (make-baricoin-cross-toolchain "i686-linux-gnu")
+       (make-baricoin-cross-toolchain "x86_64-linux-gnu")
+       (make-baricoin-cross-toolchain "aarch64-linux-gnu")
+       (make-baricoin-cross-toolchain "arm-linux-gnueabihf")
        ;; The glibc 2.27 for riscv64 needs gcc 7 to successfully build (see:
        ;; https://www.gnu.org/software/gcc/gcc-7/changes.html#riscv). The final
        ;; toolchain is still a gcc 9 toolchain targeting glibc 2.27.
-       (make-fujicoin-cross-toolchain "riscv64-linux-gnu"
+       (make-baricoin-cross-toolchain "riscv64-linux-gnu"
                                      #:base-gcc-for-libc gcc-7)))

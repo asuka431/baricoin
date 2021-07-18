@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_MEMUSAGE_H
-#define FUJICOIN_MEMUSAGE_H
+#ifndef BARICOIN_MEMUSAGE_H
+#define BARICOIN_MEMUSAGE_H
 
 #include <indirectmap.h>
 #include <prevector.h>
@@ -169,4 +169,4 @@ static inline size_t DynamicUsage(const std::unordered_map<X, Y, Z>& m)
 
 }
 
-#endif // FUJICOIN_MEMUSAGE_H
+#endif // BARICOIN_MEMUSAGE_H

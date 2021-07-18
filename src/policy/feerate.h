@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_POLICY_FEERATE_H
-#define FUJICOIN_POLICY_FEERATE_H
+#ifndef BARICOIN_POLICY_FEERATE_H
+#define BARICOIN_POLICY_FEERATE_H
 
 #include <amount.h>
 #include <serialize.h>
@@ -56,4 +56,4 @@ public:
     }
 };
 
-#endif //  FUJICOIN_POLICY_FEERATE_H
+#endif //  BARICOIN_POLICY_FEERATE_H

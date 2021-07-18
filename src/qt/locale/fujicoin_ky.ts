@@ -28,7 +28,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -103,8 +103,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -337,6 +337,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

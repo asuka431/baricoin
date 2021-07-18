@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_TEST_UTIL_MINING_H
-#define FUJICOIN_TEST_UTIL_MINING_H
+#ifndef BARICOIN_TEST_UTIL_MINING_H
+#define BARICOIN_TEST_UTIL_MINING_H
 
 #include <memory>
 #include <string>
@@ -22,4 +22,4 @@ std::shared_ptr<CBlock> PrepareBlock(const NodeContext&, const CScript& coinbase
 /** RPC-like helper function, returns the generated coin */
 CTxIn generatetoaddress(const NodeContext&, const std::string& address);
 
-#endif // FUJICOIN_TEST_UTIL_MINING_H
+#endif // BARICOIN_TEST_UTIL_MINING_H

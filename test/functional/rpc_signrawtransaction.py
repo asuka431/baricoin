@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2019 The Fujicoin Core developers
+# Copyright (c) 2015-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test transaction signing using the signrawtransaction* RPCs."""
 
 from test_framework.address import check_script, script_to_p2sh
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error, find_vout_for_address, hex_str_to_bytes
 from test_framework.messages import sha256
 from test_framework.script import CScript, OP_0, OP_CHECKSIG
 
 from decimal import Decimal
 
-class SignRawTransactionsTest(FujicoinTestFramework):
+class SignRawTransactionsTest(BaricoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

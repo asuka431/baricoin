@@ -2,10 +2,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_TRANSACTIONTABLEMODEL_H
-#define FUJICOIN_QT_TRANSACTIONTABLEMODEL_H
+#ifndef BARICOIN_QT_TRANSACTIONTABLEMODEL_H
+#define BARICOIN_QT_TRANSACTIONTABLEMODEL_H
 
-#include <qt/fujicoinunits.h>
+#include <qt/baricoinunits.h>
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -101,7 +101,7 @@ private:
     QString formatTxDate(const TransactionRecord *wtx) const;
     QString formatTxType(const TransactionRecord *wtx) const;
     QString formatTxToAddress(const TransactionRecord *wtx, bool tooltip) const;
-    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true, FujicoinUnits::SeparatorStyle separators=FujicoinUnits::separatorStandard) const;
+    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true, BaricoinUnits::SeparatorStyle separators=BaricoinUnits::separatorStandard) const;
     QString formatTooltip(const TransactionRecord *rec) const;
     QVariant txStatusDecoration(const TransactionRecord *wtx) const;
     QVariant txWatchonlyDecoration(const TransactionRecord *wtx) const;
@@ -120,4 +120,4 @@ public Q_SLOTS:
     friend class TransactionTablePriv;
 };
 
-#endif // FUJICOIN_QT_TRANSACTIONTABLEMODEL_H
+#endif // BARICOIN_QT_TRANSACTIONTABLEMODEL_H

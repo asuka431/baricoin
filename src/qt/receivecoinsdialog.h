@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_RECEIVECOINSDIALOG_H
-#define FUJICOIN_QT_RECEIVECOINSDIALOG_H
+#ifndef BARICOIN_QT_RECEIVECOINSDIALOG_H
+#define BARICOIN_QT_RECEIVECOINSDIALOG_H
 
 #include <qt/guiutil.h>
 
@@ -26,7 +26,7 @@ QT_BEGIN_NAMESPACE
 class QModelIndex;
 QT_END_NAMESPACE
 
-/** Dialog for requesting payment of fujicoins */
+/** Dialog for requesting payment of baricoins */
 class ReceiveCoinsDialog : public QDialog
 {
     Q_OBJECT
@@ -77,4 +77,4 @@ private Q_SLOTS:
     void copyAmount();
 };
 
-#endif // FUJICOIN_QT_RECEIVECOINSDIALOG_H
+#endif // BARICOIN_QT_RECEIVECOINSDIALOG_H

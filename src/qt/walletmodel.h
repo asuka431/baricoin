@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_WALLETMODEL_H
-#define FUJICOIN_QT_WALLETMODEL_H
+#ifndef BARICOIN_QT_WALLETMODEL_H
+#define BARICOIN_QT_WALLETMODEL_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <key.h>
@@ -46,7 +46,7 @@ QT_BEGIN_NAMESPACE
 class QTimer;
 QT_END_NAMESPACE
 
-/** Interface to Fujicoin wallet from Qt view code. */
+/** Interface to Baricoin wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -227,4 +227,4 @@ public Q_SLOTS:
     void pollBalanceChanged();
 };
 
-#endif // FUJICOIN_QT_WALLETMODEL_H
+#endif // BARICOIN_QT_WALLETMODEL_H

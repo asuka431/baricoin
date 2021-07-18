@@ -2,27 +2,27 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_TEST_APPTESTS_H
-#define FUJICOIN_QT_TEST_APPTESTS_H
+#ifndef BARICOIN_QT_TEST_APPTESTS_H
+#define BARICOIN_QT_TEST_APPTESTS_H
 
 #include <QObject>
 #include <set>
 #include <string>
 #include <utility>
 
-class FujicoinApplication;
-class FujicoinGUI;
+class BaricoinApplication;
+class BaricoinGUI;
 class RPCConsole;
 
 class AppTests : public QObject
 {
     Q_OBJECT
 public:
-    explicit AppTests(FujicoinApplication& app) : m_app(app) {}
+    explicit AppTests(BaricoinApplication& app) : m_app(app) {}
 
 private Q_SLOTS:
     void appTests();
-    void guiTests(FujicoinGUI* window);
+    void guiTests(BaricoinGUI* window);
     void consoleTests(RPCConsole* console);
 
 private:
@@ -37,8 +37,8 @@ private:
         ~HandleCallback();
     };
 
-    //! Fujicoin application.
-    FujicoinApplication& m_app;
+    //! Baricoin application.
+    BaricoinApplication& m_app;
 
     //! Set of pending callback names. Used to track expected callbacks and shut
     //! down the app after the last callback has been handled and all tests have
@@ -47,4 +47,4 @@ private:
     std::multiset<std::string> m_callbacks;
 };
 
-#endif // FUJICOIN_QT_TEST_APPTESTS_H
+#endif // BARICOIN_QT_TEST_APPTESTS_H

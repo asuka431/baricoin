@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_SCRIPT_INTERPRETER_H
-#define FUJICOIN_SCRIPT_INTERPRETER_H
+#ifndef BARICOIN_SCRIPT_INTERPRETER_H
+#define BARICOIN_SCRIPT_INTERPRETER_H
 
 #include <script/script_error.h>
 #include <primitives/transaction.h>
@@ -191,4 +191,4 @@ size_t CountWitnessSigOps(const CScript& scriptSig, const CScript& scriptPubKey,
 
 int FindAndDelete(CScript& script, const CScript& b);
 
-#endif // FUJICOIN_SCRIPT_INTERPRETER_H
+#endif // BARICOIN_SCRIPT_INTERPRETER_H

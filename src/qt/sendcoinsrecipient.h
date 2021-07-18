@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_SENDCOINSRECIPIENT_H
-#define FUJICOIN_QT_SENDCOINSRECIPIENT_H
+#ifndef BARICOIN_QT_SENDCOINSRECIPIENT_H
+#define BARICOIN_QT_SENDCOINSRECIPIENT_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <amount.h>
@@ -71,4 +71,4 @@ public:
     }
 };
 
-#endif // FUJICOIN_QT_SENDCOINSRECIPIENT_H
+#endif // BARICOIN_QT_SENDCOINSRECIPIENT_H

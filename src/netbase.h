@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NETBASE_H
-#define FUJICOIN_NETBASE_H
+#ifndef BARICOIN_NETBASE_H
+#define BARICOIN_NETBASE_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <compat.h>
@@ -68,4 +68,4 @@ bool SetSocketNoDelay(const SOCKET& hSocket);
 struct timeval MillisToTimeval(int64_t nTimeout);
 void InterruptSocks5(bool interrupt);
 
-#endif // FUJICOIN_NETBASE_H
+#endif // BARICOIN_NETBASE_H

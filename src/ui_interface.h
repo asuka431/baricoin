@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UI_INTERFACE_H
-#define FUJICOIN_UI_INTERFACE_H
+#ifndef BARICOIN_UI_INTERFACE_H
+#define BARICOIN_UI_INTERFACE_H
 
 #include <functional>
 #include <memory>
@@ -125,4 +125,4 @@ bool InitError(const std::string& str);
 
 extern CClientUIInterface uiInterface;
 
-#endif // FUJICOIN_UI_INTERFACE_H
+#endif // BARICOIN_UI_INTERFACE_H

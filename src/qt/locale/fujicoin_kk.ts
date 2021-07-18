@@ -48,7 +48,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -167,7 +167,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Fujicoin</source>
+        <source>Baricoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -337,7 +337,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Transaction amount too small</source>
         <translation>Транзакция өте кішкентай</translation>

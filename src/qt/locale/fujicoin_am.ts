@@ -62,7 +62,7 @@
         <translation>የመቀበያ አድራሻዎች</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>እነኚ የቢትኮይን ክፍያ የመላኪያ አድራሻዎችዎ ናቸው:: ገንዘብ/ኮይኖች ከመላክዎ በፊት መጠኑን እና የመቀበያ አድራሻውን ሁልጊዜ ያረጋግጡ::</translation>
     </message>
     <message>
@@ -156,7 +156,7 @@
         <translation>የቢትኮይን ቦርሳዎን ማመስጠር ያረጋግጡ</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
         <translation>ማስጠንቀቂያ: የቢትኮይን ቦርሳዎን አመስጥረው የይለፍ-ሐረግዎን ካጡት&lt;b&gt;ቢትኮይኖቾን በሙሉ ያጣሉ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -216,7 +216,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>ምልክትና መልእክት...</translation>
@@ -429,6 +429,6 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

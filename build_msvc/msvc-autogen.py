@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016-2019 The Fujicoin Core developers
+# Copyright (c) 2016-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,15 +12,15 @@ SOURCE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'
 DEFAULT_PLATFORM_TOOLSET = R'v141'
 
 libs = [
-    'libfujicoin_cli',
-    'libfujicoin_common',
-    'libfujicoin_crypto',
-    'libfujicoin_server',
-    'libfujicoin_util',
-    'libfujicoin_wallet_tool',
-    'libfujicoin_wallet',
-    'libfujicoin_zmq',
-    'bench_fujicoin',
+    'libbaricoin_cli',
+    'libbaricoin_common',
+    'libbaricoin_crypto',
+    'libbaricoin_server',
+    'libbaricoin_util',
+    'libbaricoin_wallet_tool',
+    'libbaricoin_wallet',
+    'libbaricoin_zmq',
+    'bench_baricoin',
     'libtest_util',
 ]
 
@@ -58,7 +58,7 @@ def set_common_properties(toolset):
         wfile.write(s)
 
 def main():
-    parser = argparse.ArgumentParser(description='Fujicoin-core msbuild configuration initialiser.')
+    parser = argparse.ArgumentParser(description='Baricoin-core msbuild configuration initialiser.')
     parser.add_argument('-toolset', nargs='?',help='Optionally sets the msbuild platform toolset, e.g. v142 for Visual Studio 2019.'
          ' default is %s.'%DEFAULT_PLATFORM_TOOLSET)
     args = parser.parse_args()
@@ -79,7 +79,7 @@ def main():
             with open(vcxproj_filename, 'w', encoding='utf-8') as vcxproj_file:
                 vcxproj_file.write(vcxproj_in_file.read().replace(
                     '@SOURCE_FILES@\n', content))
-    copyfile(os.path.join(SOURCE_DIR,'../build_msvc/fujicoin_config.h'), os.path.join(SOURCE_DIR, 'config/fujicoin-config.h'))
+    copyfile(os.path.join(SOURCE_DIR,'../build_msvc/baricoin_config.h'), os.path.join(SOURCE_DIR, 'config/baricoin-config.h'))
     copyfile(os.path.join(SOURCE_DIR,'../build_msvc/libsecp256k1_config.h'), os.path.join(SOURCE_DIR, 'secp256k1/src/libsecp256k1-config.h'))
 
 if __name__ == '__main__':

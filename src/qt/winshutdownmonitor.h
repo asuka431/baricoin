@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_WINSHUTDOWNMONITOR_H
-#define FUJICOIN_QT_WINSHUTDOWNMONITOR_H
+#ifndef BARICOIN_QT_WINSHUTDOWNMONITOR_H
+#define BARICOIN_QT_WINSHUTDOWNMONITOR_H
 
 #ifdef WIN32
 #include <QByteArray>
@@ -24,4 +24,4 @@ public:
 };
 #endif
 
-#endif // FUJICOIN_QT_WINSHUTDOWNMONITOR_H
+#endif // BARICOIN_QT_WINSHUTDOWNMONITOR_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_PRIMITIVES_BLOCK_H
-#define FUJICOIN_PRIMITIVES_BLOCK_H
+#ifndef BARICOIN_PRIMITIVES_BLOCK_H
+#define BARICOIN_PRIMITIVES_BLOCK_H
 
 #include <primitives/transaction.h>
 #include <serialize.h>
@@ -155,4 +155,4 @@ struct CBlockLocator
     }
 };
 
-#endif // FUJICOIN_PRIMITIVES_BLOCK_H
+#endif // BARICOIN_PRIMITIVES_BLOCK_H

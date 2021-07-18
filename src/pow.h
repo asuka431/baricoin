@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_POW_H
-#define FUJICOIN_POW_H
+#ifndef BARICOIN_POW_H
+#define BARICOIN_POW_H
 
 #include <consensus/params.h>
 
@@ -21,4 +21,4 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 /** Check whether a block hash satisfies the proof-of-work requirement specified by nBits */
 bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&);
 
-#endif // FUJICOIN_POW_H
+#endif // BARICOIN_POW_H

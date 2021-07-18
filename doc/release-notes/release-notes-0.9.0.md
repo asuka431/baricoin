@@ -1,4 +1,4 @@
-Fujicoin Core version 0.9.0 is now available from:
+Baricoin Core version 0.9.0 is now available from:
 
   https://bitcoin.org/bin/0.9.0/
 
@@ -14,14 +14,14 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), uninstall all
-earlier versions of Fujicoin, then run the installer (on Windows) or just copy
-over /Applications/Fujicoin-Qt (on Mac) or fujicoind/fujicoin-qt (on Linux).
+earlier versions of Baricoin, then run the installer (on Windows) or just copy
+over /Applications/Baricoin-Qt (on Mac) or baricoind/baricoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you run
 0.9.0 your blockchain files will be re-indexed, which will take anywhere from 
 30 minutes to several hours, depending on the speed of your machine.
 
-On Windows, do not forget to uninstall all earlier versions of the Fujicoin
+On Windows, do not forget to uninstall all earlier versions of the Baricoin
 client first, especially if you are switching to the 64-bit version.
 
 Windows 64-bit installer
@@ -59,11 +59,11 @@ Also, the first time you run a 0.8.x release on a 0.9 wallet it will rescan
 the blockchain for missing spent coins, which will take a long time (tens
 of minutes on a typical machine).
 
-Rebranding to Fujicoin Core
+Rebranding to Baricoin Core
 ---------------------------
 
-To reduce confusion between Fujicoin-the-network and Fujicoin-the-software we
-have renamed the reference client to Fujicoin Core.
+To reduce confusion between Baricoin-the-network and Baricoin-the-software we
+have renamed the reference client to Baricoin Core.
 
 
 OP_RETURN and data in the block chain
@@ -74,7 +74,7 @@ blockchain.  This change is not an endorsement of storing data in the
 blockchain.  The OP_RETURN change creates a provably-prunable output,
 to avoid data storage schemes -- some of which were already deployed --
 that were storing arbitrary data such as images as forever-unspendable
-TX outputs, bloating fujicoin's UTXO database.
+TX outputs, bloating baricoin's UTXO database.
 
 Storing arbitrary data in the blockchain is still a bad idea; it is less
 costly and far more efficient to store non-currency data elsewhere.
@@ -85,20 +85,20 @@ Autotools build system
 For 0.9.0 we switched to an autotools-based build system instead of individual
 (q)makefiles.
 
-Using the standard "./autogen.sh; ./configure; make" to build Fujicoin-Qt and
-fujicoind makes it easier for experienced open source developers to contribute 
+Using the standard "./autogen.sh; ./configure; make" to build Baricoin-Qt and
+baricoind makes it easier for experienced open source developers to contribute 
 to the project.
 
 Be sure to check doc/build-*.md for your platform before building from source.
 
-Fujicoin-cli
+Baricoin-cli
 -------------
 
-Another change in the 0.9 release is moving away from the fujicoind executable
+Another change in the 0.9 release is moving away from the baricoind executable
 functioning both as a server and as a RPC client. The RPC client functionality
-("tell the running fujicoin daemon to do THIS") was split into a separate
-executable, 'fujicoin-cli'. The RPC client code will eventually be removed from
-fujicoind, but will be kept for backwards compatibility for a release or two.
+("tell the running baricoin daemon to do THIS") was split into a separate
+executable, 'baricoin-cli'. The RPC client code will eventually be removed from
+baricoind, but will be kept for backwards compatibility for a release or two.
 
 `walletpassphrase` RPC
 -----------------------
@@ -143,7 +143,7 @@ Transaction Fees
 
 This release drops the default fee required to relay transactions across the
 network and for miners to consider the transaction in their blocks to
-0.01mFJC per kilobyte.
+0.01mBARI per kilobyte.
 
 Note that getting a transaction relayed across the network does NOT guarantee
 that the transaction will be accepted by a miner; by default, miners fill
@@ -156,7 +156,7 @@ the mintxfee setting to determine which low-priority transactions should
 be considered for inclusion in blocks.
 
 The wallet code still uses a default fee for low-priority transactions of
-0.1mFJC per kilobyte. During periods of heavy transaction volume, even this
+0.1mBARI per kilobyte. During periods of heavy transaction volume, even this
 fee may not be enough to get transactions confirmed quickly; the mintxfee
 option may be used to override the default.
 
@@ -197,13 +197,13 @@ Command-line options:
 - New option: -nospendzeroconfchange to never spend unconfirmed change outputs
 - New option: -zapwallettxes to rebuild the wallet's transaction information
 - Rename option '-tor' to '-onion' to better reflect what it does
-- Add '-disablewallet' mode to let fujicoind run entirely without wallet (when
+- Add '-disablewallet' mode to let baricoind run entirely without wallet (when
   built with wallet)
 - Update default '-rpcsslciphers' to include TLSv1.2
 - make '-logtimestamps' default on and rework help-message
 - RPC client option: '-rpcwait', to wait for server start
 - Remove '-logtodebugger'
-- Allow `-noserver` with fujicoind
+- Allow `-noserver` with baricoind
 
 Block-chain handling and storage:
 
@@ -239,7 +239,7 @@ Mining:
 
 Protocol and network:
 
-- Drop the fee required to relay a transaction to 0.01mFJC per kilobyte
+- Drop the fee required to relay a transaction to 0.01mBARI per kilobyte
 - Send tx relay flag with version
 - New 'reject' P2P message (BIP 0061, see
   https://gist.github.com/gavinandresen/7079034 for draft)
@@ -254,7 +254,7 @@ Protocol and network:
 - Improve logging of failed connections
 - Bump protocol version to 70002
 - Add some additional logging to give extra network insight
-- Added new DNS seed from fujicoinstats.com
+- Added new DNS seed from baricoinstats.com
 
 Validation:
 
@@ -295,18 +295,18 @@ GUI:
 - Add Coin Control Features
 - Improve receive coins workflow: make the 'Receive' tab into a form to request
   payments, and move historical address list functionality to File menu.
-- Rebrand to `Fujicoin Core`
+- Rebrand to `Baricoin Core`
 - Move initialization/shutdown to a thread. This prevents "Not responding"
   messages during startup. Also show a window during shutdown.
 - Don't regenerate autostart link on every client startup
-- Show and store message of normal fujicoin:URI
+- Show and store message of normal baricoin:URI
 - Fix richtext detection hang issue on very old Qt versions
 - OS X: Make use of the 10.8+ user notification center to display Growl-like 
   notifications
 - OS X: Added NSHighResolutionCapable flag to Info.plist for better font
   rendering on Retina displays.
-- OS X: Fix fujicoin-qt startup crash when clicking dock icon
-- Linux: Fix Gnome fujicoin: URI handler
+- OS X: Fix baricoin-qt startup crash when clicking dock icon
+- Linux: Fix Gnome baricoin: URI handler
 
 Miscellaneous:
 
@@ -314,7 +314,7 @@ Miscellaneous:
 - Add '-regtest' mode, similar to testnet but private with instant block
   generation with 'setgenerate' RPC.
 - Add 'linearize.py' script to contrib, for creating bootstrap.dat
-- Add separate fujicoin-cli client
+- Add separate baricoin-cli client
 
 Credits
 --------

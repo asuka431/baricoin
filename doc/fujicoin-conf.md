@@ -1,6 +1,6 @@
-# `fujicoin.conf` Configuration File
+# `baricoin.conf` Configuration File
 
-The configuration file is used by `fujicoind`, `fujicoin-qt` and `fujicoin-cli`.
+The configuration file is used by `baricoind`, `baricoin-qt` and `baricoin-cli`.
 
 All command-line options (except for `-?`, `-help`, `-version` and `-conf`) may be specified in a configuration file, and all configuration file options (except for `includeconf`) may also be specified on the command line. Command-line options override values set in the configuration file and configuration file options override values set in the GUI.
 
@@ -47,16 +47,16 @@ rpcport=4000
 
 ## Configuration File Path
 
-The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `fujicoin.conf` and it is located in the Fujicoin data directory, but both the Fujicoin data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
+The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `baricoin.conf` and it is located in the Baricoin data directory, but both the Baricoin data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
 
-The `includeconf=<file>` option in the `fujicoin.conf` file can be used to include additional configuration files.
+The `includeconf=<file>` option in the `baricoin.conf` file can be used to include additional configuration files.
 
 ### Default configuration file locations
 
 Operating System | Data Directory | Example Path
 -- | -- | --
-Windows | `%APPDATA%\Fujicoin\` | `C:\Users\username\AppData\Roaming\Fujicoin\fujicoin.conf`
-Linux | `$HOME/.fujicoin/` | `/home/username/.fujicoin/fujicoin.conf`
-macOS | `$HOME/Library/Application Support/Fujicoin/` | `/Users/username/Library/Application Support/Fujicoin/fujicoin.conf`
+Windows | `%APPDATA%\Baricoin\` | `C:\Users\username\AppData\Roaming\Baricoin\baricoin.conf`
+Linux | `$HOME/.baricoin/` | `/home/username/.baricoin/baricoin.conf`
+macOS | `$HOME/Library/Application Support/Baricoin/` | `/Users/username/Library/Application Support/Baricoin/baricoin.conf`
 
-You can find an example fujicoin.conf file in [share/examples/fujicoin.conf](../share/examples/fujicoin.conf).
+You can find an example baricoin.conf file in [share/examples/baricoin.conf](../share/examples/baricoin.conf).

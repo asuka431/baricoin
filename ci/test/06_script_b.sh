@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -31,7 +31,7 @@ fi
 
 if [ "$RUN_UNIT_TESTS_SEQUENTIAL" = "true" ]; then
   BEGIN_FOLD unit-tests-seq
-  DOCKER_EXEC LD_LIBRARY_PATH=$DEPENDS_DIR/$HOST/lib "${BASE_ROOT_DIR}/build/fujicoin-*/src/test/test_fujicoin" --catch_system_errors=no -l test_suite
+  DOCKER_EXEC LD_LIBRARY_PATH=$DEPENDS_DIR/$HOST/lib "${BASE_ROOT_DIR}/build/baricoin-*/src/test/test_baricoin" --catch_system_errors=no -l test_suite
   END_FOLD
 fi
 

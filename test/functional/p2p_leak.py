@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test message sending before handshake completion.
@@ -14,7 +14,7 @@ import time
 
 from test_framework.messages import msg_getaddr, msg_ping, msg_verack
 from test_framework.mininode import mininode_lock, P2PInterface
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import wait_until
 
 banscore = 10
@@ -59,7 +59,7 @@ class CLazyNode(P2PInterface):
 # anyway, and eventually get disconnected.
 class CNodeNoVersionBan(CLazyNode):
     # send a bunch of veracks without sending a message. This should get us disconnected.
-    # NOTE: implementation-specific check here. Remove if fujicoind ban behavior changes
+    # NOTE: implementation-specific check here. Remove if baricoind ban behavior changes
     def on_open(self):
         super().on_open()
         for i in range(banscore):
@@ -90,7 +90,7 @@ class CNodeNoVerackIdle(CLazyNode):
         self.send_message(msg_getaddr())
 
 
-class P2PLeakTest(FujicoinTestFramework):
+class P2PLeakTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-banscore=' + str(banscore)]]

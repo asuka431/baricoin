@@ -1,7 +1,7 @@
 Description
 ------------
 
-This directory contains data-driven tests for various aspects of Fujicoin.
+This directory contains data-driven tests for various aspects of Baricoin.
 
 License
 --------

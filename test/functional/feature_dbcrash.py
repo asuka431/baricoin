@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test recovery from a crash during chainstate writing.
@@ -38,7 +38,7 @@ from test_framework.messages import (
     CTxOut,
     ToHex,
 )
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     create_confirmed_utxos,
@@ -46,7 +46,7 @@ from test_framework.util import (
 )
 
 
-class ChainstateWriteCrashTest(FujicoinTestFramework):
+class ChainstateWriteCrashTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = False
@@ -94,14 +94,14 @@ class ChainstateWriteCrashTest(FujicoinTestFramework):
                 return utxo_hash
             except:
                 # An exception here should mean the node is about to crash.
-                # If fujicoind exits, then try again.  wait_for_node_exit()
-                # should raise an exception if fujicoind doesn't exit.
+                # If baricoind exits, then try again.  wait_for_node_exit()
+                # should raise an exception if baricoind doesn't exit.
                 self.wait_for_node_exit(node_index, timeout=10)
             self.crashed_on_restart += 1
             time.sleep(1)
 
-        # If we got here, fujicoind isn't coming back up on restart.  Could be a
-        # bug in fujicoind, or we've gotten unlucky with our dbcrash ratio --
+        # If we got here, baricoind isn't coming back up on restart.  Could be a
+        # bug in baricoind, or we've gotten unlucky with our dbcrash ratio --
         # perhaps we generated a test case that blew up our cache?
         # TODO: If this happens a lot, we should try to restart without -dbcrashratio
         # and make sure that recovery happens.

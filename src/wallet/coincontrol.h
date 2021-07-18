@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLET_COINCONTROL_H
-#define FUJICOIN_WALLET_COINCONTROL_H
+#ifndef BARICOIN_WALLET_COINCONTROL_H
+#define BARICOIN_WALLET_COINCONTROL_H
 
 #include <optional.h>
 #include <outputtype.h>
@@ -90,4 +90,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // FUJICOIN_WALLET_COINCONTROL_H
+#endif // BARICOIN_WALLET_COINCONTROL_H

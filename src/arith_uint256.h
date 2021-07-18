@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_ARITH_UINT256_H
-#define FUJICOIN_ARITH_UINT256_H
+#ifndef BARICOIN_ARITH_UINT256_H
+#define BARICOIN_ARITH_UINT256_H
 
 #include <cstring>
 #include <limits>
@@ -269,7 +269,7 @@ public:
      * Thus 0x1234560000 is compact (0x05123456)
      * and  0xc0de000000 is compact (0x0600c0de)
      *
-     * Fujicoin only uses this "compact" format for encoding difficulty
+     * Baricoin only uses this "compact" format for encoding difficulty
      * targets, which are unsigned 256bit quantities.  Thus, all the
      * complexities of the sign bit and using base 256 are probably an
      * implementation accident.
@@ -284,4 +284,4 @@ public:
 uint256 ArithToUint256(const arith_uint256 &);
 arith_uint256 UintToArith256(const uint256 &);
 
-#endif // FUJICOIN_ARITH_UINT256_H
+#endif // BARICOIN_ARITH_UINT256_H

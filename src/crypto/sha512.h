@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CRYPTO_SHA512_H
-#define FUJICOIN_CRYPTO_SHA512_H
+#ifndef BARICOIN_CRYPTO_SHA512_H
+#define BARICOIN_CRYPTO_SHA512_H
 
 #include <stdint.h>
 #include <stdlib.h>
@@ -26,4 +26,4 @@ public:
     uint64_t Size() const { return bytes; }
 };
 
-#endif // FUJICOIN_CRYPTO_SHA512_H
+#endif // BARICOIN_CRYPTO_SHA512_H

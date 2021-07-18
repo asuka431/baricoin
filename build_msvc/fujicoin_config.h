@@ -1,9 +1,9 @@
-// Copyright (c) 2018-2019 The Fujicoin Core developers
+// Copyright (c) 2018-2019 The Baricoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_FUJICOIN_CONFIG_H
-#define FUJICOIN_FUJICOIN_CONFIG_H
+#ifndef BARICOIN_BARICOIN_CONFIG_H
+#define BARICOIN_BARICOIN_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -27,10 +27,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Fujicoin Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Baricoin Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Fujicoin Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Baricoin Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2019
@@ -262,13 +262,13 @@
 #define PACKAGE_BUGREPORT "https://github.com/bitcoin/bitcoin/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Fujicoin Core"
+#define PACKAGE_NAME "Baricoin Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Fujicoin Core 0.19.99"
+#define PACKAGE_STRING "Baricoin Core 0.19.99"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "fujicoin"
+#define PACKAGE_TARNAME "baricoin"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL "https://bitcoincore.org/"
@@ -347,4 +347,4 @@
 
 #endif // !WINAPI_FAMILY || WINAPI_FAMILY_DESKTOP_APP
 
-#endif //FUJICOIN_FUJICOIN_CONFIG_H
+#endif //BARICOIN_BARICOIN_CONFIG_H

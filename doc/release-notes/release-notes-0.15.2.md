@@ -1,4 +1,4 @@
-Fujicoin Core version *0.15.2* is now available from:
+Baricoin Core version *0.15.2* is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.15.2/>
 
@@ -18,8 +18,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the 
-installer (on Windows) or just copy over `/Applications/Fujicoin-Qt` (on Mac)
-or `fujicoind`/`fujicoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Baricoin-Qt` (on Mac)
+or `baricoind`/`baricoin-qt` (on Linux).
 
 The first time you run version 0.15.0 or higher, your chainstate database will
 be converted to a new format, which will take anywhere from a few minutes to
@@ -48,10 +48,10 @@ processing the entire blockchain.
 Compatibility
 ==============
 
-Fujicoin Core is extensively tested on multiple operating systems using
+Baricoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
-Fujicoin Core should also work on most other Unix-like systems but is not
+Baricoin Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 
@@ -62,7 +62,7 @@ Denial-of-Service vulnerability CVE-2018-17144
 -------------------------------
 
 A denial-of-service vulnerability exploitable by miners has been discovered in
-Fujicoin Core versions 0.14.0 up to 0.16.2. It is recommended to upgrade any of
+Baricoin Core versions 0.14.0 up to 0.16.2. It is recommended to upgrade any of
 the vulnerable versions to 0.15.2 or 0.16.3 as soon as possible.
 
 0.15.2 Change log
@@ -87,9 +87,9 @@ the vulnerable versions to 0.15.2 or 0.16.3 as soon as possible.
 - #11289 `42ea47d` Add wallet backup text to import*, add* and dumpwallet RPCs (MeshCollider)
 - #11590 `6372a75` [Wallet] always show help-line of wallet encryption calls (Jonas Schnelli)
 
-### fujicoin-tx
+### baricoin-tx
 
-- #11554 `a69cc07` Sanity-check script sizes in fujicoin-tx (TheBlueMatt)
+- #11554 `a69cc07` Sanity-check script sizes in baricoin-tx (TheBlueMatt)
 
 ### Tests
 - #11277 `3a6cdd4` Add test for multiwallet batch RPC calls (Russell Yanofsky)

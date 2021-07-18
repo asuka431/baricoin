@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test fujicoin-wallet."""
+"""Test baricoin-wallet."""
 
 import hashlib
 import os
@@ -10,12 +10,12 @@ import stat
 import subprocess
 import textwrap
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import assert_equal
 
 BUFFER_SIZE = 16 * 1024
 
-class ToolWalletTest(FujicoinTestFramework):
+class ToolWalletTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True
@@ -25,20 +25,20 @@ class ToolWalletTest(FujicoinTestFramework):
         self.skip_if_no_wallet()
         self.skip_if_no_wallet_tool()
 
-    def fujicoin_wallet_process(self, *args):
-        binary = self.config["environment"]["BUILDDIR"] + '/src/fujicoin-wallet' + self.config["environment"]["EXEEXT"]
+    def baricoin_wallet_process(self, *args):
+        binary = self.config["environment"]["BUILDDIR"] + '/src/baricoin-wallet' + self.config["environment"]["EXEEXT"]
         args = ['-datadir={}'.format(self.nodes[0].datadir), '-chain=%s' % self.chain] + list(args)
         return subprocess.Popen([binary] + args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
     def assert_raises_tool_error(self, error, *args):
-        p = self.fujicoin_wallet_process(*args)
+        p = self.baricoin_wallet_process(*args)
         stdout, stderr = p.communicate()
         assert_equal(p.poll(), 1)
         assert_equal(stdout, '')
         assert_equal(stderr.strip(), error)
 
     def assert_tool_output(self, output, *args):
-        p = self.fujicoin_wallet_process(*args)
+        p = self.baricoin_wallet_process(*args)
         stdout, stderr = p.communicate()
         assert_equal(stderr, '')
         assert_equal(stdout, output)
@@ -65,7 +65,7 @@ class ToolWalletTest(FujicoinTestFramework):
     def test_invalid_tool_commands_and_args(self):
         self.log.info('Testing that various invalid commands raise with specific error messages')
         self.assert_raises_tool_error('Invalid command: foo', 'foo')
-        # `fujicoin-wallet help` raises an error. Use `fujicoin-wallet -help`.
+        # `baricoin-wallet help` raises an error. Use `baricoin-wallet -help`.
         self.assert_raises_tool_error('Invalid command: help', 'help')
         self.assert_raises_tool_error('Error: two methods provided (info and create). Only one method should be provided.', 'info', 'create')
         self.assert_raises_tool_error('Error parsing command line arguments: Invalid parameter -foo', '-foo')

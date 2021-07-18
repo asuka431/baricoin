@@ -12,7 +12,7 @@
 #include <mutex>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <boost/test/unit_test.hpp>

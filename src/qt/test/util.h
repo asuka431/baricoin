@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_TEST_UTIL_H
-#define FUJICOIN_QT_TEST_UTIL_H
+#ifndef BARICOIN_QT_TEST_UTIL_H
+#define BARICOIN_QT_TEST_UTIL_H
 
 #include <QString>
 
@@ -15,4 +15,4 @@
  */
 void ConfirmMessage(QString* text = nullptr, int msec = 0);
 
-#endif // FUJICOIN_QT_TEST_UTIL_H
+#endif // BARICOIN_QT_TEST_UTIL_H

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.fujicoin;
+package org.baricoin;
 
 public class NativeSecp256k1Util{
 

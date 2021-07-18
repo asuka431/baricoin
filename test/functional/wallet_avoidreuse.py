@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018-2020 The Fujicoin Core developers
+# Copyright (c) 2018-2020 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the avoid_reuse and setwalletflag features."""
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_approx,
     assert_equal,
@@ -63,7 +63,7 @@ def assert_balances(node, mine):
     for k,v in mine.items():
         assert_approx(got[k], v, 0.001)
 
-class AvoidReuseTest(FujicoinTestFramework):
+class AvoidReuseTest(BaricoinTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = False
@@ -164,8 +164,8 @@ class AvoidReuseTest(FujicoinTestFramework):
 
     def test_fund_send_fund_senddirty(self):
         '''
-        Test the same as test_fund_send_fund_send, except send the 10 FJC with
-        the avoid_reuse flag set to false. This means the 10 FJC send should succeed,
+        Test the same as test_fund_send_fund_send, except send the 10 BARI with
+        the avoid_reuse flag set to false. This means the 10 BARI send should succeed,
         where it fails in test_fund_send_fund_send.
         '''
         self.log.info("Test fund send fund send dirty")
@@ -216,11 +216,11 @@ class AvoidReuseTest(FujicoinTestFramework):
     def test_fund_send_fund_send(self, second_addr_type):
         '''
         Test the simple case where [1] generates a new address A, then
-        [0] sends 10 FJC to A.
-        [1] spends 5 FJC from A. (leaving roughly 5 FJC useable)
-        [0] sends 10 FJC to A again.
-        [1] tries to spend 10 FJC (fails; dirty).
-        [1] tries to spend 4 FJC (succeeds; change address sufficient)
+        [0] sends 10 BARI to A.
+        [1] spends 5 BARI from A. (leaving roughly 5 BARI useable)
+        [0] sends 10 BARI to A again.
+        [1] tries to spend 10 BARI (fails; dirty).
+        [1] tries to spend 4 BARI (succeeds; change address sufficient)
         '''
         self.log.info("Test fund send fund send")
 

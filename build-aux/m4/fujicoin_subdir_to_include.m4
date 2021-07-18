@@ -1,10 +1,10 @@
-dnl Copyright (c) 2013-2014 The Fujicoin Core developers
+dnl Copyright (c) 2013-2014 The Baricoin Core developers
 dnl Distributed under the MIT software license, see the accompanying
 dnl file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-dnl FUJICOIN_SUBDIR_TO_INCLUDE([CPPFLAGS-VARIABLE-NAME],[SUBDIRECTORY-NAME],[HEADER-FILE])
+dnl BARICOIN_SUBDIR_TO_INCLUDE([CPPFLAGS-VARIABLE-NAME],[SUBDIRECTORY-NAME],[HEADER-FILE])
 dnl SUBDIRECTORY-NAME must end with a path separator
-AC_DEFUN([FUJICOIN_SUBDIR_TO_INCLUDE],[
+AC_DEFUN([BARICOIN_SUBDIR_TO_INCLUDE],[
   if test "x$2" = "x"; then
     AC_MSG_RESULT([default])
   else

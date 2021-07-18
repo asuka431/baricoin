@@ -868,7 +868,7 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn, bool fFlushOnClose)
 
 void CWallet::LoadToWallet(CWalletTx& wtxIn)
 {
-    // If wallet doesn't have a chain (e.g fujicoin-wallet), lock can't be taken.
+    // If wallet doesn't have a chain (e.g baricoin-wallet), lock can't be taken.
     auto locked_chain = LockChain();
     if (locked_chain) {
         Optional<int> block_height = locked_chain->getBlockHeight(wtxIn.m_confirm.hashBlock);
@@ -2763,7 +2763,7 @@ bool CWallet::CreateTransaction(interfaces::Chain::Lock& locked_chain, const std
 
             // Create change script that will be used if we need change
             // TODO: pass in scriptChange instead of reservedest so
-            // change transaction isn't always pay-to-fujicoin-address
+            // change transaction isn't always pay-to-baricoin-address
             CScript scriptChange;
 
             // coin control: send change to custom address
@@ -3114,7 +3114,7 @@ DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
 {
     // Even if we don't use this lock in this function, we want to preserve
     // lock order in LoadToWallet if query of chain state is needed to know
-    // tx status. If lock can't be taken (e.g fujicoin-wallet), tx confirmation
+    // tx status. If lock can't be taken (e.g baricoin-wallet), tx confirmation
     // status may be not reliable.
     auto locked_chain = LockChain();
     LOCK(cs_wallet);

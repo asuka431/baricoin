@@ -8,181 +8,181 @@
 #else
 #define UNUSED
 #endif
-static const char UNUSED *fujicoin_strings[] = {
-QT_TRANSLATE_NOOP("fujicoin-core", "The %s developers"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+static const char UNUSED *baricoin_strings[] = {
+QT_TRANSLATE_NOOP("baricoin-core", "The %s developers"),
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "-maxtxfee is set very high! Fees this large could be paid on a single "
 "transaction."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Can't generate a change-address key. No keys in the internal keypool and "
 "can't generate any keys."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Cannot obtain a lock on data directory %s. %s is probably already running."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Cannot provide specific connections and have addrman find outgoing "
 "connections at the same."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Cannot upgrade a non HD split wallet without upgrading to support pre split "
 "keypool. Please use -upgradewallet=169900 or -upgradewallet with no version "
 "specified."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Distributed under the MIT software license, see the accompanying file %s or "
 "%s"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Error reading %s! All keys read correctly, but transaction data or address "
 "book entries might be missing or incorrect."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Error: Listening for incoming connections failed (listen returned error %s)"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Fee estimation failed. Fallbackfee is disabled. Wait a few blocks or enable -"
 "fallbackfee."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Invalid amount for -maxtxfee=<amount>: '%s' (must be at least the minrelay "
 "fee of %s to prevent stuck transactions)"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Please check that your computer's date and time are correct! If your clock "
 "is wrong, %s will not work properly."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Please contribute if you find %s useful. Visit %s for further information "
 "about the software."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Prune configured below the minimum of %d MiB.  Please use a higher number."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Prune: last wallet synchronisation goes beyond pruned data. You need to -"
 "reindex (download the whole blockchain again in case of pruned node)"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "The block database contains a block which appears to be from the future. "
 "This may be due to your computer's date and time being set incorrectly. Only "
 "rebuild the block database if you are sure that your computer's date and "
 "time are correct"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "The transaction amount is too small to send after the fee has been deducted"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "This is a pre-release test build - use at your own risk - do not use for "
 "mining or merchant applications"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "This is the transaction fee you may discard if change is smaller than dust "
 "at this level"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "This is the transaction fee you may pay when fee estimates are not available."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Total length of network version string (%i) exceeds maximum length (%i). "
 "Reduce the number or size of uacomments."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Unable to replay blocks. You will need to rebuild the database using -"
 "reindex-chainstate."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Unable to rewind the database to a pre-fork state. You will need to "
 "redownload the blockchain"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Warning: Private keys detected in wallet {%s} with disabled private keys"),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Warning: The network does not appear to fully agree! Some miners appear to "
 "be experiencing issues."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; "
 "if your balance or transactions are incorrect you should restore from a "
 "backup."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "Warning: We do not appear to fully agree with our peers! You may need to "
 "upgrade, or other nodes may need to upgrade."),
-QT_TRANSLATE_NOOP("fujicoin-core", ""
+QT_TRANSLATE_NOOP("baricoin-core", ""
 "You need to rebuild the database using -reindex to go back to unpruned "
 "mode.  This will redownload the entire blockchain"),
-QT_TRANSLATE_NOOP("fujicoin-core", "%d of last 100 blocks have unexpected version"),
-QT_TRANSLATE_NOOP("fujicoin-core", "%s corrupt, salvage failed"),
-QT_TRANSLATE_NOOP("fujicoin-core", "%s is set very high!"),
-QT_TRANSLATE_NOOP("fujicoin-core", "-maxmempool must be at least %d MB"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Cannot downgrade wallet"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Cannot resolve -%s address: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Cannot write to data directory '%s'; check permissions."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Change index out of range"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Config setting for %s only applied on %s network when in [%s] section."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Copyright (C) %i-%i"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Corrupted block database detected"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Could not find asmap file %s"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Could not parse asmap file %s"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Do you want to rebuild the block database now?"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Done loading"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error initializing block database"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error initializing wallet database environment %s!"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error loading %s"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error loading %s: Private keys can only be disabled during creation"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error loading %s: Wallet corrupted"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error loading %s: Wallet requires newer version of %s"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error loading block database"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error loading wallet %s. Duplicate -wallet filename specified."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error opening block database"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error reading from database, shutting down."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error upgrading chainstate database"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error: A fatal internal error occurred, see debug.log for details"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error: Disk space is low for %s"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Error: Disk space is too low!"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Failed to rescan the wallet during initialization"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Importing..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Initialization sanity check failed. %s is shutting down."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Insufficient funds"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid -onion address or hostname: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid -proxy address or hostname: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid P2P permission: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid amount for -%s=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid amount for -discardfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid amount for -fallbackfee=<amount>: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid amount for -paytxfee=<amount>: '%s' (must be at least %s)"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Invalid netmask specified in -whitelist: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Loading P2P addresses..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Loading banlist..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Loading block index..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Loading wallet..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Need to specify a port with -whitebind: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Not enough file descriptors available."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Prune cannot be configured with a negative value."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Prune mode is incompatible with -blockfilterindex."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Prune mode is incompatible with -txindex."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Pruning blockstore..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Reducing -maxconnections from %d to %d, because of system limitations."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Replaying blocks..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Rescanning..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Rewinding blocks..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Section [%s] is not recognized."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Signing transaction failed"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Specified -walletdir \"%s\" does not exist"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Specified -walletdir \"%s\" is a relative path"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Specified -walletdir \"%s\" is not a directory"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Specified blocks directory \"%s\" does not exist."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Starting network threads..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "The source code is available from %s."),
-QT_TRANSLATE_NOOP("fujicoin-core", "The specified config file %s does not exist\n"),
-QT_TRANSLATE_NOOP("fujicoin-core", "The transaction amount is too small to pay the fee"),
-QT_TRANSLATE_NOOP("fujicoin-core", "The wallet will avoid paying less than the minimum relay fee."),
-QT_TRANSLATE_NOOP("fujicoin-core", "This is experimental software."),
-QT_TRANSLATE_NOOP("fujicoin-core", "This is the minimum transaction fee you pay on every transaction."),
-QT_TRANSLATE_NOOP("fujicoin-core", "This is the transaction fee you will pay if you send a transaction."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Transaction amount too small"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Transaction amounts must not be negative"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Transaction fee and change calculation failed"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Transaction has too long of a mempool chain"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Transaction must have at least one recipient"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Transaction too large"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unable to bind to %s on this computer (bind returned error %s)"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unable to bind to %s on this computer. %s is probably already running."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unable to create the PID file '%s': %s"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unable to generate initial keys"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unable to generate keys"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unable to start HTTP server. See debug log for details."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unknown -blockfilterindex value %s."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unknown address type '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unknown change type '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unknown network specified in -onlynet: '%s'"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Unsupported logging category %s=%s."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Upgrading UTXO database"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Upgrading txindex database"),
-QT_TRANSLATE_NOOP("fujicoin-core", "User Agent comment (%s) contains unsafe characters."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Verifying blocks..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Verifying wallet(s)..."),
-QT_TRANSLATE_NOOP("fujicoin-core", "Wallet needed to be rewritten: restart %s to complete"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Warning: unknown new rules activated (versionbit %i)"),
-QT_TRANSLATE_NOOP("fujicoin-core", "Zapping all transactions from wallet..."),
+QT_TRANSLATE_NOOP("baricoin-core", "%d of last 100 blocks have unexpected version"),
+QT_TRANSLATE_NOOP("baricoin-core", "%s corrupt, salvage failed"),
+QT_TRANSLATE_NOOP("baricoin-core", "%s is set very high!"),
+QT_TRANSLATE_NOOP("baricoin-core", "-maxmempool must be at least %d MB"),
+QT_TRANSLATE_NOOP("baricoin-core", "Cannot downgrade wallet"),
+QT_TRANSLATE_NOOP("baricoin-core", "Cannot resolve -%s address: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Cannot write to data directory '%s'; check permissions."),
+QT_TRANSLATE_NOOP("baricoin-core", "Change index out of range"),
+QT_TRANSLATE_NOOP("baricoin-core", "Config setting for %s only applied on %s network when in [%s] section."),
+QT_TRANSLATE_NOOP("baricoin-core", "Copyright (C) %i-%i"),
+QT_TRANSLATE_NOOP("baricoin-core", "Corrupted block database detected"),
+QT_TRANSLATE_NOOP("baricoin-core", "Could not find asmap file %s"),
+QT_TRANSLATE_NOOP("baricoin-core", "Could not parse asmap file %s"),
+QT_TRANSLATE_NOOP("baricoin-core", "Do you want to rebuild the block database now?"),
+QT_TRANSLATE_NOOP("baricoin-core", "Done loading"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error initializing block database"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error initializing wallet database environment %s!"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error loading %s"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error loading %s: Private keys can only be disabled during creation"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error loading %s: Wallet corrupted"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error loading %s: Wallet requires newer version of %s"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error loading block database"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error loading wallet %s. Duplicate -wallet filename specified."),
+QT_TRANSLATE_NOOP("baricoin-core", "Error opening block database"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error reading from database, shutting down."),
+QT_TRANSLATE_NOOP("baricoin-core", "Error upgrading chainstate database"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error: A fatal internal error occurred, see debug.log for details"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error: Disk space is low for %s"),
+QT_TRANSLATE_NOOP("baricoin-core", "Error: Disk space is too low!"),
+QT_TRANSLATE_NOOP("baricoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
+QT_TRANSLATE_NOOP("baricoin-core", "Failed to rescan the wallet during initialization"),
+QT_TRANSLATE_NOOP("baricoin-core", "Importing..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Incorrect or no genesis block found. Wrong datadir for network?"),
+QT_TRANSLATE_NOOP("baricoin-core", "Initialization sanity check failed. %s is shutting down."),
+QT_TRANSLATE_NOOP("baricoin-core", "Insufficient funds"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid -onion address or hostname: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid -proxy address or hostname: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid P2P permission: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid amount for -%s=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid amount for -discardfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid amount for -fallbackfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid amount for -paytxfee=<amount>: '%s' (must be at least %s)"),
+QT_TRANSLATE_NOOP("baricoin-core", "Invalid netmask specified in -whitelist: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Loading P2P addresses..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Loading banlist..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Loading block index..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Loading wallet..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Need to specify a port with -whitebind: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Not enough file descriptors available."),
+QT_TRANSLATE_NOOP("baricoin-core", "Prune cannot be configured with a negative value."),
+QT_TRANSLATE_NOOP("baricoin-core", "Prune mode is incompatible with -blockfilterindex."),
+QT_TRANSLATE_NOOP("baricoin-core", "Prune mode is incompatible with -txindex."),
+QT_TRANSLATE_NOOP("baricoin-core", "Pruning blockstore..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Reducing -maxconnections from %d to %d, because of system limitations."),
+QT_TRANSLATE_NOOP("baricoin-core", "Replaying blocks..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Rescanning..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Rewinding blocks..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Section [%s] is not recognized."),
+QT_TRANSLATE_NOOP("baricoin-core", "Signing transaction failed"),
+QT_TRANSLATE_NOOP("baricoin-core", "Specified -walletdir \"%s\" does not exist"),
+QT_TRANSLATE_NOOP("baricoin-core", "Specified -walletdir \"%s\" is a relative path"),
+QT_TRANSLATE_NOOP("baricoin-core", "Specified -walletdir \"%s\" is not a directory"),
+QT_TRANSLATE_NOOP("baricoin-core", "Specified blocks directory \"%s\" does not exist."),
+QT_TRANSLATE_NOOP("baricoin-core", "Starting network threads..."),
+QT_TRANSLATE_NOOP("baricoin-core", "The source code is available from %s."),
+QT_TRANSLATE_NOOP("baricoin-core", "The specified config file %s does not exist\n"),
+QT_TRANSLATE_NOOP("baricoin-core", "The transaction amount is too small to pay the fee"),
+QT_TRANSLATE_NOOP("baricoin-core", "The wallet will avoid paying less than the minimum relay fee."),
+QT_TRANSLATE_NOOP("baricoin-core", "This is experimental software."),
+QT_TRANSLATE_NOOP("baricoin-core", "This is the minimum transaction fee you pay on every transaction."),
+QT_TRANSLATE_NOOP("baricoin-core", "This is the transaction fee you will pay if you send a transaction."),
+QT_TRANSLATE_NOOP("baricoin-core", "Transaction amount too small"),
+QT_TRANSLATE_NOOP("baricoin-core", "Transaction amounts must not be negative"),
+QT_TRANSLATE_NOOP("baricoin-core", "Transaction fee and change calculation failed"),
+QT_TRANSLATE_NOOP("baricoin-core", "Transaction has too long of a mempool chain"),
+QT_TRANSLATE_NOOP("baricoin-core", "Transaction must have at least one recipient"),
+QT_TRANSLATE_NOOP("baricoin-core", "Transaction too large"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unable to bind to %s on this computer (bind returned error %s)"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unable to bind to %s on this computer. %s is probably already running."),
+QT_TRANSLATE_NOOP("baricoin-core", "Unable to create the PID file '%s': %s"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unable to generate initial keys"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unable to generate keys"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unable to start HTTP server. See debug log for details."),
+QT_TRANSLATE_NOOP("baricoin-core", "Unknown -blockfilterindex value %s."),
+QT_TRANSLATE_NOOP("baricoin-core", "Unknown address type '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unknown change type '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unknown network specified in -onlynet: '%s'"),
+QT_TRANSLATE_NOOP("baricoin-core", "Unsupported logging category %s=%s."),
+QT_TRANSLATE_NOOP("baricoin-core", "Upgrading UTXO database"),
+QT_TRANSLATE_NOOP("baricoin-core", "Upgrading txindex database"),
+QT_TRANSLATE_NOOP("baricoin-core", "User Agent comment (%s) contains unsafe characters."),
+QT_TRANSLATE_NOOP("baricoin-core", "Verifying blocks..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Verifying wallet(s)..."),
+QT_TRANSLATE_NOOP("baricoin-core", "Wallet needed to be rewritten: restart %s to complete"),
+QT_TRANSLATE_NOOP("baricoin-core", "Warning: unknown new rules activated (versionbit %i)"),
+QT_TRANSLATE_NOOP("baricoin-core", "Zapping all transactions from wallet..."),
 };

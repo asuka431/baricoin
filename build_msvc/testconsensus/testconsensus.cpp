@@ -1,11 +1,11 @@
-// Copyright (c) 2018 The Fujicoin Core developers
+// Copyright (c) 2018 The Baricoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <iostream>
 
-// fujicoin includes.
-#include <..\src\script\fujicoinconsensus.h>
+// baricoin includes.
+#include <..\src\script\baricoinconsensus.h>
 #include <..\src\primitives\transaction.h>
 #include <..\src\script\script.h>
 #include <..\src\streams.h>
@@ -31,7 +31,7 @@ CMutableTransaction BuildSpendingTransaction(const CScript& scriptSig, const CSc
 
 int main()
 {
-    std::cout << "fujicoinconsensus version: " << fujicoinconsensus_version() << std::endl;
+    std::cout << "baricoinconsensus version: " << baricoinconsensus_version() << std::endl;
 
     CScript pubKeyScript;
     pubKeyScript << OP_1 << OP_0 << OP_1;
@@ -44,8 +44,8 @@ int main()
     CDataStream stream(SER_NETWORK, PROTOCOL_VERSION);
     stream << vanillaSpendTx;
 
-    fujicoinconsensus_error err;
-    auto op0Result = fujicoinconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, fujicoinconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
+    baricoinconsensus_error err;
+    auto op0Result = baricoinconsensus_verify_script_with_amount(pubKeyScript.data(), pubKeyScript.size(), amount, (const unsigned char*)&stream[0], stream.size(), 0, baricoinconsensus_SCRIPT_FLAGS_VERIFY_ALL, &err);
     std::cout << "Op0 result: " << op0Result << ", error code " << err << std::endl;
 
     getchar();

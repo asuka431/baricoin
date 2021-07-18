@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_FUJICOINAMOUNTFIELD_H
-#define FUJICOIN_QT_FUJICOINAMOUNTFIELD_H
+#ifndef BARICOIN_QT_BARICOINAMOUNTFIELD_H
+#define BARICOIN_QT_BARICOINAMOUNTFIELD_H
 
 #include <amount.h>
 
@@ -15,9 +15,9 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering fujicoin amounts.
+/** Widget for entering baricoin amounts.
   */
-class FujicoinAmountField: public QWidget
+class BaricoinAmountField: public QWidget
 {
     Q_OBJECT
 
@@ -26,7 +26,7 @@ class FujicoinAmountField: public QWidget
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit FujicoinAmountField(QWidget *parent = nullptr);
+    explicit BaricoinAmountField(QWidget *parent = nullptr);
 
     CAmount value(bool *value=nullptr) const;
     void setValue(const CAmount& value);
@@ -81,4 +81,4 @@ private Q_SLOTS:
 
 };
 
-#endif // FUJICOIN_QT_FUJICOINAMOUNTFIELD_H
+#endif // BARICOIN_QT_BARICOINAMOUNTFIELD_H

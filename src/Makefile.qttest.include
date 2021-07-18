@@ -2,8 +2,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/test/test_fujicoin-qt
-TESTS += qt/test/test_fujicoin-qt
+bin_PROGRAMS += qt/test/test_baricoin-qt
+TESTS += qt/test/test_baricoin-qt
 
 TEST_QT_MOC_CPP = \
   qt/test/moc_apptests.cpp \
@@ -26,10 +26,10 @@ TEST_QT_H = \
   qt/test/util.h \
   qt/test/wallettests.h
 
-qt_test_test_fujicoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(FUJICOIN_INCLUDES) $(FUJICOIN_QT_INCLUDES) \
+qt_test_test_baricoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BARICOIN_INCLUDES) $(BARICOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_TEST_INCLUDES)
 
-qt_test_test_fujicoin_qt_SOURCES = \
+qt_test_test_baricoin_qt_SOURCES = \
   qt/test/apptests.cpp \
   qt/test/compattests.cpp \
   qt/test/rpcnestedtests.cpp \
@@ -38,36 +38,36 @@ qt_test_test_fujicoin_qt_SOURCES = \
   qt/test/util.cpp \
   $(TEST_QT_H)
 if ENABLE_WALLET
-qt_test_test_fujicoin_qt_SOURCES += \
+qt_test_test_baricoin_qt_SOURCES += \
   qt/test/addressbooktests.cpp \
   qt/test/wallettests.cpp \
   wallet/test/wallet_test_fixture.cpp
 endif # ENABLE_WALLET
 
-nodist_qt_test_test_fujicoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
+nodist_qt_test_test_baricoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
 
-qt_test_test_fujicoin_qt_LDADD = $(LIBFUJICOINQT) $(LIBFUJICOIN_SERVER) $(LIBTEST_UTIL)
+qt_test_test_baricoin_qt_LDADD = $(LIBBARICOINQT) $(LIBBARICOIN_SERVER) $(LIBTEST_UTIL)
 if ENABLE_WALLET
-qt_test_test_fujicoin_qt_LDADD += $(LIBFUJICOIN_UTIL) $(LIBFUJICOIN_WALLET)
+qt_test_test_baricoin_qt_LDADD += $(LIBBARICOIN_UTIL) $(LIBBARICOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_test_test_fujicoin_qt_LDADD += $(LIBFUJICOIN_ZMQ) $(ZMQ_LIBS)
+qt_test_test_baricoin_qt_LDADD += $(LIBBARICOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_test_test_fujicoin_qt_LDADD += $(LIBFUJICOIN_CLI) $(LIBFUJICOIN_COMMON) $(LIBFUJICOIN_UTIL) $(LIBFUJICOIN_CONSENSUS) $(LIBFUJICOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) \
+qt_test_test_baricoin_qt_LDADD += $(LIBBARICOIN_CLI) $(LIBBARICOIN_COMMON) $(LIBBARICOIN_UTIL) $(LIBBARICOIN_CONSENSUS) $(LIBBARICOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) $(LIBMEMENV) $(BOOST_LIBS) $(QT_DBUS_LIBS) $(QT_TEST_LIBS) $(QT_LIBS) \
   $(QR_LIBS) $(BDB_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_test_test_fujicoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_test_test_fujicoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_test_test_baricoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_test_test_baricoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-CLEAN_FUJICOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
+CLEAN_BARICOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 
-CLEANFILES += $(CLEAN_FUJICOIN_QT_TEST)
+CLEANFILES += $(CLEAN_BARICOIN_QT_TEST)
 
-test_fujicoin_qt : qt/test/test_fujicoin-qt$(EXEEXT)
+test_baricoin_qt : qt/test/test_baricoin-qt$(EXEEXT)
 
-test_fujicoin_qt_check : qt/test/test_fujicoin-qt$(EXEEXT) FORCE
+test_baricoin_qt_check : qt/test/test_baricoin-qt$(EXEEXT) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
-test_fujicoin_qt_clean: FORCE
-	rm -f $(CLEAN_FUJICOIN_QT_TEST) $(qt_test_test_fujicoin_qt_OBJECTS)
+test_baricoin_qt_clean: FORCE
+	rm -f $(CLEAN_BARICOIN_QT_TEST) $(qt_test_test_baricoin_qt_OBJECTS)

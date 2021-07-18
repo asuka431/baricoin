@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CONSENSUS_PARAMS_H
-#define FUJICOIN_CONSENSUS_PARAMS_H
+#ifndef BARICOIN_CONSENSUS_PARAMS_H
+#define BARICOIN_CONSENSUS_PARAMS_H
 
 #include <uint256.h>
 #include <limits>
@@ -83,4 +83,4 @@ struct Params {
 };
 } // namespace Consensus
 
-#endif // FUJICOIN_CONSENSUS_PARAMS_H
+#endif // BARICOIN_CONSENSUS_PARAMS_H

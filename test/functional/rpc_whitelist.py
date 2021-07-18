@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
 A test for RPC users with restricted permissions
 """
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 import os
 from test_framework.util import (
     get_datadir_path,
@@ -26,7 +26,7 @@ def rpccall(node, user, method):
     return resp
 
 
-class RPCWhitelistTest(FujicoinTestFramework):
+class RPCWhitelistTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 
@@ -55,7 +55,7 @@ class RPCWhitelistTest(FujicoinTestFramework):
         ]
         # These commands shouldn't be allowed for any user to test failures
         self.never_allowed = ["getnetworkinfo"]
-        with open(os.path.join(get_datadir_path(self.options.tmpdir, 0), "fujicoin.conf"), 'a', encoding='utf8') as f:
+        with open(os.path.join(get_datadir_path(self.options.tmpdir, 0), "baricoin.conf"), 'a', encoding='utf8') as f:
             f.write("\nrpcwhitelistdefault=0\n")
             for user in self.users:
                 f.write("rpcauth=" + user[0] + ":" + user[1] + "\n")

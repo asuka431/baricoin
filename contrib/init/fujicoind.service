@@ -1,53 +1,53 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
-# $ systemctl edit fujicoind.service
+# $ systemctl edit baricoind.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/fujicoin/fujicoin.conf, but keep in mind those explicitly
+# /etc/baricoin/baricoin.conf, but keep in mind those explicitly
 # specified as arguments in ExecStart= will override those in the
 # config file.
 
 [Unit]
-Description=Fujicoin daemon
+Description=Baricoin daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/fujicoind -daemon \
-                            -pid=/run/fujicoind/fujicoind.pid \
-                            -conf=/etc/fujicoin/fujicoin.conf \
-                            -datadir=/var/lib/fujicoind
+ExecStart=/usr/bin/baricoind -daemon \
+                            -pid=/run/baricoind/baricoind.pid \
+                            -conf=/etc/baricoin/baricoin.conf \
+                            -datadir=/var/lib/baricoind
 
 # Make sure the config directory is readable by the service user
 PermissionsStartOnly=true
-ExecStartPre=/bin/chgrp fujicoin /etc/fujicoin
+ExecStartPre=/bin/chgrp baricoin /etc/baricoin
 
 # Process management
 ####################
 
 Type=forking
-PIDFile=/run/fujicoind/fujicoind.pid
+PIDFile=/run/baricoind/baricoind.pid
 Restart=on-failure
 TimeoutStopSec=600
 
 # Directory creation and permissions
 ####################################
 
-# Run as fujicoin:fujicoin
-User=fujicoin
-Group=fujicoin
+# Run as baricoin:baricoin
+User=baricoin
+Group=baricoin
 
-# /run/fujicoind
-RuntimeDirectory=fujicoind
+# /run/baricoind
+RuntimeDirectory=baricoind
 RuntimeDirectoryMode=0710
 
-# /etc/fujicoin
-ConfigurationDirectory=fujicoin
+# /etc/baricoin
+ConfigurationDirectory=baricoin
 ConfigurationDirectoryMode=0710
 
-# /var/lib/fujicoind
-StateDirectory=fujicoind
+# /var/lib/baricoind
+StateDirectory=baricoind
 StateDirectoryMode=0710
 
 # Hardening measures

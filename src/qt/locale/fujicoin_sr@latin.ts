@@ -66,12 +66,12 @@
         <translation>Adresa na koju se prima</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su Vaše Fujicoin adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su Vaše Baricoin adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
-        <translation>Ovo su vaše Fujicoin adrese za primanje isplete. Upotrebite dugme 'Kreiraj novu adresu prijema' na kartici za prijem da biste kreirali nove adrese.</translation>
+        <source>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>Ovo su vaše Baricoin adrese za primanje isplete. Upotrebite dugme 'Kreiraj novu adresu prijema' na kartici za prijem da biste kreirali nove adrese.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,7 +168,7 @@
         <translation>Potvrdite šifrovanje novčanika</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
         <translation>Upozorenje: Ako šifrujete svoj novčanik, i potom izgubite svoju pristupnu frazu &lt;b&gt;IZGUBIĆETE SVE SVOJE BITKOINE&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -244,7 +244,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Potpišite &amp;poruka...</translation>
@@ -342,8 +342,8 @@
         <translation>Ponovo obeležavam blokove na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Pošalji novčiće na Fujicoin adresu</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Pošalji novčiće na Baricoin adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -378,12 +378,12 @@
         <translation>Enkriptuj privatne ključeve novčanika</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Potpišite poruke sa svojim Fujicoin adresama da biste dokazali njihovo vlasništvo</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Potpišite poruke sa svojim Baricoin adresama da biste dokazali njihovo vlasništvo</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Proverite poruke da biste utvrdili sa kojim Fujicoin adresama su potpisane</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Proverite poruke da biste utvrdili sa kojim Baricoin adresama su potpisane</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -402,8 +402,8 @@
         <translation>Alatke za tabove</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Zatražite plaćanje (generiše QR kodove i fujicoin: URI-e)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Zatražite plaćanje (generiše QR kodove i baricoin: URI-e)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -521,8 +521,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -883,7 +883,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Nedovoljno sredstava</translation>

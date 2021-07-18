@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_TRANSACTIONVIEW_H
-#define FUJICOIN_QT_TRANSACTIONVIEW_H
+#ifndef BARICOIN_QT_TRANSACTIONVIEW_H
+#define BARICOIN_QT_TRANSACTIONVIEW_H
 
 #include <qt/guiutil.h>
 
@@ -121,4 +121,4 @@ public Q_SLOTS:
     void focusTransaction(const uint256& txid);
 };
 
-#endif // FUJICOIN_QT_TRANSACTIONVIEW_H
+#endif // BARICOIN_QT_TRANSACTIONVIEW_H

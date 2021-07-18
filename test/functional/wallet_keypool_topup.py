@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test HD Wallet keypool restore function.
@@ -13,14 +13,14 @@ Two nodes. Node1 is under test. Node0 is providing transactions and generating b
 import os
 import shutil
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     connect_nodes,
 )
 
 
-class KeypoolRestoreTest(FujicoinTestFramework):
+class KeypoolRestoreTest(BaricoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4

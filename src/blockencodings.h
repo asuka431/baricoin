@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_BLOCKENCODINGS_H
-#define FUJICOIN_BLOCKENCODINGS_H
+#ifndef BARICOIN_BLOCKENCODINGS_H
+#define BARICOIN_BLOCKENCODINGS_H
 
 #include <primitives/block.h>
 
@@ -136,4 +136,4 @@ public:
     ReadStatus FillBlock(CBlock& block, const std::vector<CTransactionRef>& vtx_missing);
 };
 
-#endif // FUJICOIN_BLOCKENCODINGS_H
+#endif // BARICOIN_BLOCKENCODINGS_H

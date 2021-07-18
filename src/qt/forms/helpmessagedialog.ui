@@ -52,7 +52,7 @@
         </size>
        </property>
        <property name="pixmap">
-        <pixmap resource="../fujicoin.qrc">:/icons/fujicoin</pixmap>
+        <pixmap resource="../baricoin.qrc">:/icons/baricoin</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -150,7 +150,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../fujicoin.qrc"/>
+  <include location="../baricoin.qrc"/>
  </resources>
  <connections>
   <connection>

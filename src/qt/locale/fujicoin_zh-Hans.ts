@@ -62,7 +62,7 @@
         <translation>接收地址</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>这是你的富士币发币地址。发送前请确认发送数量和接收地址</translation>
     </message>
     <message>
@@ -120,7 +120,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -281,6 +281,6 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

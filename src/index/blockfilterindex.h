@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_INDEX_BLOCKFILTERINDEX_H
-#define FUJICOIN_INDEX_BLOCKFILTERINDEX_H
+#ifndef BARICOIN_INDEX_BLOCKFILTERINDEX_H
+#define BARICOIN_INDEX_BLOCKFILTERINDEX_H
 
 #include <blockfilter.h>
 #include <chain.h>
@@ -91,4 +91,4 @@ bool DestroyBlockFilterIndex(BlockFilterType filter_type);
 /** Destroy all open block filter indexes. */
 void DestroyAllBlockFilterIndexes();
 
-#endif // FUJICOIN_INDEX_BLOCKFILTERINDEX_H
+#endif // BARICOIN_INDEX_BLOCKFILTERINDEX_H

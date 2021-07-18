@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_RBF_H
-#define FUJICOIN_UTIL_RBF_H
+#ifndef BARICOIN_UTIL_RBF_H
+#define BARICOIN_UTIL_RBF_H
 
 #include <cstdint>
 
@@ -15,4 +15,4 @@ static const uint32_t MAX_BIP125_RBF_SEQUENCE = 0xfffffffd;
 // opt-in to replace-by-fee, according to BIP 125
 bool SignalsOptInRBF(const CTransaction &tx);
 
-#endif // FUJICOIN_UTIL_RBF_H
+#endif // BARICOIN_UTIL_RBF_H

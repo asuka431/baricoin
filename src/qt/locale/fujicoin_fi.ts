@@ -66,12 +66,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat Fujicoin-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat Baricoin-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
-        <translation>Nämä ovat sinun Fujicoin osoitteesi maksujen vastaanottamista varten. Käytä 'Luo uusi vastaanotto-osoite' painiketta vastaantto tabissä luodaksesi uuden osoitteen.</translation>
+        <source>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>Nämä ovat sinun Baricoin osoitteesi maksujen vastaanottamista varten. Käytä 'Luo uusi vastaanotto-osoite' painiketta vastaantto tabissä luodaksesi uuden osoitteen.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI FUJICOINISI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI BARICOINISI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Syötä vanha ja uusi salasanalause lompakolle.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your fujicoins from being stolen by malware infecting your computer.</source>
-        <translation>Muista, että salaamalla lompakkosi et täysin pysty suojaamaan fujicoineja varkaudelta, jotka aiheutuvat koneellasi olevista haittaohjelmista.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your baricoins from being stolen by malware infecting your computer.</source>
+        <translation>Muista, että salaamalla lompakkosi et täysin pysty suojaamaan baricoineja varkaudelta, jotka aiheutuvat koneellasi olevista haittaohjelmista.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -252,7 +252,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Allekirjoita viesti...</translation>
@@ -362,8 +362,8 @@
         <translation>Välipalvelin on &lt;b&gt;käytössä&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Lähetä kolikoita Fujicoin-osoitteeseen</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Lähetä kolikoita Baricoin-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -391,19 +391,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Fujicoin-ikkuna</translation>
+        <translation>Näytä tai piilota Baricoin-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Fujicoin -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Baricoin -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Fujicoin -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Baricoin -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -422,8 +422,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja fujicoin: URIt)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja baricoin: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -438,8 +438,8 @@
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Fujicoin network</source>
-        <translation><numerusform>%n aktiivinen yhteys Fujicoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Fujicoin-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to Baricoin network</source>
+        <translation><numerusform>%n aktiivinen yhteys Baricoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Baricoin-verkkoon</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>&amp;Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>Open a fujicoin: URI</source>
-        <translation>Avaa fujicoin: URI</translation>
+        <source>Open a baricoin: URI</source>
+        <translation>Avaa baricoin: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -518,8 +518,8 @@
         <translation>Sulje lompakko</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Fujicoin command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Fujicoinin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible Baricoin command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Baricoinin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -630,8 +630,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Fujicoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Baricoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -874,8 +874,8 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen Fujicoin-osoite.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen Baricoin-osoite.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -971,8 +971,8 @@
         <translation>Määritä oma kansio:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Discard blocks after verification, except most recent %1 GB (prune)</source>
@@ -987,8 +987,8 @@
         <translation>Noin %1 GB tietoa varastoidaan tähän hakemistoon.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Fujicoin block chain.</source>
-        <translation>%1 lataa ja tallentaa kopion Fujicoinin lohkoketjusta.</translation>
+        <source>%1 will download and store a copy of the Baricoin block chain.</source>
+        <translation>%1 lataa ja tallentaa kopion Baricoinin lohkoketjusta.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1022,12 +1022,12 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fujicoin network, as detailed below.</source>
-        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi fujicoin-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the baricoin network, as detailed below.</source>
+        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi baricoin-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
     </message>
     <message>
-        <source>Attempting to spend fujicoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Verkko ei tule hyväksymään sellaisten fujicoinien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
+        <source>Attempting to spend baricoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Verkko ei tule hyväksymään sellaisten baricoinien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1073,8 +1073,8 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open fujicoin URI</source>
-        <translation>Avaa fujicoin URI</translation>
+        <source>Open baricoin URI</source>
+        <translation>Avaa baricoin URI</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1219,8 +1219,8 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Fujicoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Baricoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1235,8 +1235,8 @@
         <translation>Hyväksy sisääntulevia yhteyksiä</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Fujicoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the Baricoin network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Baricoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1271,8 +1271,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Fujicoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the Baricoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä Baricoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1304,11 +1304,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona fujicoin-määrät näytetään</translation>
+        <translation>Yksikkö jona baricoin-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti fujicoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti baricoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1382,8 +1382,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Fujicoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Baricoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1423,7 +1423,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Fujicoinien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Baricoinien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1457,16 +1457,16 @@
         <translation>Maksupyyntövirhe</translation>
     </message>
     <message>
-        <source>Cannot start fujicoin: click-to-pay handler</source>
-        <translation>Fujicoinia ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
+        <source>Cannot start baricoin: click-to-pay handler</source>
+        <translation>Baricoinia ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI käsittely</translation>
     </message>
     <message>
-        <source>'fujicoin://' is not a valid URI. Use 'fujicoin:' instead.</source>
-        <translation>'fujicoin://' ei ole kelvollinen URI. Käytä 'fujicoin:' sen sijaan.</translation>
+        <source>'baricoin://' is not a valid URI. Use 'baricoin:' instead.</source>
+        <translation>'baricoin://' ei ole kelvollinen URI. Käytä 'baricoin:' sen sijaan.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1481,8 +1481,8 @@
         <translation>Virheellinen maksuosoite %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Fujicoin address or malformed URI parameters.</source>
-        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä Fujicoin-osoitteesta tai väärin muotoilluista URI parametreista.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Baricoin address or malformed URI parameters.</source>
+        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä Baricoin-osoitteesta tai väärin muotoilluista URI parametreista.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1523,8 +1523,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
-        <translation>Syötä Fujicoin-osoite (esim. %1)</translation>
+        <source>Enter a Baricoin address (e.g. %1)</source>
+        <translation>Syötä Baricoin-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1992,8 +1992,8 @@
         <translation>&amp;Viesti:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fujicoin network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Fujicoin-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Baricoin network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Baricoin-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2269,8 +2269,8 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation> Piilota siirtomaksuasetukset</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fujicoin transactions than the network can process.</source>
-        <translation>Mikäli lohkoissa ei ole tilaa kaikille siirtotapahtumille, voi louhijat sekä välittävät solmut pakottaa vähimmäispalkkion. Tämän vähimmäispalkkion maksaminen on täysin OK, mutta huomaa, että se saattaa johtaa siihen, ettei siirto vahvistu koskaan, jos fujicoin-siirtoja on enemmän kuin mitä verkko pystyy käsittelemään.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</source>
+        <translation>Mikäli lohkoissa ei ole tilaa kaikille siirtotapahtumille, voi louhijat sekä välittävät solmut pakottaa vähimmäispalkkion. Tämän vähimmäispalkkion maksaminen on täysin OK, mutta huomaa, että se saattaa johtaa siihen, ettei siirto vahvistu koskaan, jos baricoin-siirtoja on enemmän kuin mitä verkko pystyy käsittelemään.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2433,8 +2433,8 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation><numerusform>Vahvistuminen alkaa arviolta %n lohkon sisällä.</numerusform><numerusform>Vahvistuminen alkaa arviolta %n lohkon sisällä.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Varoitus: Virheellinen Fujicoin-osoite</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Varoitus: Virheellinen Baricoin-osoite</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2472,8 +2472,8 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation>Valitse aikaisemmin käytetty osoite</translation>
     </message>
     <message>
-        <source>The Fujicoin address to send the payment to</source>
-        <translation>Fujicoin-osoite johon maksu lähetetään</translation>
+        <source>The Baricoin address to send the payment to</source>
+        <translation>Baricoin-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2492,8 +2492,8 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän fujicoineja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän baricoineja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2520,8 +2520,8 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the fujicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fujicoin network.</source>
-        <translation>Viesti joka liitettiin fujicoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Fujicoin-verkkoon.</translation>
+        <source>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</source>
+        <translation>Viesti joka liitettiin baricoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Baricoin-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2554,12 +2554,12 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fujicoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt fujicoinit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive baricoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt baricoinit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
     </message>
     <message>
-        <source>The Fujicoin address to sign the message with</source>
-        <translation>Fujicoin-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Baricoin address to sign the message with</source>
+        <translation>Baricoin-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2590,8 +2590,8 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Fujicoin-osoitteen</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Baricoin-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2614,12 +2614,12 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
         <translation>Syötä vastaanottajan osoite, viesti ja allekirjoitus (varmista että kopioit rivinvaihdot, välilyönnit, sarkaimet yms. täsmälleen) alle vahvistaaksesi viestin. Varo lukemasta allekirjoitukseen enempää kuin mitä viestissä itsessään on välttääksesi man-in-the-middle -hyökkäyksiltä. Huomaa, että tämä todentaa ainoastaan allekirjoittavan vastaanottajan osoitteen, tämä ei voi todentaa minkään tapahtuman lähettäjää!</translation>
     </message>
     <message>
-        <source>The Fujicoin address the message was signed with</source>
-        <translation>Fujicoin-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Baricoin address the message was signed with</source>
+        <translation>Baricoin-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Fujicoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Baricoin-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3257,7 +3257,7 @@ Huom: Koska siirtomaksu lasketaan tavujen mukaan, niin määrittelemällä 500 t
     </message>
 </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Jaettu MIT -ohjelmistolisenssin alaisuudessa, katso mukana tuleva %s tiedosto tai %s</translation>

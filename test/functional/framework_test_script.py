@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020 The Fujicoin Core developers
+# Copyright (c) 2020 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Tests for test_framework.script."""
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.script import bn2vch
 from test_framework.util import assert_equal
 
@@ -30,7 +30,7 @@ def test_bn2vch():
     assert_equal(bn2vch(123456789), bytes([0x15, 0xCD, 0x5B, 0x07]))
     assert_equal(bn2vch(-54321), bytes([0x31, 0xD4, 0x80]))
 
-class FrameworkTestScript(FujicoinTestFramework):
+class FrameworkTestScript(BaricoinTestFramework):
     def setup_network(self):
         pass
 

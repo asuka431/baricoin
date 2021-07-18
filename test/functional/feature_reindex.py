@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2018 The Fujicoin Core developers
+# Copyright (c) 2014-2018 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test running fujicoind with -reindex and -reindex-chainstate options.
+"""Test running baricoind with -reindex and -reindex-chainstate options.
 
 - Start a single node and generate 3 blocks.
 - Stop the node and restart it with -reindex. Verify that the node has reindexed up to block 3.
 - Stop the node and restart it with -reindex-chainstate. Verify that the node has reindexed up to block 3.
 """
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import wait_until
 
-class ReindexTest(FujicoinTestFramework):
+class ReindexTest(BaricoinTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

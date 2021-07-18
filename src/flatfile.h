@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_FLATFILE_H
-#define FUJICOIN_FLATFILE_H
+#ifndef BARICOIN_FLATFILE_H
+#define BARICOIN_FLATFILE_H
 
 #include <string>
 
@@ -93,4 +93,4 @@ public:
     bool Flush(const FlatFilePos& pos, bool finalize = false);
 };
 
-#endif // FUJICOIN_FLATFILE_H
+#endif // BARICOIN_FLATFILE_H

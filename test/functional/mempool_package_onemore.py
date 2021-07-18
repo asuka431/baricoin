@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2019 The Fujicoin Core developers
+# Copyright (c) 2014-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test descendant package tracking carve-out allowing one final transaction in
@@ -9,13 +9,13 @@
 
 from decimal import Decimal
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error, satoshi_round
 
 MAX_ANCESTORS = 25
 MAX_DESCENDANTS = 25
 
-class MempoolPackagesTest(FujicoinTestFramework):
+class MempoolPackagesTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [["-maxorphantx=1000"]]

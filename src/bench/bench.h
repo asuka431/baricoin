@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_BENCH_BENCH_H
-#define FUJICOIN_BENCH_BENCH_H
+#ifndef BARICOIN_BENCH_BENCH_H
+#define BARICOIN_BENCH_BENCH_H
 
 #include <functional>
 #include <map>
@@ -141,4 +141,4 @@ private:
 #define BENCHMARK(n, num_iters_for_one_second) \
     benchmark::BenchRunner BOOST_PP_CAT(bench_, BOOST_PP_CAT(__LINE__, n))(BOOST_PP_STRINGIZE(n), n, (num_iters_for_one_second));
 
-#endif // FUJICOIN_BENCH_BENCH_H
+#endif // BARICOIN_BENCH_BENCH_H

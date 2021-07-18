@@ -66,12 +66,12 @@
         <translation>Receiving addresses</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
-        <translation>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</translation>
+        <source>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Enter the old passphrase and new passphrase for the wallet.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your fujicoins from being stolen by malware infecting your computer.</source>
-        <translation>Remember that encrypting your wallet cannot fully protect your Fujicoins from being stolen by malware infecting your computer.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your baricoins from being stolen by malware infecting your computer.</source>
+        <translation>Remember that encrypting your wallet cannot fully protect your Baricoins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -252,7 +252,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message ...</translation>
@@ -362,8 +362,8 @@
         <translation>Proxy is &lt;b&gt;enabled&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Send coins to a Fujicoin address</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Send coins to a Baricoin address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -398,12 +398,12 @@
         <translation>Encrypt the private keys that belong to your wallet</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Sign messages with your Fujicoin addresses to prove you own them</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Sign messages with your Baricoin addresses to prove you own them</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Fujicoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Baricoin addresses</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -422,8 +422,8 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Request payments (generates QR codes and fujicoin: URIs)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Request payments (generates QR codes and baricoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -438,8 +438,8 @@
         <translation>&amp;Command-line options</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Fujicoin network</source>
-        <translation><numerusform>%n active connection to Fujicoin network</numerusform><numerusform>%n active connections to Fujicoin network</numerusform></translation>
+        <source>%n active connection(s) to Baricoin network</source>
+        <translation><numerusform>%n active connection to Baricoin network</numerusform><numerusform>%n active connections to Baricoin network</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>&amp;Receiving addresses</translation>
     </message>
     <message>
-        <source>Open a fujicoin: URI</source>
-        <translation>Open a Fujicoin: URI</translation>
+        <source>Open a baricoin: URI</source>
+        <translation>Open a Baricoin: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -518,8 +518,8 @@
         <translation>Close wallet</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Fujicoin command-line options</source>
-        <translation>Show the %1 help message to get a list with possible Fujicoin command-line options</translation>
+        <source>Show the %1 help message to get a list with possible Baricoin command-line options</source>
+        <translation>Show the %1 help message to get a list with possible Baricoin command-line options</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -630,8 +630,8 @@
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. Baricoin can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
@@ -874,8 +874,8 @@
         <translation>Edit sending address</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>The entered address "%1" is not a valid Fujicoin address.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>The entered address "%1" is not a valid Baricoin address.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -971,8 +971,8 @@
         <translation>Use a custom data directory:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Discard blocks after verification, except most recent %1 GB (prune)</source>
@@ -987,8 +987,8 @@
         <translation>Approximately %1 GB of data will be stored in this directory.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Fujicoin block chain.</source>
-        <translation>%1 will download and store a copy of the Fujicoin block chain.</translation>
+        <source>%1 will download and store a copy of the Baricoin block chain.</source>
+        <translation>%1 will download and store a copy of the Baricoin block chain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1022,12 +1022,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fujicoin network, as detailed below.</source>
-        <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronising with the Fujicoin network, as detailed below.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the baricoin network, as detailed below.</source>
+        <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronising with the Baricoin network, as detailed below.</translation>
     </message>
     <message>
-        <source>Attempting to spend fujicoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Attempting to spend Fujicoins that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
+        <source>Attempting to spend baricoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Attempting to spend Baricoins that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1077,8 +1077,8 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open fujicoin URI</source>
-        <translation>Open Fujicoin URI</translation>
+        <source>Open baricoin URI</source>
+        <translation>Open Baricoin URI</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1223,8 +1223,8 @@
         <translation>&amp;Spend unconfirmed change</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1239,8 +1239,8 @@
         <translation>Allow incomin&amp;g connections</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a SOCKS5 proxy.</source>
-        <translation>Connect to the Fujicoin network through a SOCKS5 proxy.</translation>
+        <source>Connect to the Baricoin network through a SOCKS5 proxy.</source>
+        <translation>Connect to the Baricoin network through a SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1275,8 +1275,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connect to the Fujicoin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
+        <source>Connect to the Baricoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connect to the Baricoin network through a separate SOCKS5 proxy for Tor hidden services.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1386,8 +1386,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your Wallet automatically synchronises with the Fujicoin Network after a connection is established, but this process has not been completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your Wallet automatically synchronises with the Baricoin Network after a connection is established, but this process has not been completed yet.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1461,16 +1461,16 @@
         <translation>Payment request error</translation>
     </message>
     <message>
-        <source>Cannot start fujicoin: click-to-pay handler</source>
-        <translation>Cannot start Fujicoin: click-to-pay handler</translation>
+        <source>Cannot start baricoin: click-to-pay handler</source>
+        <translation>Cannot start Baricoin: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI handling</translation>
     </message>
     <message>
-        <source>'fujicoin://' is not a valid URI. Use 'fujicoin:' instead.</source>
-        <translation>'fujicoin://' is not a valid URI. Use 'fujicoin:' instead.</translation>
+        <source>'baricoin://' is not a valid URI. Use 'baricoin:' instead.</source>
+        <translation>'baricoin://' is not a valid URI. Use 'baricoin:' instead.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1489,8 +1489,8 @@
         <translation>Invalid payment address %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Fujicoin address or malformed URI parameters.</source>
-        <translation>URI cannot be parsed! This can be caused by an invalid Fujicoin address or malformed URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Baricoin address or malformed URI parameters.</source>
+        <translation>URI cannot be parsed! This can be caused by an invalid Baricoin address or malformed URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1531,8 +1531,8 @@
         <translation>Amount</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
-        <translation>Enter a Fujicoin address (e.g. %1)</translation>
+        <source>Enter a Baricoin address (e.g. %1)</source>
+        <translation>Enter a Baricoin address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1992,8 +1992,8 @@
         <translation>&amp;Message:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fujicoin network.</source>
-        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fujicoin network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Baricoin network.</source>
+        <translation>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Baricoin network.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2273,8 +2273,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Hide transaction fee settings</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fujicoin transactions than the network can process.</source>
-        <translation>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fujicoin transactions than the network can process.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</source>
+        <translation>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2345,8 +2345,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Cr&amp;eate Unsigned</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Fujicoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation>Creates a Partially Signed Fujicoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
+        <source>Creates a Partially Signed Baricoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation>Creates a Partially Signed Baricoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -2369,8 +2369,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Are you sure you want to send?</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Fujicoin Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation>Please, review your transaction proposal. This will produce a Partially Signed Fujicoin Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Baricoin Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation>Please, review your transaction proposal. This will produce a Partially Signed Baricoin Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</translation>
     </message>
     <message>
         <source>or</source>
@@ -2461,8 +2461,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation><numerusform>Estimated to begin confirmation within %n block.</numerusform><numerusform>Estimated to begin confirmation within %n blocks.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Warning: Invalid Fujicoin address</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Warning: Invalid Baricoin address</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2500,8 +2500,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Choose previously used address</translation>
     </message>
     <message>
-        <source>The Fujicoin address to send the payment to</source>
-        <translation>The Fujicoin address to send the payment to</translation>
+        <source>The Baricoin address to send the payment to</source>
+        <translation>The Baricoin address to send the payment to</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2524,8 +2524,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>The amount to send in the selected unit</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2552,8 +2552,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
-        <source>A message that was attached to the fujicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fujicoin network.</source>
-        <translation>A message that was attached to the fujicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fujicoin network.</translation>
+        <source>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</source>
+        <translation>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2586,12 +2586,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fujicoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive fujicoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive baricoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive baricoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
-        <source>The Fujicoin address to sign the message with</source>
-        <translation>The Fujicoin address to sign the message with</translation>
+        <source>The Baricoin address to sign the message with</source>
+        <translation>The Baricoin address to sign the message with</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2622,8 +2622,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Sign the message to prove you own this Fujicoin address</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Sign the message to prove you own this Baricoin address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2646,8 +2646,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</translation>
     </message>
     <message>
-        <source>The Fujicoin address the message was signed with</source>
-        <translation>The Fujicoin address the message was signed with</translation>
+        <source>The Baricoin address the message was signed with</source>
+        <translation>The Baricoin address the message was signed with</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2658,8 +2658,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>The signature given when the message was signed</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
-        <translation>Verify the message to ensure it was signed with the specified Fujicoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
+        <translation>Verify the message to ensure it was signed with the specified Baricoin address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3309,7 +3309,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distributed under the MIT software license, see the accompanying file %s or %s.</translation>

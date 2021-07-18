@@ -2,13 +2,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_WALLETFRAME_H
-#define FUJICOIN_QT_WALLETFRAME_H
+#ifndef BARICOIN_QT_WALLETFRAME_H
+#define BARICOIN_QT_WALLETFRAME_H
 
 #include <QFrame>
 #include <QMap>
 
-class FujicoinGUI;
+class BaricoinGUI;
 class ClientModel;
 class PlatformStyle;
 class SendCoinsRecipient;
@@ -21,9 +21,9 @@ QT_END_NAMESPACE
 
 /**
  * A container for embedding all wallet-related
- * controls into FujicoinGUI. The purpose of this class is to allow future
+ * controls into BaricoinGUI. The purpose of this class is to allow future
  * refinements of the wallet controls with minimal need for further
- * modifications to FujicoinGUI, thus greatly simplifying merges while
+ * modifications to BaricoinGUI, thus greatly simplifying merges while
  * reducing the risk of breaking top-level stuff.
  */
 class WalletFrame : public QFrame
@@ -31,7 +31,7 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, FujicoinGUI *_gui = nullptr);
+    explicit WalletFrame(const PlatformStyle *platformStyle, BaricoinGUI *_gui = nullptr);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
@@ -51,7 +51,7 @@ Q_SIGNALS:
 
 private:
     QStackedWidget *walletStack;
-    FujicoinGUI *gui;
+    BaricoinGUI *gui;
     ClientModel *clientModel;
     QMap<WalletModel*, WalletView*> mapWalletViews;
 
@@ -95,4 +95,4 @@ public Q_SLOTS:
     void outOfSyncWarningClicked();
 };
 
-#endif // FUJICOIN_QT_WALLETFRAME_H
+#endif // BARICOIN_QT_WALLETFRAME_H

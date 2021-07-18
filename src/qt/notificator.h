@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_NOTIFICATOR_H
-#define FUJICOIN_QT_NOTIFICATOR_H
+#ifndef BARICOIN_QT_NOTIFICATOR_H
+#define BARICOIN_QT_NOTIFICATOR_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <QIcon>
@@ -74,4 +74,4 @@ private:
 #endif
 };
 
-#endif // FUJICOIN_QT_NOTIFICATOR_H
+#endif // BARICOIN_QT_NOTIFICATOR_H

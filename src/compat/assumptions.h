@@ -5,8 +5,8 @@
 
 // Compile-time verification of assumptions we make.
 
-#ifndef FUJICOIN_COMPAT_ASSUMPTIONS_H
-#define FUJICOIN_COMPAT_ASSUMPTIONS_H
+#ifndef BARICOIN_COMPAT_ASSUMPTIONS_H
+#define BARICOIN_COMPAT_ASSUMPTIONS_H
 
 #include <limits>
 
@@ -14,7 +14,7 @@
 // Example(s): We use assert(...) extensively with the assumption of it never
 //             being a noop at runtime.
 #if defined(NDEBUG)
-# error "Fujicoin cannot be compiled without assertions."
+# error "Baricoin cannot be compiled without assertions."
 #endif
 
 // Assumption: We assume a C++11 (ISO/IEC 14882:2011) compiler (minimum requirement).
@@ -62,4 +62,4 @@ static_assert(sizeof(size_t) == sizeof(void*), "Sizes of size_t and void* assume
 // * We are NOT assuming a specific value for std::locale("").name().
 // * We are NOT assuming a specific value for std::numeric_limits<char>::is_signed.
 
-#endif // FUJICOIN_COMPAT_ASSUMPTIONS_H
+#endif // BARICOIN_COMPAT_ASSUMPTIONS_H

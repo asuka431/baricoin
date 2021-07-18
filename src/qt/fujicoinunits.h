@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_FUJICOINUNITS_H
-#define FUJICOIN_QT_FUJICOINUNITS_H
+#ifndef BARICOIN_QT_BARICOINUNITS_H
+#define BARICOIN_QT_BARICOINUNITS_H
 
 #include <amount.h>
 
@@ -25,24 +25,24 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Fujicoin unit definitions. Encapsulates parsing and formatting
+/** Baricoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class FujicoinUnits: public QAbstractListModel
+class BaricoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit FujicoinUnits(QObject *parent);
+    explicit BaricoinUnits(QObject *parent);
 
-    /** Fujicoin units.
+    /** Baricoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        FJC,
-        mFJC,
-        uFJC,
+        BARI,
+        mBARI,
+        uBARI,
         SAT
     };
 
@@ -105,8 +105,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<FujicoinUnits::Unit> unitlist;
+    QList<BaricoinUnits::Unit> unitlist;
 };
-typedef FujicoinUnits::Unit FujicoinUnit;
+typedef BaricoinUnits::Unit BaricoinUnit;
 
-#endif // FUJICOIN_QT_FUJICOINUNITS_H
+#endif // BARICOIN_QT_BARICOINUNITS_H

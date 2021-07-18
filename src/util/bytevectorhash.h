@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_BYTEVECTORHASH_H
-#define FUJICOIN_UTIL_BYTEVECTORHASH_H
+#ifndef BARICOIN_UTIL_BYTEVECTORHASH_H
+#define BARICOIN_UTIL_BYTEVECTORHASH_H
 
 #include <stdint.h>
 #include <vector>
@@ -23,4 +23,4 @@ public:
     size_t operator()(const std::vector<unsigned char>& input) const;
 };
 
-#endif // FUJICOIN_UTIL_BYTEVECTORHASH_H
+#endif // BARICOIN_UTIL_BYTEVECTORHASH_H

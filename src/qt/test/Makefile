@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C ../../ test_fujicoin_qt
+	$(MAKE) -C ../../ test_baricoin_qt
 clean:
-	$(MAKE) -C ../../ test_fujicoin_qt_clean
+	$(MAKE) -C ../../ test_baricoin_qt_clean
 check:
-	$(MAKE) -C ../../ test_fujicoin_qt_check
+	$(MAKE) -C ../../ test_baricoin_qt_check

@@ -6,8 +6,8 @@
 /**
  * Money parsing/formatting utilities.
  */
-#ifndef FUJICOIN_UTIL_MONEYSTR_H
-#define FUJICOIN_UTIL_MONEYSTR_H
+#ifndef BARICOIN_UTIL_MONEYSTR_H
+#define BARICOIN_UTIL_MONEYSTR_H
 
 #include <amount.h>
 #include <attributes.h>
@@ -21,4 +21,4 @@ std::string FormatMoney(const CAmount& n);
 /** Parse an amount denoted in full coins. E.g. "0.0034" supplied on the command line. **/
 NODISCARD bool ParseMoney(const std::string& str, CAmount& nRet);
 
-#endif // FUJICOIN_UTIL_MONEYSTR_H
+#endif // BARICOIN_UTIL_MONEYSTR_H

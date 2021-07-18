@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C.UTF-8
 
-FUJICOIN_CONFIG_ALL="--disable-dependency-tracking --prefix=$DEPENDS_DIR/$HOST --bindir=$BASE_OUTDIR/bin --libdir=$BASE_OUTDIR/lib"
+BARICOIN_CONFIG_ALL="--disable-dependency-tracking --prefix=$DEPENDS_DIR/$HOST --bindir=$BASE_OUTDIR/bin --libdir=$BASE_OUTDIR/lib"
 if [ -z "$NO_DEPENDS" ]; then
   DOCKER_EXEC ccache --max-size=$CCACHE_SIZE
 fi
@@ -23,19 +23,19 @@ DOCKER_EXEC mkdir -p build
 export P_CI_DIR="$P_CI_DIR/build"
 
 BEGIN_FOLD configure
-DOCKER_EXEC ../configure --cache-file=config.cache $FUJICOIN_CONFIG_ALL $FUJICOIN_CONFIG || ( (DOCKER_EXEC cat config.log) && false)
+DOCKER_EXEC ../configure --cache-file=config.cache $BARICOIN_CONFIG_ALL $BARICOIN_CONFIG || ( (DOCKER_EXEC cat config.log) && false)
 END_FOLD
 
 BEGIN_FOLD distdir
 # Create folder on host and docker, so that `cd` works
-mkdir -p "fujicoin-$HOST"
+mkdir -p "baricoin-$HOST"
 DOCKER_EXEC make distdir VERSION=$HOST
 END_FOLD
 
-export P_CI_DIR="$P_CI_DIR/fujicoin-$HOST"
+export P_CI_DIR="$P_CI_DIR/baricoin-$HOST"
 
 BEGIN_FOLD configure
-DOCKER_EXEC ./configure --cache-file=../config.cache $FUJICOIN_CONFIG_ALL $FUJICOIN_CONFIG || ( (DOCKER_EXEC cat config.log) && false)
+DOCKER_EXEC ./configure --cache-file=../config.cache $BARICOIN_CONFIG_ALL $BARICOIN_CONFIG || ( (DOCKER_EXEC cat config.log) && false)
 END_FOLD
 
 set -o errtrace

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_LOGGING_TIMER_H
-#define FUJICOIN_LOGGING_TIMER_H
+#ifndef BARICOIN_LOGGING_TIMER_H
+#define BARICOIN_LOGGING_TIMER_H
 
 #include <logging.h>
 #include <util/macros.h>
@@ -101,4 +101,4 @@ private:
     BCLog::Timer<std::chrono::seconds> PASTE2(logging_timer, __COUNTER__)(__func__, end_msg, ## __VA_ARGS__)
 
 
-#endif // FUJICOIN_LOGGING_TIMER_H
+#endif // BARICOIN_LOGGING_TIMER_H

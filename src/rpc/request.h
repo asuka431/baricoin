@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_RPC_REQUEST_H
-#define FUJICOIN_RPC_REQUEST_H
+#ifndef BARICOIN_RPC_REQUEST_H
+#define BARICOIN_RPC_REQUEST_H
 
 #include <string>
 
@@ -39,4 +39,4 @@ public:
     void parse(const UniValue& valRequest);
 };
 
-#endif // FUJICOIN_RPC_REQUEST_H
+#endif // BARICOIN_RPC_REQUEST_H

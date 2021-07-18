@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: fujicoind.service
-Upstart: fujicoind.conf
-OpenRC:  fujicoind.openrc
-         fujicoind.openrcconf
-CentOS:  fujicoind.init
-macOS:   org.fujicoin.fujicoind.plist
+SystemD: baricoind.service
+Upstart: baricoind.conf
+OpenRC:  baricoind.openrc
+         baricoind.openrcconf
+CentOS:  baricoind.init
+macOS:   org.baricoin.baricoind.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

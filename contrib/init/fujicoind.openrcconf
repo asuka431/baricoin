@@ -1,33 +1,33 @@
-# /etc/conf.d/fujicoind: config file for /etc/init.d/fujicoind
+# /etc/conf.d/baricoind: config file for /etc/init.d/baricoind
 
 # Config file location
-#FUJICOIND_CONFIGFILE="/etc/fujicoin/fujicoin.conf"
+#BARICOIND_CONFIGFILE="/etc/baricoin/baricoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $FUJICOIND_USER)
-#FUJICOIND_PIDDIR="/var/run/fujicoind"
+# What directory to write pidfile to?  (created and owned by $BARICOIND_USER)
+#BARICOIND_PIDDIR="/var/run/baricoind"
 
 # What filename to give the pidfile
-#FUJICOIND_PIDFILE="${FUJICOIND_PIDDIR}/fujicoind.pid"
+#BARICOIND_PIDFILE="${BARICOIND_PIDDIR}/baricoind.pid"
 
-# Where to write fujicoind data (be mindful that the blockchain is large)
-#FUJICOIND_DATADIR="/var/lib/fujicoind"
+# Where to write baricoind data (be mindful that the blockchain is large)
+#BARICOIND_DATADIR="/var/lib/baricoind"
 
-# User and group to own fujicoind process
-#FUJICOIND_USER="fujicoin"
-#FUJICOIND_GROUP="fujicoin"
+# User and group to own baricoind process
+#BARICOIND_USER="baricoin"
+#BARICOIND_GROUP="baricoin"
 
-# Path to fujicoind executable
-#FUJICOIND_BIN="/usr/bin/fujicoind"
+# Path to baricoind executable
+#BARICOIND_BIN="/usr/bin/baricoind"
 
-# Nice value to run fujicoind under
-#FUJICOIND_NICE=0
+# Nice value to run baricoind under
+#BARICOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#FUJICOIND_OPTS=""
+#BARICOIND_OPTS=""
 
-# The timeout in seconds OpenRC will wait for fujicoind to terminate
+# The timeout in seconds OpenRC will wait for baricoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-FUJICOIND_SIGTERM_TIMEOUT=600
+BARICOIND_SIGTERM_TIMEOUT=600

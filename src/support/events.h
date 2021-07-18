@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_SUPPORT_EVENTS_H
-#define FUJICOIN_SUPPORT_EVENTS_H
+#ifndef BARICOIN_SUPPORT_EVENTS_H
+#define BARICOIN_SUPPORT_EVENTS_H
 
 #include <ios>
 #include <memory>
@@ -53,4 +53,4 @@ inline raii_evhttp_connection obtain_evhttp_connection_base(struct event_base* b
     return result;
 }
 
-#endif // FUJICOIN_SUPPORT_EVENTS_H
+#endif // BARICOIN_SUPPORT_EVENTS_H

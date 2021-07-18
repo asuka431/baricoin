@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.fujicoin;
+package org.baricoin;
 
 /**
  * This class holds the context reference used in native methods 

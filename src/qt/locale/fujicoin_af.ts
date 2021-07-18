@@ -62,8 +62,8 @@
         <translation>Ontvang adresse</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit is jou Fujicoin-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit is jou Baricoin-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -156,8 +156,8 @@
         <translation>Bevestig beursie enkripsie.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: As jy jou beursie enkripteer en jou wagwoord verloor, sal jy &lt;b&gt;AL JOU FUJICOINS VERLOOR&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Waarskuwing: As jy jou beursie enkripteer en jou wagwoord verloor, sal jy &lt;b&gt;AL JOU BARICOINS VERLOOR&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -216,7 +216,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Teken &amp;Boodskap</translation>
@@ -310,8 +310,8 @@
         <translation>Herindekseer blokke op skyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Stuur muntstukke na 'n Fujicoin adres</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Stuur muntstukke na 'n Baricoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -346,12 +346,12 @@
         <translation>Versleutel die private sleutels wat aan u beursie behoort</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Teken boodskappe met u Fujicoin adresse om te bewys dat u hul besit</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Teken boodskappe met u Baricoin adresse om te bewys dat u hul besit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Bevestig boodskappe om te verseker dat hulle geteken was met gespesifiseerde Fujicoin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Bevestig boodskappe om te verseker dat hulle geteken was met gespesifiseerde Baricoin adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -370,8 +370,8 @@
         <translation>Blad nutsbalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR kodes en fujicoin: URIs)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR kodes en baricoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,8 +422,8 @@
         <translation>Op datum</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Fujicoin command-line options</source>
-        <translation>Wys die %1 hulpboodskap om 'n lys met moontlike Fujicoin bevel-lyn opsies te verkry</translation>
+        <source>Show the %1 help message to get a list with possible Baricoin command-line options</source>
+        <translation>Wys die %1 hulpboodskap om 'n lys met moontlike Baricoin bevel-lyn opsies te verkry</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -500,8 +500,8 @@
         <translation>Beursie is &lt;b&gt;versleutel&lt;/b&gt; en is tans &lt;b&gt;gesluit&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>'n Noodlottige fout het voorgekom. Fujicoin kan nie langer voortgaan nie en sal afsluit.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>'n Noodlottige fout het voorgekom. Baricoin kan nie langer voortgaan nie en sal afsluit.</translation>
     </message>
 </context>
 <context>
@@ -696,8 +696,8 @@
         <translation>Wysig stuurende adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>Die ingeskrewe adres "%1" is nie 'n geldige Fujicoin adres nie.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>Die ingeskrewe adres "%1" is nie 'n geldige Baricoin adres nie.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -765,8 +765,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1069,8 +1069,8 @@
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
-        <translation>Voer in 'n Fujicoin adres (bv. %1)</translation>
+        <source>Enter a Baricoin address (e.g. %1)</source>
+        <translation>Voer in 'n Baricoin adres (bv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1635,8 +1635,8 @@ transaksievertragingsrisiko.</translation>
         <translation>Betalings versoek verstryk.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Waarskuwing: Ongeldige Fujicoinadres</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Waarskuwing: Ongeldige Baricoinadres</translation>
     </message>
     <message>
         <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
@@ -1668,8 +1668,8 @@ Is u seker?</translation>
         <translation>Kies voorheen gebruikte adres</translation>
     </message>
     <message>
-        <source>The Fujicoin address to send the payment to</source>
-        <translation>Die Fujicoinadres waarheen die betaling gestuur word</translation>
+        <source>The Baricoin address to send the payment to</source>
+        <translation>Die Baricoinadres waarheen die betaling gestuur word</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1684,7 +1684,7 @@ Is u seker?</translation>
         <translation>Verwyder hierdie inskrywing</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>De fooi word afgetrek van die gestuurde bedrag.
 Die ontvanger sal minder ontvang as wat u in die 
 bedrag opgee. As daar meer as een ontvanger is,
@@ -2065,7 +2065,7 @@ word die fooi eweredig verdeel.</translation>
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Error loading %s</source>
         <translation>Fout met laai %s</translation>

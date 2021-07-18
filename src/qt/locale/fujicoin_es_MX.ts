@@ -66,8 +66,8 @@
         <translation>Direcciones de recibo</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones de Fujicoin para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones de Baricoin para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Confirmar la encriptación de cartera</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Advertencia: Si encripta su cartera y pierde su contraseña, &lt;b&gt;PERDERÁ TODOS SUS FUJICOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Advertencia: Si encripta su cartera y pierde su contraseña, &lt;b&gt;PERDERÁ TODOS SUS BARICOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -220,7 +220,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje</translation>
@@ -323,8 +323,8 @@ Haga clic para habilitar la actividad de red nuevamente.</translation>
         <translation>El proxy está &lt;b&gt;habilitado&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Enviar monedas a una dirección Fujicoin</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Enviar monedas a una dirección Baricoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -359,12 +359,12 @@ Haga clic para habilitar la actividad de red nuevamente.</translation>
         <translation>Cifre las claves privadas que pertenecen a su billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Firme mensajes con sus direcciones de Fujicoin para demostrar que los posee</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Firme mensajes con sus direcciones de Baricoin para demostrar que los posee</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Verifique los mensajes para asegurarse de que se firmaron con direcciones de Fujicoin especificadas.</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Verifique los mensajes para asegurarse de que se firmaron con direcciones de Baricoin especificadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -383,9 +383,9 @@ Haga clic para habilitar la actividad de red nuevamente.</translation>
         <translation>Pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
         <translation> 
-Solicitar pagos (genera códigos QR y fujicoin: URI)
+Solicitar pagos (genera códigos QR y baricoin: URI)
  </translation>
     </message>
     <message>
@@ -582,8 +582,8 @@ Solicitar pagos (genera códigos QR y fujicoin: URI)
 <context>
     <name>Intro</name>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -667,8 +667,8 @@ Solicitar pagos (genera códigos QR y fujicoin: URI)
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fujicoin network.</source>
-        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Fujicoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Baricoin network.</source>
+        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Baricoin.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -816,8 +816,8 @@ Solicitar pagos (genera códigos QR y fujicoin: URI)
         <translation>¡La creación de la transación falló!</translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
-        <translation>Advertencia: Dirección de Fujicoin invalida</translation>
+        <source>Warning: Invalid Baricoin address</source>
+        <translation>Advertencia: Dirección de Baricoin invalida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1188,7 +1188,7 @@ Solicitar pagos (genera códigos QR y fujicoin: URI)
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Verifying blocks...</source>
         <translation>Verificando bloques...</translation>

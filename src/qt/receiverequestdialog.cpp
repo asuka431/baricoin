@@ -5,7 +5,7 @@
 #include <qt/receiverequestdialog.h>
 #include <qt/forms/ui_receiverequestdialog.h>
 
-#include <qt/fujicoinunits.h>
+#include <qt/baricoinunits.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 #include <qt/walletmodel.h>
@@ -14,7 +14,7 @@
 #include <QPixmap>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h> /* for USE_QRCODE */
+#include <config/baricoin-config.h> /* for USE_QRCODE */
 #endif
 
 ReceiveRequestDialog::ReceiveRequestDialog(QWidget *parent) :
@@ -63,7 +63,7 @@ void ReceiveRequestDialog::update()
         target = info.address;
     setWindowTitle(tr("Request payment to %1").arg(target));
 
-    QString uri = GUIUtil::formatFujicoinURI(info);
+    QString uri = GUIUtil::formatBaricoinURI(info);
     ui->btnSaveAs->setEnabled(false);
     QString html;
     html += "<html><font face='verdana, arial, helvetica, sans-serif'>";
@@ -72,7 +72,7 @@ void ReceiveRequestDialog::update()
     html += "<a href=\""+uri+"\">" + GUIUtil::HtmlEscape(uri) + "</a><br>";
     html += "<b>"+tr("Address")+"</b>: " + GUIUtil::HtmlEscape(info.address) + "<br>";
     if(info.amount)
-        html += "<b>"+tr("Amount")+"</b>: " + FujicoinUnits::formatHtmlWithUnit(model->getOptionsModel()->getDisplayUnit(), info.amount) + "<br>";
+        html += "<b>"+tr("Amount")+"</b>: " + BaricoinUnits::formatHtmlWithUnit(model->getOptionsModel()->getDisplayUnit(), info.amount) + "<br>";
     if(!info.label.isEmpty())
         html += "<b>"+tr("Label")+"</b>: " + GUIUtil::HtmlEscape(info.label) + "<br>";
     if(!info.message.isEmpty())
@@ -89,7 +89,7 @@ void ReceiveRequestDialog::update()
 
 void ReceiveRequestDialog::on_btnCopyURI_clicked()
 {
-    GUIUtil::setClipboard(GUIUtil::formatFujicoinURI(info));
+    GUIUtil::setClipboard(GUIUtil::formatBaricoinURI(info));
 }
 
 void ReceiveRequestDialog::on_btnCopyAddress_clicked()

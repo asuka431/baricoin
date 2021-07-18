@@ -2,17 +2,17 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_FUJICOIN_H
-#define FUJICOIN_QT_FUJICOIN_H
+#ifndef BARICOIN_QT_BARICOIN_H
+#define BARICOIN_QT_BARICOIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <QApplication>
 #include <memory>
 
-class FujicoinGUI;
+class BaricoinGUI;
 class ClientModel;
 class NetworkStyle;
 class OptionsModel;
@@ -26,14 +26,14 @@ class Handler;
 class Node;
 } // namespace interfaces
 
-/** Class encapsulating Fujicoin Core startup and shutdown.
+/** Class encapsulating Baricoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class FujicoinCore: public QObject
+class BaricoinCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit FujicoinCore(interfaces::Node& node);
+    explicit BaricoinCore(interfaces::Node& node);
 
 public Q_SLOTS:
     void initialize();
@@ -51,13 +51,13 @@ private:
     interfaces::Node& m_node;
 };
 
-/** Main Fujicoin application object */
-class FujicoinApplication: public QApplication
+/** Main Baricoin application object */
+class BaricoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit FujicoinApplication(interfaces::Node& node);
-    ~FujicoinApplication();
+    explicit BaricoinApplication(interfaces::Node& node);
+    ~BaricoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -84,7 +84,7 @@ public:
     /// Get process return value
     int getReturnValue() const { return returnValue; }
 
-    /// Get window identifier of QMainWindow (FujicoinGUI)
+    /// Get window identifier of QMainWindow (BaricoinGUI)
     WId getMainWinId() const;
 
     /// Setup platform style
@@ -100,14 +100,14 @@ Q_SIGNALS:
     void requestedInitialize();
     void requestedShutdown();
     void splashFinished();
-    void windowShown(FujicoinGUI* window);
+    void windowShown(BaricoinGUI* window);
 
 private:
     QThread *coreThread;
     interfaces::Node& m_node;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    FujicoinGUI *window;
+    BaricoinGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer{nullptr};
@@ -122,4 +122,4 @@ private:
 
 int GuiMain(int argc, char* argv[]);
 
-#endif // FUJICOIN_QT_FUJICOIN_H
+#endif // BARICOIN_QT_BARICOIN_H

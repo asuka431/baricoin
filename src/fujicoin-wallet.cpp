@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <chainparams.h>
@@ -40,12 +40,12 @@ static bool WalletAppInit(int argc, char* argv[])
         return false;
     }
     if (argc < 2 || HelpRequested(gArgs)) {
-        std::string usage = strprintf("%s fujicoin-wallet version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n\n" +
-                                      "fujicoin-wallet is an offline tool for creating and interacting with " PACKAGE_NAME " wallet files.\n" +
-                                      "By default fujicoin-wallet will act on wallets in the default mainnet wallet directory in the datadir.\n" +
+        std::string usage = strprintf("%s baricoin-wallet version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n\n" +
+                                      "baricoin-wallet is an offline tool for creating and interacting with " PACKAGE_NAME " wallet files.\n" +
+                                      "By default baricoin-wallet will act on wallets in the default mainnet wallet directory in the datadir.\n" +
                                       "To change the target wallet, use the -datadir, -wallet and -testnet/-regtest arguments.\n\n" +
                                       "Usage:\n" +
-                                     "  fujicoin-wallet [options] <command>\n\n" +
+                                     "  baricoin-wallet [options] <command>\n\n" +
                                      gArgs.GetHelpMessage();
 
         tfm::format(std::cout, "%s", usage);
@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
     }
 
     if (method.empty()) {
-        tfm::format(std::cerr, "No method provided. Run `fujicoin-wallet -help` for valid methods.\n");
+        tfm::format(std::cerr, "No method provided. Run `baricoin-wallet -help` for valid methods.\n");
         return EXIT_FAILURE;
     }
 

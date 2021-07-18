@@ -19,8 +19,8 @@ Release Process
 
 * On both the master branch and the new release branch:
   - update `CLIENT_VERSION_MINOR` in [`configure.ac`](../configure.ac)
-  - update `CLIENT_VERSION_MINOR`, `PACKAGE_VERSION`, and `PACKAGE_STRING` in [`build_msvc/fujicoin_config.h`](/build_msvc/fujicoin_config.h)
-* On the new release branch in [`configure.ac`](../configure.ac) and [`build_msvc/fujicoin_config.h`](/build_msvc/fujicoin_config.h) (see [this commit](https://github.com/bitcoin/bitcoin/commit/742f7dd)):
+  - update `CLIENT_VERSION_MINOR`, `PACKAGE_VERSION`, and `PACKAGE_STRING` in [`build_msvc/baricoin_config.h`](/build_msvc/baricoin_config.h)
+* On the new release branch in [`configure.ac`](../configure.ac) and [`build_msvc/baricoin_config.h`](/build_msvc/baricoin_config.h) (see [this commit](https://github.com/bitcoin/bitcoin/commit/742f7dd)):
   - set `CLIENT_VERSION_REVISION` to `0`
   - set `CLIENT_VERSION_IS_RELEASE` to `true`
 
@@ -94,7 +94,7 @@ If you're using the automated script (found in [contrib/gitian-build.py](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./fujicoin
+    pushd ./baricoin
     export SIGNER="(your Gitian key, ie bluematt, sipa, etc)"
     export VERSION=(new version, e.g. 0.20.0)
     git fetch
@@ -127,10 +127,10 @@ Create the macOS SDK tarball, see the [macdeploy instructions](/contrib/macdeplo
 
 NOTE: Gitian is sometimes unable to download files. If you have errors, try the step below.
 
-By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in fujicoin, then:
+By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in baricoin, then:
 
     pushd ./gitian-builder
-    make -C ../fujicoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../baricoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -138,47 +138,47 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url fujicoin=/path/to/fujicoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url baricoin=/path/to/baricoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Fujicoin Core for Linux, Windows, and macOS:
+### Build and sign Baricoin Core for Linux, Windows, and macOS:
 
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit fujicoin=v${VERSION} ../fujicoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../fujicoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/fujicoin-*.tar.gz build/out/src/fujicoin-*.tar.gz ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit baricoin=v${VERSION} ../baricoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../baricoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/baricoin-*.tar.gz build/out/src/baricoin-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit fujicoin=v${VERSION} ../fujicoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../fujicoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/fujicoin-*-win-unsigned.tar.gz inputs/fujicoin-win-unsigned.tar.gz
-    mv build/out/fujicoin-*.zip build/out/fujicoin-*.exe ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit baricoin=v${VERSION} ../baricoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../baricoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/baricoin-*-win-unsigned.tar.gz inputs/baricoin-win-unsigned.tar.gz
+    mv build/out/baricoin-*.zip build/out/baricoin-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit fujicoin=v${VERSION} ../fujicoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../fujicoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/fujicoin-*-osx-unsigned.tar.gz inputs/fujicoin-osx-unsigned.tar.gz
-    mv build/out/fujicoin-*.tar.gz build/out/fujicoin-*.dmg ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit baricoin=v${VERSION} ../baricoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../baricoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/baricoin-*-osx-unsigned.tar.gz inputs/baricoin-osx-unsigned.tar.gz
+    mv build/out/baricoin-*.tar.gz build/out/baricoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`fujicoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`fujicoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`fujicoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `fujicoin-${VERSION}-win[32|64].zip`)
-  4. macOS unsigned installer and dist tarball (`fujicoin-${VERSION}-osx-unsigned.dmg`, `fujicoin-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`baricoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`baricoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`baricoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `baricoin-${VERSION}-win[32|64].zip`)
+  4. macOS unsigned installer and dist tarball (`baricoin-${VERSION}-osx-unsigned.dmg`, `baricoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
-Add other gitian builders keys to your gpg keyring, and/or refresh keys: See `../fujicoin/contrib/gitian-keys/README.md`.
+Add other gitian builders keys to your gpg keyring, and/or refresh keys: See `../baricoin/contrib/gitian-keys/README.md`.
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../fujicoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../fujicoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../fujicoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../baricoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../baricoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../baricoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -199,22 +199,22 @@ Codesigner only: Create Windows/macOS detached signatures:
 
 Codesigner only: Sign the macOS binary:
 
-    transfer fujicoin-osx-unsigned.tar.gz to macOS for signing
-    tar xf fujicoin-osx-unsigned.tar.gz
+    transfer baricoin-osx-unsigned.tar.gz to macOS for signing
+    tar xf baricoin-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf fujicoin-win-unsigned.tar.gz
+    tar xf baricoin-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/fujicoin-detached-sigs
+    cd ~/baricoin-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -227,24 +227,24 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/macOS detached signatures:
 
 - Once the Windows/macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [fujicoin-detached-sigs](https://github.com/bitcoin-core/bitcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [baricoin-detached-sigs](https://github.com/bitcoin-core/bitcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed macOS binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../fujicoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../fujicoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../fujicoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/fujicoin-osx-signed.dmg ../fujicoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../baricoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../baricoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../baricoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/baricoin-osx-signed.dmg ../baricoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../fujicoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../fujicoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../fujicoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/fujicoin-*win64-setup.exe ../fujicoin-${VERSION}-win64-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../baricoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../baricoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../baricoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/baricoin-*win64-setup.exe ../baricoin-${VERSION}-win64-setup.exe
     popd
 
 Commit your signature for the signed macOS/Windows binaries:
@@ -266,21 +266,21 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-fujicoin-${VERSION}-aarch64-linux-gnu.tar.gz
-fujicoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-fujicoin-${VERSION}-riscv64-linux-gnu.tar.gz
-fujicoin-${VERSION}-x86_64-linux-gnu.tar.gz
-fujicoin-${VERSION}-osx64.tar.gz
-fujicoin-${VERSION}-osx.dmg
-fujicoin-${VERSION}.tar.gz
-fujicoin-${VERSION}-win64-setup.exe
-fujicoin-${VERSION}-win64.zip
+baricoin-${VERSION}-aarch64-linux-gnu.tar.gz
+baricoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+baricoin-${VERSION}-riscv64-linux-gnu.tar.gz
+baricoin-${VERSION}-x86_64-linux-gnu.tar.gz
+baricoin-${VERSION}-osx64.tar.gz
+baricoin-${VERSION}-osx.dmg
+baricoin-${VERSION}.tar.gz
+baricoin-${VERSION}-win64-setup.exe
+baricoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the fujicoin.org server, nor put them in the torrent*.
+space *do not upload these to the baricoin.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -290,28 +290,28 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the fujicoin.org server
-  into `/var/www/bin/fujicoin-core-${VERSION}`
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the baricoin.org server
+  into `/var/www/bin/baricoin-core-${VERSION}`
 
 - A `.torrent` will appear in the directory after a few minutes. Optionally help seed this torrent. To get the `magnet:` URI use:
 ```bash
 transmission-show -m <torrent file>
 ```
 Insert the magnet URI into the announcement sent to mailing lists. This permits
-people without access to `fujicoin.org` to download the binary distribution.
+people without access to `baricoin.org` to download the binary distribution.
 Also put it into the `optional_magnetlink:` slot in the YAML file for
-fujicoin.org (see below for fujicoin.org update instructions).
+baricoin.org (see below for baricoin.org update instructions).
 
-- Update fujicoin.org version
+- Update baricoin.org version
 
-  - First, check to see if the Fujicoin.org maintainers have prepared a
+  - First, check to see if the Baricoin.org maintainers have prepared a
     release: https://github.com/bitcoin-dot-org/bitcoin.org/labels/Core
 
       - If they have, it will have previously failed their Travis CI
         checks because the final release files weren't uploaded.
         Trigger a Travis CI rebuild---if it passes, merge.
 
-  - If they have not prepared a release, follow the Fujicoin.org release
+  - If they have not prepared a release, follow the Baricoin.org release
     instructions: https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/adding-events-release-notes-and-alerts.md#release-notes
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
@@ -319,12 +319,12 @@ fujicoin.org (see below for fujicoin.org update instructions).
 
 - Update other repositories and websites for new version
 
-  - fujicoincore.org blog post
+  - baricoincore.org blog post
 
-  - fujicoincore.org maintained versions update:
+  - baricoincore.org maintained versions update:
     [table](https://github.com/bitcoin-core/bitcoincore.org/commits/master/_includes/posts/maintenance-table.md)
 
-  - fujicoincore.org RPC documentation update
+  - baricoincore.org RPC documentation update
 
   - Update packaging repo
 
@@ -339,12 +339,12 @@ fujicoin.org (see below for fujicoin.org update instructions).
 
         - https://code.launchpad.net/~bitcoin-core/bitcoin-core-snap/+git/packaging (Click "Import Now" to fetch the branch)
         - https://code.launchpad.net/~bitcoin-core/bitcoin-core-snap/+git/packaging/+ref/0.xx (Click "Create snap package")
-        - Name it "fujicoin-core-snap-0.xx"
+        - Name it "baricoin-core-snap-0.xx"
         - Leave owner and series as-is
         - Select architectures that are compiled via gitian
         - Leave "automatically build when branch changes" unticked
         - Tick "automatically upload to store"
-        - Put "fujicoin-core" in the registered store package name field
+        - Put "baricoin-core" in the registered store package name field
         - Tick the "edge" box
         - Put "0.xx" in the track field
         - Click "create snap package"
@@ -359,13 +359,13 @@ fujicoin.org (see below for fujicoin.org update instructions).
 
 - Announce the release:
 
-  - fujicoin-dev and fujicoin-core-dev mailing list
+  - baricoin-dev and baricoin-core-dev mailing list
 
-  - Fujicoin Core announcements list https://bitcoincore.org/en/list/announcements/join/
+  - Baricoin Core announcements list https://bitcoincore.org/en/list/announcements/join/
 
-  - Update title of #fujicoin on Freenode IRC
+  - Update title of #baricoin on Freenode IRC
 
-  - Optionally twitter, reddit /r/Fujicoin, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/Baricoin, ... but this will usually sort out itself
 
   - Celebrate
 

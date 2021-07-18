@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_PSBT_H
-#define FUJICOIN_PSBT_H
+#ifndef BARICOIN_PSBT_H
+#define BARICOIN_PSBT_H
 
 #include <attributes.h>
 #include <node/transaction.h>
@@ -395,7 +395,7 @@ struct PartiallySignedTransaction
     bool IsNull() const;
 
     /** Merge psbt into this. The two psbts must have the same underlying CTransaction (i.e. the
-      * same actual Fujicoin transaction.) Returns true if the merge succeeded, false otherwise. */
+      * same actual Baricoin transaction.) Returns true if the merge succeeded, false otherwise. */
     NODISCARD bool Merge(const PartiallySignedTransaction& psbt);
     bool IsSane() const;
     bool AddInput(const CTxIn& txin, PSBTInput& psbtin);
@@ -612,4 +612,4 @@ NODISCARD bool DecodeBase64PSBT(PartiallySignedTransaction& decoded_psbt, const 
 //! Decode a raw (binary blob) PSBT into a PartiallySignedTransaction
 NODISCARD bool DecodeRawPSBT(PartiallySignedTransaction& decoded_psbt, const std::string& raw_psbt, std::string& error);
 
-#endif // FUJICOIN_PSBT_H
+#endif // BARICOIN_PSBT_H

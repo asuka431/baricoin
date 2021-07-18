@@ -62,7 +62,7 @@
         <translation>Хүлээн авах хаяг</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Эдгээр Биткойн хаягууд нь илгээх хаягууд. Хүлээн авах хаяг болон тоо хэмжээг илгээхээсээ өмнө сайн нягталж үзэж байна уу</translation>
     </message>
     <message>
@@ -180,7 +180,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Зурвас хавсаргах...</translation>
@@ -379,7 +379,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Fujicoin</source>
+        <source>Baricoin</source>
         <translation>Биткойн</translation>
     </message>
     <message>
@@ -685,7 +685,7 @@
         <translation>Гүйлгээний тѳлбѳр %1-ийг тооцхоор нийт дүн нь таны балансаас хэтрээд байна.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
+        <source>Warning: Invalid Baricoin address</source>
         <translation>Анхаар:Буруу Биткойны хаяг байна</translation>
     </message>
     <message>
@@ -1017,7 +1017,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Таны дансны үлдэгдэл хүрэлцэхгүй байна</translation>

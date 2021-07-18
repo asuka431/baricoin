@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_RPCCONSOLE_H
-#define FUJICOIN_QT_RPCCONSOLE_H
+#ifndef BARICOIN_QT_RPCCONSOLE_H
+#define BARICOIN_QT_RPCCONSOLE_H
 
 #include <qt/guiutil.h>
 #include <qt/peertablemodel.h>
@@ -32,7 +32,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local Fujicoin RPC console. */
+/** Local Baricoin RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT
@@ -173,4 +173,4 @@ private Q_SLOTS:
     void updateAlerts(const QString& warnings);
 };
 
-#endif // FUJICOIN_QT_RPCCONSOLE_H
+#endif // BARICOIN_QT_RPCCONSOLE_H

@@ -9,37 +9,37 @@
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\fujicoin-wallet.cpp" />
+    <ClCompile Include="..\..\src\baricoin-wallet.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libfujicoinconsensus\libfujicoinconsensus.vcxproj">
+    <ProjectReference Include="..\libbaricoinconsensus\libbaricoinconsensus.vcxproj">
       <Project>{2b384fa8-9ee1-4544-93cb-0d733c25e8ce}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_cli\libfujicoin_cli.vcxproj">
+    <ProjectReference Include="..\libbaricoin_cli\libbaricoin_cli.vcxproj">
       <Project>{0667528c-d734-4009-adf9-c0d6c4a5a5a6}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_common\libfujicoin_common.vcxproj">
+    <ProjectReference Include="..\libbaricoin_common\libbaricoin_common.vcxproj">
       <Project>{7c87e378-df58-482e-aa2f-1bc129bc19ce}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_crypto\libfujicoin_crypto.vcxproj">
+    <ProjectReference Include="..\libbaricoin_crypto\libbaricoin_crypto.vcxproj">
       <Project>{6190199c-6cf4-4dad-bfbd-93fa72a760c1}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_server\libfujicoin_server.vcxproj">
+    <ProjectReference Include="..\libbaricoin_server\libbaricoin_server.vcxproj">
       <Project>{460fee33-1fe1-483f-b3bf-931ff8e969a5}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_util\libfujicoin_util.vcxproj">
+    <ProjectReference Include="..\libbaricoin_util\libbaricoin_util.vcxproj">
       <Project>{b53a5535-ee9d-4c6f-9a26-f79ee3bc3754}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_wallet\libfujicoin_wallet.vcxproj">
+    <ProjectReference Include="..\libbaricoin_wallet\libbaricoin_wallet.vcxproj">
       <Project>{93b86837-b543-48a5-a89b-7c87abb77df2}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_zmq\libfujicoin_zmq.vcxproj">
+    <ProjectReference Include="..\libbaricoin_zmq\libbaricoin_zmq.vcxproj">
       <Project>{792d487f-f14c-49fc-a9de-3fc150f31c3f}</Project>
     </ProjectReference>
     <ProjectReference Include="..\libunivalue\libunivalue.vcxproj">
       <Project>{5724ba7d-a09a-4ba8-800b-c4c1561b3d69}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libfujicoin_wallet_tool\libfujicoin_wallet_tool.vcxproj">
+    <ProjectReference Include="..\libbaricoin_wallet_tool\libbaricoin_wallet_tool.vcxproj">
       <Project>{f91ac55e-6f5e-4c58-9ac5-b40db7deef93}</Project>
     </ProjectReference>
     <ProjectReference Include="..\libsecp256k1\libsecp256k1.vcxproj">

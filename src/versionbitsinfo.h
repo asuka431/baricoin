@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_VERSIONBITSINFO_H
-#define FUJICOIN_VERSIONBITSINFO_H
+#ifndef BARICOIN_VERSIONBITSINFO_H
+#define BARICOIN_VERSIONBITSINFO_H
 
 struct VBDeploymentInfo {
     /** Deployment name */
@@ -14,4 +14,4 @@ struct VBDeploymentInfo {
 
 extern const struct VBDeploymentInfo VersionBitsDeploymentInfo[];
 
-#endif // FUJICOIN_VERSIONBITSINFO_H
+#endif // BARICOIN_VERSIONBITSINFO_H

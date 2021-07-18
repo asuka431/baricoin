@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NODE_COIN_H
-#define FUJICOIN_NODE_COIN_H
+#ifndef BARICOIN_NODE_COIN_H
+#define BARICOIN_NODE_COIN_H
 
 #include <map>
 
@@ -21,4 +21,4 @@ struct NodeContext;
  */
 void FindCoins(const NodeContext& node, std::map<COutPoint, Coin>& coins);
 
-#endif // FUJICOIN_NODE_COIN_H
+#endif // BARICOIN_NODE_COIN_H

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2019 The Fujicoin Core developers
+# Copyright (c) 2014-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test node disconnect and ban behavior"""
 import time
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -13,7 +13,7 @@ from test_framework.util import (
     wait_until,
 )
 
-class DisconnectBanTest(FujicoinTestFramework):
+class DisconnectBanTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.supports_cli = False

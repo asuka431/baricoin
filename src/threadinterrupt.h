@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_THREADINTERRUPT_H
-#define FUJICOIN_THREADINTERRUPT_H
+#ifndef BARICOIN_THREADINTERRUPT_H
+#define BARICOIN_THREADINTERRUPT_H
 
 #include <sync.h>
 
@@ -33,4 +33,4 @@ private:
     std::atomic<bool> flag;
 };
 
-#endif //FUJICOIN_THREADINTERRUPT_H
+#endif //BARICOIN_THREADINTERRUPT_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_BLOCKFILTER_H
-#define FUJICOIN_BLOCKFILTER_H
+#ifndef BARICOIN_BLOCKFILTER_H
+#define BARICOIN_BLOCKFILTER_H
 
 #include <stdint.h>
 #include <string>
@@ -168,4 +168,4 @@ public:
     }
 };
 
-#endif // FUJICOIN_BLOCKFILTER_H
+#endif // BARICOIN_BLOCKFILTER_H

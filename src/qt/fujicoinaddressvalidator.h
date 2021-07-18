@@ -2,34 +2,34 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_FUJICOINADDRESSVALIDATOR_H
-#define FUJICOIN_QT_FUJICOINADDRESSVALIDATOR_H
+#ifndef BARICOIN_QT_BARICOINADDRESSVALIDATOR_H
+#define BARICOIN_QT_BARICOINADDRESSVALIDATOR_H
 
 #include <QValidator>
 
 /** Base58 entry widget validator, checks for valid characters and
  * removes some whitespace.
  */
-class FujicoinAddressEntryValidator : public QValidator
+class BaricoinAddressEntryValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit FujicoinAddressEntryValidator(QObject *parent);
+    explicit BaricoinAddressEntryValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-/** Fujicoin address widget validator, checks for a valid fujicoin address.
+/** Baricoin address widget validator, checks for a valid baricoin address.
  */
-class FujicoinAddressCheckValidator : public QValidator
+class BaricoinAddressCheckValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit FujicoinAddressCheckValidator(QObject *parent);
+    explicit BaricoinAddressCheckValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-#endif // FUJICOIN_QT_FUJICOINADDRESSVALIDATOR_H
+#endif // BARICOIN_QT_BARICOINADDRESSVALIDATOR_H

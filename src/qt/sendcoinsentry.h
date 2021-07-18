@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_SENDCOINSENTRY_H
-#define FUJICOIN_QT_SENDCOINSENTRY_H
+#ifndef BARICOIN_QT_SENDCOINSENTRY_H
+#define BARICOIN_QT_SENDCOINSENTRY_H
 
 #include <qt/sendcoinsrecipient.h>
 
@@ -21,7 +21,7 @@ namespace Ui {
 }
 
 /**
- * A single entry in the dialog for sending fujicoins.
+ * A single entry in the dialog for sending baricoins.
  * Stacked widget, with different UIs for payment requests
  * with a strong payee identity.
  */
@@ -78,4 +78,4 @@ private:
     bool updateLabel(const QString &address);
 };
 
-#endif // FUJICOIN_QT_SENDCOINSENTRY_H
+#endif // BARICOIN_QT_SENDCOINSENTRY_H

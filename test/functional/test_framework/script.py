@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2019 The Fujicoin Core developers
+# Copyright (c) 2015-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Functionality to build scripts, as well as signature hash functions.
 
-This file is modified from python-fujicoinlib.
+This file is modified from python-baricoinlib.
 """
 import hashlib
 import struct
@@ -26,7 +26,7 @@ def hash160(s):
     return hashlib.new('ripemd160', sha256(s)).digest()
 
 def bn2vch(v):
-    """Convert number to fujicoin-specific little endian format."""
+    """Convert number to baricoin-specific little endian format."""
     # We need v.bit_length() bits, plus a sign bit for every nonzero number.
     n_bits = v.bit_length() + (v != 0)
     # The number of bytes for that is:

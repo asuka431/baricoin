@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_PEERTABLEMODEL_H
-#define FUJICOIN_QT_PEERTABLEMODEL_H
+#ifndef BARICOIN_QT_PEERTABLEMODEL_H
+#define BARICOIN_QT_PEERTABLEMODEL_H
 
 #include <net_processing.h> // For CNodeStateStats
 #include <net.h>
@@ -87,4 +87,4 @@ private:
     QTimer *timer;
 };
 
-#endif // FUJICOIN_QT_PEERTABLEMODEL_H
+#endif // BARICOIN_QT_PEERTABLEMODEL_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_TRANSACTIONFILTERPROXY_H
-#define FUJICOIN_QT_TRANSACTIONFILTERPROXY_H
+#ifndef BARICOIN_QT_TRANSACTIONFILTERPROXY_H
+#define BARICOIN_QT_TRANSACTIONFILTERPROXY_H
 
 #include <amount.h>
 
@@ -65,4 +65,4 @@ private:
     bool showInactive;
 };
 
-#endif // FUJICOIN_QT_TRANSACTIONFILTERPROXY_H
+#endif // BARICOIN_QT_TRANSACTIONFILTERPROXY_H

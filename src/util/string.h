@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_STRING_H
-#define FUJICOIN_UTIL_STRING_H
+#ifndef BARICOIN_UTIL_STRING_H
+#define BARICOIN_UTIL_STRING_H
 
 #include <attributes.h>
 
@@ -66,4 +66,4 @@ std::string ToString(const T& t)
     return oss.str();
 }
 
-#endif // FUJICOIN_UTIL_STRENCODINGS_H
+#endif // BARICOIN_UTIL_STRENCODINGS_H

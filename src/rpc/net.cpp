@@ -337,7 +337,7 @@ static UniValue getaddednodeinfo(const JSONRPCRequest& request)
                             {
                                 {RPCResult::Type::OBJ, "", "",
                                 {
-                                    {RPCResult::Type::STR, "address", "The fujicoin server IP and port we're connected to"},
+                                    {RPCResult::Type::STR, "address", "The baricoin server IP and port we're connected to"},
                                     {RPCResult::Type::STR, "connected", "connection, inbound or outbound"},
                                 }},
                             }},

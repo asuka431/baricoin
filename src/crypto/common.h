@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CRYPTO_COMMON_H
-#define FUJICOIN_CRYPTO_COMMON_H
+#ifndef BARICOIN_CRYPTO_COMMON_H
+#define BARICOIN_CRYPTO_COMMON_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <stdint.h>
@@ -100,4 +100,4 @@ uint64_t static inline CountBits(uint64_t x)
     return ret;
 }
 
-#endif // FUJICOIN_CRYPTO_COMMON_H
+#endif // BARICOIN_CRYPTO_COMMON_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UNDO_H
-#define FUJICOIN_UNDO_H
+#ifndef BARICOIN_UNDO_H
+#define BARICOIN_UNDO_H
 
 #include <coins.h>
 #include <compressor.h>
@@ -68,4 +68,4 @@ public:
     SERIALIZE_METHODS(CBlockUndo, obj) { READWRITE(obj.vtxundo); }
 };
 
-#endif // FUJICOIN_UNDO_H
+#endif // BARICOIN_UNDO_H

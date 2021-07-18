@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_TEST_UTIL_NET_H
-#define FUJICOIN_TEST_UTIL_NET_H
+#ifndef BARICOIN_TEST_UTIL_NET_H
+#define BARICOIN_TEST_UTIL_NET_H
 
 #include <net.h>
 
@@ -30,4 +30,4 @@ struct ConnmanTestMsg : public CConnman {
     bool ReceiveMsgFrom(CNode& node, CSerializedNetMsg& ser_msg) const;
 };
 
-#endif // FUJICOIN_TEST_UTIL_NET_H
+#endif // BARICOIN_TEST_UTIL_NET_H

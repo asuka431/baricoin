@@ -66,11 +66,11 @@
         <translation>Адресе за примање</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Ово су твоје Биткоин адресе за слање уплата. Увек добро проверите износ и адресу на коју шаљете пре него што пошаљете уплату.</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <source>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
         <translation>Ово су твоје Биткоин адресе за приманје уплата. Користи дугме „Направи нову адресу за примање” у картици за примање за креирање нових адреса.</translation>
     </message>
     <message>
@@ -168,7 +168,7 @@
         <translation>Потврди шифрирање новчаника</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
         <translation>Упозорење: Уколико шифрирате новчаник и изгубите своју лозинку, &lt;b&gt;ИЗГУБИЋЕТЕ СВЕ СВОЈЕ БИТКОИНЕ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -188,7 +188,7 @@
         <translation>Унеси стару лозунку и нову лозинку новчаника.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your fujicoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your baricoins from being stolen by malware infecting your computer.</source>
         <translation>Упамти, шифрирање новчаника не може у потуности заштити твоје биткоине од крађе од стране малвера инфицира твој рачунар.</translation>
     </message>
     <message>
@@ -252,7 +252,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;поруку...</translation>
@@ -362,7 +362,7 @@
         <translation>Прокси је &lt;b&gt;омогућен&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
+        <source>Send coins to a Baricoin address</source>
         <translation>Пошаљите новац на Биткоин адресу</translation>
     </message>
     <message>
@@ -398,11 +398,11 @@
         <translation>Шифрирај приватни клуљ који припада новчанику.</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
         <translation>Потписуј поруку са своје Биткоин адресе као доказ да си њихов власник</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
         <translation>Верификуј поруке и утврди да ли су потписане од стране спецификованих Биткоин адреса</translation>
     </message>
     <message>
@@ -422,7 +422,7 @@
         <translation>Трака са картицама</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
         <translation>Затражи плаћање (генерише QR кодове и биткоин: URI-е)</translation>
     </message>
     <message>
@@ -438,7 +438,7 @@
         <translation>&amp;Опције командне линије</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Fujicoin network</source>
+        <source>%n active connection(s) to Baricoin network</source>
         <translation><numerusform>%n aктивна веза са Биткоин мрежом</numerusform><numerusform>%n aктивних веза са Биткоин мрежом</numerusform><numerusform>%n aктивних веза са Биткоин мрежом</numerusform></translation>
     </message>
     <message>
@@ -498,7 +498,7 @@
         <translation>&amp;Адресе за примање</translation>
     </message>
     <message>
-        <source>Open a fujicoin: URI</source>
+        <source>Open a baricoin: URI</source>
         <translation>Отвори биткоин: URI</translation>
     </message>
     <message>
@@ -518,7 +518,7 @@
         <translation>Затвори новчаник</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Fujicoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Baricoin command-line options</source>
         <translation>Прикажи  поруку помоћи %1 за листу са могућим опцијама Биткоин командне линије</translation>
     </message>
     <message>
@@ -626,7 +626,7 @@
         <translation>Новчаник јс &lt;b&gt;шифрован&lt;/b&gt; и тренутно &lt;b&gt;закључан&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
         <translation>Дошло је до критичне грешке. Биткоин не може безбедно да настави са радом и искључиће се.</translation>
     </message>
 </context>
@@ -870,7 +870,7 @@
         <translation>Измени адресу за слање</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
         <translation>Унета адреса "%1" није важећа Биткоин адреса.</translation>
     </message>
     <message>
@@ -967,7 +967,7 @@
         <translation>Користите прилагођени директоријум података:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
+        <source>Baricoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -983,7 +983,7 @@
         <translation>Најмање %1 GB подататака биће складиштен у овај директорјиум.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Fujicoin block chain.</source>
+        <source>%1 will download and store a copy of the Baricoin block chain.</source>
         <translation>%1 биће преузеће и складиштити копију Биткоин ланца блокова.</translation>
     </message>
     <message>
@@ -1018,11 +1018,11 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fujicoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the baricoin network, as detailed below.</source>
         <translation>Недавне трансакције можда не буду видљиве, зато салдо твог новчаника можда буде нетачан. </translation>
     </message>
     <message>
-        <source>Attempting to spend fujicoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend baricoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Покушај слања биткоина који су под утицајем још не приказаних трансакција неће бити прихваћен од стране мреже.</translation>
     </message>
     <message>
@@ -1073,7 +1073,7 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open fujicoin URI</source>
+        <source>Open baricoin URI</source>
         <translation>Отвори биткоин URI</translation>
     </message>
     <message>
@@ -1215,7 +1215,7 @@
         <translation>&amp;Троши непотврђени кусур</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Аутоматски отвори Биткоин клијент порт на рутеру. Ова опција ради само уколико твој рутер подржава и има омогућен UPnP.</translation>
     </message>
     <message>
@@ -1231,7 +1231,7 @@
         <translation>Дозволи долазеће конекције.</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Baricoin network through a SOCKS5 proxy.</source>
         <translation>Конектуј се на Биткоин мрежу кроз SOCKS5 проксијем.</translation>
     </message>
     <message>
@@ -1267,7 +1267,7 @@
         <translation>Тор</translation>
     </message>
     <message>
-        <source>Connect to the Fujicoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Baricoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Конектуј се на Биткоин мрежу кроз SOCK5 прокси за Тор скривене сервисе.</translation>
     </message>
     <message>
@@ -1374,7 +1374,7 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Приказана информација може бити застарела. Ваш новчаник се аутоматски синхронизује са Биткоин мрежом након успостављања конекције, али овај процес је још увек у току.</translation>
     </message>
     <message>
@@ -1449,7 +1449,7 @@
         <translation>Грешка у захтеву за плаћање</translation>
     </message>
     <message>
-        <source>Cannot start fujicoin: click-to-pay handler</source>
+        <source>Cannot start baricoin: click-to-pay handler</source>
         <translation>Не могу покренути биткоин: кликни-да-платиш механизам</translation>
     </message>
     <message>
@@ -1457,8 +1457,8 @@
         <translation>URI манипулација</translation>
     </message>
     <message>
-        <source>'fujicoin://' is not a valid URI. Use 'fujicoin:' instead.</source>
-        <translation>'fujicoin://' није важећи URI. Уместо тога користити  'fujicoin:'.</translation>
+        <source>'baricoin://' is not a valid URI. Use 'baricoin:' instead.</source>
+        <translation>'baricoin://' није важећи URI. Уместо тога користити  'baricoin:'.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.</source>
@@ -1477,7 +1477,7 @@
         <translation>Неважећа адреса за плаћање %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Fujicoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Baricoin address or malformed URI parameters.</source>
         <translation>URI се не може рашчланити! Ово може бити проузроковано неважећом Биткоин адресом или погрешно форматираним URI параметрима.</translation>
     </message>
     <message>
@@ -1519,7 +1519,7 @@
         <translation>iznos</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
+        <source>Enter a Baricoin address (e.g. %1)</source>
         <translation>Унеси Биткоин адресу, (нпр %1)</translation>
     </message>
     <message>
@@ -1984,7 +1984,7 @@
         <translation>Poruka:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fujicoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Baricoin network.</source>
         <translation>Опционална порука коју можеш прикачити уз захтев за плаћање, која ће бити приказана када захтев буде отворен. Напомена: Порука неће бити послата са уплатом на Биткоин мрежи.</translation>
     </message>
     <message>
@@ -2266,7 +2266,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Сакријте подешавања провизије за трансакцију</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fujicoin transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</source>
         <translation>Када је мањи обим трансакција од простора у блоку, рудари, као и повезани чворови могу применити минималну провизију. Плаћање само минималне провизије је добро, али треба бити свестан да ово може резултовати у трансакцији која неће никада бити потврђена, у случају када је број захтева за биткоин трансакцијама већи од могућности мреже да обради.</translation>
     </message>
     <message>
@@ -2338,7 +2338,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Креирај непотписано</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Fujicoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Baricoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>Креира делимично потписану Биткоин трансакцију (PSBT) за коришћење са нпр. офлајн %1 новчаником, или PSBT компатибилним хардверским новчаником. </translation>
     </message>
     <message>
@@ -2362,7 +2362,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Да ли сте сигурни да желите да пошаљете?</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Fujicoin Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Baricoin Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>Молим, проверите ваш предлог трансакције. Ово ће произвести делимично потписану Биткоин трансакцију (PSBT) коју можете копирати и онда потписати са нпр. офлајн %1 новчаником, или PSBT компатибилним хардверским новчаником.</translation>
     </message>
     <message>
@@ -2454,7 +2454,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation><numerusform>Процењује се да ће започети потврду унутар %n блока.</numerusform><numerusform>Процењује се да ће започети потврду унутар %n блока.</numerusform><numerusform>Процењује се да ће започети потврду унутар %n блокова.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
+        <source>Warning: Invalid Baricoin address</source>
         <translation>Упозорење: Неважећа Биткоин адреса</translation>
     </message>
     <message>
@@ -2493,7 +2493,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Промени претходно коришћену адресу</translation>
     </message>
     <message>
-        <source>The Fujicoin address to send the payment to</source>
+        <source>The Baricoin address to send the payment to</source>
         <translation>Биткоин адреса на коју се шаље уплата</translation>
     </message>
     <message>
@@ -2517,7 +2517,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Износ који ће бити послат у одабрану јединицу</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Провизија ће бити одузета од износа који је послат. Примаоц ће добити мање биткоина него што је унесено у поље за износ. Уколико је одабрано више примаоца, провизија се дели равномерно.</translation>
     </message>
     <message>
@@ -2545,7 +2545,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Унесите ознаку за ову адресу да бисте је додали на листу коришћених адреса</translation>
     </message>
     <message>
-        <source>A message that was attached to the fujicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fujicoin network.</source>
+        <source>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</source>
         <translation>Порука која је приложена биткоину: URI која ће бити сачувана уз трансакцију ради референце. Напомена: Ова порука се шаље преко Биткоин мреже.</translation>
     </message>
     <message>
@@ -2575,11 +2575,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Потписи - Потпиши / Потврди поруку</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fujicoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive baricoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Можете потписати поруку/споразум са вашом адресом да би сте доказали да можете примити биткоин послат ка њима. Будите опрезни да не потписујете ништа нејасно или случајно, јер се може десити напад крађе идентитета, да потпишете ваш идентитет нападачу. Потпишите само потпуно детаљне изјаве са којима се слажете.</translation>
     </message>
     <message>
-        <source>The Fujicoin address to sign the message with</source>
+        <source>The Baricoin address to sign the message with</source>
         <translation>Биткоин адреса са којом ћете потписати поруку</translation>
     </message>
     <message>
@@ -2611,7 +2611,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Копирајте тренутни потпис у системску базу за копирање</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
+        <source>Sign the message to prove you own this Baricoin address</source>
         <translation>Потпишите поруку да докажете да сте власник ове Биткоин адресе</translation>
     </message>
     <message>
@@ -2635,7 +2635,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Унесите адресу примаоца, поруку (осигурајте да тачно копирате прекиде линија, размаке, картице итд) и потпишите испод да потврдите поруку. Будите опрезни да не убаците више у потпис од онога што је у потписаној поруци, да би сте избегли напад посредника. Имајте на уму да потпис само доказује да потписник прима са потписаном адресом, а не може да докаже слање било које трансакције!</translation>
     </message>
     <message>
-        <source>The Fujicoin address the message was signed with</source>
+        <source>The Baricoin address the message was signed with</source>
         <translation>Биткоин адреса са којом је потписана порука</translation>
     </message>
     <message>
@@ -2647,7 +2647,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Потпис који је дат приликом потписивања поруке</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
         <translation>Потврдите поруку да осигурате да је потписана са одговарајућом Биткоин адресом</translation>
     </message>
     <message>
@@ -3295,7 +3295,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Дистрибуирано под MIT софтверском лиценцом, погледајте придружени документ %s или %s</translation>

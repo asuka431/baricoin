@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #
 # Test getblockstats rpc call
 #
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -16,7 +16,7 @@ import os
 
 TESTSDIR = os.path.dirname(os.path.realpath(__file__))
 
-class GetblockstatsTest(FujicoinTestFramework):
+class GetblockstatsTest(BaricoinTestFramework):
 
     start_height = 101
     max_stat_pos = 2

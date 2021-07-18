@@ -6,8 +6,8 @@
 
 #include <chainparams.h>
 #include <key.h>
-#include <qt/fujicoin.h>
-#include <qt/fujicoingui.h>
+#include <qt/baricoin.h>
+#include <qt/baricoingui.h>
 #include <qt/networkstyle.h>
 #include <qt/rpcconsole.h>
 #include <shutdown.h>
@@ -16,7 +16,7 @@
 #include <validation.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <QAction>
@@ -47,7 +47,7 @@ void TestRpcCommand(RPCConsole* console)
 }
 } // namespace
 
-//! Entry point for FujicoinApplication tests.
+//! Entry point for BaricoinApplication tests.
 void AppTests::appTests()
 {
 #ifdef Q_OS_MAC
@@ -57,7 +57,7 @@ void AppTests::appTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         QWARN("Skipping AppTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
-              "with 'QT_QPA_PLATFORM=cocoa test_fujicoin-qt' on mac, or else use a linux or windows build.");
+              "with 'QT_QPA_PLATFORM=cocoa test_baricoin-qt' on mac, or else use a linux or windows build.");
         return;
     }
 #endif
@@ -71,7 +71,7 @@ void AppTests::appTests()
     QScopedPointer<const NetworkStyle> style(NetworkStyle::instantiate(Params().NetworkIDString()));
     m_app.setupPlatformStyle();
     m_app.createWindow(style.data());
-    connect(&m_app, &FujicoinApplication::windowShown, this, &AppTests::guiTests);
+    connect(&m_app, &BaricoinApplication::windowShown, this, &AppTests::guiTests);
     expectCallback("guiTests");
     m_app.baseInitialize();
     m_app.requestInitialize();
@@ -84,11 +84,11 @@ void AppTests::appTests()
     UnloadBlockIndex();
 }
 
-//! Entry point for FujicoinGUI tests.
-void AppTests::guiTests(FujicoinGUI* window)
+//! Entry point for BaricoinGUI tests.
+void AppTests::guiTests(BaricoinGUI* window)
 {
     HandleCallback callback{"guiTests", *this};
-    connect(window, &FujicoinGUI::consoleShown, this, &AppTests::consoleTests);
+    connect(window, &BaricoinGUI::consoleShown, this, &AppTests::consoleTests);
     expectCallback("consoleTests");
     QAction* action = window->findChild<QAction*>("openRPCConsoleAction");
     action->activate(QAction::Trigger);

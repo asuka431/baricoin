@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CONSENSUS_VALIDATION_H
-#define FUJICOIN_CONSENSUS_VALIDATION_H
+#ifndef BARICOIN_CONSENSUS_VALIDATION_H
+#define BARICOIN_CONSENSUS_VALIDATION_H
 
 #include <string>
 #include <version.h>
@@ -144,4 +144,4 @@ static inline int64_t GetTransactionInputWeight(const CTxIn& txin)
     return ::GetSerializeSize(txin, PROTOCOL_VERSION | SERIALIZE_TRANSACTION_NO_WITNESS) * (WITNESS_SCALE_FACTOR - 1) + ::GetSerializeSize(txin, PROTOCOL_VERSION) + ::GetSerializeSize(txin.scriptWitness.stack, PROTOCOL_VERSION);
 }
 
-#endif // FUJICOIN_CONSENSUS_VALIDATION_H
+#endif // BARICOIN_CONSENSUS_VALIDATION_H

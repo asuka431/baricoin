@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Backwards compatibility functional test
@@ -18,7 +18,7 @@ needs an older patch version.
 import os
 import shutil
 
-from test_framework.test_framework import FujicoinTestFramework, SkipTest
+from test_framework.test_framework import BaricoinTestFramework, SkipTest
 from test_framework.descriptors import descsum_create
 
 from test_framework.util import (
@@ -27,7 +27,7 @@ from test_framework.util import (
     sync_mempools
 )
 
-class BackwardsCompatibilityTest(FujicoinTestFramework):
+class BackwardsCompatibilityTest(BaricoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 5
@@ -60,17 +60,17 @@ class BackwardsCompatibilityTest(FujicoinTestFramework):
             180100,
             170100
         ], binary=[
-            self.options.fujicoind,
-            self.options.fujicoind,
-            releases_path + "/v0.19.0.1/bin/fujicoind",
-            releases_path + "/v0.18.1/bin/fujicoind",
-            releases_path + "/v0.17.1/bin/fujicoind"
+            self.options.baricoind,
+            self.options.baricoind,
+            releases_path + "/v0.19.0.1/bin/baricoind",
+            releases_path + "/v0.18.1/bin/baricoind",
+            releases_path + "/v0.17.1/bin/baricoind"
         ], binary_cli=[
-            self.options.fujicoincli,
-            self.options.fujicoincli,
-            releases_path + "/v0.19.0.1/bin/fujicoin-cli",
-            releases_path + "/v0.18.1/bin/fujicoin-cli",
-            releases_path + "/v0.17.1/bin/fujicoin-cli"
+            self.options.baricoincli,
+            self.options.baricoincli,
+            releases_path + "/v0.19.0.1/bin/baricoin-cli",
+            releases_path + "/v0.18.1/bin/baricoin-cli",
+            releases_path + "/v0.17.1/bin/baricoin-cli"
         ])
 
         self.start_nodes()
@@ -306,14 +306,14 @@ class BackwardsCompatibilityTest(FujicoinTestFramework):
         assert info['private_keys_enabled'] == False
         assert info['keypoolsize'] == 0
 
-        # RPC loadwallet failure causes fujicoind to exit, in addition to the RPC
+        # RPC loadwallet failure causes baricoind to exit, in addition to the RPC
         # call failure, so the following test won't work:
         # assert_raises_rpc_error(-4, "Wallet loading failed.", node_v17.loadwallet, 'w3_v18')
 
         # Instead, we stop node and try to launch it with the wallet:
         self.stop_node(self.num_nodes - 1)
-        node_v17.assert_start_raises_init_error(["-wallet=w3_v18"], "Error: Error loading w3_v18: Wallet requires newer version of Fujicoin Core")
-        node_v17.assert_start_raises_init_error(["-wallet=w3"], "Error: Error loading w3: Wallet requires newer version of Fujicoin Core")
+        node_v17.assert_start_raises_init_error(["-wallet=w3_v18"], "Error: Error loading w3_v18: Wallet requires newer version of Baricoin Core")
+        node_v17.assert_start_raises_init_error(["-wallet=w3"], "Error: Error loading w3: Wallet requires newer version of Baricoin Core")
         self.start_node(self.num_nodes - 1)
 
         self.log.info("Test wallet upgrade path...")
@@ -325,7 +325,7 @@ class BackwardsCompatibilityTest(FujicoinTestFramework):
         hdkeypath = info["hdkeypath"]
         pubkey = info["pubkey"]
 
-        # Copy the 0.17 wallet to the last Fujicoin Core version and open it:
+        # Copy the 0.17 wallet to the last Baricoin Core version and open it:
         node_v17.unloadwallet("u1_v17")
         shutil.copytree(
             os.path.join(node_v17_wallets_dir, "u1_v17"),
@@ -337,7 +337,7 @@ class BackwardsCompatibilityTest(FujicoinTestFramework):
         descriptor = "wpkh([" + info["hdmasterfingerprint"] + hdkeypath[1:] + "]" + pubkey + ")"
         assert_equal(info["desc"], descsum_create(descriptor))
 
-        # Copy the 0.19 wallet to the last Fujicoin Core version and open it:
+        # Copy the 0.19 wallet to the last Baricoin Core version and open it:
         shutil.copytree(
             os.path.join(node_v19_wallets_dir, "w1_v19"),
             os.path.join(node_master_wallets_dir, "w1_v19")

@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <chainparams.h>
@@ -50,7 +50,7 @@ static bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/fujicoin.conf are parsed in qt/fujicoin.cpp's main()
+    // If Qt is used, parameters/baricoin.conf are parsed in qt/baricoin.cpp's main()
     SetupServerArgs();
     std::string error;
     if (!gArgs.ParseParameters(argc, argv, error)) {
@@ -67,7 +67,7 @@ static bool AppInit(int argc, char* argv[])
         }
         else
         {
-            strUsage += "\nUsage:  fujicoind [options]                     Start " PACKAGE_NAME "\n";
+            strUsage += "\nUsage:  baricoind [options]                     Start " PACKAGE_NAME "\n";
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
 
@@ -93,11 +93,11 @@ static bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                return InitError(strprintf("Command line contains unexpected token '%s', see fujicoind -h for a list of options.\n", argv[i]));
+                return InitError(strprintf("Command line contains unexpected token '%s', see baricoind -h for a list of options.\n", argv[i]));
             }
         }
 
-        // -server defaults to true for fujicoind but not for the GUI so do this here
+        // -server defaults to true for baricoind but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -170,7 +170,7 @@ int main(int argc, char* argv[])
 #endif
     SetupEnvironment();
 
-    // Connect fujicoind signal handlers
+    // Connect baricoind signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

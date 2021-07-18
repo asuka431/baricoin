@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_KEY_H
-#define FUJICOIN_KEY_H
+#ifndef BARICOIN_KEY_H
+#define BARICOIN_KEY_H
 
 #include <pubkey.h>
 #include <serialize.h>
@@ -173,4 +173,4 @@ void ECC_Stop();
 /** Check that required EC support is available at runtime. */
 bool ECC_InitSanityCheck();
 
-#endif // FUJICOIN_KEY_H
+#endif // BARICOIN_KEY_H

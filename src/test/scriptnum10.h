@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_TEST_SCRIPTNUM10_H
-#define FUJICOIN_TEST_SCRIPTNUM10_H
+#ifndef BARICOIN_TEST_SCRIPTNUM10_H
+#define BARICOIN_TEST_SCRIPTNUM10_H
 
 #include <limits>
 #include <stdexcept>
@@ -22,7 +22,7 @@ public:
 class CScriptNum10
 {
 /**
- * The ScriptNum implementation from Fujicoin Core 0.10.0, for cross-comparison.
+ * The ScriptNum implementation from Baricoin Core 0.10.0, for cross-comparison.
  */
 public:
 
@@ -179,4 +179,4 @@ private:
 };
 
 
-#endif // FUJICOIN_TEST_BIGNUM_H
+#endif // BARICOIN_TEST_BIGNUM_H

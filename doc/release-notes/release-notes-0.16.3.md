@@ -1,4 +1,4 @@
-Fujicoin Core version 0.16.3 is now available from:
+Baricoin Core version 0.16.3 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.16.3/>
 
@@ -17,8 +17,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Fujicoin-Qt` (on Mac)
-or `fujicoind`/`fujicoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Baricoin-Qt` (on Mac)
+or `baricoind`/`baricoin-qt` (on Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -39,10 +39,10 @@ wallets that were created with older versions are not affected by this.
 Compatibility
 ==============
 
-Fujicoin Core is extensively tested on multiple operating systems using
+Baricoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
-Fujicoin Core should also work on most other Unix-like systems but is not
+Baricoin Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable changes
@@ -52,7 +52,7 @@ Denial-of-Service vulnerability
 -------------------------------
 
 A denial-of-service vulnerability (CVE-2018-17144) exploitable by miners has
-been discovered in Fujicoin Core versions 0.14.0 up to 0.16.2. It is recommended
+been discovered in Baricoin Core versions 0.14.0 up to 0.16.2. It is recommended
 to upgrade any of the vulnerable versions to 0.16.3 as soon as possible.
 
 0.16.3 change log
@@ -65,7 +65,7 @@ to upgrade any of the vulnerable versions to 0.16.3 as soon as possible.
 - #13547 `212ef1f` Make `signrawtransaction*` give an error when amount is needed but missing (ajtowns)
 
 ### Miscellaneous
-- #13655 `1cdbea7` fujicoinconsensus: invalid flags error should be set to `fujicoinconsensus_err` (afk11)
+- #13655 `1cdbea7` baricoinconsensus: invalid flags error should be set to `baricoinconsensus_err` (afk11)
 
 ### Documentation
 - #13844 `11b9dbb` correct the help output for -prune (hebasto)

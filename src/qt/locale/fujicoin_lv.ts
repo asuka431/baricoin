@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt fujicoins</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt baricoins</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt fujicoins</translation>
+        <translation>Izvēlies adresi ar kuru saņemt baricoins</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -132,7 +132,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Parakstīt &amp;ziņojumu...</translation>
@@ -198,8 +198,8 @@
         <translation>Bloku reindeksēšana no diska...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Nosūtīt bitkoinus uz Fujicoin adresi</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Nosūtīt bitkoinus uz Baricoin adresi</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -234,12 +234,12 @@
         <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām Fujicoin adresēm lai pierādītu ka tās pieder tev</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām Baricoin adresēm lai pierādītu ka tās pieder tev</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Fujicoin adresēm</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Baricoin adresēm</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -258,8 +258,8 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un fujicoin: URIs)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un baricoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -439,8 +439,8 @@
         <translation>Izmantot pielāgotu datu mapi:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -516,15 +516,15 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt fujicoin &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt baricoin &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt Fujicoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt Baricoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -576,7 +576,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt Fujicoin kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt Baricoin kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -614,8 +614,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Fujicoin tīklu, taču šis process vēl nav beidzies.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Baricoin tīklu, taču šis process vēl nav beidzies.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -882,7 +882,7 @@
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>Fujicoin Kontroles Funkcijas</translation>
+        <translation>Baricoin Kontroles Funkcijas</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1058,8 +1058,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Fujicoin adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Baricoin adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1185,7 +1185,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Error loading block database</source>
         <translation>Kļūda ielādējot bloku datubāzi</translation>

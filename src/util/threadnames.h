@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_THREADNAMES_H
-#define FUJICOIN_UTIL_THREADNAMES_H
+#ifndef BARICOIN_UTIL_THREADNAMES_H
+#define BARICOIN_UTIL_THREADNAMES_H
 
 #include <string>
 
@@ -23,4 +23,4 @@ const std::string& ThreadGetInternalName();
 
 } // namespace util
 
-#endif // FUJICOIN_UTIL_THREADNAMES_H
+#endif // BARICOIN_UTIL_THREADNAMES_H

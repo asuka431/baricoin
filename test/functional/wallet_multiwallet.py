@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test multiwallet.
 
-Verify that a fujicoind node can load multiple wallet files
+Verify that a baricoind node can load multiple wallet files
 """
 import os
 import shutil
 import time
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.test_node import ErrorMatch
 from test_framework.util import (
     assert_equal,
@@ -20,7 +20,7 @@ from test_framework.util import (
 FEATURE_LATEST = 169900
 
 
-class MultiWalletTest(FujicoinTestFramework):
+class MultiWalletTest(BaricoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

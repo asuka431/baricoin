@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_HTTPSERVER_H
-#define FUJICOIN_HTTPSERVER_H
+#ifndef BARICOIN_HTTPSERVER_H
+#define BARICOIN_HTTPSERVER_H
 
 #include <string>
 #include <functional>
@@ -147,4 +147,4 @@ private:
     struct event* ev;
 };
 
-#endif // FUJICOIN_HTTPSERVER_H
+#endif // BARICOIN_HTTPSERVER_H

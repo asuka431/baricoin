@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2019 The Fujicoin Core developers
+# Copyright (c) 2014-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the fundrawtransaction RPC."""
 
 from decimal import Decimal
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     assert_fee_amount,
@@ -24,7 +24,7 @@ def get_unspent(listunspent, amount):
             return utx
     raise AssertionError('Could not find unspent with amount={}'.format(amount))
 
-class RawTransactionsTest(FujicoinTestFramework):
+class RawTransactionsTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = True
@@ -224,7 +224,7 @@ class RawTransactionsTest(FujicoinTestFramework):
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
         assert_equal(utx['txid'], dec_tx['vin'][0]['txid'])
 
-        assert_raises_rpc_error(-5, "changeAddress must be a valid fujicoin address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
+        assert_raises_rpc_error(-5, "changeAddress must be a valid baricoin address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
 
     def test_valid_change_address(self):
         self.log.info("Test fundrawtxn with a provided change address")
@@ -472,7 +472,7 @@ class RawTransactionsTest(FujicoinTestFramework):
             ]
         )['address']
 
-        # Send 1.2 FJC to msig addr.
+        # Send 1.2 BARI to msig addr.
         self.nodes[0].sendtoaddress(mSigObj, 1.2)
         self.nodes[0].generate(1)
         self.sync_all()

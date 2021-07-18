@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CRYPTO_HKDF_SHA256_32_H
-#define FUJICOIN_CRYPTO_HKDF_SHA256_32_H
+#ifndef BARICOIN_CRYPTO_HKDF_SHA256_32_H
+#define BARICOIN_CRYPTO_HKDF_SHA256_32_H
 
 #include <crypto/hmac_sha256.h>
 
@@ -22,4 +22,4 @@ public:
     void Expand32(const std::string& info, unsigned char hash[OUTPUT_SIZE]);
 };
 
-#endif // FUJICOIN_CRYPTO_HKDF_SHA256_32_H
+#endif // BARICOIN_CRYPTO_HKDF_SHA256_32_H

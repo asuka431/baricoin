@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_TEST_ADDRESSBOOKTESTS_H
-#define FUJICOIN_QT_TEST_ADDRESSBOOKTESTS_H
+#ifndef BARICOIN_QT_TEST_ADDRESSBOOKTESTS_H
+#define BARICOIN_QT_TEST_ADDRESSBOOKTESTS_H
 
 #include <QObject>
 #include <QTest>
@@ -24,4 +24,4 @@ private Q_SLOTS:
     void addressBookTests();
 };
 
-#endif // FUJICOIN_QT_TEST_ADDRESSBOOKTESTS_H
+#endif // BARICOIN_QT_TEST_ADDRESSBOOKTESTS_H

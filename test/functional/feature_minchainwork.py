@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2018 The Fujicoin Core developers
+# Copyright (c) 2017-2018 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test logic for setting nMinimumChainWork on command line.
@@ -17,13 +17,13 @@ only succeeds past a given node once its nMinimumChainWork has been exceeded.
 
 import time
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import connect_nodes, assert_equal
 
 # 2 hashes required per regtest block (with no difficulty adjustment)
 REGTEST_WORK_PER_BLOCK = 2
 
-class MinimumChainWorkTest(FujicoinTestFramework):
+class MinimumChainWorkTest(BaricoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3

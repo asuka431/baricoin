@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_COMPRESSOR_H
-#define FUJICOIN_COMPRESSOR_H
+#ifndef BARICOIN_COMPRESSOR_H
+#define BARICOIN_COMPRESSOR_H
 
 #include <primitives/transaction.h>
 #include <script/script.h>
@@ -103,4 +103,4 @@ struct TxOutCompression
     FORMATTER_METHODS(CTxOut, obj) { READWRITE(Using<AmountCompression>(obj.nValue), Using<ScriptCompression>(obj.scriptPubKey)); }
 };
 
-#endif // FUJICOIN_COMPRESSOR_H
+#endif // BARICOIN_COMPRESSOR_H

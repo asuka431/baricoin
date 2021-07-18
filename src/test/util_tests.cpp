@@ -1015,7 +1015,7 @@ BOOST_FIXTURE_TEST_CASE(util_ArgsMerge, ArgsMergeTestingSetup)
 
     // If check below fails, should manually dump the results with:
     //
-    //   ARGS_MERGE_TEST_OUT=results.txt ./test_fujicoin --run_test=util_tests/util_ArgsMerge
+    //   ARGS_MERGE_TEST_OUT=results.txt ./test_baricoin --run_test=util_tests/util_ArgsMerge
     //
     // And verify diff against previous results to make sure the changes are expected.
     //
@@ -1118,7 +1118,7 @@ BOOST_FIXTURE_TEST_CASE(util_ChainMerge, ChainMergeTestingSetup)
 
     // If check below fails, should manually dump the results with:
     //
-    //   CHAIN_MERGE_TEST_OUT=results.txt ./test_fujicoin --run_test=util_tests/util_ChainMerge
+    //   CHAIN_MERGE_TEST_OUT=results.txt ./test_baricoin --run_test=util_tests/util_ChainMerge
     //
     // And verify diff against previous results to make sure the changes are expected.
     //
@@ -1811,7 +1811,7 @@ BOOST_AUTO_TEST_CASE(test_ToUpper)
 BOOST_AUTO_TEST_CASE(test_Capitalize)
 {
     BOOST_CHECK_EQUAL(Capitalize(""), "");
-    BOOST_CHECK_EQUAL(Capitalize("fujicoin"), "Fujicoin");
+    BOOST_CHECK_EQUAL(Capitalize("baricoin"), "Baricoin");
     BOOST_CHECK_EQUAL(Capitalize("\x00\xfe\xff"), "\x00\xfe\xff");
 }
 

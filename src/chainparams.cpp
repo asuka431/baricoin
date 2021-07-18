@@ -63,7 +63,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = CBaseChainParams::MAIN;
-        consensus.nSubsidyHalvingInterval = 210000; //fujicoin do not use
+        consensus.nSubsidyHalvingInterval = 210000; //baricoin do not use
         consensus.BIP16Exception = uint256(); //no bip16 exception
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0xadb6d9cfd74075e7f91608add4bd2a2ea636f70856183086842667a1597714a0");
@@ -113,8 +113,8 @@ public:
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed1.fujicoin.org"); // Fujicoin official seed
-        vSeeds.emplace_back("seed2.fujicoin.org"); // Fujicoin official seed
+        vSeeds.emplace_back("seed1.baricoin.org"); // Baricoin official seed
+        vSeeds.emplace_back("seed2.baricoin.org"); // Baricoin official seed
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,36);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
@@ -226,7 +226,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        //vSeeds.emplace_back("testseed.fujicoin.org");
+        //vSeeds.emplace_back("testseed.baricoin.org");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,74);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);

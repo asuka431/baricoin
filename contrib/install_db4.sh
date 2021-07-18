@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +12,7 @@ if [ -z "${1}" ]; then
   echo "Usage: $0 <base-dir> [<extra-bdb-configure-flag> ...]"
   echo
   echo "Must specify a single argument: the directory in which db4 will be built."
-  echo "This is probably \`pwd\` if you're at the root of the fujicoin repository."
+  echo "This is probably \`pwd\` if you're at the root of the baricoin repository."
   exit 1
 fi
 
@@ -99,7 +99,7 @@ echo
 echo "db4 build complete."
 echo
 # shellcheck disable=SC2016
-echo 'When compiling fujicoind, run `./configure` in the following way:'
+echo 'When compiling baricoind, run `./configure` in the following way:'
 echo
 echo "  export BDB_PREFIX='${BDB_PREFIX}'"
 # shellcheck disable=SC2016

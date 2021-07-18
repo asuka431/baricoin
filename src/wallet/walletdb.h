@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLET_WALLETDB_H
-#define FUJICOIN_WALLET_WALLETDB_H
+#ifndef BARICOIN_WALLET_WALLETDB_H
+#define BARICOIN_WALLET_WALLETDB_H
 
 #include <amount.h>
 #include <script/sign.h>
@@ -280,4 +280,4 @@ private:
 //! Compacts BDB state so that wallet.dat is self-contained (if there are changes)
 void MaybeCompactWalletDB();
 
-#endif // FUJICOIN_WALLET_WALLETDB_H
+#endif // BARICOIN_WALLET_WALLETDB_H

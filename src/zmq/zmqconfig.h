@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_ZMQ_ZMQCONFIG_H
-#define FUJICOIN_ZMQ_ZMQCONFIG_H
+#ifndef BARICOIN_ZMQ_ZMQCONFIG_H
+#define BARICOIN_ZMQ_ZMQCONFIG_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <stdarg.h>
@@ -19,4 +19,4 @@
 
 void zmqError(const char *str);
 
-#endif // FUJICOIN_ZMQ_ZMQCONFIG_H
+#endif // BARICOIN_ZMQ_ZMQCONFIG_H

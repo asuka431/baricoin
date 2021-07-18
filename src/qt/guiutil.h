@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_GUIUTIL_H
-#define FUJICOIN_QT_GUIUTIL_H
+#ifndef BARICOIN_QT_GUIUTIL_H
+#define BARICOIN_QT_GUIUTIL_H
 
 #include <amount.h>
 #include <fs.h>
@@ -36,7 +36,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the Fujicoin Qt UI.
+/** Utility functions used by the Baricoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -50,10 +50,10 @@ namespace GUIUtil
     // Set up widget for address
     void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
 
-    // Parse "fujicoin:" URI into recipient object, return true on successful parsing
-    bool parseFujicoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseFujicoinURI(QString uri, SendCoinsRecipient *out);
-    QString formatFujicoinURI(const SendCoinsRecipient &info);
+    // Parse "baricoin:" URI into recipient object, return true on successful parsing
+    bool parseBaricoinURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseBaricoinURI(QString uri, SendCoinsRecipient *out);
+    QString formatBaricoinURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -128,7 +128,7 @@ namespace GUIUtil
     void openDebugLogfile();
 
     // Open the config file
-    bool openFujicoinConf();
+    bool openBaricoinConf();
 
     /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.
@@ -272,4 +272,4 @@ namespace GUIUtil
     void LogQtInfo();
 } // namespace GUIUtil
 
-#endif // FUJICOIN_QT_GUIUTIL_H
+#endif // BARICOIN_QT_GUIUTIL_H

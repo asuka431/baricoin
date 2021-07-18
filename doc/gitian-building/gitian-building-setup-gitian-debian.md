@@ -96,11 +96,11 @@ sudo apt-get install ubuntu-vm-builder
 
 **Note**: When sudo asks for a password, enter the password for the user `gitianuser` not for `root`.
 
-Clone the git repositories for fujicoin and Gitian.
+Clone the git repositories for baricoin and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/fujicoin/fujicoin
+git clone https://github.com/baricoin/baricoin
 git clone https://github.com/bitcoin-core/gitian.sigs.git
 git clone https://github.com/bitcoin-core/bitcoin-detached-sigs.git
 ```

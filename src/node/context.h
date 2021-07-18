@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NODE_CONTEXT_H
-#define FUJICOIN_NODE_CONTEXT_H
+#ifndef BARICOIN_NODE_CONTEXT_H
+#define BARICOIN_NODE_CONTEXT_H
 
 #include <memory>
 #include <vector>
@@ -44,4 +44,4 @@ struct NodeContext {
     ~NodeContext();
 };
 
-#endif // FUJICOIN_NODE_CONTEXT_H
+#endif // BARICOIN_NODE_CONTEXT_H

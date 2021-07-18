@@ -66,7 +66,7 @@
         <translation>接收地址</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>这些是你的富士币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
     </message>
     <message>
@@ -160,7 +160,7 @@
         <translation>确认钱包密码</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
         <translation>注意：如果你加密了钱包，丢失了密码，您将&lt;b&gt;丢失所有的富士币。</translation>
     </message>
     <message>
@@ -220,7 +220,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>签名 &amp;消息...</translation>
@@ -318,7 +318,7 @@
         <translation>启用代理:%1</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
+        <source>Send coins to a Baricoin address</source>
         <translation>发送富士币到一个富士币地址</translation>
     </message>
     <message>
@@ -354,11 +354,11 @@
         <translation>加密您的钱包私钥</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
         <translation>用您的富士币地址签名信息，以证明拥有它们</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
         <translation>验证消息，确保它们是用指定的富士币地址签名的</translation>
     </message>
     <message>
@@ -378,7 +378,7 @@
         <translation>标签工具栏</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
         <translation>请求支付(生成二维码和富士币链接)</translation>
     </message>
     <message>
@@ -454,8 +454,8 @@
         <translation>关闭钱包</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Fujicoin command-line options</source>
-        <translation>显示%1帮助消息以获得可能包含Fujicoin命令行选项的列表</translation>
+        <source>Show the %1 help message to get a list with possible Baricoin command-line options</source>
+        <translation>显示%1帮助消息以获得可能包含Baricoin命令行选项的列表</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -554,7 +554,7 @@
         <translation>钱包是&lt;b&gt;加密的&lt;/b&gt;，目前&lt;b&gt;已锁定&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
         <translation>发生了致命错误。富士币无法继续安全运行，将退出。</translation>
     </message>
 </context>
@@ -730,7 +730,7 @@
         <translation>编辑发送地址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
         <translation>输入的地址"%1"不是有效的富士币地址。</translation>
     </message>
     <message>
@@ -807,7 +807,7 @@
         <translation>使用自定数据目录</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
+        <source>Baricoin</source>
         <translation>富士币</translation>
     </message>
     <message>
@@ -1096,7 +1096,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>粉尘：</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fujicoin transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</source>
         <translation>当交易量小于块的空间时，矿工和中继节点可以强制执行最低费用。只付最低费用就可以了，但注意，一旦富士币交易的需求超出网络的处理能力，就可能导致交易无法确认。</translation>
     </message>
     <message>
@@ -1184,7 +1184,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>支付请求已过期。</translation>
     </message>
     <message>
-        <source>Warning: Invalid Fujicoin address</source>
+        <source>Warning: Invalid Baricoin address</source>
         <translation>警告：富士币地址无效</translation>
     </message>
     <message>
@@ -1207,11 +1207,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>选择以前使用的地址</translation>
     </message>
     <message>
-        <source>The Fujicoin address to send the payment to</source>
+        <source>The Baricoin address to send the payment to</source>
         <translation>支付到的富士币地址</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fujicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>手续费将从发出的总额中扣除。接受者收到的富士币将少于你输入的金额字段。如果选择了多个接受者，手续费将平均分配。</translation>
     </message>
     <message>
@@ -1223,7 +1223,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>输入此地址的标签，将其添加到使用的地址列表中</translation>
     </message>
     <message>
-        <source>A message that was attached to the fujicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fujicoin network.</source>
+        <source>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</source>
         <translation>附在富士币上的消息:URI将与交易一起存储，供参考。注意：此信息不会通过富士币网络发送。</translation>
     </message>
     </context>
@@ -1348,7 +1348,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Transaction too large</source>
         <translation>超额转账</translation>

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_RPC_SERVER_H
-#define FUJICOIN_RPC_SERVER_H
+#ifndef BARICOIN_RPC_SERVER_H
+#define BARICOIN_RPC_SERVER_H
 
 #include <amount.h>
 #include <rpc/request.h>
@@ -114,7 +114,7 @@ public:
 };
 
 /**
- * Fujicoin RPC command dispatcher.
+ * Baricoin RPC command dispatcher.
  */
 class CRPCTable
 {
@@ -167,4 +167,4 @@ std::string JSONRPCExecBatch(const JSONRPCRequest& jreq, const UniValue& vReq);
 // Retrieves any serialization flags requested in command line argument
 int RPCSerializationFlags();
 
-#endif // FUJICOIN_RPC_SERVER_H
+#endif // BARICOIN_RPC_SERVER_H

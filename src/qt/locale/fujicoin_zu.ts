@@ -42,12 +42,12 @@
         <translation>Ukuthola amakheli</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Lawa amakheli akho e-Fujicoin okuthumela izinkokhelo. Njalo hlola inani nekheli elitholwayo ngaphambi kokuthumela izinhlamvu zemali.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Lawa amakheli akho e-Baricoin okuthumela izinkokhelo. Njalo hlola inani nekheli elitholwayo ngaphambi kokuthumela izinhlamvu zemali.</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
-        <translation>Lawa amakheli akho e-Fujicoin athola izinkokhelo. Sebenzisa inkinobho ethi 'Dala ikheli elisha lokuthola' kuthebhu yokwamukela ukudala amakheli amasha.</translation>
+        <source>These are your Baricoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>Lawa amakheli akho e-Baricoin athola izinkokhelo. Sebenzisa inkinobho ethi 'Dala ikheli elisha lokuthola' kuthebhu yokwamukela ukudala amakheli amasha.</translation>
     </message>
     <message>
         <source>Export Address List</source>
@@ -128,9 +128,9 @@
         <translation>Qinisekisa ukubethelwa kwe-wallet</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
         <translation>Isexwayiso: Uma ubhala ngemfihlo isikhwama sakho futhi ulahlekelwe umushwana wakho wokungena, uzokwazi
-Lahla YONKE IFUJICOIN YAKHO!</translation>
+Lahla YONKE IBARICOIN YAKHO!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -145,7 +145,7 @@ Lahla YONKE IFUJICOIN YAKHO!</translation>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -286,6 +286,6 @@ Lahla YONKE IFUJICOIN YAKHO!</translation>
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

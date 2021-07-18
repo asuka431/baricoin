@@ -1,7 +1,7 @@
 0.19.1 Release Notes
 ===============================
 
-Fujicoin Core version 0.19.1 is now available from:
+Baricoin Core version 0.19.1 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.19.1/>
 
@@ -21,26 +21,26 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Fujicoin-Qt` (on Mac)
-or `fujicoind`/`fujicoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Baricoin-Qt` (on Mac)
+or `baricoind`/`baricoin-qt` (on Linux).
 
-Upgrading directly from a version of Fujicoin Core that has reached its EOL is
+Upgrading directly from a version of Baricoin Core that has reached its EOL is
 possible, but it might take some time if the datadir needs to be migrated. Old
-wallet versions of Fujicoin Core are generally supported.
+wallet versions of Baricoin Core are generally supported.
 
 Compatibility
 ==============
 
-Fujicoin Core is supported and extensively tested on operating systems using
+Baricoin Core is supported and extensively tested on operating systems using
 the Linux kernel, macOS 10.10+, and Windows 7 and newer. It is not recommended
-to use Fujicoin Core on unsupported systems.
+to use Baricoin Core on unsupported systems.
 
-Fujicoin Core should also work on most other Unix-like systems but is not
+Baricoin Core should also work on most other Unix-like systems but is not
 as frequently tested on them.
 
-From Fujicoin Core 0.17.0 onwards, macOS versions earlier than 10.10 are no
-longer supported, as Fujicoin Core is now built using Qt 5.9.x which requires
-macOS 10.10+. Additionally, Fujicoin Core does not yet change appearance when
+From Baricoin Core 0.17.0 onwards, macOS versions earlier than 10.10 are no
+longer supported, as Baricoin Core is now built using Qt 5.9.x which requires
+macOS 10.10+. Additionally, Baricoin Core does not yet change appearance when
 macOS "dark mode" is activated.
 
 In addition to previously supported CPU platforms, this release's pre-compiled
@@ -72,7 +72,7 @@ distribution provides binaries for the RISC-V platform.
 
 ### Tests and QA
 - #17416 Appveyor improvement - text file for vcpkg package list (sipsorcery)
-- #17488 fix "fujicoind already running" warnings on macOS (fanquake)
+- #17488 fix "baricoind already running" warnings on macOS (fanquake)
 - #17980 add missing #include to fix compiler errors (kallewoof)
 
 ### Platform support

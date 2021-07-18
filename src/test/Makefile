@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. fujicoin_test
+	$(MAKE) -C .. baricoin_test
 clean:
-	$(MAKE) -C .. fujicoin_test_clean
+	$(MAKE) -C .. baricoin_test_clean
 check:
-	$(MAKE) -C .. fujicoin_test_check
+	$(MAKE) -C .. baricoin_test_check

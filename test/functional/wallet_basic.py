@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2019 The Fujicoin Core developers
+# Copyright (c) 2014-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the wallet."""
 from decimal import Decimal
 import time
 
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_array_result,
     assert_equal,
@@ -18,7 +18,7 @@ from test_framework.util import (
 from test_framework.wallet_util import test_address
 
 
-class WalletTest(FujicoinTestFramework):
+class WalletTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.extra_args = [[
@@ -85,7 +85,7 @@ class WalletTest(FujicoinTestFramework):
         txout = self.nodes[0].gettxout(txid=confirmed_txid, n=confirmed_index, include_mempool=True)
         assert_equal(txout['value'], 50)
 
-        # Send 21 FJC from 0 to 2 using sendtoaddress call.
+        # Send 21 BARI from 0 to 2 using sendtoaddress call.
         self.nodes[0].sendtoaddress(self.nodes[2].getnewaddress(), 11)
         mempool_txid = self.nodes[0].sendtoaddress(self.nodes[2].getnewaddress(), 10)
 
@@ -185,7 +185,7 @@ class WalletTest(FujicoinTestFramework):
         spent_0 = {"txid": node0utxos[0]["txid"], "vout": node0utxos[0]["vout"]}
         assert_raises_rpc_error(-8, "Invalid parameter, expected unspent output", self.nodes[0].lockunspent, False, [spent_0])
 
-        # Send 10 FJC normal
+        # Send 10 BARI normal
         address = self.nodes[0].getnewaddress("test")
         fee_per_byte = Decimal('0.001') / 1000
         self.nodes[2].settxfee(fee_per_byte * 1000)
@@ -195,7 +195,7 @@ class WalletTest(FujicoinTestFramework):
         node_2_bal = self.check_fee_amount(self.nodes[2].getbalance(), Decimal('84'), fee_per_byte, self.get_vsize(self.nodes[2].gettransaction(txid)['hex']))
         assert_equal(self.nodes[0].getbalance(), Decimal('10'))
 
-        # Send 10 FJC with subtract fee from amount
+        # Send 10 BARI with subtract fee from amount
         txid = self.nodes[2].sendtoaddress(address, 10, "", "", True)
         self.nodes[2].generate(1)
         self.sync_all(self.nodes[0:3])
@@ -203,7 +203,7 @@ class WalletTest(FujicoinTestFramework):
         assert_equal(self.nodes[2].getbalance(), node_2_bal)
         node_0_bal = self.check_fee_amount(self.nodes[0].getbalance(), Decimal('20'), fee_per_byte, self.get_vsize(self.nodes[2].gettransaction(txid)['hex']))
 
-        # Sendmany 10 FJC
+        # Sendmany 10 BARI
         txid = self.nodes[2].sendmany('', {address: 10}, 0, "", [])
         self.nodes[2].generate(1)
         self.sync_all(self.nodes[0:3])
@@ -211,7 +211,7 @@ class WalletTest(FujicoinTestFramework):
         node_2_bal = self.check_fee_amount(self.nodes[2].getbalance(), node_2_bal - Decimal('10'), fee_per_byte, self.get_vsize(self.nodes[2].gettransaction(txid)['hex']))
         assert_equal(self.nodes[0].getbalance(), node_0_bal)
 
-        # Sendmany 10 FJC with subtract fee from amount
+        # Sendmany 10 BARI with subtract fee from amount
         txid = self.nodes[2].sendmany('', {address: 10}, 0, "", [address])
         self.nodes[2].generate(1)
         self.sync_all(self.nodes[0:3])
@@ -325,14 +325,14 @@ class WalletTest(FujicoinTestFramework):
         # This will raise an exception for attempting to dump the private key of an address you do not own
         assert_raises_rpc_error(-3, "Address does not refer to a key", self.nodes[0].dumpprivkey, temp_address)
 
-        # This will raise an exception for attempting to get the private key of an invalid Fujicoin address
-        assert_raises_rpc_error(-5, "Invalid Fujicoin address", self.nodes[0].dumpprivkey, "invalid")
+        # This will raise an exception for attempting to get the private key of an invalid Baricoin address
+        assert_raises_rpc_error(-5, "Invalid Baricoin address", self.nodes[0].dumpprivkey, "invalid")
 
-        # This will raise an exception for attempting to set a label for an invalid Fujicoin address
-        assert_raises_rpc_error(-5, "Invalid Fujicoin address", self.nodes[0].setlabel, "invalid address", "label")
+        # This will raise an exception for attempting to set a label for an invalid Baricoin address
+        assert_raises_rpc_error(-5, "Invalid Baricoin address", self.nodes[0].setlabel, "invalid address", "label")
 
         # This will raise an exception for importing an invalid address
-        assert_raises_rpc_error(-5, "Invalid Fujicoin address or script", self.nodes[0].importaddress, "invalid")
+        assert_raises_rpc_error(-5, "Invalid Baricoin address or script", self.nodes[0].importaddress, "invalid")
 
         # This will raise an exception for attempting to import a pubkey that isn't in hex
         assert_raises_rpc_error(-5, "Pubkey must be a hex string", self.nodes[0].importpubkey, "not hex")

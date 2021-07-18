@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NODE_COINSTATS_H
-#define FUJICOIN_NODE_COINSTATS_H
+#ifndef BARICOIN_NODE_COINSTATS_H
+#define BARICOIN_NODE_COINSTATS_H
 
 #include <amount.h>
 #include <uint256.h>
@@ -31,4 +31,4 @@ struct CCoinsStats
 //! Calculate statistics about the unspent transaction output set
 bool GetUTXOStats(CCoinsView* view, CCoinsStats& stats);
 
-#endif // FUJICOIN_NODE_COINSTATS_H
+#endif // BARICOIN_NODE_COINSTATS_H

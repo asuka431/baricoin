@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2019 The Fujicoin Core developers
+# Copyright (c) 2014-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Base class for RPC testing."""
@@ -44,7 +44,7 @@ TEST_EXIT_PASSED = 0
 TEST_EXIT_FAILED = 1
 TEST_EXIT_SKIPPED = 77
 
-TMPDIR_PREFIX = "fujicoin_func_test_"
+TMPDIR_PREFIX = "baricoin_func_test_"
 
 
 class SkipTest(Exception):
@@ -54,30 +54,30 @@ class SkipTest(Exception):
         self.message = message
 
 
-class FujicoinTestMetaClass(type):
-    """Metaclass for FujicoinTestFramework.
+class BaricoinTestMetaClass(type):
+    """Metaclass for BaricoinTestFramework.
 
-    Ensures that any attempt to register a subclass of `FujicoinTestFramework`
+    Ensures that any attempt to register a subclass of `BaricoinTestFramework`
     adheres to a standard whereby the subclass overrides `set_test_params` and
     `run_test` but DOES NOT override either `__init__` or `main`. If any of
     those standards are violated, a ``TypeError`` is raised."""
 
     def __new__(cls, clsname, bases, dct):
-        if not clsname == 'FujicoinTestFramework':
+        if not clsname == 'BaricoinTestFramework':
             if not ('run_test' in dct and 'set_test_params' in dct):
-                raise TypeError("FujicoinTestFramework subclasses must override "
+                raise TypeError("BaricoinTestFramework subclasses must override "
                                 "'run_test' and 'set_test_params'")
             if '__init__' in dct or 'main' in dct:
-                raise TypeError("FujicoinTestFramework subclasses may not override "
+                raise TypeError("BaricoinTestFramework subclasses may not override "
                                 "'__init__' or 'main'")
 
         return super().__new__(cls, clsname, bases, dct)
 
 
-class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
-    """Base class for a fujicoin test script.
+class BaricoinTestFramework(metaclass=BaricoinTestMetaClass):
+    """Base class for a baricoin test script.
 
-    Individual fujicoin test scripts should subclass this class and override the set_test_params() and run_test() methods.
+    Individual baricoin test scripts should subclass this class and override the set_test_params() and run_test() methods.
 
     Individual tests can also override the following methods to customize the test setup:
 
@@ -138,9 +138,9 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
     def parse_args(self):
         parser = argparse.ArgumentParser(usage="%(prog)s [options]")
         parser.add_argument("--nocleanup", dest="nocleanup", default=False, action="store_true",
-                            help="Leave fujicoinds and test.* datadir on exit or error")
+                            help="Leave baricoinds and test.* datadir on exit or error")
         parser.add_argument("--noshutdown", dest="noshutdown", default=False, action="store_true",
-                            help="Don't stop fujicoinds after the test execution")
+                            help="Don't stop baricoinds after the test execution")
         parser.add_argument("--cachedir", dest="cachedir", default=os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + "/../../cache"),
                             help="Directory for caching pregenerated datadirs (default: %(default)s)")
         parser.add_argument("--tmpdir", dest="tmpdir", help="Root directory for datadirs")
@@ -158,7 +158,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         parser.add_argument("--pdbonfailure", dest="pdbonfailure", default=False, action="store_true",
                             help="Attach a python debugger if test fails")
         parser.add_argument("--usecli", dest="usecli", default=False, action="store_true",
-                            help="use fujicoin-cli instead of RPC for all commands")
+                            help="use baricoin-cli instead of RPC for all commands")
         parser.add_argument("--perf", dest="perf", default=False, action="store_true",
                             help="profile running nodes with perf for the duration of the test")
         parser.add_argument("--valgrind", dest="valgrind", default=False, action="store_true",
@@ -180,8 +180,8 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
         self.config = config
-        self.options.fujicoind = os.getenv("FUJICOIND", default=config["environment"]["BUILDDIR"] + '/src/fujicoind' + config["environment"]["EXEEXT"])
-        self.options.fujicoincli = os.getenv("FUJICOINCLI", default=config["environment"]["BUILDDIR"] + '/src/fujicoin-cli' + config["environment"]["EXEEXT"])
+        self.options.baricoind = os.getenv("BARICOIND", default=config["environment"]["BUILDDIR"] + '/src/baricoind' + config["environment"]["EXEEXT"])
+        self.options.baricoincli = os.getenv("BARICOINCLI", default=config["environment"]["BUILDDIR"] + '/src/baricoin-cli' + config["environment"]["EXEEXT"])
 
         os.environ['PATH'] = os.pathsep.join([
             os.path.join(config['environment']['BUILDDIR'], 'src'),
@@ -243,7 +243,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         else:
             for node in self.nodes:
                 node.cleanup_on_exit = False
-            self.log.info("Note: fujicoinds were not stopped and may still be running")
+            self.log.info("Note: baricoinds were not stopped and may still be running")
 
         should_clean_up = (
             not self.options.nocleanup and
@@ -279,7 +279,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
             h.flush()
             h.close()
             self.log.removeHandler(h)
-        rpc_logger = logging.getLogger("FujicoinRPC")
+        rpc_logger = logging.getLogger("BaricoinRPC")
         for h in list(rpc_logger.handlers):
             h.flush()
             rpc_logger.removeHandler(h)
@@ -383,9 +383,9 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         if versions is None:
             versions = [None] * num_nodes
         if binary is None:
-            binary = [self.options.fujicoind] * num_nodes
+            binary = [self.options.baricoind] * num_nodes
         if binary_cli is None:
-            binary_cli = [self.options.fujicoincli] * num_nodes
+            binary_cli = [self.options.baricoincli] * num_nodes
         assert_equal(len(extra_confs), num_nodes)
         assert_equal(len(extra_args), num_nodes)
         assert_equal(len(versions), num_nodes)
@@ -398,8 +398,8 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
                 chain=self.chain,
                 rpchost=rpchost,
                 timewait=self.rpc_timeout,
-                fujicoind=binary[i],
-                fujicoin_cli=binary_cli[i],
+                baricoind=binary[i],
+                baricoin_cli=binary_cli[i],
                 version=versions[i],
                 coverage_dir=self.options.coveragedir,
                 cwd=self.options.tmpdir,
@@ -411,7 +411,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
             ))
 
     def start_node(self, i, *args, **kwargs):
-        """Start a fujicoind"""
+        """Start a baricoind"""
 
         node = self.nodes[i]
 
@@ -422,7 +422,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
             coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def start_nodes(self, extra_args=None, *args, **kwargs):
-        """Start multiple fujicoinds"""
+        """Start multiple baricoinds"""
 
         if extra_args is None:
             extra_args = [None] * self.num_nodes
@@ -442,12 +442,12 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
                 coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def stop_node(self, i, expected_stderr='', wait=0):
-        """Stop a fujicoind test node"""
+        """Stop a baricoind test node"""
         self.nodes[i].stop_node(expected_stderr, wait=wait)
         self.nodes[i].wait_until_stopped()
 
     def stop_nodes(self, wait=0):
-        """Stop multiple fujicoind test nodes"""
+        """Stop multiple baricoind test nodes"""
         for node in self.nodes:
             # Issue RPC to stop nodes
             node.stop_node(wait=wait)
@@ -504,7 +504,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         # User can provide log level as a number or string (eg DEBUG). loglevel was caught as a string, so try to convert it to an int
         ll = int(self.options.loglevel) if self.options.loglevel.isdigit() else self.options.loglevel.upper()
         ch.setLevel(ll)
-        # Format logs the same as fujicoind's debug.log with microprecision (so log files can be concatenated and sorted)
+        # Format logs the same as baricoind's debug.log with microprecision (so log files can be concatenated and sorted)
         formatter = logging.Formatter(fmt='%(asctime)s.%(msecs)03d000Z %(name)s (%(levelname)s): %(message)s', datefmt='%Y-%m-%dT%H:%M:%S')
         formatter.converter = time.gmtime
         fh.setFormatter(formatter)
@@ -514,7 +514,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         self.log.addHandler(ch)
 
         if self.options.trace_rpc:
-            rpc_logger = logging.getLogger("FujicoinRPC")
+            rpc_logger = logging.getLogger("BaricoinRPC")
             rpc_logger.setLevel(logging.DEBUG)
             rpc_handler = logging.StreamHandler(sys.stdout)
             rpc_handler.setLevel(logging.DEBUG)
@@ -543,8 +543,8 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
                     extra_args=['-disablewallet'],
                     rpchost=None,
                     timewait=self.rpc_timeout,
-                    fujicoind=self.options.fujicoind,
-                    fujicoin_cli=self.options.fujicoincli,
+                    baricoind=self.options.baricoind,
+                    baricoin_cli=self.options.baricoincli,
                     coverage_dir=None,
                     cwd=self.options.tmpdir,
                 ))
@@ -583,7 +583,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
             self.log.debug("Copy cache directory {} to node {}".format(cache_node_dir, i))
             to_dir = get_datadir_path(self.options.tmpdir, i)
             shutil.copytree(cache_node_dir, to_dir)
-            initialize_datadir(self.options.tmpdir, i, self.chain)  # Overwrite port/rpcport in fujicoin.conf
+            initialize_datadir(self.options.tmpdir, i, self.chain)  # Overwrite port/rpcport in baricoin.conf
 
     def _initialize_chain_clean(self):
         """Initialize empty blockchain for use by the test.
@@ -600,10 +600,10 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
-    def skip_if_no_fujicoind_zmq(self):
-        """Skip the running test if fujicoind has not been compiled with zmq support."""
+    def skip_if_no_baricoind_zmq(self):
+        """Skip the running test if baricoind has not been compiled with zmq support."""
         if not self.is_zmq_compiled():
-            raise SkipTest("fujicoind has not been built with zmq enabled.")
+            raise SkipTest("baricoind has not been built with zmq enabled.")
 
     def skip_if_no_wallet(self):
         """Skip the running test if wallet has not been compiled."""
@@ -611,17 +611,17 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
             raise SkipTest("wallet has not been compiled.")
 
     def skip_if_no_wallet_tool(self):
-        """Skip the running test if fujicoin-wallet has not been compiled."""
+        """Skip the running test if baricoin-wallet has not been compiled."""
         if not self.is_wallet_tool_compiled():
-            raise SkipTest("fujicoin-wallet has not been compiled")
+            raise SkipTest("baricoin-wallet has not been compiled")
 
     def skip_if_no_cli(self):
-        """Skip the running test if fujicoin-cli has not been compiled."""
+        """Skip the running test if baricoin-cli has not been compiled."""
         if not self.is_cli_compiled():
-            raise SkipTest("fujicoin-cli has not been compiled.")
+            raise SkipTest("baricoin-cli has not been compiled.")
 
     def is_cli_compiled(self):
-        """Checks whether fujicoin-cli was compiled."""
+        """Checks whether baricoin-cli was compiled."""
         return self.config["components"].getboolean("ENABLE_CLI")
 
     def is_wallet_compiled(self):
@@ -629,7 +629,7 @@ class FujicoinTestFramework(metaclass=FujicoinTestMetaClass):
         return self.config["components"].getboolean("ENABLE_WALLET")
 
     def is_wallet_tool_compiled(self):
-        """Checks whether fujicoin-wallet was compiled."""
+        """Checks whether baricoin-wallet was compiled."""
         return self.config["components"].getboolean("ENABLE_WALLET_TOOL")
 
     def is_zmq_compiled(self):

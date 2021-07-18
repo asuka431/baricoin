@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_ATTRIBUTES_H
-#define FUJICOIN_ATTRIBUTES_H
+#ifndef BARICOIN_ATTRIBUTES_H
+#define BARICOIN_ATTRIBUTES_H
 
 #if defined(__has_cpp_attribute)
 #  if __has_cpp_attribute(nodiscard)
@@ -19,4 +19,4 @@
 #  endif
 #endif
 
-#endif // FUJICOIN_ATTRIBUTES_H
+#endif // BARICOIN_ATTRIBUTES_H

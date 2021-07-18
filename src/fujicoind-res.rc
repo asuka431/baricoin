@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Fujicoin"
-            VALUE "FileDescription",    "fujicoind (Fujicoin node with a JSON-RPC server)"
+            VALUE "CompanyName",        "Baricoin"
+            VALUE "FileDescription",    "baricoind (Baricoin node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "fujicoind"
+            VALUE "InternalName",       "baricoind"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "fujicoind.exe"
-            VALUE "ProductName",        "fujicoind"
+            VALUE "OriginalFilename",   "baricoind.exe"
+            VALUE "ProductName",        "baricoind"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

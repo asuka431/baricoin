@@ -31,7 +31,7 @@
 #include <typeinfo>
 
 #if defined(NDEBUG)
-# error "Fujicoin cannot be compiled without assertions."
+# error "Baricoin cannot be compiled without assertions."
 #endif
 
 /** Expiration time for orphan transactions in seconds */
@@ -635,7 +635,7 @@ static void FindNextBlocksToDownload(CNode* pto, unsigned int count, std::vector
         LogPrintf("::Set ChainstateActive().IsStartUp = %s\n", ::ChainstateActive().IsStartUp);
     }
 
-    // Introduce settlement to Fujicoin's block chain.
+    // Introduce settlement to Baricoin's block chain.
     // Payment will be settled with 6 confirmations.
     if(::ChainstateActive().IsStartUp < 1 && ::ChainActive().Height() - state->pindexLastCommonBlock->nHeight >= 6){
         pto->fDisconnect = true;

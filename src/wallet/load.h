@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLET_LOAD_H
-#define FUJICOIN_WALLET_LOAD_H
+#ifndef BARICOIN_WALLET_LOAD_H
+#define BARICOIN_WALLET_LOAD_H
 
 #include <string>
 #include <vector>
@@ -35,4 +35,4 @@ void StopWallets();
 //! Close all wallets.
 void UnloadWallets();
 
-#endif // FUJICOIN_WALLET_LOAD_H
+#endif // BARICOIN_WALLET_LOAD_H

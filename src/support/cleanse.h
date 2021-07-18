@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_SUPPORT_CLEANSE_H
-#define FUJICOIN_SUPPORT_CLEANSE_H
+#ifndef BARICOIN_SUPPORT_CLEANSE_H
+#define BARICOIN_SUPPORT_CLEANSE_H
 
 #include <stdlib.h>
 
@@ -12,4 +12,4 @@
  * operation will not be optimized out by the compiler. */
 void memory_cleanse(void *ptr, size_t len);
 
-#endif // FUJICOIN_SUPPORT_CLEANSE_H
+#endif // BARICOIN_SUPPORT_CLEANSE_H

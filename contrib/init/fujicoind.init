@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 #
-#  fujicoind The fujicoin core server.
+#  baricoind The baricoin core server.
 #
 #
 # chkconfig: 345 80 20
-# description: fujicoind
-# processname: fujicoind
+# description: baricoind
+# processname: baricoind
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/fujicoind, see below
-if [ -f /etc/sysconfig/fujicoind ]; then
-        . /etc/sysconfig/fujicoind
+# you can override defaults in /etc/sysconfig/baricoind, see below
+if [ -f /etc/sysconfig/baricoind ]; then
+        . /etc/sysconfig/baricoind
 fi
 
 RETVAL=0
 
-prog=fujicoind
-# you can override the lockfile via FUJICOIND_LOCKFILE in /etc/sysconfig/fujicoind
-lockfile=${FUJICOIND_LOCKFILE-/var/lock/subsys/fujicoind}
+prog=baricoind
+# you can override the lockfile via BARICOIND_LOCKFILE in /etc/sysconfig/baricoind
+lockfile=${BARICOIND_LOCKFILE-/var/lock/subsys/baricoind}
 
-# fujicoind defaults to /usr/bin/fujicoind, override with FUJICOIND_BIN
-fujicoind=${FUJICOIND_BIN-/usr/bin/fujicoind}
+# baricoind defaults to /usr/bin/baricoind, override with BARICOIND_BIN
+baricoind=${BARICOIND_BIN-/usr/bin/baricoind}
 
-# fujicoind opts default to -disablewallet, override with FUJICOIND_OPTS
-fujicoind_opts=${FUJICOIND_OPTS--disablewallet}
+# baricoind opts default to -disablewallet, override with BARICOIND_OPTS
+baricoind_opts=${BARICOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $fujicoind $fujicoind_opts
+    daemon $DAEMONOPTS $baricoind $baricoind_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

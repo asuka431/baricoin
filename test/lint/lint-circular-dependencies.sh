@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2019 The Fujicoin Core developers
+# Copyright (c) 2018-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -13,7 +13,7 @@ EXPECTED_CIRCULAR_DEPENDENCIES=(
     "index/txindex -> validation -> index/txindex"
     "policy/fees -> txmempool -> policy/fees"
     "qt/addresstablemodel -> qt/walletmodel -> qt/addresstablemodel"
-    "qt/fujicoingui -> qt/walletframe -> qt/fujicoingui"
+    "qt/baricoingui -> qt/walletframe -> qt/baricoingui"
     "qt/recentrequeststablemodel -> qt/walletmodel -> qt/recentrequeststablemodel"
     "qt/sendcoinsdialog -> qt/walletmodel -> qt/sendcoinsdialog"
     "qt/transactiontablemodel -> qt/walletmodel -> qt/transactiontablemodel"

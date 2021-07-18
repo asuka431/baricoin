@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NODE_UTXO_SNAPSHOT_H
-#define FUJICOIN_NODE_UTXO_SNAPSHOT_H
+#ifndef BARICOIN_NODE_UTXO_SNAPSHOT_H
+#define BARICOIN_NODE_UTXO_SNAPSHOT_H
 
 #include <uint256.h>
 #include <serialize.h>
@@ -47,4 +47,4 @@ public:
 
 };
 
-#endif // FUJICOIN_NODE_UTXO_SNAPSHOT_H
+#endif // BARICOIN_NODE_UTXO_SNAPSHOT_H

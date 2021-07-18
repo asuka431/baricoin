@@ -11,12 +11,12 @@
     <ClCompile Include="..\..\src\qt\addresstablemodel.cpp" />
     <ClCompile Include="..\..\src\qt\askpassphrasedialog.cpp" />
     <ClCompile Include="..\..\src\qt\bantablemodel.cpp" />
-    <ClCompile Include="..\..\src\qt\fujicoin.cpp" />
-    <ClCompile Include="..\..\src\qt\fujicoinaddressvalidator.cpp" />
-    <ClCompile Include="..\..\src\qt\fujicoinamountfield.cpp" />
-    <ClCompile Include="..\..\src\qt\fujicoingui.cpp" />
-    <ClCompile Include="..\..\src\qt\fujicoinstrings.cpp" />
-    <ClCompile Include="..\..\src\qt\fujicoinunits.cpp" />
+    <ClCompile Include="..\..\src\qt\baricoin.cpp" />
+    <ClCompile Include="..\..\src\qt\baricoinaddressvalidator.cpp" />
+    <ClCompile Include="..\..\src\qt\baricoinamountfield.cpp" />
+    <ClCompile Include="..\..\src\qt\baricoingui.cpp" />
+    <ClCompile Include="..\..\src\qt\baricoinstrings.cpp" />
+    <ClCompile Include="..\..\src\qt\baricoinunits.cpp" />
     <ClCompile Include="..\..\src\qt\clientmodel.cpp" />
     <ClCompile Include="..\..\src\qt\coincontroldialog.cpp" />
     <ClCompile Include="..\..\src\qt\coincontroltreewidget.cpp" />
@@ -64,11 +64,11 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_addresstablemodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_askpassphrasedialog.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_bantablemodel.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_fujicoin.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_fujicoinaddressvalidator.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_fujicoinamountfield.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_fujicoingui.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_fujicoinunits.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_baricoin.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_baricoinaddressvalidator.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_baricoinamountfield.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_baricoingui.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_baricoinunits.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_clientmodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_coincontroldialog.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_coincontroltreewidget.cpp" />
@@ -112,8 +112,8 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_walletmodeltransaction.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_walletview.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_winshutdownmonitor.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_fujicoin.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_fujicoin_locale.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_baricoin.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\rcc\qrc_baricoin_locale.cpp" />
   </ItemGroup>
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
 
   <ItemGroup>
-    <QT_MOC Include="..\..\src\qt\fujicoinamountfield.cpp" />
+    <QT_MOC Include="..\..\src\qt\baricoinamountfield.cpp" />
     <QT_MOC Include="..\..\src\qt\intro.cpp" />
     <QT_MOC Include="..\..\src\qt\overviewpage.cpp" />
     <QT_MOC Include="..\..\src\qt\rpcconsole.cpp" />
@@ -160,19 +160,19 @@
 
   <Target Name="moccode" Inputs="@(QT_MOC)" Outputs="@(QT_MOC->'$(GeneratedFilesOutDir)\%(Filename).moc')">
     <PropertyGroup>
-      <ErrorText>There was an error executing the libfujicoin_qt moc code include generation task.</ErrorText>
+      <ErrorText>There was an error executing the libbaricoin_qt moc code include generation task.</ErrorText>
     </PropertyGroup>
     <MakeDir Directories="$(GeneratedFilesOutDir)" />
-    <Exec Command="echo Performing libfujicoin_qt moc code include generation task, output path $(GeneratedFilesOutDir)." />
+    <Exec Command="echo Performing libbaricoin_qt moc code include generation task, output path $(GeneratedFilesOutDir)." />
     <Exec Command="echo $(QtToolsDir)\moc.exe $(MOC_DEFINES) &quot;%(QT_MOC.Identity)&quot; -o $(GeneratedFilesOutDir)\%(Filename).moc." />
     <Exec Command="$(QtToolsDir)\moc.exe $(MOC_DEFINES) &quot;%(QT_MOC.Identity)&quot; -o $(GeneratedFilesOutDir)\%(Filename).moc" />
   </Target>
 
   <Target Name="mocheader" Inputs="@(MocHeaderFiles)" Outputs="@(MocHeaderFiles->'$(GeneratedFilesOutDir)\moc\moc_%(Filename).cpp')">
     <PropertyGroup>
-      <ErrorText>There was an error executing the libfujicoin_qt moc header generation task.</ErrorText>
+      <ErrorText>There was an error executing the libbaricoin_qt moc header generation task.</ErrorText>
     </PropertyGroup>
-    <Exec Command="echo Performing libfujicoin_qt moc header generation task, output path $(GeneratedFilesOutDir)\moc." />
+    <Exec Command="echo Performing libbaricoin_qt moc header generation task, output path $(GeneratedFilesOutDir)\moc." />
     <Exec Command="echo $(QtToolsDir)\moc.exe $(MOC_DEFINES) &quot;%(MocHeaderFiles.Identity)&quot; -o $(GeneratedFilesOutDir)\moc\moc_%(Filename).cpp." />
     <MakeDir Directories="$(GeneratedFilesOutDir)\moc\" />
     <Exec Command="$(QtToolsDir)\moc.exe $(MOC_DEFINES) &quot;%(MocHeaderFiles.Identity)&quot; -o $(GeneratedFilesOutDir)\moc\moc_%(Filename).cpp" />
@@ -180,32 +180,32 @@
 
   <Target Name="forms" Inputs="@(UiFormFiles)" Outputs="@(UiFormFiles->'$(GeneratedFilesOutDir)\forms\ui_%(Filename).h')">
     <PropertyGroup>
-      <ErrorText>There was an error executing the libfujicoin_qt forms header generation task.</ErrorText>
+      <ErrorText>There was an error executing the libbaricoin_qt forms header generation task.</ErrorText>
     </PropertyGroup>
-    <Exec Command="echo Performing libfujicoin_qt forms header generation task, output path $(GeneratedFilesOutDir)\forms." />
+    <Exec Command="echo Performing libbaricoin_qt forms header generation task, output path $(GeneratedFilesOutDir)\forms." />
     <MakeDir Directories="$(GeneratedFilesOutDir)\forms\" />
     <Exec Command="$(QtToolsDir)\uic.exe &quot;%(UiFormFiles.Identity)&quot; -o $(GeneratedFilesOutDir)\forms\ui_%(Filename).h" />
   </Target>
 
   <Target Name="translation" Inputs="@(TranslationFiles)" Outputs="@(TranslationFiles->'..\..\src\qt\locale\%(Filename).qm')">
     <PropertyGroup>
-      <ErrorText>There was an error executing the libfujicoin_qt translation file generation task.</ErrorText>
+      <ErrorText>There was an error executing the libbaricoin_qt translation file generation task.</ErrorText>
     </PropertyGroup>
-    <Exec Command="echo Performing libfujicoin_qt translation file generation task." />
+    <Exec Command="echo Performing libbaricoin_qt translation file generation task." />
     <Exec Command="$(QtToolsDir)\lrelease.exe &quot;%(TranslationFiles.Identity)&quot; -qm ..\..\src\qt\locale\%(Filename).qm" />
   </Target>
 
   <Target Name="resource" Inputs="@(ResourceTemplates)" Outputs="@(ResourceTemplates->'$(GeneratedFilesOutDir)\rcc\qrc_%(Filename).cpp')" DependsOnTargets="translation">
     <PropertyGroup>
-      <ErrorText>There was an error executing the libfujicoin_qt resource code generation task.</ErrorText>
+      <ErrorText>There was an error executing the libbaricoin_qt resource code generation task.</ErrorText>
     </PropertyGroup>
-    <Exec Command="echo Performing libfujicoin_qt resource code generation task, output path $(GeneratedFilesOutDir)\rcc." />
+    <Exec Command="echo Performing libbaricoin_qt resource code generation task, output path $(GeneratedFilesOutDir)\rcc." />
     <MakeDir Directories="$(GeneratedFilesOutDir)\rcc\" />
     <Exec Command="$(QtToolsDir)\rcc.exe --verbose --name %(Filename) &quot;%(ResourceTemplates.Identity)&quot; -o $(GeneratedFilesOutDir)\rcc\qrc_%(Filename).cpp" />
   </Target>
 
   <Target Name="qtclean">
-    <Exec Command="echo Clean libfujicoin_qt generated files from $(GeneratedFilesOutDir)." />
+    <Exec Command="echo Clean libbaricoin_qt generated files from $(GeneratedFilesOutDir)." />
     <RemoveDir Directories="$(GeneratedFilesOutDir)\forms;$(GeneratedFilesOutDir)\moc;$(GeneratedFilesOutDir)\rcc;" />
     <RemoveDir Directories="$(GeneratedFilesOutDir)" />
   </Target>

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_FS_H
-#define FUJICOIN_FS_H
+#ifndef BARICOIN_FS_H
+#define BARICOIN_FS_H
 
 #include <stdio.h>
 #include <string>
@@ -92,4 +92,4 @@ namespace fsbridge {
 #endif // WIN32 && __GLIBCXX__
 };
 
-#endif // FUJICOIN_FS_H
+#endif // BARICOIN_FS_H

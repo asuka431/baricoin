@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Fujicoin tests.
+Utilities to generate test vectors for the data-driven Baricoin tests.
 
 Usage:
 

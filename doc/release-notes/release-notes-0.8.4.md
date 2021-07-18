@@ -1,5 +1,5 @@
-Fujicoin-Qt version 0.8.4 is now available from:
-  http://sourceforge.net/projects/bitcoin/files/Fujicoin/bitcoin-0.8.4/
+Baricoin-Qt version 0.8.4 is now available from:
+  http://sourceforge.net/projects/bitcoin/files/Baricoin/bitcoin-0.8.4/
 
 This is a maintenance release to fix a critical bug and three
 security issues; we urge all users to upgrade.
@@ -14,7 +14,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
-/Applications/Fujicoin-Qt (on Mac) or fujicoind/fujicoin-qt (on Linux).
+/Applications/Baricoin-Qt (on Mac) or baricoind/baricoin-qt (on Linux).
 
 If you are upgrading from version 0.7.2 or earlier, the first time you
 run 0.8.4 your blockchain files will be re-indexed, which will take
@@ -29,7 +29,7 @@ Security issues
 
 An attacker could send a series of messages that resulted in
 an integer division-by-zero error in the Bloom Filter handling
-code, causing the Fujicoin-Qt or fujicoind process to crash.
+code, causing the Baricoin-Qt or baricoind process to crash.
 Bloom filters were introduced with version 0.8, so versions 0.8.0
 through 0.8.3 are vulnerable to this critical denial-of-service attack.
 
@@ -55,11 +55,11 @@ OSX: use 'FD_FULLSYNC' with LevelDB, which will (hopefully!)
 prevent the database corruption issues many people have
 experienced on OSX.
 
-Linux: clicking on fujicoin: links was broken if you were using
+Linux: clicking on baricoin: links was broken if you were using
 a Gnome-based desktop.
 
 Fix a hang-at-shutdown bug that only affects users that compile
-their own version of Fujicoin against Boost versions 1.50-1.52.
+their own version of Baricoin against Boost versions 1.50-1.52.
 
 Other changes
 -------------

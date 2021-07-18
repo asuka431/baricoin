@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLET_ISMINE_H
-#define FUJICOIN_WALLET_ISMINE_H
+#ifndef BARICOIN_WALLET_ISMINE_H
+#define BARICOIN_WALLET_ISMINE_H
 
 #include <script/standard.h>
 
@@ -47,4 +47,4 @@ struct CachableAmount
     }
 };
 
-#endif // FUJICOIN_WALLET_ISMINE_H
+#endif // BARICOIN_WALLET_ISMINE_H

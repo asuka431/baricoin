@@ -58,8 +58,8 @@
         <translation>Address king pamag-Tanggap</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Reni reng kekang Fujicoin address king pamagpadalang kabayaran. Lawan mulang masalese reng alaga ampo ing address na ning tumanggap bayu ka magpadalang barya.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Reni reng kekang Baricoin address king pamagpadalang kabayaran. Lawan mulang masalese reng alaga ampo ing address na ning tumanggap bayu ka magpadalang barya.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -140,8 +140,8 @@
         <translation>Kumpirman ya ing wallet encryption</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Kapabaluan: Istung in-encrypt me ing kekang wallet at meala ya ing passphrase na, ma-&lt;b&gt;ALA NO NGAN RING KEKANG FUJICOINS&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Kapabaluan: Istung in-encrypt me ing kekang wallet at meala ya ing passphrase na, ma-&lt;b&gt;ALA NO NGAN RING KEKANG BARICOINS&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -192,7 +192,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>I-sign ing &amp;mensayi</translation>
@@ -250,8 +250,8 @@
         <translation>&amp;Alilan ing Passphrase...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Magpadalang barya king Fujicoin address</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Magpadalang barya king Baricoin address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -342,8 +342,8 @@
         <translation>Maka-&lt;b&gt;encrypt&lt;/b&gt; ya ing wallet at kasalukuyan yang maka-&lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Fujicoin can no longer continue safely and will quit.</source>
-        <translation>Atin kamalian a milyari. Ali ne magsilbing sumulung pa ing Fujicoin at kailangan na ng tuknang.</translation>
+        <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
+        <translation>Atin kamalian a milyari. Ali ne magsilbing sumulung pa ing Baricoin at kailangan na ng tuknang.</translation>
     </message>
 </context>
 <context>
@@ -414,8 +414,8 @@
         <translation>Alilan ya ing address king pamagpadala</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>Ing pepalub yung address "%1" ali ya katanggap-tanggap a Fujicoin address.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>Ing pepalub yung address "%1" ali ya katanggap-tanggap a Baricoin address.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -447,8 +447,8 @@
         <translation>Malaus ka</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -487,8 +487,8 @@
         <translation>&amp;Network</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ibuklat yang antimanu ing Fujicoin client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ibuklat yang antimanu ing Baricoin client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -566,8 +566,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Fujicoin network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Baricoin network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -882,8 +882,8 @@
         <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Pirman ing mensayi ban patune na keka ya ining Fujicoin address</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Pirman ing mensayi ban patune na keka ya ining Baricoin address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -902,8 +902,8 @@
         <translation>&amp;Beripikan ing Mensayi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
-        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Fujicoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
+        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Baricoin address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1281,7 +1281,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>Corrupted block database detected</source>
         <translation>Mekapansin lang me-corrupt a block database</translation>

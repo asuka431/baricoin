@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_ERROR_H
-#define FUJICOIN_UTIL_ERROR_H
+#ifndef BARICOIN_UTIL_ERROR_H
+#define BARICOIN_UTIL_ERROR_H
 
 /**
  * util/error.h is a common place for definitions of simple error types and
@@ -40,4 +40,4 @@ bilingual_str AmountHighWarn(const std::string& optname);
 
 bilingual_str AmountErrMsg(const std::string& optname, const std::string& strValue);
 
-#endif // FUJICOIN_UTIL_ERROR_H
+#endif // BARICOIN_UTIL_ERROR_H

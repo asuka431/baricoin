@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_COMPAT_BYTESWAP_H
-#define FUJICOIN_COMPAT_BYTESWAP_H
+#ifndef BARICOIN_COMPAT_BYTESWAP_H
+#define BARICOIN_COMPAT_BYTESWAP_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <stdint.h>
@@ -56,4 +56,4 @@ inline uint64_t bswap_64(uint64_t x)
 
 #endif // defined(MAC_OSX)
 
-#endif // FUJICOIN_COMPAT_BYTESWAP_H
+#endif // BARICOIN_COMPAT_BYTESWAP_H

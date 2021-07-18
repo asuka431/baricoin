@@ -3,11 +3,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_COMPAT_H
-#define FUJICOIN_COMPAT_H
+#ifndef BARICOIN_COMPAT_H
+#define BARICOIN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #ifdef WIN32
@@ -103,4 +103,4 @@ bool static inline IsSelectableSocket(const SOCKET& s) {
 #endif
 }
 
-#endif // FUJICOIN_COMPAT_H
+#endif // BARICOIN_COMPAT_H

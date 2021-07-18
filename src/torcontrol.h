@@ -5,8 +5,8 @@
 /**
  * Functionality for communicating with Tor.
  */
-#ifndef FUJICOIN_TORCONTROL_H
-#define FUJICOIN_TORCONTROL_H
+#ifndef BARICOIN_TORCONTROL_H
+#define BARICOIN_TORCONTROL_H
 
 
 extern const std::string DEFAULT_TOR_CONTROL;
@@ -16,4 +16,4 @@ void StartTorControl();
 void InterruptTorControl();
 void StopTorControl();
 
-#endif /* FUJICOIN_TORCONTROL_H */
+#endif /* BARICOIN_TORCONTROL_H */

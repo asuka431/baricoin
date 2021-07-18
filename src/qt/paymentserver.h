@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_PAYMENTSERVER_H
-#define FUJICOIN_QT_PAYMENTSERVER_H
+#ifndef BARICOIN_QT_PAYMENTSERVER_H
+#define BARICOIN_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
-// fujicoin: URIs
+// baricoin: URIs
 //
 // This is somewhat tricky, because we have to deal with
 // the situation where the user clicks on a link during
@@ -33,7 +33,7 @@
 //
 
 #if defined(HAVE_CONFIG_H)
-#include <config/fujicoin-config.h>
+#include <config/baricoin-config.h>
 #endif
 
 #include <qt/sendcoinsrecipient.h>
@@ -106,4 +106,4 @@ private:
     OptionsModel *optionsModel;
 };
 
-#endif // FUJICOIN_QT_PAYMENTSERVER_H
+#endif // BARICOIN_QT_PAYMENTSERVER_H

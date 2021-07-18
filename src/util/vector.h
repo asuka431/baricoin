@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_VECTOR_H
-#define FUJICOIN_UTIL_VECTOR_H
+#ifndef BARICOIN_UTIL_VECTOR_H
+#define BARICOIN_UTIL_VECTOR_H
 
 #include <initializer_list>
 #include <type_traits>
@@ -48,4 +48,4 @@ inline V Cat(V v1, const V& v2)
     return v1;
 }
 
-#endif // FUJICOIN_UTIL_VECTOR_H
+#endif // BARICOIN_UTIL_VECTOR_H

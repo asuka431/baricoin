@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NET_H
-#define FUJICOIN_NET_H
+#ifndef BARICOIN_NET_H
+#define BARICOIN_NET_H
 
 #include <addrdb.h>
 #include <addrman.h>
@@ -1019,4 +1019,4 @@ inline std::chrono::microseconds PoissonNextSend(std::chrono::microseconds now, 
     return std::chrono::microseconds{PoissonNextSend(now.count(), average_interval.count())};
 }
 
-#endif // FUJICOIN_NET_H
+#endif // BARICOIN_NET_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_QVALUECOMBOBOX_H
-#define FUJICOIN_QT_QVALUECOMBOBOX_H
+#ifndef BARICOIN_QT_QVALUECOMBOBOX_H
+#define BARICOIN_QT_QVALUECOMBOBOX_H
 
 #include <QComboBox>
 #include <QVariant>
@@ -34,4 +34,4 @@ private Q_SLOTS:
     void handleSelectionChanged(int idx);
 };
 
-#endif // FUJICOIN_QT_QVALUECOMBOBOX_H
+#endif // BARICOIN_QT_QVALUECOMBOBOX_H

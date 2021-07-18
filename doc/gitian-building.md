@@ -1,9 +1,9 @@
 Gitian building
 ================
 
-*Setup instructions for a Gitian build of Fujicoin Core using a VM or physical system.*
+*Setup instructions for a Gitian build of Baricoin Core using a VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the Fujicoin
+Gitian is the deterministic build process that is used to build the Baricoin
 Core executables. It provides a way to be reasonably sure that the
 executables are really built from the git source. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
@@ -22,7 +22,7 @@ Table of Contents
 
 - [Preparing the Gitian builder host](#preparing-the-gitian-builder-host)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Fujicoin Core](#building-fujicoin-core)
+- [Building Baricoin Core](#building-baricoin-core)
 
 Preparing the Gitian builder host
 ---------------------------------
@@ -53,7 +53,7 @@ Initial Gitian Setup
 The `gitian-build.py` script will checkout different release tags, so it's best to copy it:
 
 ```
-cp fujicoin/contrib/gitian-build.py .
+cp baricoin/contrib/gitian-build.py .
 ```
 
 You only need to do this once:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2015-2019 The Fujicoin Core developers
+# Copyright (c) 2015-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test BIP66 (DER SIG).
@@ -11,7 +11,7 @@ from test_framework.blocktools import create_coinbase, create_block, create_tran
 from test_framework.messages import msg_block
 from test_framework.mininode import P2PInterface
 from test_framework.script import CScript
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
 )
@@ -36,7 +36,7 @@ def unDERify(tx):
     tx.vin[0].scriptSig = CScript(newscript)
 
 
-class BIP66Test(FujicoinTestFramework):
+class BIP66Test(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [[

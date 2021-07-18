@@ -1,7 +1,7 @@
-Fujicoin version 0.7.0 is now available for download at:
-  http://sourceforge.net/projects/bitcoin/files/Fujicoin/bitcoin-0.7.0/
+Baricoin version 0.7.0 is now available for download at:
+  http://sourceforge.net/projects/bitcoin/files/Baricoin/bitcoin-0.7.0/
 
-We recommend that everybody running prior versions of fujicoind/Fujicoin-Qt
+We recommend that everybody running prior versions of baricoind/Baricoin-Qt
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
@@ -14,11 +14,11 @@ source-only tarballs/zipballs directly from there:
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
-fujicoin up-to-date.  Just type
-  sudo apt-add-repository ppa:fujicoin/fujicoin
+baricoin up-to-date.  Just type
+  sudo apt-add-repository ppa:baricoin/baricoin
   sudo apt-get update
-in your terminal, then install the fujicoin-qt package:
-  sudo apt-get install fujicoin-qt
+in your terminal, then install the baricoin-qt package:
+  sudo apt-get install baricoin-qt
 
 
 How to Upgrade
@@ -27,10 +27,10 @@ If you are running an older version, shut it down. Wait
 until it has completely shut down (which might take a few minutes for older
 versions), then run the installer (on Windows) or just copy over
 Code:
-/Applications/Fujicoin-Qt
+/Applications/Baricoin-Qt
 (on Mac) or
 Code:
-fujicoind/fujicoin-qt
+baricoind/baricoin-qt
 (on Linux).
 
 If you were running on Linux with a version that might have been compiled
@@ -45,14 +45,14 @@ Incompatible Changes
   and 'getrawmempool' commands.
 * Remove deprecated RPC 'getblocknumber'
 
-Fujicoin Improvement Proposals implemented
+Baricoin Improvement Proposals implemented
 
 BIP 22 - 'getblocktemplate', 'submitblock' RPCs
 BIP 34 - block version 2, height in coinbase
 BIP 35 - 'mempool' message, extended 'getdata' message behavior
 
 
-Core fujicoin handling and blockchain database
+Core baricoin handling and blockchain database
 
 * Reduced CPU usage, by eliminating some redundant hash calculations
 * Cache signature verifications, to eliminate redundant signature checks
@@ -109,7 +109,7 @@ Qt GUI
 * Add 2 labels to the overviewpage that display Wallet and Transaction status (obsolete or current)
 * Extend the optionsdialog (e.g. language selection) and re-work it to a tabbed UI
 * Merge sign/verify message into a single window with tabbed UI
-* Ensure a changed fujicoin unit immediately updates all GUI elements that use units
+* Ensure a changed baricoin unit immediately updates all GUI elements that use units
 * Update QR Code dialog
 * Improve error reporting at startup
 * Fine-grained UI updates for a much smoother UI during block downloads
@@ -119,8 +119,8 @@ Qt GUI
 * Much better translations
 * Override progress bar design on platforms with segmented progress bars to assist with readability
 * Added 'immature balance' display on the overview page
-* (Windows only): enable ASLR and DEP for fujicoin-qt.exe
-* (Windows only): add meta-data to fujicoin-qt.exe (e.g. description)
+* (Windows only): enable ASLR and DEP for baricoin-qt.exe
+* (Windows only): add meta-data to baricoin-qt.exe (e.g. description)
 
 Internal codebase
 
@@ -131,7 +131,7 @@ Internal codebase
 Miscellaneous
 
 * Reopen debug.log upon SIGHUP
-* Bash programmable completion for fujicoind(1)
+* Bash programmable completion for baricoind(1)
 * On supported OS's, each thread is given a useful name
 
 

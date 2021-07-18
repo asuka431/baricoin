@@ -66,8 +66,8 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Fujicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones Fujicoin para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
+        <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones Baricoin para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Confirme cifrado del monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FUJICOINS&lt;/b&gt;!</source>
-        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS FUJICOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
+        <translation>Atención: Si cifra su monedero y pierde la contraseña, perderá ¡&lt;b&gt;TODOS SUS BARICOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -212,7 +212,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -278,8 +278,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>Enviar monedas a una dirección Fujicoin</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>Enviar monedas a una dirección Baricoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,12 +314,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your Fujicoin addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Fujicoin para demostrar la propiedad</translation>
+        <source>Sign messages with your Baricoin addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Baricoin para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Fujicoin addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Fujicoin concretas</translation>
+        <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones Baricoin concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -338,8 +338,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fujicoin: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de Fujicoin)</translation>
+        <source>Request payments (generates QR codes and baricoin: URIs)</source>
+        <translation>Solicitar pagos (genera codigo QR y URL's de Baricoin)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -598,8 +598,8 @@
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Fujicoin address.</source>
-        <translation>La dirección introducida "%1" no es una dirección Fujicoin válida.</translation>
+        <source>The entered address "%1" is not a valid Baricoin address.</source>
+        <translation>La dirección introducida "%1" no es una dirección Baricoin válida.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -663,8 +663,8 @@
         <translation>Utilice un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -731,8 +731,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the Fujicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Fujicoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the Baricoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Baricoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -830,8 +830,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fujicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Fujicoin después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Baricoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Baricoin después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1318,8 +1318,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Fujicoin address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección Fujicoin</translation>
+        <source>Sign the message to prove you own this Baricoin address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección Baricoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1338,8 +1338,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Fujicoin address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Fujicoin indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified Baricoin address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Baricoin indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1493,7 +1493,7 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation>Esta es una compilación de prueba pre-lanzamiento - use bajo su propio riesgo - no utilizar para aplicaciones de minería o mercantes</translation>

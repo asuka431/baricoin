@@ -5,7 +5,7 @@
 #include <qt/walletframe.h>
 #include <qt/walletmodel.h>
 
-#include <qt/fujicoingui.h>
+#include <qt/baricoingui.h>
 #include <qt/walletview.h>
 
 #include <cassert>
@@ -13,7 +13,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 
-WalletFrame::WalletFrame(const PlatformStyle *_platformStyle, FujicoinGUI *_gui) :
+WalletFrame::WalletFrame(const PlatformStyle *_platformStyle, BaricoinGUI *_gui) :
     QFrame(_gui),
     gui(_gui),
     platformStyle(_platformStyle)
@@ -65,14 +65,14 @@ bool WalletFrame::addWallet(WalletModel *walletModel)
     mapWalletViews[walletModel] = walletView;
 
     connect(walletView, &WalletView::outOfSyncWarningClicked, this, &WalletFrame::outOfSyncWarningClicked);
-    connect(walletView, &WalletView::transactionClicked, gui, &FujicoinGUI::gotoHistoryPage);
-    connect(walletView, &WalletView::coinsSent, gui, &FujicoinGUI::gotoHistoryPage);
+    connect(walletView, &WalletView::transactionClicked, gui, &BaricoinGUI::gotoHistoryPage);
+    connect(walletView, &WalletView::coinsSent, gui, &BaricoinGUI::gotoHistoryPage);
     connect(walletView, &WalletView::message, [this](const QString& title, const QString& message, unsigned int style) {
         gui->message(title, message, style);
     });
-    connect(walletView, &WalletView::encryptionStatusChanged, gui, &FujicoinGUI::updateWalletStatus);
-    connect(walletView, &WalletView::incomingTransaction, gui, &FujicoinGUI::incomingTransaction);
-    connect(walletView, &WalletView::hdEnabledStatusChanged, gui, &FujicoinGUI::updateWalletStatus);
+    connect(walletView, &WalletView::encryptionStatusChanged, gui, &BaricoinGUI::updateWalletStatus);
+    connect(walletView, &WalletView::incomingTransaction, gui, &BaricoinGUI::incomingTransaction);
+    connect(walletView, &WalletView::hdEnabledStatusChanged, gui, &BaricoinGUI::updateWalletStatus);
 
     return true;
 }

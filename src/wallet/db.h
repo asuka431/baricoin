@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLET_DB_H
-#define FUJICOIN_WALLET_DB_H
+#ifndef BARICOIN_WALLET_DB_H
+#define BARICOIN_WALLET_DB_H
 
 #include <clientversion.h>
 #include <fs.h>
@@ -400,4 +400,4 @@ public:
     bool static Rewrite(BerkeleyDatabase& database, const char* pszSkip = nullptr);
 };
 
-#endif // FUJICOIN_WALLET_DB_H
+#endif // BARICOIN_WALLET_DB_H

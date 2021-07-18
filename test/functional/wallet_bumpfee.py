@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2016-2019 The Fujicoin Core developers
+# Copyright (c) 2016-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the bumpfee RPC.
@@ -18,7 +18,7 @@ import io
 
 from test_framework.blocktools import add_witness_commitment, create_block, create_coinbase, send_to_witness
 from test_framework.messages import BIP125_SEQUENCE_NUMBER, CTransaction
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -30,14 +30,14 @@ from test_framework.util import (
 WALLET_PASSPHRASE = "test"
 WALLET_PASSPHRASE_TIMEOUT = 3600
 
-# Fee rates (in FJC per 1000 vbytes)
+# Fee rates (in BARI per 1000 vbytes)
 INSUFFICIENT = 0.00001000
 ECONOMICAL   = 0.00050000
 NORMAL       = 0.00100000
 HIGH         = 0.00500000
 TOO_HIGH     = 1.00000000
 
-class BumpFeeTest(FujicoinTestFramework):
+class BumpFeeTest(BaricoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True
@@ -253,16 +253,16 @@ def test_dust_to_fee(self, rbf_node, dest_address):
     self.log.info('Test that bumped output that is dust is dropped to fee')
     rbfid = spend_one_input(rbf_node, dest_address)
     fulltx = rbf_node.getrawtransaction(rbfid, 1)
-    # The DER formatting used by Fujicoin to serialize ECDSA signatures means that signatures can have a
+    # The DER formatting used by Baricoin to serialize ECDSA signatures means that signatures can have a
     # variable size of 70-72 bytes (or possibly even less), with most being 71 or 72 bytes. The signature
     # in the witness is divided by 4 for the vsize, so this variance can take the weight across a 4-byte
     # boundary. Thus expected transaction size (p2wpkh, 1 input, 2 outputs) is 140-141 vbytes, usually 141.
     if not 140 <= fulltx["vsize"] <= 141:
         raise AssertionError("Invalid tx vsize of {} (140-141 expected), full tx: {}".format(fulltx["vsize"], fulltx))
-    # Bump with fee_rate of 0.00350250 FJC per 1000 vbytes to create dust.
-    # Expected fee is 141 vbytes * fee_rate 0.00350250 FJC / 1000 vbytes = 0.00049385 FJC.
-    # or occasionally 140 vbytes * fee_rate 0.00350250 FJC / 1000 vbytes = 0.00049035 FJC.
-    # Dust should be dropped to the fee, so actual bump fee is 0.00050000 FJC.
+    # Bump with fee_rate of 0.00350250 BARI per 1000 vbytes to create dust.
+    # Expected fee is 141 vbytes * fee_rate 0.00350250 BARI / 1000 vbytes = 0.00049385 BARI.
+    # or occasionally 140 vbytes * fee_rate 0.00350250 BARI / 1000 vbytes = 0.00049035 BARI.
+    # Dust should be dropped to the fee, so actual bump fee is 0.00050000 BARI.
     bumped_tx = rbf_node.bumpfee(rbfid, {"fee_rate": 0.00350250})
     full_bumped_tx = rbf_node.getrawtransaction(bumped_tx["txid"], 1)
     assert_equal(bumped_tx["fee"], Decimal("0.00050000"))
@@ -290,7 +290,7 @@ def test_settxfee(self, rbf_node, dest_address):
 def test_maxtxfee_fails(self, rbf_node, dest_address):
     self.log.info('Test that bumpfee fails when it hits -matxfee')
     # size of bumped transaction (p2wpkh, 1 input, 2 outputs): 141 vbytes
-    # expected bump fee of 141 vbytes * 0.00200000 FJC / 1000 vbytes = 0.00002820 FJC
+    # expected bump fee of 141 vbytes * 0.00200000 BARI / 1000 vbytes = 0.00002820 BARI
     # which exceeds maxtxfee and is expected to raise
     self.restart_node(1, ['-maxtxfee=0.000025'] + self.extra_args[1])
     rbf_node.walletpassphrase(WALLET_PASSPHRASE, WALLET_PASSPHRASE_TIMEOUT)

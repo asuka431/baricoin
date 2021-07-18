@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WARNINGS_H
-#define FUJICOIN_WARNINGS_H
+#ifndef BARICOIN_WARNINGS_H
+#define BARICOIN_WARNINGS_H
 
 #include <string>
 
@@ -20,4 +20,4 @@ void SetfLargeWorkInvalidChainFound(bool flag);
  */
 std::string GetWarnings(bool verbose);
 
-#endif //  FUJICOIN_WARNINGS_H
+#endif //  BARICOIN_WARNINGS_H

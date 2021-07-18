@@ -2,33 +2,33 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/fujicoinunits.h>
+#include <qt/baricoinunits.h>
 
 #include <QStringList>
 
-FujicoinUnits::FujicoinUnits(QObject *parent):
+BaricoinUnits::BaricoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<FujicoinUnits::Unit> FujicoinUnits::availableUnits()
+QList<BaricoinUnits::Unit> BaricoinUnits::availableUnits()
 {
-    QList<FujicoinUnits::Unit> unitlist;
-    unitlist.append(FJC);
-    unitlist.append(mFJC);
-    unitlist.append(uFJC);
+    QList<BaricoinUnits::Unit> unitlist;
+    unitlist.append(BARI);
+    unitlist.append(mBARI);
+    unitlist.append(uBARI);
     unitlist.append(SAT);
     return unitlist;
 }
 
-bool FujicoinUnits::valid(int unit)
+bool BaricoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case FJC:
-    case mFJC:
-    case uFJC:
+    case BARI:
+    case mBARI:
+    case uBARI:
     case SAT:
         return true;
     default:
@@ -36,65 +36,65 @@ bool FujicoinUnits::valid(int unit)
     }
 }
 
-QString FujicoinUnits::longName(int unit)
+QString BaricoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case FJC: return QString("FJC");
-    case mFJC: return QString("mFJC");
-    case uFJC: return QString::fromUtf8("µFJC (bits)");
+    case BARI: return QString("BARI");
+    case mBARI: return QString("mBARI");
+    case uBARI: return QString::fromUtf8("µBARI (bits)");
     case SAT: return QString("Satoshi (sat)");
     default: return QString("???");
     }
 }
 
-QString FujicoinUnits::shortName(int unit)
+QString BaricoinUnits::shortName(int unit)
 {
     switch(unit)
     {
-    case uFJC: return QString::fromUtf8("bits");
+    case uBARI: return QString::fromUtf8("bits");
     case SAT: return QString("sat");
     default: return longName(unit);
     }
 }
 
-QString FujicoinUnits::description(int unit)
+QString BaricoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case FJC: return QString("Fujicoins");
-    case mFJC: return QString("Milli-Fujicoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uFJC: return QString("Micro-Fujicoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BARI: return QString("Baricoins");
+    case mBARI: return QString("Milli-Baricoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uBARI: return QString("Micro-Baricoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
 
-qint64 FujicoinUnits::factor(int unit)
+qint64 BaricoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case FJC: return 100000000;
-    case mFJC: return 100000;
-    case uFJC: return 100;
+    case BARI: return 100000000;
+    case mBARI: return 100000;
+    case uBARI: return 100;
     case SAT: return 1;
     default: return 100000000;
     }
 }
 
-int FujicoinUnits::decimals(int unit)
+int BaricoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case FJC: return 8;
-    case mFJC: return 5;
-    case uFJC: return 2;
+    case BARI: return 8;
+    case mBARI: return 5;
+    case uBARI: return 2;
     case SAT: return 0;
     default: return 0;
     }
 }
 
-QString FujicoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
+QString BaricoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -138,12 +138,12 @@ QString FujicoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separato
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString FujicoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString BaricoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + shortName(unit);
 }
 
-QString FujicoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString BaricoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
@@ -151,7 +151,7 @@ QString FujicoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool 
 }
 
 
-bool FujicoinUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool BaricoinUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -190,23 +190,23 @@ bool FujicoinUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-QString FujicoinUnits::getAmountColumnTitle(int unit)
+QString BaricoinUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (FujicoinUnits::valid(unit))
+    if (BaricoinUnits::valid(unit))
     {
-        amountTitle += " ("+FujicoinUnits::shortName(unit) + ")";
+        amountTitle += " ("+BaricoinUnits::shortName(unit) + ")";
     }
     return amountTitle;
 }
 
-int FujicoinUnits::rowCount(const QModelIndex &parent) const
+int BaricoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant FujicoinUnits::data(const QModelIndex &index, int role) const
+QVariant BaricoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -226,7 +226,7 @@ QVariant FujicoinUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount FujicoinUnits::maxMoney()
+CAmount BaricoinUnits::maxMoney()
 {
     return MAX_MONEY;
 }

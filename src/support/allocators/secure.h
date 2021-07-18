@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_SUPPORT_ALLOCATORS_SECURE_H
-#define FUJICOIN_SUPPORT_ALLOCATORS_SECURE_H
+#ifndef BARICOIN_SUPPORT_ALLOCATORS_SECURE_H
+#define BARICOIN_SUPPORT_ALLOCATORS_SECURE_H
 
 #include <support/lockedpool.h>
 #include <support/cleanse.h>
@@ -59,4 +59,4 @@ struct secure_allocator : public std::allocator<T> {
 // This is exactly like std::string, but with a custom allocator.
 typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString;
 
-#endif // FUJICOIN_SUPPORT_ALLOCATORS_SECURE_H
+#endif // BARICOIN_SUPPORT_ALLOCATORS_SECURE_H

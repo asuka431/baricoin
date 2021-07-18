@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_VALIDATIONINTERFACE_H
-#define FUJICOIN_VALIDATIONINTERFACE_H
+#ifndef BARICOIN_VALIDATIONINTERFACE_H
+#define BARICOIN_VALIDATIONINTERFACE_H
 
 #include <primitives/transaction.h> // CTransaction(Ref)
 #include <sync.h>
@@ -207,4 +207,4 @@ public:
 
 CMainSignals& GetMainSignals();
 
-#endif // FUJICOIN_VALIDATIONINTERFACE_H
+#endif // BARICOIN_VALIDATIONINTERFACE_H

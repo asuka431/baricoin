@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CHECKQUEUE_H
-#define FUJICOIN_CHECKQUEUE_H
+#ifndef BARICOIN_CHECKQUEUE_H
+#define BARICOIN_CHECKQUEUE_H
 
 #include <sync.h>
 
@@ -210,4 +210,4 @@ public:
     }
 };
 
-#endif // FUJICOIN_CHECKQUEUE_H
+#endif // BARICOIN_CHECKQUEUE_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NOUI_H
-#define FUJICOIN_NOUI_H
+#ifndef BARICOIN_NOUI_H
+#define BARICOIN_NOUI_H
 
 #include <string>
 
@@ -14,13 +14,13 @@ bool noui_ThreadSafeQuestion(const std::string& /* ignored interactive message *
 /** Non-GUI handler, which only logs a message. */
 void noui_InitMessage(const std::string& message);
 
-/** Connect all fujicoind signal handlers */
+/** Connect all baricoind signal handlers */
 void noui_connect();
 
-/** Redirect all fujicoind signal handlers to LogPrintf. Used to check or suppress output during test runs that produce expected errors */
+/** Redirect all baricoind signal handlers to LogPrintf. Used to check or suppress output during test runs that produce expected errors */
 void noui_test_redirect();
 
 /** Reconnects the regular Non-GUI handlers after having used noui_test_redirect */
 void noui_reconnect();
 
-#endif // FUJICOIN_NOUI_H
+#endif // BARICOIN_NOUI_H

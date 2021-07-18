@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
-#define FUJICOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
+#ifndef BARICOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
+#define BARICOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
 
 #include <test/util/setup_common.h>
 
@@ -26,4 +26,4 @@ struct WalletTestingSetup: public TestingSetup {
     std::unique_ptr<interfaces::Handler> m_chain_notifications_handler;
 };
 
-#endif // FUJICOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
+#endif // BARICOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H

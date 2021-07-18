@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_CONSENSUS_TX_VERIFY_H
-#define FUJICOIN_CONSENSUS_TX_VERIFY_H
+#ifndef BARICOIN_CONSENSUS_TX_VERIFY_H
+#define BARICOIN_CONSENSUS_TX_VERIFY_H
 
 #include <amount.h>
 
@@ -75,4 +75,4 @@ bool EvaluateSequenceLocks(const CBlockIndex& block, std::pair<int, int64_t> loc
  */
 bool SequenceLocks(const CTransaction &tx, int flags, std::vector<int>* prevHeights, const CBlockIndex& block);
 
-#endif // FUJICOIN_CONSENSUS_TX_VERIFY_H
+#endif // BARICOIN_CONSENSUS_TX_VERIFY_H

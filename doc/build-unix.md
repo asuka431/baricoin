@@ -1,12 +1,12 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Fujicoin Core in Unix.
+Some notes on how to build Baricoin Core in Unix.
 
 (For BSD specific instructions, see `build-*bsd.md` in this directory.)
 
 Note
 ---------------------
-Always use absolute paths to configure and compile Fujicoin Core and the dependencies.
+Always use absolute paths to configure and compile Baricoin Core and the dependencies.
 For example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -27,8 +27,8 @@ apt-get install build-essential libtool autotools-dev automake pkg-config libssl
 ```
 Let's go:
 ```
-git clone https://github.com/fujicoin/fujicoin.git fujicoin
-cd fujicoin
+git clone https://github.com/baricoin/baricoin.git baricoin
+cd baricoin
 
 git tag
 git checkout f0.19.0 # Select right version
@@ -45,7 +45,7 @@ CONFIG_SITE=$PWD/depends/x86_64-pc-linux-gnu/share/config.site ./configure --pre
 
 make install
 cd dist/bin
-strip fujicoin-cli fujicoind fujicoin-tx
+strip baricoin-cli baricoind baricoin-tx
 ```
 The executable files are in dist/bin .
 Note: x86_64-pc-linux-gnu may be different on another system.
@@ -61,7 +61,7 @@ make
 make install # optional
 ```
 
-This will build fujicoin-qt as well, if the dependencies are met.
+This will build baricoin-qt as well, if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -90,7 +90,7 @@ Memory Requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1.5 GB of
-memory available when compiling Fujicoin Core. On systems with less, gcc can be
+memory available when compiling Baricoin Core. On systems with less, gcc can be
 tuned to conserve memory with additional CXXFLAGS:
 
 
@@ -128,7 +128,7 @@ pass `--with-incompatible-bdb` to configure.
 
 Otherwise, you can build from self-compiled `depends` (see above).
 
-To build Fujicoin Core without wallet, see [*Disable-wallet mode*](/doc/build-unix.md#disable-wallet-mode)
+To build Baricoin Core without wallet, see [*Disable-wallet mode*](/doc/build-unix.md#disable-wallet-mode)
 
 
 Optional (see `--with-miniupnpc` and `--enable-upnp-default`):
@@ -141,7 +141,7 @@ ZMQ dependencies (provides ZMQ API):
 
 GUI dependencies:
 
-If you want to build fujicoin-qt, make sure that the required packages for Qt development
+If you want to build baricoin-qt, make sure that the required packages for Qt development
 are installed. Qt 5 is necessary to build the GUI.
 To build without GUI pass `--without-gui`.
 
@@ -153,7 +153,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a fujicoin-qt executable will be
+Once these are installed, they will be found by configure and a baricoin-qt executable will be
 built by default.
 
 
@@ -183,7 +183,7 @@ libqrencode (optional) can be installed with:
 
 Notes
 -----
-The release is built with GCC and then "strip fujicoind" to strip the debug
+The release is built with GCC and then "strip baricoind" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 
@@ -224,7 +224,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your Fujicoin Core installation more secure by making certain attacks impossible to
+To help make your Baricoin Core installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -246,7 +246,7 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./fujicoin
+    	scanelf -e ./baricoin
 
     The output should contain:
 
@@ -254,13 +254,13 @@ Hardening enables the following features:
     ET_DYN
 
 * _Non-executable Stack_: If the stack is executable then trivial stack-based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, Fujicoin Core should be built with a non-executable stack,
+    vulnerable buffers are found. By default, Baricoin Core should be built with a non-executable stack,
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./fujicoin`
+    `scanelf -e ./baricoin`
 
     The output should contain:
 	STK/REL/PTL
@@ -270,7 +270,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, Fujicoin Core may be compiled in
+When the intention is to run only a P2P node without a wallet, Baricoin Core may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -292,7 +292,7 @@ This example lists the steps necessary to setup and build a command line only, n
 
     pacman -S git base-devel boost libevent python
     git clone https://github.com/bitcoin/bitcoin.git
-    cd fujicoin/
+    cd baricoin/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
     make check
@@ -301,7 +301,7 @@ Note:
 Enabling wallet support requires either compiling against a Berkeley DB newer than 4.8 (package `db`) using `--with-incompatible-bdb`,
 or building and depending on a local version of Berkeley DB 4.8. The readily available Arch Linux packages are currently built using
 `--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/bitcoin/trunk/PKGBUILD).
-As mentioned above, when maintaining portability of the wallet between the standard Fujicoin Core distributions and independently built
+As mentioned above, when maintaining portability of the wallet between the standard Baricoin Core distributions and independently built
 node software is desired, Berkeley DB 4.8 must be used.
 
 

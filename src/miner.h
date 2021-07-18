@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_MINER_H
-#define FUJICOIN_MINER_H
+#ifndef BARICOIN_MINER_H
+#define BARICOIN_MINER_H
 
 #include <optional.h>
 #include <primitives/block.h>
@@ -203,4 +203,4 @@ private:
 void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned int& nExtraNonce);
 int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParams, const CBlockIndex* pindexPrev);
 
-#endif // FUJICOIN_MINER_H
+#endif // BARICOIN_MINER_H

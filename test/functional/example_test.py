@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2019 The Fujicoin Core developers
+# Copyright (c) 2017-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """An example functional test
@@ -22,7 +22,7 @@ from test_framework.mininode import (
     msg_block,
     msg_getdata,
 )
-from test_framework.test_framework import FujicoinTestFramework
+from test_framework.test_framework import BaricoinTestFramework
 from test_framework.util import (
     assert_equal,
     connect_nodes,
@@ -64,12 +64,12 @@ def custom_function():
 
     If this function is more generally useful for other tests, consider
     moving it to a module in test_framework."""
-    # self.log.info("running custom_function")  # Oops! Can't run self.log outside the FujicoinTestFramework
+    # self.log.info("running custom_function")  # Oops! Can't run self.log outside the BaricoinTestFramework
     pass
 
 
-class ExampleTest(FujicoinTestFramework):
-    # Each functional test is a subclass of the FujicoinTestFramework class.
+class ExampleTest(BaricoinTestFramework):
+    # Each functional test is a subclass of the BaricoinTestFramework class.
 
     # Override the set_test_params(), skip_test_if_missing_module(), add_options(), setup_chain(), setup_network()
     # and setup_nodes() methods to customize the test setup as required.
@@ -129,7 +129,7 @@ class ExampleTest(FujicoinTestFramework):
 
         Define it in a method here because you're going to use it repeatedly.
         If you think it's useful in general, consider moving it to the base
-        FujicoinTestFramework class so other tests can use it."""
+        BaricoinTestFramework class so other tests can use it."""
 
         self.log.info("Running custom_method")
 

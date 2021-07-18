@@ -1,4 +1,4 @@
-Fujicoin Core version 0.9.5 is now available from:
+Baricoin Core version 0.9.5 is now available from:
 
   https://bitcoin.org/bin/0.9.5/
 
@@ -15,8 +15,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Fujicoin-Qt (on Mac) or
-fujicoind/fujicoin-qt (on Linux).
+installer (on Windows) or just copy over /Applications/Baricoin-Qt (on Mac) or
+baricoind/baricoin-qt (on Linux).
 
 Notable changes
 ================
@@ -24,10 +24,10 @@ Notable changes
 Mining and relay policy enhancements
 ------------------------------------
 
-Fujicoin Core's block templates are now for version 3 blocks only, and any mining
+Baricoin Core's block templates are now for version 3 blocks only, and any mining
 software relying on its `getblocktemplate` must be updated in parallel to use
 libblkmaker either version 0.4.2 or any version from 0.5.1 onward.
-If you are solo mining, this will affect you the moment you upgrade Fujicoin
+If you are solo mining, this will affect you the moment you upgrade Baricoin
 Core, which must be done prior to BIP66 achieving its 951/1001 status.
 If you are mining with the stratum mining protocol: this does not affect you.
 If you are mining with the getblocktemplate protocol to a pool: this will affect

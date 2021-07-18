@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_QVALIDATEDLINEEDIT_H
-#define FUJICOIN_QT_QVALIDATEDLINEEDIT_H
+#ifndef BARICOIN_QT_QVALIDATEDLINEEDIT_H
+#define BARICOIN_QT_QVALIDATEDLINEEDIT_H
 
 #include <QLineEdit>
 
@@ -40,4 +40,4 @@ private Q_SLOTS:
     void checkValidity();
 };
 
-#endif // FUJICOIN_QT_QVALIDATEDLINEEDIT_H
+#endif // BARICOIN_QT_QVALIDATEDLINEEDIT_H

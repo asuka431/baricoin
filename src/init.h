@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_INIT_H
-#define FUJICOIN_INIT_H
+#ifndef BARICOIN_INIT_H
+#define BARICOIN_INIT_H
 
 #include <memory>
 #include <string>
@@ -23,7 +23,7 @@ void InitLogging();
 //!Parameter interaction: change current parameters depending on various rules
 void InitParameterInteraction();
 
-/** Initialize fujicoin core: Basic context setup.
+/** Initialize baricoin core: Basic context setup.
  *  @note This can be done before daemonization. Do not call Shutdown() if this function fails.
  *  @pre Parameters should be parsed and config file should be read.
  */
@@ -41,13 +41,13 @@ bool AppInitParameterInteraction();
  */
 bool AppInitSanityChecks();
 /**
- * Lock fujicoin core data directory.
+ * Lock baricoin core data directory.
  * @note This should only be done after daemonization. Do not call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitSanityChecks should have been called.
  */
 bool AppInitLockDataDirectory();
 /**
- * Fujicoin core main initialization.
+ * Baricoin core main initialization.
  * @note This should only be done after daemonization. Call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitLockDataDirectory should have been called.
  */
@@ -61,4 +61,4 @@ void SetupServerArgs();
 /** Returns licensing information (for -version) */
 std::string LicenseInfo();
 
-#endif // FUJICOIN_INIT_H
+#endif // BARICOIN_INIT_H

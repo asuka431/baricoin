@@ -2,7 +2,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/fujicoinaddressvalidator.h>
+#include <qt/baricoinaddressvalidator.h>
 
 #include <key_io.h>
 
@@ -15,12 +15,12 @@
   - All lower-case letters except for 'l'
 */
 
-FujicoinAddressEntryValidator::FujicoinAddressEntryValidator(QObject *parent) :
+BaricoinAddressEntryValidator::BaricoinAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State FujicoinAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State BaricoinAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -80,15 +80,15 @@ QValidator::State FujicoinAddressEntryValidator::validate(QString &input, int &p
     return state;
 }
 
-FujicoinAddressCheckValidator::FujicoinAddressCheckValidator(QObject *parent) :
+BaricoinAddressCheckValidator::BaricoinAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State FujicoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State BaricoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed Fujicoin address
+    // Validate the passed Baricoin address
     if (IsValidDestinationString(input.toStdString())) {
         return QValidator::Acceptable;
     }

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_INDEX_BASE_H
-#define FUJICOIN_INDEX_BASE_H
+#ifndef BARICOIN_INDEX_BASE_H
+#define BARICOIN_INDEX_BASE_H
 
 #include <dbwrapper.h>
 #include <primitives/block.h>
@@ -108,4 +108,4 @@ public:
     void Stop();
 };
 
-#endif // FUJICOIN_INDEX_BASE_H
+#endif // BARICOIN_INDEX_BASE_H

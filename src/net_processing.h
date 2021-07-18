@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_NET_PROCESSING_H
-#define FUJICOIN_NET_PROCESSING_H
+#ifndef BARICOIN_NET_PROCESSING_H
+#define BARICOIN_NET_PROCESSING_H
 
 #include <consensus/params.h>
 #include <net.h>
@@ -94,4 +94,4 @@ bool GetNodeStateStats(NodeId nodeid, CNodeStateStats &stats);
 /** Relay transaction to every node */
 void RelayTransaction(const uint256&, const CConnman& connman);
 
-#endif // FUJICOIN_NET_PROCESSING_H
+#endif // BARICOIN_NET_PROCESSING_H

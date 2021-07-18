@@ -2,17 +2,17 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += bench/bench_fujicoin
+bin_PROGRAMS += bench/bench_baricoin
 BENCH_SRCDIR = bench
-BENCH_BINARY = bench/bench_fujicoin$(EXEEXT)
+BENCH_BINARY = bench/bench_baricoin$(EXEEXT)
 
 RAW_BENCH_FILES = \
   bench/data/block413567.raw
 GENERATED_BENCH_FILES = $(RAW_BENCH_FILES:.raw=.raw.h)
 
-bench_bench_fujicoin_SOURCES = \
+bench_bench_baricoin_SOURCES = \
   $(RAW_BENCH_FILES) \
-  bench/bench_fujicoin.cpp \
+  bench/bench_baricoin.cpp \
   bench/bench.cpp \
   bench/bench.h \
   bench/block_assemble.cpp \
@@ -41,17 +41,17 @@ bench_bench_fujicoin_SOURCES = \
   bench/poly1305.cpp \
   bench/prevector.cpp
 
-nodist_bench_bench_fujicoin_SOURCES = $(GENERATED_BENCH_FILES)
+nodist_bench_bench_baricoin_SOURCES = $(GENERATED_BENCH_FILES)
 
-bench_bench_fujicoin_CPPFLAGS = $(AM_CPPFLAGS) $(FUJICOIN_INCLUDES) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-bench_bench_fujicoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bench_bench_fujicoin_LDADD = \
-  $(LIBFUJICOIN_SERVER) \
-  $(LIBFUJICOIN_WALLET) \
-  $(LIBFUJICOIN_COMMON) \
-  $(LIBFUJICOIN_UTIL) \
-  $(LIBFUJICOIN_CONSENSUS) \
-  $(LIBFUJICOIN_CRYPTO) \
+bench_bench_baricoin_CPPFLAGS = $(AM_CPPFLAGS) $(BARICOIN_INCLUDES) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_baricoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_baricoin_LDADD = \
+  $(LIBBARICOIN_SERVER) \
+  $(LIBBARICOIN_WALLET) \
+  $(LIBBARICOIN_COMMON) \
+  $(LIBBARICOIN_UTIL) \
+  $(LIBBARICOIN_CONSENSUS) \
+  $(LIBBARICOIN_CRYPTO) \
   $(LIBTEST_UTIL) \
   $(LIBLEVELDB) \
   $(LIBLEVELDB_SSE42) \
@@ -62,30 +62,30 @@ bench_bench_fujicoin_LDADD = \
   $(EVENT_LIBS)
 
 if ENABLE_ZMQ
-bench_bench_fujicoin_LDADD += $(LIBFUJICOIN_ZMQ) $(ZMQ_LIBS)
+bench_bench_baricoin_LDADD += $(LIBBARICOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-bench_bench_fujicoin_SOURCES += bench/coin_selection.cpp
-bench_bench_fujicoin_SOURCES += bench/wallet_balance.cpp
+bench_bench_baricoin_SOURCES += bench/coin_selection.cpp
+bench_bench_baricoin_SOURCES += bench/wallet_balance.cpp
 endif
 
-bench_bench_fujicoin_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS)
-bench_bench_fujicoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bench_bench_baricoin_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS)
+bench_bench_baricoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-CLEAN_FUJICOIN_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_BENCH_FILES)
+CLEAN_BARICOIN_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_BENCH_FILES)
 
-CLEANFILES += $(CLEAN_FUJICOIN_BENCH)
+CLEANFILES += $(CLEAN_BARICOIN_BENCH)
 
 bench/data.cpp: bench/data/block413567.raw.h
 
-fujicoin_bench: $(BENCH_BINARY)
+baricoin_bench: $(BENCH_BINARY)
 
 bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
-fujicoin_bench_clean : FORCE
-	rm -f $(CLEAN_FUJICOIN_BENCH) $(bench_bench_fujicoin_OBJECTS) $(BENCH_BINARY)
+baricoin_bench_clean : FORCE
+	rm -f $(CLEAN_BARICOIN_BENCH) $(bench_bench_baricoin_OBJECTS) $(BENCH_BINARY)
 
 %.raw.h: %.raw
 	@$(MKDIR_P) $(@D)

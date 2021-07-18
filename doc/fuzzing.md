@@ -1,12 +1,12 @@
-# Fuzzing Fujicoin Core using libFuzzer
+# Fuzzing Baricoin Core using libFuzzer
 
 ## Quickstart guide
 
-To quickly get started fuzzing Fujicoin Core using [libFuzzer](https://llvm.org/docs/LibFuzzer.html):
+To quickly get started fuzzing Baricoin Core using [libFuzzer](https://llvm.org/docs/LibFuzzer.html):
 
 ```sh
 $ git clone https://github.com/bitcoin/bitcoin
-$ cd fujicoin/
+$ cd baricoin/
 $ ./autogen.sh
 $ CC=clang CXX=clang++ ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined
 # macOS users: If you have problem with this step then make sure to read "macOS hints for
@@ -64,9 +64,9 @@ block^@M-^?M-^?M-^?M-^?M-^?nM-^?M-^?
 
 In this case the fuzzer managed to create a `block` message which when passed to `ProcessMessage(...)` increased coverage.
 
-The project's collection of seed corpora is found in the [`fujicoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo.
+The project's collection of seed corpora is found in the [`baricoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo.
 
-To fuzz `process_message` using the [`fujicoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) seed corpus:
+To fuzz `process_message` using the [`baricoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) seed corpus:
 
 ```sh
 $ git clone https://github.com/bitcoin-core/qa-assets
@@ -81,9 +81,9 @@ INFO: seed corpus: files: 991 min: 1b max: 1858b total: 288291b rss: 150Mb
 …
 ```
 
-If you find coverage increasing inputs when fuzzing you are highly encouraged to submit them for inclusion in the [`fujicoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo.
+If you find coverage increasing inputs when fuzzing you are highly encouraged to submit them for inclusion in the [`baricoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo.
 
-Every single pull request submitted against the Fujicoin Core repo is automatically tested against all inputs in the [`fujicoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo. Contributing new coverage increasing inputs is an easy way to help make Fujicoin Core more robust.
+Every single pull request submitted against the Baricoin Core repo is automatically tested against all inputs in the [`baricoin-core/qa-assets`](https://github.com/bitcoin-core/qa-assets) repo. Contributing new coverage increasing inputs is an easy way to help make Baricoin Core more robust.
 
 ## macOS hints for libFuzzer
 
@@ -93,7 +93,7 @@ example using `brew install llvm`.
 
 Should you run into problems with the address sanitizer, it is possible you
 may need to run `./configure` with `--disable-asm` to avoid errors
-with certain assembly code from Fujicoin Core's code. See [developer notes on sanitizers](https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md#sanitizers)
+with certain assembly code from Baricoin Core's code. See [developer notes on sanitizers](https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md#sanitizers)
 for more information.
 
 You may also need to take care of giving the correct path for `clang` and
@@ -108,15 +108,15 @@ Full configure that was tested on macOS Catalina with `brew` installed `llvm`:
 
 Read the [libFuzzer documentation](https://llvm.org/docs/LibFuzzer.html) for more information. This [libFuzzer tutorial](https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md) might also be of interest.
 
-# Fuzzing Fujicoin Core using american fuzzy lop (`afl-fuzz`)
+# Fuzzing Baricoin Core using american fuzzy lop (`afl-fuzz`)
 
 ## Quickstart guide
 
-To quickly get started fuzzing Fujicoin Core using [`afl-fuzz`](https://github.com/google/afl):
+To quickly get started fuzzing Baricoin Core using [`afl-fuzz`](https://github.com/google/afl):
 
 ```sh
 $ git clone https://github.com/bitcoin/bitcoin
-$ cd fujicoin/
+$ cd baricoin/
 $ git clone https://github.com/google/afl
 $ make -C afl/
 $ make -C afl/llvm_mode/

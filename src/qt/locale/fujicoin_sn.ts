@@ -64,7 +64,7 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
         <source>E&amp;xit</source>
         <translation>Buda</translation>
@@ -155,8 +155,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Fujicoin</source>
-        <translation>Fujicoin</translation>
+        <source>Baricoin</source>
+        <translation>Baricoin</translation>
     </message>
     </context>
 <context>
@@ -187,8 +187,8 @@
         <translation>Marii</translation>
     </message>
     <message>
-        <source>Enter a Fujicoin address (e.g. %1)</source>
-        <translation>Nyora kero ye Fujicoin (sekuti %1)</translation>
+        <source>Enter a Baricoin address (e.g. %1)</source>
+        <translation>Nyora kero ye Baricoin (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -341,6 +341,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

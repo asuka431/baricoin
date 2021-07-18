@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_TXMEMPOOL_H
-#define FUJICOIN_TXMEMPOOL_H
+#ifndef BARICOIN_TXMEMPOOL_H
+#define BARICOIN_TXMEMPOOL_H
 
 #include <atomic>
 #include <map>
@@ -899,4 +899,4 @@ struct DisconnectedBlockTransactions {
     }
 };
 
-#endif // FUJICOIN_TXMEMPOOL_H
+#endif // BARICOIN_TXMEMPOOL_H

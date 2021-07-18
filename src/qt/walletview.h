@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_QT_WALLETVIEW_H
-#define FUJICOIN_QT_WALLETVIEW_H
+#ifndef BARICOIN_QT_WALLETVIEW_H
+#define BARICOIN_QT_WALLETVIEW_H
 
 #include <amount.h>
 
@@ -44,7 +44,7 @@ public:
     void setClientModel(ClientModel *clientModel);
     WalletModel *getWalletModel() { return walletModel; }
     /** Set the wallet model.
-        The wallet model represents a fujicoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a baricoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);
@@ -127,4 +127,4 @@ Q_SIGNALS:
     void outOfSyncWarningClicked();
 };
 
-#endif // FUJICOIN_QT_WALLETVIEW_H
+#endif // BARICOIN_QT_WALLETVIEW_H

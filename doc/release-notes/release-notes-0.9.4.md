@@ -1,4 +1,4 @@
-Fujicoin Core version 0.9.4 is now available from:
+Baricoin Core version 0.9.4 is now available from:
 
   https://bitcoin.org/bin/0.9.4/
 
@@ -14,26 +14,26 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Fujicoin-Qt (on Mac) or
-fujicoind/fujicoin-qt (on Linux).
+installer (on Windows) or just copy over /Applications/Baricoin-Qt (on Mac) or
+baricoind/baricoin-qt (on Linux).
 
 OpenSSL Warning
 ================
 
 OpenSSL 1.0.0p / 1.0.1k was recently released and is being pushed out by
 various operating system maintainers. Review by Gregory Maxwell determined that
-this update is incompatible with the Fujicoin system and could lead to consensus
+this update is incompatible with the Baricoin system and could lead to consensus
 forks.
 
-Fujicoin Core released binaries from https://bitcoin.org are unaffected,
+Baricoin Core released binaries from https://bitcoin.org are unaffected,
 as are any built with the gitian deterministic build system.
 
 However, if you are running either
 
 - The Ubuntu PPA from https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin
-- A third-party or self-compiled Fujicoin Core
+- A third-party or self-compiled Baricoin Core
 
-upgrade to Fujicoin Core 0.9.4, which includes a workaround, **before** updating
+upgrade to Baricoin Core 0.9.4, which includes a workaround, **before** updating
 OpenSSL.
 
 The incompatibility is due to the OpenSSL update changing the

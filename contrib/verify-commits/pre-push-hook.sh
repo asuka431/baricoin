@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Copyright (c) 2014-2019 The Fujicoin Core developers
+# Copyright (c) 2014-2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 export LC_ALL=C
-if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)fujicoin/fujicoin(.git)?$ ]]; then
+if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)baricoin/baricoin(.git)?$ ]]; then
     exit 0
 fi
 

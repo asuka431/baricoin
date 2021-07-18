@@ -1,9 +1,9 @@
 .PHONY: FORCE
 all: FORCE
-	$(MAKE) -C .. fujicoin_qt test_fujicoin_qt
+	$(MAKE) -C .. baricoin_qt test_baricoin_qt
 clean: FORCE
-	$(MAKE) -C .. fujicoin_qt_clean test_fujicoin_qt_clean
+	$(MAKE) -C .. baricoin_qt_clean test_baricoin_qt_clean
 check: FORCE
-	$(MAKE) -C .. test_fujicoin_qt_check
-fujicoin-qt fujicoin-qt.exe: FORCE
-	 $(MAKE) -C .. fujicoin_qt
+	$(MAKE) -C .. test_baricoin_qt_check
+baricoin-qt baricoin-qt.exe: FORCE
+	 $(MAKE) -C .. baricoin_qt

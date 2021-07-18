@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_UTIL_SETTINGS_H
-#define FUJICOIN_UTIL_SETTINGS_H
+#ifndef BARICOIN_UTIL_SETTINGS_H
+#define BARICOIN_UTIL_SETTINGS_H
 
 #include <map>
 #include <string>
@@ -24,7 +24,7 @@ namespace util {
 //!       https://github.com/bitcoin/bitcoin/pull/15934/files#r337691812)
 using SettingsValue = UniValue;
 
-//! Stored fujicoin settings. This struct combines settings from the command line
+//! Stored baricoin settings. This struct combines settings from the command line
 //! and a read-only configuration file.
 struct Settings {
     //! Map of setting name to forced setting value.
@@ -91,4 +91,4 @@ auto FindKey(Map&& map, Key&& key) -> decltype(&map.at(key))
 
 } // namespace util
 
-#endif // FUJICOIN_UTIL_SETTINGS_H
+#endif // BARICOIN_UTIL_SETTINGS_H

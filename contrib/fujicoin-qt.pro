@@ -19,4 +19,4 @@ FORMS += \
     ../src/qt/forms/createwalletdialog.ui
 
 RESOURCES += \
-    ../src/qt/fujicoin.qrc
+    ../src/qt/baricoin.qrc

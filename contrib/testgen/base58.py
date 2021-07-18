@@ -1,8 +1,8 @@
-# Copyright (c) 2012-2018 The Fujicoin Core developers
+# Copyright (c) 2012-2018 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
-Fujicoin base58 encoding and decoding.
+Baricoin base58 encoding and decoding.
 
 Based on https://bitcointalk.org/index.php?topic=1026.0 (public domain)
 '''
@@ -39,7 +39,7 @@ def b58encode(v):
         long_value = div
     result = __b58chars[long_value] + result
 
-    # Fujicoin does a little leading-zero-compression:
+    # Baricoin does a little leading-zero-compression:
     # leading 0-bytes in the input become leading-1s
     nPad = 0
     for c in v:

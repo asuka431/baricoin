@@ -9,7 +9,7 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both fujicoind and fujicoin-qt, to make it harder for attackers to
+ * for both baricoind and baricoin-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
 const std::string CLIENT_NAME("Satoshi");

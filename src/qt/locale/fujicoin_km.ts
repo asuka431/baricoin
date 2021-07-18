@@ -145,10 +145,10 @@
     </message>
 </context>
 <context>
-    <name>FujicoinGUI</name>
+    <name>BaricoinGUI</name>
     <message>
-        <source>Send coins to a Fujicoin address</source>
-        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន Fujicoin មួយ</translation>
+        <source>Send coins to a Baricoin address</source>
+        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន Baricoin មួយ</translation>
     </message>
     </context>
 <context>
@@ -310,6 +310,6 @@
     </message>
     </context>
 <context>
-    <name>fujicoin-core</name>
+    <name>baricoin-core</name>
     </context>
 </TS>

@@ -43,17 +43,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see [*Disable-wallet mode*](/doc/build-osx.md#disable-wallet-mode)).
 
-## Build Fujicoin Core
+## Build Baricoin Core
 
-1. Clone the Fujicoin Core source code:
+1. Clone the Baricoin Core source code:
     ```shell
     git clone https://github.com/bitcoin/bitcoin
-    cd fujicoin
+    cd baricoin
     ```
 
-2.  Build Fujicoin Core:
+2.  Build Baricoin Core:
 
-    Configure and build the headless Fujicoin Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Baricoin Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
     ```shell
@@ -73,7 +73,7 @@ from the root of the repository.
     ```
 
 ## `disable-wallet` mode
-When the intention is to run only a P2P node without a wallet, Fujicoin Core may be
+When the intention is to run only a P2P node without a wallet, Baricoin Core may be
 compiled in `disable-wallet` mode with:
 ```shell
 ./configure --disable-wallet
@@ -84,30 +84,30 @@ In this case there is no dependency on Berkeley DB 4.8.
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
 
 ## Running
-Fujicoin Core is now available at `./src/fujicoind`
+Baricoin Core is now available at `./src/baricoind`
 
 Before running, you may create an empty configuration file:
 ```shell
-mkdir -p "/Users/${USER}/Library/Application Support/Fujicoin"
+mkdir -p "/Users/${USER}/Library/Application Support/Baricoin"
 
-touch "/Users/${USER}/Library/Application Support/Fujicoin/fujicoin.conf"
+touch "/Users/${USER}/Library/Application Support/Baricoin/baricoin.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Fujicoin/fujicoin.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Baricoin/baricoin.conf"
 ```
 
-The first time you run fujicoind, it will start downloading the blockchain. This process could
+The first time you run baricoind, it will start downloading the blockchain. This process could
 take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 ```shell
-tail -f $HOME/Library/Application\ Support/Fujicoin/debug.log
+tail -f $HOME/Library/Application\ Support/Baricoin/debug.log
 ```
 
 ## Other commands:
 ```shell
-./src/fujicoind -daemon      # Starts the fujicoin daemon.
-./src/fujicoin-cli --help    # Outputs a list of command-line options.
-./src/fujicoin-cli help      # Outputs a list of RPC commands when the daemon is running.
+./src/baricoind -daemon      # Starts the baricoin daemon.
+./src/baricoin-cli --help    # Outputs a list of command-line options.
+./src/baricoin-cli help      # Outputs a list of RPC commands when the daemon is running.
 ```
 
 ## Notes

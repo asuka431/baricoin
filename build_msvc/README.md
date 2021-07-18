@@ -1,26 +1,26 @@
-Building Fujicoin Core with Visual Studio
+Building Baricoin Core with Visual Studio
 ========================================
 
 Introduction
 ---------------------
-Solution and project files to build the Fujicoin Core applications `msbuild` or Visual Studio can be found in the build_msvc directory. The build has been tested with Visual Studio 2017 and 2019.
+Solution and project files to build the Baricoin Core applications `msbuild` or Visual Studio can be found in the build_msvc directory. The build has been tested with Visual Studio 2017 and 2019.
 
 Building with Visual Studio is an alternative to the Linux based [cross-compiler build](https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md).
 
 Quick Start
 ---------------------
-The minimal steps required to build Fujicoin Core with the msbuild toolchain are below. More detailed instructions are contained in the following sections.
+The minimal steps required to build Baricoin Core with the msbuild toolchain are below. More detailed instructions are contained in the following sections.
 
 ```
 vcpkg install --triplet x64-windows-static berkeleydb boost-filesystem boost-multi-index boost-signals2 boost-test boost-thread libevent[thread] zeromq double-conversion
 vcpkg integrate install
 py -3 build_msvc\msvc-autogen.py
-msbuild /m build_msvc\fujicoin.sln /p:Platform=x64 /p:Configuration=Release /t:build
+msbuild /m build_msvc\baricoin.sln /p:Platform=x64 /p:Configuration=Release /t:build
 ```
 
 Dependencies
 ---------------------
-A number of [open source libraries](https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md) are required in order to be able to build Fujicoin Core.
+A number of [open source libraries](https://github.com/bitcoin/bitcoin/blob/master/doc/dependencies.md) are required in order to be able to build Baricoin Core.
 
 Options for installing the dependencies in a Visual Studio compatible manner are:
 
@@ -39,13 +39,13 @@ The [external dependencies](https://github.com/bitcoin/bitcoin/blob/master/doc/d
 
 Qt
 ---------------------
-In order to build the Fujicoin Core a static build of Qt is required. The runtime library version (e.g. v141, v142) and platform type (x86 or x64) must also match.
+In order to build the Baricoin Core a static build of Qt is required. The runtime library version (e.g. v141, v142) and platform type (x86 or x64) must also match.
 
-Some prebuilt x64 versions of Qt can be downloaded from [here](https://github.com/sipsorcery/qt_win_binary/releases). Please be aware these downloads are NOT officially sanctioned by Fujicoin Core and are provided for developer convenience only. They should NOT be used for builds that will be used in a production environment or with real funds.
+Some prebuilt x64 versions of Qt can be downloaded from [here](https://github.com/sipsorcery/qt_win_binary/releases). Please be aware these downloads are NOT officially sanctioned by Baricoin Core and are provided for developer convenience only. They should NOT be used for builds that will be used in a production environment or with real funds.
 
 To determine which Qt prebuilt version to download open the `.appveyor.yml` file and note the `QT_DOWNLOAD_URL`. When extracting the zip file the destination path must be set to `C:\`. This is due to the way that Qt includes, libraries and tools use internal paths.
 
-To build Fujicoin Core without Qt unload or disable the `fujicoin-qt`, `libfujicoin_qt` and `test_fujicoin-qt` projects.
+To build Baricoin Core without Qt unload or disable the `baricoin-qt`, `libbaricoin_qt` and `test_baricoin-qt` projects.
 
 Building
 ---------------------
@@ -70,24 +70,24 @@ PS >py -3 msvc-autogen.py
 - To build from the command line with the Visual Studio 2017 toolchain use:
 
 ```
-msbuild /m fujicoin.sln /p:Platform=x64 /p:Configuration=Release /p:PlatformToolset=v141 /t:build
+msbuild /m baricoin.sln /p:Platform=x64 /p:Configuration=Release /p:PlatformToolset=v141 /t:build
 ```
 
 - To build from the command line with the Visual Studio 2019 toolchain use:
 
 ```
-msbuild /m fujicoin.sln /p:Platform=x64 /p:Configuration=Release /t:build
+msbuild /m baricoin.sln /p:Platform=x64 /p:Configuration=Release /t:build
 ```
 
-- Alternatively open the `build_msvc\fujicoin.sln` file in Visual Studio.
+- Alternatively open the `build_msvc\baricoin.sln` file in Visual Studio.
 
 AppVeyor
 ---------------------
-The .appveyor.yml in the root directory is suitable to perform builds on [AppVeyor](https://www.appveyor.com/) Continuous Integration servers. The simplest way to perform an AppVeyor build is to fork Fujicoin Core and then configure a new AppVeyor Project pointing to the forked repository.
+The .appveyor.yml in the root directory is suitable to perform builds on [AppVeyor](https://www.appveyor.com/) Continuous Integration servers. The simplest way to perform an AppVeyor build is to fork Baricoin Core and then configure a new AppVeyor Project pointing to the forked repository.
 
-For safety reasons the Fujicoin Core .appveyor.yml file has the artifact options disabled. The build will be performed but no executable files will be available. To enable artifacts on a forked repository uncomment the lines shown below:
+For safety reasons the Baricoin Core .appveyor.yml file has the artifact options disabled. The build will be performed but no executable files will be available. To enable artifacts on a forked repository uncomment the lines shown below:
 
 ```
-    #- 7z a fujicoin-%APPVEYOR_BUILD_VERSION%.zip %APPVEYOR_BUILD_FOLDER%\build_msvc\%platform%\%configuration%\*.exe
-    #- path: fujicoin-%APPVEYOR_BUILD_VERSION%.zip
+    #- 7z a baricoin-%APPVEYOR_BUILD_VERSION%.zip %APPVEYOR_BUILD_FOLDER%\build_msvc\%platform%\%configuration%\*.exe
+    #- path: baricoin-%APPVEYOR_BUILD_VERSION%.zip
 ```

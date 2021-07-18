@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2019 The Fujicoin Core developers
+# Copyright (c) 2019 The Baricoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -9,36 +9,36 @@ export LC_ALL=C
 set -ueo pipefail
 
 if (( $# < 3 )); then
-  echo 'Usage: utxo_snapshot.sh <generate-at-height> <snapshot-out-path> <fujicoin-cli-call ...>'
+  echo 'Usage: utxo_snapshot.sh <generate-at-height> <snapshot-out-path> <baricoin-cli-call ...>'
   echo
   echo "  if <snapshot-out-path> is '-', don't produce a snapshot file but instead print the "
   echo "  expected assumeutxo hash"
   echo
   echo 'Examples:'
   echo
-  echo "  ./contrib/devtools/utxo_snapshot.sh 570000 utxo.dat ./src/fujicoin-cli -datadir=\$(pwd)/testdata"
-  echo '  ./contrib/devtools/utxo_snapshot.sh 570000 - ./src/fujicoin-cli'
+  echo "  ./contrib/devtools/utxo_snapshot.sh 570000 utxo.dat ./src/baricoin-cli -datadir=\$(pwd)/testdata"
+  echo '  ./contrib/devtools/utxo_snapshot.sh 570000 - ./src/baricoin-cli'
   exit 1
 fi
 
 GENERATE_AT_HEIGHT="${1}"; shift;
 OUTPUT_PATH="${1}"; shift;
 # Most of the calls we make take a while to run, so pad with a lengthy timeout.
-FUJICOIN_CLI_CALL="${*} -rpcclienttimeout=9999999"
+BARICOIN_CLI_CALL="${*} -rpcclienttimeout=9999999"
 
 # Block we'll invalidate/reconsider to rewind/fast-forward the chain.
-PIVOT_BLOCKHASH=$($FUJICOIN_CLI_CALL getblockhash $(( GENERATE_AT_HEIGHT + 1 )) )
+PIVOT_BLOCKHASH=$($BARICOIN_CLI_CALL getblockhash $(( GENERATE_AT_HEIGHT + 1 )) )
 
 (>&2 echo "Rewinding chain back to height ${GENERATE_AT_HEIGHT} (by invalidating ${PIVOT_BLOCKHASH}); this may take a while")
-${FUJICOIN_CLI_CALL} invalidateblock "${PIVOT_BLOCKHASH}"
+${BARICOIN_CLI_CALL} invalidateblock "${PIVOT_BLOCKHASH}"
 
 if [[ "${OUTPUT_PATH}" = "-" ]]; then
   (>&2 echo "Generating txoutset info...")
-  ${FUJICOIN_CLI_CALL} gettxoutsetinfo | grep hash_serialized_2 | sed 's/^.*: "\(.\+\)\+",/\1/g'
+  ${BARICOIN_CLI_CALL} gettxoutsetinfo | grep hash_serialized_2 | sed 's/^.*: "\(.\+\)\+",/\1/g'
 else
   (>&2 echo "Generating UTXO snapshot...")
-  ${FUJICOIN_CLI_CALL} dumptxoutset "${OUTPUT_PATH}"
+  ${BARICOIN_CLI_CALL} dumptxoutset "${OUTPUT_PATH}"
 fi
 
 (>&2 echo "Restoring chain to original height; this may take a while")
-${FUJICOIN_CLI_CALL} reconsiderblock "${PIVOT_BLOCKHASH}"
+${BARICOIN_CLI_CALL} reconsiderblock "${PIVOT_BLOCKHASH}"

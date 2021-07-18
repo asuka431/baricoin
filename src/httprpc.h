@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_HTTPRPC_H
-#define FUJICOIN_HTTPRPC_H
+#ifndef BARICOIN_HTTPRPC_H
+#define BARICOIN_HTTPRPC_H
 
 
 /** Start HTTP RPC subsystem.

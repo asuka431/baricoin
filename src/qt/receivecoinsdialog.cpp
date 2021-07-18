@@ -275,7 +275,7 @@ void ReceiveCoinsDialog::copyURI()
     }
 
     const RecentRequestsTableModel * const submodel = model->getRecentRequestsTableModel();
-    const QString uri = GUIUtil::formatFujicoinURI(submodel->entry(sel.row()).recipient);
+    const QString uri = GUIUtil::formatBaricoinURI(submodel->entry(sel.row()).recipient);
     GUIUtil::setClipboard(uri);
 }
 

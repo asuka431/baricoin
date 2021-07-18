@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
-#define FUJICOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#ifndef BARICOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#define BARICOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
 
 #include <validationinterface.h>
 #include <list>
@@ -39,4 +39,4 @@ private:
 
 extern CZMQNotificationInterface* g_zmq_notification_interface;
 
-#endif // FUJICOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#endif // BARICOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H

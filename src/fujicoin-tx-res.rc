@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Fujicoin"
-            VALUE "FileDescription",    "fujicoin-tx (CLI Fujicoin transaction editor utility)"
+            VALUE "CompanyName",        "Baricoin"
+            VALUE "FileDescription",    "baricoin-tx (CLI Baricoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "fujicoin-tx"
+            VALUE "InternalName",       "baricoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "fujicoin-tx.exe"
-            VALUE "ProductName",        "fujicoin-tx"
+            VALUE "OriginalFilename",   "baricoin-tx.exe"
+            VALUE "ProductName",        "baricoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

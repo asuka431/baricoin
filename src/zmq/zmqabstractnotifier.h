@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FUJICOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
-#define FUJICOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#ifndef BARICOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#define BARICOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
 
 #include <zmq/zmqconfig.h>
 
@@ -50,4 +50,4 @@ protected:
     int outbound_message_high_water_mark; // aka SNDHWM
 };
 
-#endif // FUJICOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#endif // BARICOIN_ZMQ_ZMQABSTRACTNOTIFIER_H

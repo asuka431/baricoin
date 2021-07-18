@@ -2,41 +2,41 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/fujicoin/.fujicoin" ]; then
-	FUJICOIND_DEFAULT_DATADIR="/var/lib/fujicoin/.fujicoin"
+if [ -d "/var/lib/baricoin/.baricoin" ]; then
+	BARICOIND_DEFAULT_DATADIR="/var/lib/baricoin/.baricoin"
 else
-	FUJICOIND_DEFAULT_DATADIR="/var/lib/fujicoind"
+	BARICOIND_DEFAULT_DATADIR="/var/lib/baricoind"
 fi
 
-FUJICOIND_CONFIGFILE=${FUJICOIND_CONFIGFILE:-/etc/fujicoin/fujicoin.conf}
-FUJICOIND_PIDDIR=${FUJICOIND_PIDDIR:-/var/run/fujicoind}
-FUJICOIND_PIDFILE=${FUJICOIND_PIDFILE:-${FUJICOIND_PIDDIR}/fujicoind.pid}
-FUJICOIND_DATADIR=${FUJICOIND_DATADIR:-${FUJICOIND_DEFAULT_DATADIR}}
-FUJICOIND_USER=${FUJICOIND_USER:-${FUJICOIN_USER:-fujicoin}}
-FUJICOIND_GROUP=${FUJICOIND_GROUP:-fujicoin}
-FUJICOIND_BIN=${FUJICOIND_BIN:-/usr/bin/fujicoind}
-FUJICOIND_NICE=${FUJICOIND_NICE:-${NICELEVEL:-0}}
-FUJICOIND_OPTS="${FUJICOIND_OPTS:-${FUJICOIN_OPTS}}"
+BARICOIND_CONFIGFILE=${BARICOIND_CONFIGFILE:-/etc/baricoin/baricoin.conf}
+BARICOIND_PIDDIR=${BARICOIND_PIDDIR:-/var/run/baricoind}
+BARICOIND_PIDFILE=${BARICOIND_PIDFILE:-${BARICOIND_PIDDIR}/baricoind.pid}
+BARICOIND_DATADIR=${BARICOIND_DATADIR:-${BARICOIND_DEFAULT_DATADIR}}
+BARICOIND_USER=${BARICOIND_USER:-${BARICOIN_USER:-baricoin}}
+BARICOIND_GROUP=${BARICOIND_GROUP:-baricoin}
+BARICOIND_BIN=${BARICOIND_BIN:-/usr/bin/baricoind}
+BARICOIND_NICE=${BARICOIND_NICE:-${NICELEVEL:-0}}
+BARICOIND_OPTS="${BARICOIND_OPTS:-${BARICOIN_OPTS}}"
 
-name="Fujicoin Core Daemon"
-description="Fujicoin cryptocurrency P2P network daemon"
+name="Baricoin Core Daemon"
+description="Baricoin cryptocurrency P2P network daemon"
 
-command="/usr/bin/fujicoind"
-command_args="-pid=\"${FUJICOIND_PIDFILE}\" \
-		-conf=\"${FUJICOIND_CONFIGFILE}\" \
-		-datadir=\"${FUJICOIND_DATADIR}\" \
+command="/usr/bin/baricoind"
+command_args="-pid=\"${BARICOIND_PIDFILE}\" \
+		-conf=\"${BARICOIND_CONFIGFILE}\" \
+		-datadir=\"${BARICOIND_DATADIR}\" \
 		-daemon \
-		${FUJICOIND_OPTS}"
+		${BARICOIND_OPTS}"
 
-required_files="${FUJICOIND_CONFIGFILE}"
-start_stop_daemon_args="-u ${FUJICOIND_USER} \
-			-N ${FUJICOIND_NICE} -w 2000"
-pidfile="${FUJICOIND_PIDFILE}"
+required_files="${BARICOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${BARICOIND_USER} \
+			-N ${BARICOIND_NICE} -w 2000"
+pidfile="${BARICOIND_PIDFILE}"
 
 # The retry schedule to use when stopping the daemon. Could be either
 # a timeout in seconds or multiple signal/timeout pairs (like
 # "SIGKILL/180 SIGTERM/300")
-retry="${FUJICOIND_SIGTERM_TIMEOUT}"
+retry="${BARICOIND_SIGTERM_TIMEOUT}"
 
 depend() {
 	need localmount net
@@ -50,29 +50,29 @@ start_pre() {
 	checkpath \
 	-d \
 	--mode 0750 \
-	--owner "${FUJICOIND_USER}:${FUJICOIND_GROUP}" \
-	"${FUJICOIND_DATADIR}"
+	--owner "${BARICOIND_USER}:${BARICOIND_GROUP}" \
+	"${BARICOIND_DATADIR}"
 
 	checkpath \
 	-d \
 	--mode 0755 \
-	--owner "${FUJICOIND_USER}:${FUJICOIND_GROUP}" \
-	"${FUJICOIND_PIDDIR}"
+	--owner "${BARICOIND_USER}:${BARICOIND_GROUP}" \
+	"${BARICOIND_PIDDIR}"
 
 	checkpath -f \
-	-o ${FUJICOIND_USER}:${FUJICOIND_GROUP} \
+	-o ${BARICOIND_USER}:${BARICOIND_GROUP} \
 	-m 0660 \
-	${FUJICOIND_CONFIGFILE}
+	${BARICOIND_CONFIGFILE}
 
 	checkconfig || return 1
 }
 
 checkconfig()
 {
-	if ! grep -qs '^rpcpassword=' "${FUJICOIND_CONFIGFILE}" ; then
+	if ! grep -qs '^rpcpassword=' "${BARICOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run fujicoind."
-		eerror "The setting must appear in ${FUJICOIND_CONFIGFILE}"
+		eerror "ERROR: You must set a secure rpcpassword to run baricoind."
+		eerror "The setting must appear in ${BARICOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Fujicoin Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Baricoin Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

@@ -6,8 +6,8 @@
 #include <vector>
 #include <netaddress.h>
 
-#ifndef FUJICOIN_NET_PERMISSIONS_H
-#define FUJICOIN_NET_PERMISSIONS_H
+#ifndef BARICOIN_NET_PERMISSIONS_H
+#define BARICOIN_NET_PERMISSIONS_H
 enum NetPermissionFlags
 {
     PF_NONE = 0,
@@ -59,4 +59,4 @@ public:
     CSubNet m_subnet;
 };
 
-#endif // FUJICOIN_NET_PERMISSIONS_H
+#endif // BARICOIN_NET_PERMISSIONS_H
