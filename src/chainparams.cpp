@@ -66,13 +66,13 @@ public:
         consensus.nSubsidyHalvingInterval = 210000; //baricoin do not use
         consensus.BIP16Exception = uint256(); //no bip16 exception
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0xadb6d9cfd74075e7f91608add4bd2a2ea636f70856183086842667a1597714a0");
-        consensus.BIP65Height = 1965600; // 9e3dfb12b8fce00cfdf96850b6f80f3635c2ecdfd26dbf32278c5046c06aaae8
-        consensus.BIP66Height = 1965600; // 9e3dfb12b8fce00cfdf96850b6f80f3635c2ecdfd26dbf32278c5046c06aaae8
-        consensus.CSVHeight = 1965600; // 9e3dfb12b8fce00cfdf96850b6f80f3635c2ecdfd26dbf32278c5046c06aaae8
-        consensus.SegwitHeight = 1965600; // 9e3dfb12b8fce00cfdf96850b6f80f3635c2ecdfd26dbf32278c5046c06aaae8
-        consensus.MinBIP9WarningHeight = 1965600 + 2016; // segwit activation height + miner confirmation window
-        consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.BIP34Hash = uint256S("わからん");
+        consensus.BIP65Height = 0; // 
+        consensus.BIP66Height = 0; // 
+        consensus.CSVHeight = 0; // 
+        consensus.SegwitHeight = 0; // 
+        consensus.MinBIP9WarningHeight = 0; // segwit activation height + miner confirmation window
+        consensus.powLimit = uint256S("0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 1.4 * 24 * 60 * 60; //1.4 days
         consensus.nPowTargetSpacing = 1.0 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -105,6 +105,27 @@ public:
 
         genesis = CreateGenesisBlock(1403910000, 2560786, 0x1e0ffff0, 1, 1 * COIN); //(nTime, nNonce, nBits, nVersion, genesisReward)
         consensus.hashGenesisBlock = genesis.GetHash();
+                std::cout << "Begin calculating " << strNetworkID << " Genesis Block:\n";
+        arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
+        uint256 hash;
+        genesis.nNonce = 0;
+        while (UintToArith256(genesis.GetHash()) > hashTarget) {
+            ++genesis.nNonce;
+            if (genesis.nNonce == 0) {
+                std::cout << std::string("NONCE WRAPPED, incrementing time:\n");
+                ++genesis.nTime;
+            }
+            if (genesis.nNonce % 1000 == 0) {
+                std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
+            }
+        }
+        
+        std::cout << strNetworkID << " ---\n";
+        std::cout << "  nonce: " << genesis.nNonce <<  "\n";
+        std::cout << "   time: " << genesis.nTime << "\n";
+        std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
+        std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
+        std::cout << "Finished calculating " << strNetworkID << " Genesis Block:\n";
         assert(consensus.hashGenesisBlock == uint256S("0xadb6d9cfd74075e7f91608add4bd2a2ea636f70856183086842667a1597714a0"));
         assert(genesis.hashMerkleRoot == uint256S("0xf951a273c3055d1bb36b4291e7f9edd491c2d435bd5737318ef8a643cab84b61"));
 
