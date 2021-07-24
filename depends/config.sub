@@ -893,7 +893,7 @@ case $basic_machine in
 		;;
 	vpp*|vx|vx-*)
 		cpu=f301
-		vendor=baritsu
+		vendor=fujitsu
 		;;
 	w65)
 		cpu=w65
@@ -1683,7 +1683,7 @@ case $cpu-$vendor in
 	*-masscomp)
 		os=rtu
 		;;
-	f30[01]-baritsu | f700-baritsu)
+	f30[01]-fujitsu | f700-fujitsu)
 		os=uxpv
 		;;
 	*-rom68k)

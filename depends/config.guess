@@ -832,12 +832,12 @@ EOF
 	FUJITSU_PROC=`uname -m | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz`
 	FUJITSU_SYS=`uname -p | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz | sed -e 's/\///'`
 	FUJITSU_REL=`echo "$UNAME_RELEASE" | sed -e 's/ /_/'`
-	echo "${FUJITSU_PROC}-baritsu-${FUJITSU_SYS}${FUJITSU_REL}"
+	echo "${FUJITSU_PROC}-fujitsu-${FUJITSU_SYS}${FUJITSU_REL}"
 	exit ;;
     5000:UNIX_System_V:4.*:*)
 	FUJITSU_SYS=`uname -p | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz | sed -e 's/\///'`
 	FUJITSU_REL=`echo "$UNAME_RELEASE" | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz | sed -e 's/ /_/'`
-	echo "sparc-baritsu-${FUJITSU_SYS}${FUJITSU_REL}"
+	echo "sparc-fujitsu-${FUJITSU_SYS}${FUJITSU_REL}"
 	exit ;;
     i*86:BSD/386:*:* | i*86:BSD/OS:*:* | *:Ascend\ Embedded/OS:*:*)
 	echo "$UNAME_MACHINE"-pc-bsdi"$UNAME_RELEASE"
