@@ -2,15 +2,15 @@
 
 *.exe
 *.pdb
-src/fujicoin
-src/fujicoind
-src/fujicoin-cli
-src/fujicoin-tx
-src/fujicoin-wallet
+src/baricoin
+src/baricoind
+src/baricoin-cli
+src/baricoin-tx
+src/baricoin-wallet
 src/test/fuzz
 !src/test/fuzz/*.*
-src/test/test_fujicoin
-src/qt/test/test_fujicoin-qt
+src/test/test_baricoin
+src/qt/test/test_baricoin-qt
 
 # autoreconf
 Makefile.in
@@ -34,8 +34,8 @@ config.log
 config.status
 configure
 libtool
-src/config/fujicoin-config.h
-src/config/fujicoin-config.h.in
+src/config/baricoin-config.h
+src/config/baricoin-config.h.in
 src/config/stamp-h1
 src/obj
 share/setup.nsi
@@ -49,11 +49,11 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
-src/qt/fujicoin-qt.config
-src/qt/fujicoin-qt.creator
-src/qt/fujicoin-qt.creator.user
-src/qt/fujicoin-qt.files
-src/qt/fujicoin-qt.includes
+src/qt/baricoin-qt.config
+src/qt/baricoin-qt.creator
+src/qt/baricoin-qt.creator.user
+src/qt/baricoin-qt.files
+src/qt/baricoin-qt.includes
 
 .deps
 .dirstamp
@@ -90,8 +90,8 @@ src/qt/fujicoin-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-src/qt/fujicoin-qt
-Fujicoin-Qt.app
+src/qt/baricoin-qt
+Baricoin-Qt.app
 background.tiff*
 
 # Qt Creator
@@ -99,7 +99,7 @@ Makefile.am.user
 
 # Unit-tests
 Makefile.test
-fujicoin-qt_test
+baricoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -115,7 +115,7 @@ releases
 *.gcno
 *.gcda
 /*.info
-test_fujicoin.coverage/
+test_baricoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -130,7 +130,7 @@ test/cache/*
 
 /doc/doxygen/
 
-libfujicoinconsensus.pc
+libbaricoinconsensus.pc
 contrib/devtools/split-debug.sh
 
 # Output from running db4 installation
