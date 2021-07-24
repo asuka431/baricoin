@@ -66,7 +66,7 @@ public:
         consensus.nSubsidyHalvingInterval = 210000; //baricoin do not use
         consensus.BIP16Exception = uint256(); //no bip16 exception
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("わからん");
+        consensus.BIP34Hash = uint256S("");
         consensus.BIP65Height = 0; // 
         consensus.BIP66Height = 0; // 
         consensus.CSVHeight = 0; // 
@@ -154,37 +154,7 @@ public:
 
         checkpointData = {
             {
-                {      0, uint256S("0xadb6d9cfd74075e7f91608add4bd2a2ea636f70856183086842667a1597714a0")},
-                { 100000, uint256S("0x1d16bb119ef3b45134055b7e16a55f99d3ef5e211922037b9fb7274a988562f6")},
-                { 200000, uint256S("0x588a542ff995394bc16731e3b53ea62f403fdfec4df5f8b4a38ad61a451523ec")},
-                { 300000, uint256S("0x29d9a3d44ccc482980f6e5a2559c0588dd71e9bcc802dba8c6d18d10bb406ad2")},
-                { 400000, uint256S("0x3c45c562ebccdf9ee7c0cb7509d9eebcbda9298636c9f4e3950fef2f6d29b8f5")},
-                { 500000, uint256S("0x91c0fbc72fc8e421d85a922ec4f6477e5763c04729d13c4f58c1b79c83232b81")},
-                { 600000, uint256S("0xc7105925a54a06fb27b4574f3b5732965d7c5b975d71b91c12c1672b68045c38")},
-                { 700000, uint256S("0x0e9946a0196fcd286ef16d7873b38c9729ac8c1bc6b540ec12225ebc0291d5d2")},
-                { 800000, uint256S("0xf3cb5bb24c7ae26f9ffe8001d594d4a951cc9a58589ac74519357add723f5602")},
-                { 900000, uint256S("0x0b5b53332af404ac740965c717a3e797cff330d9d42fb8821eedb97856d11248")},
-                {1000000, uint256S("0xe267f45f1552c735a0f879403030c3f0904e8e9e0dc84cf2e6d13fcc32520dc3")},
-                {1100000, uint256S("0x34c2396e76d0dba38cce0f247766e1b85fad5938598f0a4eb29c3b5aeccbb60b")},
-                {1200000, uint256S("0x00d47aac9bef0bfb211ebeabf5077520da5170cb269389955d1612aa0cb2757a")},
-                {1300000, uint256S("0xa4f63f7b5b92a46e73cbf3e208f5dacb2b09a39287f561541a2fc90d44b97148")},
-                {1400000, uint256S("0x86c187cf79e3723189221337b457947bf88448414205e1c37435c56a9dc55052")},
-                {1500000, uint256S("0xda3ce4ee4d6715aa5b9b6b94099b0d05cf28585473ab206c8b179c7a73ebbde8")},
-                {1600000, uint256S("0xfbe956df17cb237f6ad438c6f94215e383259b88226ebcf38f13c611313442a7")},
-                {1700000, uint256S("0xaf35ad36a43ac08d1f2d764984ccd46855d4e968853bb2287a6662ea798d6383")},
-                {1800000, uint256S("0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412")},
-                {1900000, uint256S("0x9d95b652ba4f036bcce1f26d4832b1ee9912ec9dd7baddd156326b9b095cda79")},
-                {2000000, uint256S("0xbead1047afe803c3e3b5eb246f5449e74beea3d629703c194a3fb5e78b1df6d9")},
-                {2100000, uint256S("0xa878f599a700ec50b76e40af01cd746c5282f71bad7e1caba8e3d80d8a13c360")},
-                {2200000, uint256S("0x3db13c96f372a19ebaeabd9943796bfcf1a096f9d89dcce0614075ae155d4a16")},
-                {2300000, uint256S("0x2990b037e76a4b8415f2cdbb844e36f26142c1209b0261f8b71f7fd8ae0d6246")},
-                {2400000, uint256S("0xb002e29a53e899889f6e3772386d1521d6d2301e90183ea7fec72c02f011486b")},
-                {2500000, uint256S("0xab1b07c414b4e73d14bdd4b9c607e702c6c7f654c02ce647fdb44f823a208274")},
-                {2600000, uint256S("0xcc108100ea1ad09b81a2cdaf879e5789f1d862a009e98704c02400bf8d0433ec")},
-                {2700000, uint256S("0x266a892f2e4038fc1b2fc57fd450f1153fe9ce08fc5f8fe26c2c346b7124667e")},
-                {2800000, uint256S("0x2aa5bda2047c8ad330319b1c78e617ba5cc51b48ee84f9dc734e8bcf8cf03c47")},
-                {2900000, uint256S("0x26e5db2779e1ef3d4bf878950b61e6ec588334f574fb258d8cba748e2411351a")},
-                {3000000, uint256S("0x6cb15b85c8753757deb55cfceadbdb99cd483ca4f65003a88b18ab0966f50949")},
+             
             }
         };
 
@@ -206,13 +176,13 @@ public:
         strNetworkID = CBaseChainParams::TESTNET;
         consensus.nSubsidyHalvingInterval = 210000;
         consensus.BIP16Exception = uint256(); //no bip16 exception
-        consensus.BIP34Height = 1800000;
+        consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412");
-        consensus.BIP65Height = 1800000; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
-        consensus.BIP66Height = 1800000; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
-        consensus.CSVHeight = 1800000; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
-        consensus.SegwitHeight = 1800000; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
-        consensus.MinBIP9WarningHeight = 1800000 + 2016; // segwit activation height + miner confirmation window
+        consensus.BIP65Height = 0; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
+        consensus.BIP66Height = 0; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
+        consensus.CSVHeight = 0; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
+        consensus.SegwitHeight = 0; // 0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412
+        consensus.MinBIP9WarningHeight = 0; // segwit activation height + miner confirmation window
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 1.4 * 24 * 60 * 60; 
         consensus.nPowTargetSpacing = 1.0 * 60;
@@ -288,11 +258,11 @@ public:
         strNetworkID =  CBaseChainParams::REGTEST;
         consensus.nSubsidyHalvingInterval = 150;
         consensus.BIP16Exception = uint256(); // always enforce P2SH BIP16 on regtest
-        consensus.BIP34Height = 1800000; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests)
-        consensus.BIP34Hash = uint256S("0x0f5353f137b5e3f0e45d5643843ba452ac84bb6470ba608eae71994f0be87412");
-        consensus.BIP65Height = 1800000; // BIP65 activated on regtest (Used in rpc activation tests)
-        consensus.BIP66Height = 1800000; // BIP66 activated on regtest (Used in rpc activation tests)
-        consensus.CSVHeight = 432; // CSV activated on regtest (Used in rpc activation tests)
+        consensus.BIP34Height = 0; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests)
+        consensus.BIP34Hash = uint256S("");
+        consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in rpc activation tests)
+        consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in rpc activation tests)
+        consensus.CSVHeight = 0; // CSV activated on regtest (Used in rpc activation tests)
         consensus.SegwitHeight = 0; // SEGWIT is always activated on regtest unless overridden
         consensus.MinBIP9WarningHeight = 0;
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -354,7 +324,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "fcrt";
+        bech32_hrp = "barirt";
     }
 
     /**
