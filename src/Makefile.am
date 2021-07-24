@@ -253,7 +253,7 @@ BARICOIN_CORE_H = \
   zmq/zmqconfig.h\
   zmq/zmqnotificationinterface.h \
   zmq/zmqpublishnotifier.h \
-  zmq/zmqrpc.h
+  zmq/zmqrpc.h 
 
 
 obj/build.h: FORCE
@@ -393,8 +393,8 @@ crypto_libbaricoin_crypto_base_a_SOURCES = \
   crypto/siphash.cpp \
   crypto/siphash.h \
   crypto/scrypt.cpp \
-  crypto/scrypt.h
-  crypto/yescrypt-0.5/yescrypt.c
+  crypto/scrypt.h \
+  crypto/yescrypt-0.5/yescrypt.c \
 
 if USE_ASM
 crypto_libbaricoin_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
