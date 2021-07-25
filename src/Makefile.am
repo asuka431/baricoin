@@ -392,9 +392,7 @@ crypto_libbaricoin_crypto_base_a_SOURCES = \
   crypto/sha512.h \
   crypto/siphash.cpp \
   crypto/siphash.h \
-  crypto/scrypt.cpp \
-  crypto/scrypt.h \
-  crypto/yescrypt-0.5/yescrypt.c
+  crypto/yescrypt-0.5/yescrypt.c \
 
 if USE_ASM
 crypto_libbaricoin_crypto_base_a_SOURCES += crypto/sha256_sse4.cpp
