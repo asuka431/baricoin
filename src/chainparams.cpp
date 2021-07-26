@@ -95,9 +95,9 @@ public:
          * a large 32-bit integer with any alignment.
          */
         pchMessageStart[0] = 0x66;
-        pchMessageStart[1] = 0x75;
-        pchMessageStart[2] = 0x6a;
-        pchMessageStart[3] = 0x69;
+        pchMessageStart[1] = 0x65;
+        pchMessageStart[2] = 0x82;
+        pchMessageStart[3] = 0x73;
         nDefaultPort = 8135;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 6;
@@ -201,9 +201,9 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x96bd214d68bcbfe9c786c4da26cf71fb6bbb6f24032065bdf2f4cd2b003d9c72"); // 0
 
-        pchMessageStart[0] = 0x69;
-        pchMessageStart[1] = 0x6a;
-        pchMessageStart[2] = 0x75;
+        pchMessageStart[0] = 0x98;
+        pchMessageStart[1] = 0x61;
+        pchMessageStart[2] = 0x72;
         pchMessageStart[3] = 0x66;
         nDefaultPort = 18135;
         nPruneAfterHeight = 1000;
