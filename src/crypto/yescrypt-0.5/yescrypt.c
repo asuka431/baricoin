@@ -25,7 +25,7 @@
 #define YESCRYPT_R 8
 #define YESCRYPT_P 1
 #define YESCRYPT_T 0
-#define YESCRYPT_FLAGS (YESCRYPT_RW | YESCRYPT_PWXFORM)
+#define YESCRYPT_FLAGS (yescrypt_flags_t)(YESCRYPT_RW | YESCRYPT_PWXFORM)
 
 #ifdef __clang__
 

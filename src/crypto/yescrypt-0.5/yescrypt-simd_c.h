@@ -674,7 +674,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
     salsa20_blk_t * V, uint32_t NROM, const yescrypt_shared_t * shared,
     salsa20_blk_t * XY, void * S)
 {
-	const salsa20_blk_t * VROM = shared->shared1.aligned;
+	const salsa20_blk_t * VROM = (const salsa20_blk_t*)(shared->shared1.aligned);
 	uint32_t VROM_mask = shared->mask1;
 	size_t s = 2 * r;
 	salsa20_blk_t * X = V, * Y;
@@ -697,7 +697,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 		/* 4: X <-- H(X) */
 		/* 3: V_i <-- X */
 		Y = &V[s];
-		blockmix(X, Y, r, S);
+		blockmix(X, Y, r, (const __m128i*)S);
 
 		X = &V[2 * s];
 		if ((1 & VROM_mask) == 1) {
@@ -706,10 +706,10 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 			V_j = &VROM[j * s];
 
 			/* X <-- H(X \xor VROM_j) */
-			j = blockmix_xor(Y, V_j, X, r, 1, S);
+			j = blockmix_xor(Y, V_j, X, r, 1, (const __m128i*)S);
 		} else {
 			/* X <-- H(X) */
-			blockmix(Y, X, r, S);
+			blockmix(Y, X, r, (const __m128i*)S);
 			j = integerify(X, r);
 		}
 
@@ -729,7 +729,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 				/* 4: X <-- H(X) */
 				/* 3: V_i <-- X */
 				Y = &V_n[i * s];
-				j = blockmix_xor(X, V_j, Y, r, 0, S);
+				j = blockmix_xor(X, V_j, Y, r, 0, (const __m128i*)S);
 
 				if (((n + i) & VROM_mask) == 1) {
 					/* j <-- Integerify(X) mod NROM */
@@ -744,7 +744,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 
 				/* X <-- H(X \xor VROM_j) */
 				X = &V_n[(i + 1) * s];
-				j = blockmix_xor(Y, V_j, X, r, 1, S);
+				j = blockmix_xor(Y, V_j, X, r, 1, (const __m128i*)S);
 			}
 		}
 
@@ -759,7 +759,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 		/* 4: X <-- H(X) */
 		/* 3: V_i <-- X */
 		Y = &V[(N - 1) * s];
-		j = blockmix_xor(X, V_j, Y, r, 0, S);
+		j = blockmix_xor(X, V_j, Y, r, 0, (const __m128i*)S);
 
 		if (((N - 1) & VROM_mask) == 1) {
 			/* j <-- Integerify(X) mod NROM */
@@ -775,7 +775,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 		/* X <-- X \xor V_j */
 		/* 4: X <-- H(X) */
 		X = XY;
-		blockmix_xor(Y, V_j, X, r, 1, S);
+		blockmix_xor(Y, V_j, X, r, 1, (const __m128i*)S);
 	} else if (flags & YESCRYPT_RW) {
 		uint32_t n;
 		salsa20_blk_t * V_n, * V_j;
@@ -783,12 +783,12 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 		/* 4: X <-- H(X) */
 		/* 3: V_i <-- X */
 		Y = &V[s];
-		blockmix(X, Y, r, S);
+		blockmix(X, Y, r, (const __m128i*)S);
 
 		/* 4: X <-- H(X) */
 		/* 3: V_i <-- X */
 		X = &V[2 * s];
-		blockmix(Y, X, r, S);
+		blockmix(Y, X, r, (const __m128i*)S);
 		j = integerify(X, r);
 
 		for (n = 2; n < N; n <<= 1) {
@@ -808,7 +808,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 				/* X <-- X \xor V_j */
 				/* 4: X <-- H(X) */
 				/* 3: V_i <-- X */
-				j = blockmix_xor(X, V_j, Y, r, 0, S);
+				j = blockmix_xor(X, V_j, Y, r, 0, (const __m128i*)S);
 
 				/* j <-- Wrap(Integerify(X), i) */
 				j &= n - 1;
@@ -819,7 +819,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 				/* 4: X <-- H(X) */
 				/* 3: V_i <-- X */
 				X = &V_n[(i + 1) * s];
-				j = blockmix_xor(Y, V_j, X, r, 0, S);
+				j = blockmix_xor(Y, V_j, X, r, 0, (const __m128i*)S);
 			}
 		}
 
@@ -834,7 +834,7 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 		/* 4: X <-- H(X) */
 		/* 3: V_i <-- X */
 		Y = &V[(N - 1) * s];
-		j = blockmix_xor(X, V_j, Y, r, 0, S);
+		j = blockmix_xor(X, V_j, Y, r, 0, (const __m128i*)S);
 
 		/* j <-- Wrap(Integerify(X), i) */
 		j &= n - 1;
@@ -844,29 +844,29 @@ smix1(uint8_t * B, size_t r, uint32_t N, yescrypt_flags_t flags,
 		/* X <-- X \xor V_j */
 		/* 4: X <-- H(X) */
 		X = XY;
-		blockmix_xor(Y, V_j, X, r, 0, S);
+		blockmix_xor(Y, V_j, X, r, 0, (const __m128i*)S);
 	} else {
 		/* 2: for i = 0 to N - 1 do */
 		for (i = 1; i < N - 1; i += 2) {
 			/* 4: X <-- H(X) */
 			/* 3: V_i <-- X */
 			Y = &V[i * s];
-			blockmix(X, Y, r, S);
+			blockmix(X, Y, r, (const __m128i*)S);
 
 			/* 4: X <-- H(X) */
 			/* 3: V_i <-- X */
 			X = &V[(i + 1) * s];
-			blockmix(Y, X, r, S);
+			blockmix(Y, X, r, (const __m128i*)S);
 		}
 
 		/* 4: X <-- H(X) */
 		/* 3: V_i <-- X */
 		Y = &V[i * s];
-		blockmix(X, Y, r, S);
+		blockmix(X, Y, r, (const __m128i*)S);
 
 		/* 4: X <-- H(X) */
 		X = XY;
-		blockmix(Y, X, r, S);
+		blockmix(Y, X, r, (const __m128i*)S);
 	}
 
 	/* B' <-- X */
@@ -892,7 +892,7 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
     yescrypt_flags_t flags, salsa20_blk_t * V, uint32_t NROM,
     const yescrypt_shared_t * shared, salsa20_blk_t * XY, void * S)
 {
-	const salsa20_blk_t * VROM = shared->shared1.aligned;
+	const salsa20_blk_t * VROM = (const salsa20_blk_t*)(shared->shared1.aligned);
 	uint32_t VROM_mask = shared->mask1;
 	size_t s = 2 * r;
 	salsa20_blk_t * X = XY, * Y = &XY[s];
@@ -929,7 +929,7 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 			/* 8: X <-- H(X \xor V_j) */
 			/* V_j <-- Xprev \xor V_j */
 			/* j <-- Integerify(X) mod NROM */
-			j = blockmix_xor_save(X, V_j, Y, r, S);
+			j = blockmix_xor_save(X, V_j, Y, r, (const __m128i*)S);
 
 			if (((i + 1) & VROM_mask) == 1) {
 				const salsa20_blk_t * VROM_j;
@@ -939,7 +939,7 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 
 				/* X <-- H(X \xor VROM_j) */
 				/* 7: j <-- Integerify(X) mod N */
-				j = blockmix_xor(Y, VROM_j, X, r, 1, S);
+				j = blockmix_xor(Y, VROM_j, X, r, 1, (const __m128i*)S);
 			} else {
 				j &= N - 1;
 				V_j = &V[j * s];
@@ -947,7 +947,7 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 				/* 8: X <-- H(X \xor V_j) */
 				/* V_j <-- Xprev \xor V_j */
 				/* j <-- Integerify(X) mod NROM */
-				j = blockmix_xor_save(Y, V_j, X, r, S);
+				j = blockmix_xor_save(Y, V_j, X, r, (const __m128i*)S);
 			}
 			j &= N - 1;
 			V_j = &V[j * s];
@@ -960,7 +960,7 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 			/* 8: X <-- H(X \xor V_j) */
 			/* V_j <-- Xprev \xor V_j */
 			/* j <-- Integerify(X) mod NROM */
-			j = blockmix_xor(X, V_j, Y, r, 0, S);
+			j = blockmix_xor(X, V_j, Y, r, 0, (const __m128i*)S);
 
 			if (((i + 1) & VROM_mask) == 1) {
 				j &= NROM - 1;
@@ -972,7 +972,7 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 
 			/* X <-- H(X \xor VROM_j) */
 			/* 7: j <-- Integerify(X) mod N */
-			j = blockmix_xor(Y, V_j, X, r, 1, S);
+			j = blockmix_xor(Y, V_j, X, r, 1, (const __m128i*)S);
 			j &= N - 1;
 			V_j = &V[j * s];
 		}
@@ -984,14 +984,14 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 			/* 8: X <-- H(X \xor V_j) */
 			/* V_j <-- Xprev \xor V_j */
 			/* 7: j <-- Integerify(X) mod N */
-			j = blockmix_xor_save(X, V_j, Y, r, S);
+			j = blockmix_xor_save(X, V_j, Y, r, (const __m128i*)S);
 			j &= N - 1;
 			V_j = &V[j * s];
 
 			/* 8: X <-- H(X \xor V_j) */
 			/* V_j <-- Xprev \xor V_j */
 			/* 7: j <-- Integerify(X) mod N */
-			j = blockmix_xor_save(Y, V_j, X, r, S);
+			j = blockmix_xor_save(Y, V_j, X, r, (const __m128i*)S);
 			j &= N - 1;
 		} while (--i);
 	} else {
@@ -1001,13 +1001,13 @@ smix2(uint8_t * B, size_t r, uint32_t N, uint64_t Nloop,
 
 			/* 8: X <-- H(X \xor V_j) */
 			/* 7: j <-- Integerify(X) mod N */
-			j = blockmix_xor(X, V_j, Y, r, 0, S);
+			j = blockmix_xor(X, V_j, Y, r, 0, (const __m128i*)S);
 			j &= N - 1;
 			V_j = &V[j * s];
 
 			/* 8: X <-- H(X \xor V_j) */
 			/* 7: j <-- Integerify(X) mod N */
-			j = blockmix_xor(Y, V_j, X, r, 0, S);
+			j = blockmix_xor(Y, V_j, X, r, 0, (const __m128i*)S);
 			j &= N - 1;
 		} while (--i);
 	}
@@ -1098,8 +1098,8 @@ smix(uint8_t * B, size_t r, uint32_t N, uint32_t p, uint32_t t,
 		void * Sp = S ? ((uint8_t *)S + i * S_SIZE_ALL) : S;
 		if (Sp)
 			smix1(Bp, 1, S_SIZE_ALL / 128,
-			    flags & ~YESCRYPT_PWXFORM,
-			    Sp, NROM, shared, XYp, NULL);
+			    (yescrypt_flags_t)(flags & ~YESCRYPT_PWXFORM),
+			    (salsa20_blk_t*)Sp, NROM, shared, XYp, NULL);
 		if (!(flags & __YESCRYPT_INIT_SHARED_2))
 			smix1(Bp, r, Np, flags, Vp, NROM, shared, XYp, Sp);
 		smix2(Bp, r, p2floor(Np), Nloop_rw, flags, Vp,
@@ -1119,7 +1119,7 @@ smix(uint8_t * B, size_t r, uint32_t N, uint32_t p, uint32_t t,
 #endif
 			void * Sp = S ? ((uint8_t *)S + i * S_SIZE_ALL) : S;
 			smix2(Bp, r, N, Nloop_all - Nloop_rw,
-			    flags & ~YESCRYPT_RW, V, NROM, shared, XYp, Sp);
+			    (yescrypt_flags_t)(flags & ~YESCRYPT_RW), V, NROM, shared, XYp, Sp);
 		}
 	}
 #ifdef _OPENMP
@@ -1165,7 +1165,7 @@ yescrypt_kdf(const yescrypt_shared_t * shared, yescrypt_local_t * local,
 	 * because any deviation from classic scrypt implies those.
 	 */
 	if (p == 1)
-		flags &= ~YESCRYPT_PARALLEL_SMIX;
+		flags = (yescrypt_flags_t)(flags & ~YESCRYPT_PARALLEL_SMIX);
 
 	/* Sanity-check parameters */
 	if (flags & ~YESCRYPT_KNOWN_FLAGS) {

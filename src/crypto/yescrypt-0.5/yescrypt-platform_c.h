@@ -74,7 +74,7 @@ alloc_region(yescrypt_region_t * region, size_t size)
 	base = aligned = NULL;
 	if (size + 63 < size) {
 		errno = ENOMEM;
-	} else if ((base = malloc(size + 63)) != NULL) {
+	} else if ((base = (uint8_t*)malloc(size + 63)) != NULL) {
 		aligned = base + 63;
 		aligned -= (uintptr_t)aligned & 63;
 	}
@@ -133,7 +133,7 @@ yescrypt_init_shared(yescrypt_shared_t * shared,
 	dummy.mask1 = 1;
 	if (yescrypt_kdf(&dummy, shared1,
 	    param, paramlen, NULL, 0, N, r, p, 0,
-	    YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_1,
+	    (yescrypt_flags_t)(YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_1),
 	    salt, sizeof(salt)))
 		goto out;
 
@@ -145,19 +145,19 @@ yescrypt_init_shared(yescrypt_shared_t * shared,
 
 	if (p > 1 && yescrypt_kdf(&half1, &half2.shared1,
 	    param, paramlen, salt, sizeof(salt), N, r, p, 0,
-	    YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_2,
+	    (yescrypt_flags_t)(YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_2),
 	    salt, sizeof(salt)))
 		goto out;
 
 	if (yescrypt_kdf(&half2, &half1.shared1,
 	    param, paramlen, salt, sizeof(salt), N, r, p, 0,
-	    YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_1,
+	    (yescrypt_flags_t)(YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_1),
 	    salt, sizeof(salt)))
 		goto out;
 
 	if (yescrypt_kdf(&half1, &half2.shared1,
 	    param, paramlen, salt, sizeof(salt), N, r, p, 0,
-	    YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_1,
+	    (yescrypt_flags_t)(YESCRYPT_RW | YESCRYPT_PARALLEL_SMIX | __YESCRYPT_INIT_SHARED_1),
 	    buf, buflen))
 		goto out;
 
