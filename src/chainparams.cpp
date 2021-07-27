@@ -16,6 +16,7 @@
 
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
+#include <arith_uint256.h>
 
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -225,7 +226,6 @@ public:
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,154); //26+128
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
-'''
 
 
         bech32_hrp = "baritn";
@@ -326,7 +326,6 @@ public:
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,154); //26+128
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
-'''
 
 
         bech32_hrp = "barirt";
