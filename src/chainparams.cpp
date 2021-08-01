@@ -104,7 +104,7 @@ public:
         m_assumed_blockchain_size = 6;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1403910000, 2560786, 0x1e0ffff0, 1, 1 * COIN); //(nTime, nNonce, nBits, nVersion, genesisReward)
+        genesis = CreateGenesisBlock(1627743600, 3615405, 0x1e0ffff0, 1, 1 * COIN); //(nTime, nNonce, nBits, nVersion, genesisReward)
         consensus.hashGenesisBlock = genesis.GetHash();
                 std::cout << "Begin calculating " << strNetworkID << " Genesis Block:\n";
         arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
@@ -127,8 +127,8 @@ public:
         std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
         std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
         std::cout << "Finished calculating " << strNetworkID << " Genesis Block:\n";
-        assert(consensus.hashGenesisBlock == uint256S("0xadb6d9cfd74075e7f91608add4bd2a2ea636f70856183086842667a1597714a0"));
-        assert(genesis.hashMerkleRoot == uint256S("0xf951a273c3055d1bb36b4291e7f9edd491c2d435bd5737318ef8a643cab84b61"));
+        assert(consensus.hashGenesisBlock == uint256S("00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"));
+        assert(genesis.hashMerkleRoot == uint256S("733e7ef79789e6c2721d00e5cce3d28cdbcf209d9435a80c810069aece08a9c2"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
