@@ -16,7 +16,6 @@
 
 #include <boost/algorithm/string/classification.hpp>
 #include <boost/algorithm/string/split.hpp>
-#include <arith_uint256.h>
 
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -85,10 +84,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1554076800; // Apr 1st, 2019 (UTC)
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000048095ae8a7742");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x2aa5bda2047c8ad330319b1c78e617ba5cc51b48ee84f9dc734e8bcf8cf03c47"); // 2800000
+        consensus.defaultAssumeValid = uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"); // 2800000
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -106,7 +105,8 @@ public:
 
         genesis = CreateGenesisBlock(1627743600, 3615405, 0x1e0ffff0, 1, 1 * COIN); //(nTime, nNonce, nBits, nVersion, genesisReward)
         consensus.hashGenesisBlock = genesis.GetHash();
-                std::cout << "Begin calculating " << strNetworkID << " Genesis Block:\n";
+        /*
+        std::cout << "Begin calculating " << strNetworkID << " Genesis Block:\n";
         arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
         uint256 hash;
         genesis.nNonce = 0;
@@ -120,6 +120,16 @@ public:
                 std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
             }
         }
+        std::cout << strNetworkID << " ---\n";
+        std::cout << "  nonce: " << genesis.nNonce <<  "\n";
+        std::cout << "   time: " << genesis.nTime << "\n";
+        std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
+        std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
+        std::cout << "Finished calculating " << strNetworkID << " Genesis Block:\n";
+        */
+       //↑ジェネシスの計算式
+            }
+        }
         
         std::cout << strNetworkID << " ---\n";
         std::cout << "  nonce: " << genesis.nNonce <<  "\n";
@@ -127,16 +137,16 @@ public:
         std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
         std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
         std::cout << "Finished calculating " << strNetworkID << " Genesis Block:\n";
-        assert(consensus.hashGenesisBlock == uint256S("00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"));
-        assert(genesis.hashMerkleRoot == uint256S("733e7ef79789e6c2721d00e5cce3d28cdbcf209d9435a80c810069aece08a9c2"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"));
+        assert(genesis.hashMerkleRoot == uint256S("0x733e7ef79789e6c2721d00e5cce3d28cdbcf209d9435a80c810069aece08a9c2"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed1.baricoin.org"); // ?
-        vSeeds.emplace_back("seed2.baricoin.org"); // Baricoin official seed
+        //vSeeds.emplace_back("seed1.baricoin.org"); // ?
+        //vSeeds.emplace_back("seed2.baricoin.org"); // Baricoin official seed
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,26); //B
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,21); //9
@@ -154,17 +164,17 @@ public:
         m_is_test_chain = false;
         m_is_mockable_chain = false;
 
-        checkpointData = {
+       checkpointData = {
             {
-             
+                {0, uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data from RPC: getchaintxstats 43200 aa5f8eef49377808ce0529345dffb6cd316422bfc27c60cb7d9b2a7a008f6fbb
-            /* nTime    */ 1573445634,
-            /* nTxCount */ 3399778,
-            /* dTxRate  */ 0.02147296260938681,
+            /* nTime    */ 1627743600,
+            /* nTxCount */ 0,
+            /* dTxRate  */ 0.0,
         };
     }
 };
@@ -197,10 +207,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1554076800; // Apr 1st, 2019 (UTC)
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x96bd214d68bcbfe9c786c4da26cf71fb6bbb6f24032065bdf2f4cd2b003d9c72"); // 0
+        consensus.defaultAssumeValid = uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"); // 0
 
         pchMessageStart[0] = 0x98;
         pchMessageStart[1] = 0x61;
@@ -213,8 +223,8 @@ public:
 
         genesis = CreateGenesisBlock(1402725600, 3578955, 0x1e0ffff0, 1, 1 * COIN); //(nTime, nNonce, nBits, nVersion, genesisReward)
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x96bd214d68bcbfe9c786c4da26cf71fb6bbb6f24032065bdf2f4cd2b003d9c72"));
-        assert(genesis.hashMerkleRoot == uint256S("0xf951a273c3055d1bb36b4291e7f9edd491c2d435bd5737318ef8a643cab84b61"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"));
+        assert(genesis.hashMerkleRoot == uint256S("0x733e7ef79789e6c2721d00e5cce3d28cdbcf209d9435a80c810069aece08a9c2"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -239,15 +249,15 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x96bd214d68bcbfe9c786c4da26cf71fb6bbb6f24032065bdf2f4cd2b003d9c72")},
+                {0, uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data from RPC: getchaintxstats 4096 00000000000000b7ab6ce61eb6d571003fbe5fe892da4c9b740c49a07542462d
-            /* nTime    */ 0,
+            /* nTime    */ 1627743600,
             /* nTxCount */ 0,
-            /* dTxRate  */ 0,
+            /* dTxRate  */ 0.0,
         };
     }
 };
@@ -298,8 +308,8 @@ public:
 
         genesis = CreateGenesisBlock(1402725600, 3578955, 0x1e0ffff0, 1, 1 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x96bd214d68bcbfe9c786c4da26cf71fb6bbb6f24032065bdf2f4cd2b003d9c72"));
-        assert(genesis.hashMerkleRoot == uint256S("0xf951a273c3055d1bb36b4291e7f9edd491c2d435bd5737318ef8a643cab84b61"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"));
+        assert(genesis.hashMerkleRoot == uint256S("0x733e7ef79789e6c2721d00e5cce3d28cdbcf209d9435a80c810069aece08a9c2"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -311,7 +321,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x96bd214d68bcbfe9c786c4da26cf71fb6bbb6f24032065bdf2f4cd2b003d9c72")},
+                {0, uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398")},
             }
         };
 
