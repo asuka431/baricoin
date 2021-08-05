@@ -126,17 +126,10 @@ public:
         std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
         std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
         std::cout << "Finished calculating " << strNetworkID << " Genesis Block:\n";
-        */
-       //↑ジェネシスの計算式
             }
         }
-        
-        std::cout << strNetworkID << " ---\n";
-        std::cout << "  nonce: " << genesis.nNonce <<  "\n";
-        std::cout << "   time: " << genesis.nTime << "\n";
-        std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
-        std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-        std::cout << "Finished calculating " << strNetworkID << " Genesis Block:\n";
+        */
+       
         assert(consensus.hashGenesisBlock == uint256S("0x00000f66b2bfaac823f5abdde923793dc8a2589c52f5d4006b4cc2f251088398"));
         assert(genesis.hashMerkleRoot == uint256S("0x733e7ef79789e6c2721d00e5cce3d28cdbcf209d9435a80c810069aece08a9c2"));
 
