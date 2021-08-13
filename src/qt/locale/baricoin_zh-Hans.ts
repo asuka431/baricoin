@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>选择发送今治币地址</translation>
+        <translation>选择发送富士币地址</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>选择接收今治币地址</translation>
+        <translation>选择接收富士币地址</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>这是你的今治币发币地址。发送前请确认发送数量和接收地址</translation>
+        <translation>这是你的富士币发币地址。发送前请确认发送数量和接收地址</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
