@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>These are your Baricoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>这些是你的富士币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
+        <translation>这些是你的今治币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -161,7 +161,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BARICOINS&lt;/b&gt;!</source>
-        <translation>注意：如果你加密了钱包，丢失了密码，您将&lt;b&gt;丢失所有的富士币。</translation>
+        <translation>注意：如果你加密了钱包，丢失了密码，您将&lt;b&gt;丢失所有的今治币。</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -319,7 +319,7 @@
     </message>
     <message>
         <source>Send coins to a Baricoin address</source>
-        <translation>发送富士币到一个富士币地址</translation>
+        <translation>发送今治币到一个今治币地址</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -355,11 +355,11 @@
     </message>
     <message>
         <source>Sign messages with your Baricoin addresses to prove you own them</source>
-        <translation>用您的富士币地址签名信息，以证明拥有它们</translation>
+        <translation>用您的今治币地址签名信息，以证明拥有它们</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Baricoin addresses</source>
-        <translation>验证消息，确保它们是用指定的富士币地址签名的</translation>
+        <translation>验证消息，确保它们是用指定的今治币地址签名的</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -379,7 +379,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and baricoin: URIs)</source>
-        <translation>请求支付(生成二维码和富士币链接)</translation>
+        <translation>请求支付(生成二维码和今治币链接)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -555,7 +555,7 @@
     </message>
     <message>
         <source>A fatal error occurred. Baricoin can no longer continue safely and will quit.</source>
-        <translation>发生了致命错误。富士币无法继续安全运行，将退出。</translation>
+        <translation>发生了致命错误。今治币无法继续安全运行，将退出。</translation>
     </message>
 </context>
 <context>
@@ -731,7 +731,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid Baricoin address.</source>
-        <translation>输入的地址"%1"不是有效的富士币地址。</translation>
+        <translation>输入的地址"%1"不是有效的今治币地址。</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -808,7 +808,7 @@
     </message>
     <message>
         <source>Baricoin</source>
-        <translation>富士币</translation>
+        <translation>今治币</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1097,7 +1097,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for baricoin transactions than the network can process.</source>
-        <translation>当交易量小于块的空间时，矿工和中继节点可以强制执行最低费用。只付最低费用就可以了，但注意，一旦富士币交易的需求超出网络的处理能力，就可能导致交易无法确认。</translation>
+        <translation>当交易量小于块的空间时，矿工和中继节点可以强制执行最低费用。只付最低费用就可以了，但注意，一旦今治币交易的需求超出网络的处理能力，就可能导致交易无法确认。</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -1185,7 +1185,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>Warning: Invalid Baricoin address</source>
-        <translation>警告：富士币地址无效</translation>
+        <translation>警告：今治币地址无效</translation>
     </message>
     <message>
         <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
@@ -1208,11 +1208,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>The Baricoin address to send the payment to</source>
-        <translation>支付到的富士币地址</translation>
+        <translation>支付到的今治币地址</translation>
     </message>
     <message>
         <source>The fee will be deducted from the amount being sent. The recipient will receive less baricoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>手续费将从发出的总额中扣除。接受者收到的富士币将少于你输入的金额字段。如果选择了多个接受者，手续费将平均分配。</translation>
+        <translation>手续费将从发出的总额中扣除。接受者收到的今治币将少于你输入的金额字段。如果选择了多个接受者，手续费将平均分配。</translation>
     </message>
     <message>
         <source>This is an unauthenticated payment request.</source>
@@ -1224,7 +1224,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
     <message>
         <source>A message that was attached to the baricoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Baricoin network.</source>
-        <translation>附在富士币上的消息:URI将与交易一起存储，供参考。注意：此信息不会通过富士币网络发送。</translation>
+        <translation>附在今治币上的消息:URI将与交易一起存储，供参考。注意：此信息不会通过今治币网络发送。</translation>
     </message>
     </context>
 <context>
