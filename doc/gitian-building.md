@@ -73,25 +73,25 @@ To build the most recent tag:
 
 All:
 
- `./gitian-build.py --detach-sign --no-commit -b satoshi v0.20.0`
+ `./gitian-build.py --detach-sign --no-commit -b satoshi b0.20.0`
 
 Linux:
 
- `./gitian-build.py --detach-sign --no-commit -b -o l satoshi v0.20.0`
+ `./gitian-build.py --detach-sign --no-commit -b -o l satoshi b0.20.0`
 
 Windows:
 
- `./gitian-build.py --detach-sign --no-commit -b -o w satoshi v0.20.0`
+ `./gitian-build.py --detach-sign --no-commit -b -o w satoshi b0.20.0`
 
 OSX:
 
- `./gitian-build.py --detach-sign --no-commit -b -o m satoshi v0.20.0`
+ `./gitian-build.py --detach-sign --no-commit -b -o m satoshi b0.20.0`
 
 How to see options:
 
 `./gitian-build.py --help`
 
-Where `satoshi` is your Github name and `v0.20.0` is the most recent tag. 
+Where `satoshi` is your Github name and `b0.20.0` is the most recent tag. 
 To speed up the build, use `-j 5 -m 5000` as the first arguments, where `5` is the number of CPU's you allocated to the VM plus one, and 5000 is a little bit less than then the MB's of RAM you allocated.
 
 
