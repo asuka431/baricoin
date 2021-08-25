@@ -98,7 +98,7 @@ pushd "$TARGET" || exit 1
           exit 1
         fi
 
-        git clone https://github.com/baricoin/baricoin "$tag"
+        git clone https://github.com/asuka431/baricoin "$tag"
         pushd "$tag" || exit 1
         {
           git checkout "$tag"

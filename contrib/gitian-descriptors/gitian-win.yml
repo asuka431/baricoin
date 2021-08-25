@@ -23,7 +23,7 @@ packages:
 - "ca-certificates"
 - "python3"
 remotes:
-- "url": "https://github.com/baricoin/baricoin.git"
+- "url": "https://github.com/asuka431/baricoin.git"
   "dir": "baricoin"
 files: []
 script: |

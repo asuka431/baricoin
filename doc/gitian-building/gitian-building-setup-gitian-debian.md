@@ -100,7 +100,7 @@ Clone the git repositories for baricoin and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/baricoin/baricoin
+git clone https://github.com/asuka431/baricoin
 git clone https://github.com/bitcoin-core/gitian.sigs.git
 git clone https://github.com/bitcoin-core/bitcoin-detached-sigs.git
 ```

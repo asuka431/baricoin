@@ -27,7 +27,7 @@ apt-get install build-essential libtool autotools-dev automake pkg-config libssl
 ```
 Let's go:
 ```
-git clone https://github.com/baricoin/baricoin.git baricoin
+git clone https://github.com/asuka431/baricoin.git baricoin
 cd baricoin
 
 git tag

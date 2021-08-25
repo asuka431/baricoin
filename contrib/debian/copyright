@@ -2,7 +2,7 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Baricoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#baricoin@freenode.net
-Source: https://github.com/baricoin/baricoin
+Source: https://github.com/asuka431/baricoin
 
 Files: *
 Copyright: 2009-2020, Baricoin Core Developers
