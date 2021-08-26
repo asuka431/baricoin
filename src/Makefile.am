@@ -392,10 +392,15 @@ crypto_libbaricoin_crypto_base_a_SOURCES = \
   crypto/sha512.h \
   crypto/siphash.cpp \
   crypto/siphash.h \
-  crypto/yescrypt-0.5/yescrypt.c \
+  crypto/yescrypt-0.5/yescrypt.c 
+
+noinst_HEADERS = \
+  crypto/yescrypt-0.5/sha256.h \
+  crypto/yescrypt-0.5/sha256_c.h \
+  crypto/yescrypt-0.5/sysendian.h \
   crypto/yescrypt-0.5/yescrypt.h \
   crypto/yescrypt-0.5/yescrypt-best_c.h \
-  crypto/yescrypt-0.5/yescrypt-opt.h \
+  crypto/yescrypt-0.5/yescrypt-opt_c.h \
   crypto/yescrypt-0.5/yescrypt-platform_c.h \
   crypto/yescrypt-0.5/yescrypt-simd_c.h
 
