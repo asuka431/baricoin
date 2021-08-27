@@ -92,8 +92,8 @@ unsigned int KimotoGravityWell(const CBlockIndex* pindexLast, const CBlockHeader
 
     arith_uint256 bnNew(PastDifficultyAverage);
     if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0) {
-        bnNew *= PastRateActualSeconds;
         bnNew /= PastRateTargetSeconds;
+        bnNew *= PastRateActualSeconds;
     }
 
     if (bnNew > UintToArith256(params.powLimit)) {
