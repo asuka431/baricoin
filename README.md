@@ -1,7 +1,7 @@
 Baricoin Core integration/staging tree
 =====================================
 
-http://www.fujicoin.org
+https://sites.google.com/view/baricoin/%E3%83%9B%E3%83%BC%E3%83%A0
 
 What is Baricoin?
 ----------------
@@ -16,7 +16,7 @@ Baricoin is a fork of Bitcoin. This is the best coin intended fair distribution 
 
 
 For more information, as well as an immediately useable, binary version of
-the Baricoin Core software, see http://www.fujicoin.org/, or read the
+the Baricoin Core software, see https://sites.google.com/view/baricoin/%E3%83%9B%E3%83%BC%E3%83%A0 or read the
 [What is Baricoin? page](http://www.fujicoin.org/what-is-fujicoin.php).
 
 How to Build
@@ -38,7 +38,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/fujicoin/fujicoin/tags) are created
+completely stable. [Tags](https://github.com/asuka431/baricoin/tags) are created
 regularly to indicate new official, stable release versions of Baricoin Core.
 
 Developers work on their own forks and submit pull requests in order to merge
@@ -46,10 +46,6 @@ changes with `master`. Due to the relatively small size of the development team,
 developers also commit directly to the repo often. Anyone is allowed to contribute
 though and useful pull requests will almost always be accepted given various
 obvious stipulations regarding stability etc. 
-
-The Baricoin [slack](http://slack.fujicoin.org/) or [subreddit](https://reddit.com/r/fujicoin)
-should be used to discuss complicated or controversial changes with the developers 
-before working on a patch set.
 
 Testing
 -------
