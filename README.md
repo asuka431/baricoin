@@ -1,7 +1,7 @@
 Baricoin Core integration/staging tree
 =====================================
 
-https://sites.google.com/view/baricoin/%E3%83%9B%E3%83%BC%E3%83%A0
+https://sites.google.com/view/baricoin/
 
 What is Baricoin?
 ----------------
@@ -16,8 +16,8 @@ Baricoin is a fork of Bitcoin. This is the best coin intended fair distribution 
 
 
 For more information, as well as an immediately useable, binary version of
-the Baricoin Core software, see https://sites.google.com/view/baricoin/%E3%83%9B%E3%83%BC%E3%83%A0 or read the
-[What is Baricoin? page](http://www.fujicoin.org/what-is-fujicoin.php).
+the Baricoin Core software, see https://sites.google.com/view/baricoin/ or read the
+[What I wrote in my report page](https://sites.google.com/d/19CsSakq9a3GCH7TYqr0-eqS71oleNy9A/p/1lJvxZZhJtLAQgUrBDBrDARV-8HLeg4_P/).
 
 How to Build
 ------------
